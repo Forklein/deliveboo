@@ -23,6 +23,7 @@
 /******/ 		module.l = true;
 /******/
 /******/ 		// Return the exports of the module
+/******/ 		// test
 /******/ 		return module.exports;
 /******/ 	}
 /******/
