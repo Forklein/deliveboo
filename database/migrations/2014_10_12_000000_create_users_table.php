@@ -20,6 +20,13 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->string('restaurant_name');
+            $table->char('vat', 11)->unique();
+            $table->string('address')->unique();
+            $table->char('zip', 5);
+            $table->char('city', 6)->default('Milano');
+            $table->string('phone', 20);
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone', 'city', 'address', 'image', 'zip', 'vat', 'restaurant_name'
     ];
 
     /**
@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function plates()
+    {
+        return $this->hasMany('App/Models/Plate');
+    }
+
+    public function types()
+    {
+        return $this->belongsToMany('App/Models/Type')->withTimestamps();
+    }
 }
