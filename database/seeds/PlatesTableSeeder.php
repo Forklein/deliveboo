@@ -34,6 +34,5 @@ class PlatesTableSeeder extends Seeder
         $new_plate->visibility = false;
 
         $new_plate->save();
-
     }
 }

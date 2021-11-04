@@ -17,6 +17,7 @@ class CreateOrderPlateTable extends Migration
             $table->id();
             $table->foreignId('order_id')->ondelete('cascade')->constrained();
             $table->foreignId('plate_id')->ondelete('cascade')->constrained();
+            $table->tinyInteger('quantity')->unsigned();
             $table->timestamps();
         });
     }
