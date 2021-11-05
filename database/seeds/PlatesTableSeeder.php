@@ -1,8 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use FakerRestaurant\Provider\en_US\Restaurant as Faker;
+use FakerRestaurant\Provider\en_US\Restaurant as Faker_Restaurant;
+use Faker\Generator as Faker;
 use App\Models\Plate;
+use App\User;
+use Illuminate\Support\Arr;
+
 
 class PlatesTableSeeder extends Seeder
 {
@@ -11,28 +15,21 @@ class PlatesTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run(Faker_Restaurant $faker_restaurant, Faker $faker)
     {
-        $new_plate = new Plate();
-        $new_plate->user_id = '1';
-        $new_plate->name = $faker->foodName();
-        $new_plate->ingredients = 'ingrediente di test';
-        $new_plate->description = 'descrizione di test';
-        $new_plate->course = 'portata di test';
-        $new_plate->price = '9.99';
-        $new_plate->visibility = true;
 
-        $new_plate->save();
+        $users = User::pluck('id')->toArray();
 
-        $new_plate = new Plate();
-        $new_plate->user_id = '2';
-        $new_plate->name = $faker->foodName();
-        $new_plate->ingredients = 'ingrediente di test';
-        $new_plate->description = 'descrizione di test';
-        $new_plate->course = 'portata di test';
-        $new_plate->price = '9.99';
-        $new_plate->visibility = false;
-
-        $new_plate->save();
+        for ($i = 0; $i < 30; $i++) {
+            $new_plate = new Plate();
+            $new_plate->user_id = Arr::random($users);
+            $new_plate->name = $faker_restaurant->foodName();
+            $new_plate->ingredients = $faker->paragraph();
+            $new_plate->description = $faker->paragraph();
+            $new_plate->course = $faker->words(1, true);
+            $new_plate->price = $faker->randomFloat(2, 1, 30);
+            $new_plate->visibility = $faker->boolean();
+            $new_plate->save();
+        }
     }
 }

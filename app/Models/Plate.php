@@ -12,11 +12,11 @@ class Plate extends Model
 
     public function user()
     {
-        return $this->belongsTo('App/User');
+        return $this->belongsTo('App\User');
     }
 
     public function orders()
     {
-        return $this->belongsToMany('App/Models/Order')->withTimestamps();
+        return $this->belongsToMany('App\Models\Order')->withTimestamps()->withPivot('quantity');
     }
 }

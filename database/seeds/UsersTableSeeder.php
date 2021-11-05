@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 use App\User;
+use App\Models\Type;
+use Illuminate\Support\Arr;
 
 class UsersTableSeeder extends Seeder
 {
@@ -10,7 +13,7 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         $restaurants = [
             [
@@ -35,10 +38,27 @@ class UsersTableSeeder extends Seeder
             ]
         ];
 
+        $types = Type::pluck('id')->toArray();
+
         foreach ($restaurants as $restaurant) {
             $new_user = new User();
             $new_user->fill($restaurant);
             $new_user->save();
+            $new_user->types()->attach(Arr::random($types));
+        }
+
+        for ($i = 0; $i < 8; $i++) {
+            $new_user = new User();
+            $new_user->name = $faker->name();
+            $new_user->email = $faker->email();
+            $new_user->password = bcrypt($faker->word());
+            $new_user->restaurant_name = $faker->words(2, true);
+            $new_user->vat = $faker->randomNumber(9, true);
+            $new_user->address = $faker->address();
+            $new_user->zip = $faker->randomNumber(5, true);
+            $new_user->phone = $faker->phoneNumber();
+            $new_user->save();
+            $new_user->types()->attach(Arr::random($types));
         }
     }
 }

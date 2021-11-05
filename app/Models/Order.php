@@ -10,6 +10,6 @@ class Order extends Model
 
     public function plates()
     {
-        return $this->belongsToMany('App/Models/Plate')->withTimestamps();
+        return $this->belongsToMany('App\Models\Plate')->withTimestamps()->withPivot('quantity');
     }
 }

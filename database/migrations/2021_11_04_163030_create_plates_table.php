@@ -17,7 +17,7 @@ class CreatePlatesTable extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->ondelete('set null')->constrained();
             $table->string('name');
-            $table->string('ingredients');
+            $table->text('ingredients');
             $table->text('description');
             $table->string('course');
             $table->string('image')->nullable();

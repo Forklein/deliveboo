@@ -39,11 +39,11 @@ class User extends Authenticatable
 
     public function plates()
     {
-        return $this->hasMany('App/Models/Plate');
+        return $this->hasMany('App\Models\Plate');
     }
 
     public function types()
     {
-        return $this->belongsToMany('App/Models/Type')->withTimestamps();
+        return $this->belongsToMany('App\Models\Type')->withTimestamps();
     }
 }
