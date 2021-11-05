@@ -29,7 +29,7 @@ class OrdersTableSeeder extends Seeder
             $new_order->total = $faker->randomFloat(2, 1, 100);
             $new_order->save();
 
-            $new_order->plates()->attach(Arr::random($plates, 3));
+            for ($q = 0; $q < 3; $q++) $new_order->plates()->attach(Arr::random($plates), ['quantity' => rand(1, 5)]);
         }
     }
 }
