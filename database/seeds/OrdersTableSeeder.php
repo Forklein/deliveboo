@@ -19,7 +19,7 @@ class OrdersTableSeeder extends Seeder
 
         $plates = Plate::pluck('id')->toArray();
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 25; $i++) {
             $new_order = new Order();
             $new_order->name = $faker->firstName();
             $new_order->surname = $faker->lastName();

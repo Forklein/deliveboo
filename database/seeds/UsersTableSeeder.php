@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
             $new_user->types()->attach(Arr::random($types));
         }
 
-        for ($i = 0; $i < 8; $i++) {
+        for ($i = 0; $i < 13; $i++) {
             $new_user = new User();
             $new_user->name = $faker->name();
             $new_user->email = $faker->email();
