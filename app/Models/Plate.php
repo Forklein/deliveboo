@@ -14,4 +14,8 @@ class Plate extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function orders()
+    {
+        return $this->belongsToMany('App\Models\Order')->withTimestamps()->withPivot('quantity');
+    }
 }
