@@ -5,16 +5,21 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+use App\User;
+use App\Models\Plate;
+use Illuminate\Support\Facades\Auth;
+
+class PlateController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        //
+        $plates = Plate::where('user_id', Auth::id())->paginate(5);
+        return view('admin.plates.index', compact('plates'));
     }
 
     /**
