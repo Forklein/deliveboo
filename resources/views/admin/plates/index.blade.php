@@ -1,25 +1,39 @@
-@extends('layouts.app')
+@extends('admin.home')
 
-@section('content')
-    <div class="container">
-        <div class="row justify-content-between">
+@section('rightDashboardContent')
+<div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Plate name</th>
+            <th scope="col">Plate ingredients</th>
+            <th scope="col">Plate description</th>
+            <th scope="col">Plate course</th>
+            <th scope="col">Plate price</th>
+          </tr>
+        </thead>
+        <tbody>
             @forelse($plates as $plate)
-        <div class="card my-4 shadow-lg" style="width: 18rem;">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/ad/2f/16/double-burger.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{$plate->name}}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+          <tr>
+            <th scope="row">{{$plate->id}}</th>
+            <td>{{$plate->name}}</td>
+            <td>{{Str::limit($plate->ingredients, 20, '...')}}</td>
+            <td>{{Str::limit($plate->description, 20, '...')}}</td>
+            <td>{{$plate->course}}</td>
+            <td>{{$plate->price}}</td>
+          </tr>
           @empty
-        'No plates'
-        @endforelse
-        </div>
-        {{$plates->links()}}
-        <details class="text-white">
-            <summary>Total</summary>
-            {{($plates->total())}}
-        </details>
-    </div>
+          'No plates'
+          @endforelse
+        </tbody>
+      </table>
+</div>
+<div>
+    {{$plates->links()}}
+    <details class="text-white">
+        <summary>Total</summary>
+        {{($plates->total())}}
+    </details>
+</div>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-4 rounded bg-white shadow-lg">
+    <div class="container h-75 p-4 rounded bg-white shadow-lg">
         <div class="row">
             <div class="col-3 border-right">
                 <h2>{{ __('Dashboard') }}</h2>
@@ -11,6 +11,9 @@
                     </a>
                   </p>
                   <ul class="collapse" id="collapseMenu">
+                    <li>
+                        <a href="{{ route('admin.home') }}">Home</a>
+                    </li>
                     <li>
                         <a href="{{ route('admin.orders.index') }}">Orders</a>
                     </li>
@@ -23,7 +26,8 @@
                 <h2>
                     {{'You are logged in ' . Auth::user()->name . '!'}}
                 </h2>
-                <div class="container cards">
+                @yield('rightDashboardContent')
+                <!--<div class="container cards">
                     <div class="row">
                         <div class="col-12">
                             <div class="card w-100" style="width: 18rem;">
@@ -36,7 +40,7 @@
                               </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
     
             </div>
         </div>
