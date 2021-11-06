@@ -18,7 +18,7 @@ class PlateController extends Controller
      */
     public function index(User $user)
     {
-        $plates = Plate::where('user_id', Auth::id())->paginate(5);
+        $plates = Plate::where('user_id', Auth::id())->paginate(6);
         return view('admin.plates.index', compact('plates'));
     }
 
