@@ -23,7 +23,8 @@
                 <h2>
                     {{'You are logged in ' . Auth::user()->name . '!'}}
                 </h2>
-                <div class="container cards">
+                @yield('rightDashboardContent')
+                <!--<div class="container cards">
                     <div class="row">
                         <div class="col-12">
                             <div class="card w-100" style="width: 18rem;">
@@ -36,7 +37,7 @@
                               </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
     
             </div>
         </div>
