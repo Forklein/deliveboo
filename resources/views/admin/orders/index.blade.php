@@ -1,11 +1,12 @@
-@extends('layouts.app')
+@extends('admin.home')
 
-@section('content')
-    <div class="container">
+@section('rightDashboardContent')
+<div>
+    <div>
         <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">Order Number</th>
+                <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Surname</th>
                 <th scope="col">Total</th>
@@ -29,4 +30,7 @@
             </tbody>
         </table>
     </div>
+</div>
+    
 @endsection
+
