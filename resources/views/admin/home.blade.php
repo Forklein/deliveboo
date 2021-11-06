@@ -12,6 +12,9 @@
                   </p>
                   <ul class="collapse" id="collapseMenu">
                     <li>
+                        <a href="{{ route('admin.home') }}">Home</a>
+                    </li>
+                    <li>
                         <a href="{{ route('admin.orders.index') }}">Orders</a>
                     </li>
                     <li>
