@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-4 rounded bg-white shadow-lg">
+    <div class="container h-75 p-4 rounded bg-white shadow-lg">
         <div class="row">
             <div class="col-3 border-right">
                 <h2>{{ __('Dashboard') }}</h2>
