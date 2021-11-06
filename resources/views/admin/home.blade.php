@@ -12,13 +12,10 @@
                   </p>
                   <ul class="collapse" id="collapseMenu">
                     <li>
-                        <a href="">Orders</a>
+                        <a href="{{ route('admin.orders.index') }}">Orders</a>
                     </li>
                     <li>
                         <a href="{{ route('admin.plates.index') }}">Plates</a>
-                    </li>
-                    <li>
-                        <a href="">Types</a>
                     </li>
                   </ul>
             </div>
