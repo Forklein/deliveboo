@@ -17,12 +17,10 @@ class UserController extends Controller
     public function index()
     {
         $users = User::with(['types', 'plates'])->get();
-        return response()->json(
-            [
-                'Messages' => 'Success',
-                'data' => compact('users')
-            ]
-        );
+        return response()->json([
+            'status' => 'success',
+            'data' => compact('users')
+        ], 200);
     }
 
     /**
@@ -42,9 +40,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return response()->json([
+            'status' => 'success',
+            'data' => compact('user')
+        ], 200);
     }
 
     /**
