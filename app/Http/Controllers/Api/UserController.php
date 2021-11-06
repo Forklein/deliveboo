@@ -42,6 +42,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
+        $user->plates;
         return response()->json([
             'status' => 'success',
             'data' => compact('user')
