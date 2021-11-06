@@ -6,15 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
-
+use App\Models\Plate;
 
 class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Auth::user()->plates->orders;
-        dd($orders);
-        return view('admin.orders.index', compact('orders'));
+        $plates = Plate::where('user_id', Auth::id())->get();
+        return view('admin.orders.index', compact('plates'));
     }
 
     public function show(Order $order)
