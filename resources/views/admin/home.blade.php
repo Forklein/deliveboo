@@ -1,30 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container h-75 p-4 rounded bg-white shadow-lg">
+    <div class="container p-4 rounded">
         <div class="row">
-            <div class="col-3 border-right">
+            <div class="col-3 bg-primary text-white rounded py-4" style="height: 900px">
                 <h2>{{ __('Dashboard') }}</h2>
                 <p>
-                    <a class="btn" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
+                    <a class="text-white" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
                       Pages
                     </a>
                   </p>
-                  <ul class="collapse" id="collapseMenu">
+                  <ul class="collapse list-unstyled pl-3" id="collapseMenu">
                     <li>
-                        <a href="{{ route('admin.home') }}">Home</a>
+                        <a class="text-white" href="{{ route('admin.home') }}">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.orders.index') }}">Orders</a>
+                        <a class="text-white" href="{{ route('admin.orders.index') }}">Orders</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.plates.index') }}">Plates</a>
+                        <a class="text-white" href="{{ route('admin.plates.index') }}">Plates</a>
                     </li>
                   </ul>
             </div>
-            <div class="col-9">
+            <div class="col-9 bg-white shadow-lg rounded py-4" style="height: 900px">
                 <h2>
-                    {{'You are logged in ' . Auth::user()->name . '!'}}
+                    {{Auth::user()->name.', here are your restaurant details'}}
                 </h2>
                 @yield('rightDashboardContent')
                 <!--<div class="container cards">
