@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
 use App\Models\Plate;
+use Illuminate\Support\Collection;
 
 class OrderController extends Controller
 {
     public function index()
     {
-        $plates = Plate::where('user_id', Auth::id())->get();
-        return view('admin.orders.index', compact('plates'));
+        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->sort();
+        return view('admin.orders.index', compact('orders'));
     }
 
     public function show(Order $order)

@@ -14,9 +14,7 @@
               </tr>
             </thead>
             <tbody>
-                @foreach($plates as $plate)
-                    @if($plate->orders)
-                    @foreach($plate->orders as $order)
+                @forelse($orders as $order)
                     <tr>
                         <td>{{$order->id}}</td>
                         <td>{{$order->name}}</td>
@@ -25,11 +23,9 @@
                         {{-- collegamento a show --}}
                         <td><a href="{{ route('admin.orders.show', $order->id) }}">Show Details</a></td>
                     </tr>
-                    @endforeach
-                    @else
+                @empty
                     <tr colspan="4">No Orders</tr>
-                    @endif
-                @endforeach
+                @endforelse
             </tbody>
         </table>
     </div>
