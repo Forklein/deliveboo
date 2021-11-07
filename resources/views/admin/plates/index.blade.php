@@ -6,7 +6,7 @@
     <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Plate ID</th>
             <th scope="col">Plate name</th>
             <th scope="col">Plate ingredients</th>
             <th scope="col">Plate description</th>
