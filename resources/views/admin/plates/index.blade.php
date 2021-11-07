@@ -2,6 +2,7 @@
 
 @section('rightDashboardContent')
 <div>
+    <a href="{{route('admin.plates.create')}}">Create Plate</a>
     <table class="table table-striped">
         <thead>
           <tr>

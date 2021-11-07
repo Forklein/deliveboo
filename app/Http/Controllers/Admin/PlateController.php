@@ -28,7 +28,7 @@ class PlateController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.plates.create');
     }
 
     /**
@@ -39,7 +39,12 @@ class PlateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $new_plate = new Plate();
+        $new_plate->fill($data);
+        $new_plate->user_id = Auth::id();
+        $new_plate->save();
+        return redirect()->route('admin.plates.index');
     }
 
     /**
