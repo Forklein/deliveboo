@@ -28,10 +28,16 @@ class OrdersTableSeeder extends Seeder
                 $new_order->address = $faker->streetAddress();
                 $new_order->phone = $faker->phoneNumber();
                 $new_order->mail = $faker->email();
-                $new_order->total = $faker->randomFloat(2, 1, 100);
+                $new_order->total = 0;
                 $new_order->save();
 
                 for ($q = 0; $q < 3; $q++) $new_order->plates()->attach(Arr::random($plates), ['quantity' => rand(1, 5)]);
+
+                foreach ($new_order->plates as $plate){
+                    $new_order->total += $plate->price * $plate->pivot->quantity;
+                }
+                
+                $new_order->update();
             }
         }
     }
