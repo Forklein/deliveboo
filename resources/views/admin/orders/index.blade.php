@@ -3,7 +3,7 @@
 @section('rightDashboardContent')
 <div>
     <div>
-        <div><h1>Your Orders</h1></div>
+        <div><h1 class="txt-oxford">Your Orders</h1></div>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>

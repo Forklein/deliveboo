@@ -4,7 +4,7 @@
 <div>
   {{-- @if($order->plates->contains(Auth::id())) --}}
     <div>
-      <h1>Customer Info</h1>
+      <h1 class="txt-oxford">Customer Info</h1>
       <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -30,7 +30,7 @@
         </table>
       </div>
         <hr class="py-4">
-        <h1 class="mt-4">Customer Cart</h1>
+        <h1 class="mt-4 txt-oxford">Customer Cart</h1>
         <div class="table-responsive">
           <table class="table table-striped">
               <thead>

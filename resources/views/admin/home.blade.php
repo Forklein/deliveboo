@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container-fluid p-4 rounded">
-        <div class="row shadow-lg">
+        <div class="row">
             <!--Left Dashboard Section-->
             <div class="col-side-left bg-oxford bg-dash-left text-white py-4">
                 <!--Logo Restaurant-->
                 <figure class="p-4 d-flex justify-content-center">
-                    <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid logo">
+                    <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid">
                 </figure>
                 <hr class="bg-white">
                 <!--Home Route-->
@@ -47,5 +47,5 @@
             </div>
         </div>
     </div>
-    @yield('script');
+    @yield('script')
 @endsection

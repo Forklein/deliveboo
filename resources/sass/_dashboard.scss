@@ -6,7 +6,6 @@
 .col-side-left{
   width: 20%;
   min-height: 800px;
-  flex-grow: 1;
 }
 
 .bg-dash-left{
@@ -35,9 +34,7 @@
 
         }
 }
-.logo{
-      width: 300px;
-    }
+    
 
 
 /*RIGHT SIDE DASHBOARD*/
@@ -50,6 +47,11 @@
     background-color: #fff;
     border-radius: 0px 10px 10px 0px;
 }   
+
+
+
+
+
 
 /********** TOGGLE STYLE  **********/
 
