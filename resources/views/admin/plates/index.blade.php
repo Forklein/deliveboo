@@ -2,7 +2,7 @@
 
 @section('rightDashboardContent')
 <div>
-    <div class="text-right"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
+    <div class="text-right py-4"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -27,8 +27,8 @@
             <td>{{$plate->price}}</td>
             <td>
               <div class="switch">
-                <input type="checkbox" name="visbility">
-                <label for="visibility">
+                <input type="checkbox" name="toggle">
+                <label for="toggle">
                   <i><div class="fa fa-hamburger"></div></i>
                 </label>
                 <span></span>

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-4 rounded">
+    <div class="container-fluid p-4 rounded">
         <div class="row">
-            <div class="col-3 bg-primary text-white rounded py-4" style="height: 900px">
+            <div class="col-3 bg-dash-left text-white py-4" style="min-height: 500px">
                 <h2>{{ __('Dashboard') }}</h2>
                 <p>
                     <a class="text-white" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
@@ -22,7 +22,7 @@
                     </li>
                   </ul>
             </div>
-            <div class="col-9 bg-white shadow-lg rounded py-4" style="height: 900px">
+            <div class="col-9 bg-dash-right shadow-lg py-4" style="min-height: 500px">
                 <h2>
                     {{Auth::user()->name.', here are your restaurant details'}}
                 </h2>
