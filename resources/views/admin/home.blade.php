@@ -2,28 +2,52 @@
 
 @section('content')
     <div class="container-fluid p-4 rounded">
-        <div class="row">
-            <div class="col-3 bg-dash-left text-white py-4" style="min-height: 500px">
-                <h2>{{ __('Dashboard') }}</h2>
-                <p>
-                    <a class="text-white" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
-                      Pages
-                    </a>
-                  </p>
-                  <ul class="collapse list-unstyled pl-3" id="collapseMenu">
-                    <li>
-                        <a class="text-white" href="{{ route('admin.home') }}">Home</a>
-                    </li>
-                    <li>
-                        <a class="text-white" href="{{ route('admin.orders.index') }}">Orders</a>
-                    </li>
-                    <li>
-                        <a class="text-white" href="{{ route('admin.plates.index') }}">Plates</a>
-                    </li>
-                  </ul>
+        <div class="row shadow-lg">
+            <!--Left Dashboard Section-->
+            <div class="col-side-left bg-dash-left text-white py-4">
+                <!--Logo Restaurant-->
+                <figure class="p-4 d-flex justify-content-center">
+                    <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid logo">
+                </figure>
+                <!--Home Route-->
+                <a href="{{route('admin.home')}}" class="mt-2">
+                    <div class="d-flex align-items-stretch justify-content-start side-link-bg">
+                        <div class="mr-4"><i class="fas fa-home fa-2x"></i></div>
+                        <div class="d-none d-md-inline"><h4>Home</h4></div>
+                    </div>
+                </a>
+                
+                <!--Plates Route-->
+                <a href="{{route('admin.plates.index')}}" class="mt-2">
+                    <div class="d-flex align-items-stretch justify-content-start side-link-bg">
+                        <div class="mr-4"><i class="fas fa-utensils fa-2x"></i></div>
+                        <div class="d-none d-md-inline"><h4>Plates</h4></div>
+                    </div>
+                </a>
+                                
+                <!--Order Route-->
+                <a href="{{route('admin.orders.index')}}" class="mt-2">
+                    <div class="d-flex align-items-stretch justify-content-start side-link-bg">
+                        <div class="mr-4"><i class="fas fa-receipt fa-2x"></i></div>
+                        <div class="d-none d-md-inline"><h4>Orders</h4></div>
+                    </div>
+                </a>
+                
+
+
+                <!--Restaurant Info
+                <div class="d-flex flex-column justify-content-end">
+                    <div class="d-flex align-items-stretch">
+                            <div class="mr-4"><i class="fas fa-user fa-2x"></i></div>
+                            <div><h4>{{Auth::user()->name}}</h4></div>
+                    </div>
+                </div>
+                -->
             </div>
-            <div class="col-9 bg-dash-right shadow-lg py-4" style="min-height: 500px">
-                <h2>
+
+            <!--Right Dashboard Section-->
+            <div class="col-side-right bg-dash-right p-4">
+                <h2 class="pb-4">
                     {{Auth::user()->name.', here are your restaurant details'}}
                 </h2>
                 @yield('rightDashboardContent')

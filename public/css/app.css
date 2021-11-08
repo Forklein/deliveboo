@@ -1,7 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+.col-side-left {
+  width: 20%;
+  min-height: 800px;
+  flex-grow: 1;
+}
+
+.col-side-right {
+  width: 80%;
+  min-height: 800px;
+}
+
 .bg-dash-left {
   background-color: #0C1B33;
   border-radius: 10px 0px 0px 10px;
+}
+.bg-dash-left a {
+  color: #FBFBF2;
+}
+.bg-dash-left a:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: #FBFBF2;
+}
+.bg-dash-left a .side-link-bg {
+  padding: 10px;
+}
+.bg-dash-left a .side-link-bg:hover {
+  background-color: #FBFBF2;
+}
+
+.logo {
+  width: 300px;
 }
 
 .bg-dash-right {

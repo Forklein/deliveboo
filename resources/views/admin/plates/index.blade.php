@@ -2,7 +2,7 @@
 
 @section('rightDashboardContent')
 <div>
-    <div class="text-right py-4"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
+    <div class="text-right py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
     <table class="table table-striped">
         <thead>
           <tr>
