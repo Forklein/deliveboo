@@ -32,7 +32,6 @@
                         <div class="d-none d-md-inline"><h4>Orders</h4></div>
                     </div>
                 </a>
-
             </div>
 
             <!--Right Dashboard Section-->

@@ -31,6 +31,6 @@
         <label for="visibility">Visibility</label>
         <input type="text" class="form-control" name="visibility" id="visibility">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-oxford">Submit</button>
 </form>
 @endsection

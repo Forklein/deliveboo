@@ -3,8 +3,9 @@
 
 // Variables
 @import 'variables';
-@import 'colors';
-@import "dashboard";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import "dashboard";
+@import 'colors';

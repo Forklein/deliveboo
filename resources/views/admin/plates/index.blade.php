@@ -4,7 +4,7 @@
 <div>
   <div class="d-flex justify-content-between">
     <div><h1>Your Plates</h1></div>
-    <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
+    <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}"><i class="fas fa-plus"></i></a></div>
   </div>
   <div class="table-responsive">
     <table class="table table-striped">
@@ -23,6 +23,7 @@
                 <span>{{($plates->total())}}</span>
               </details>
             </th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -50,10 +51,10 @@
               </form>
             
             </td>
-            <td>
-              <div class="btn">
-                <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-warning">Details</a>
-              </div>
+            <td></td>
+            <td class="d-flex justify-content-end">
+              <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford mr-2">Details</a>
+              <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning"><i class="fas fa-pencil"></i></a>
             </td>
           </tr>
           @empty

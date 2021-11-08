@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Type;
 use App\Models\Plate;
 use Illuminate\Support\Facades\Auth;
 
@@ -55,6 +56,7 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
+
         if ($plate->user_id == Auth::id()) return view('admin.plates.show', compact('plate'));
         else abort(404);
     }
@@ -67,7 +69,7 @@ class PlateController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.plates.edit');
     }
 
     /**
