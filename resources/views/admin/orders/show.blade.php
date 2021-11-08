@@ -4,6 +4,7 @@
 <div>
   {{-- @if($order->plates->contains(Auth::id())) --}}
     <div>
+      <h1>Customer Info</h1>
         <table class="table table-striped">
             <thead>
               <tr>
@@ -26,7 +27,9 @@
                     </tr>
             </tbody>
         </table>
-        <table class="table table-striped mt-5">
+        <hr class="py-4">
+        <h1 class="mt-4">Customer Cart</h1>
+        <table class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">Items</th>
@@ -45,6 +48,9 @@
                 <td class="font-weight-bold">Total: {{ $order->total }} </td>
             </tbody>
         </table>
+        <div class="d-flex justify-content-end">
+          <a href="{{route('admin.orders.index')}}" class="btn btn-primary">Back to Orders</a>
+        </div>
     </div>
 </div>
     

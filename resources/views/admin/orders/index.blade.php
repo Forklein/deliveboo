@@ -17,7 +17,8 @@
                         <summary>Total Orders</summary>
                         <span>{{count($orders)}}</span>
                     </details>
-            </th>
+                </th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -27,7 +28,8 @@
                         <td>{{$order->name}}</td>
                         <td>{{$order->surname}}</td>
                         <td>{{$order->total}}€</td>
-                        <td><a href="{{ route('admin.orders.show', $order->id) }}">Show Details</a></td>
+                        <td></td>
+                        <td class="text-right"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-primary">Show Details</a></td>
                     </tr>
                 @empty
                     <tr colspan="4">No Orders</tr>
