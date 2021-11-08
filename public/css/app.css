@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 /************************ TEXT ***************************/
+.link-white {
+  color: #fff;
+}
+.link-white:hover {
+  background-color: #000;
+}
+
 .txt-oxford {
   color: #0C1B33;
 }
@@ -7,6 +14,17 @@
 /********************** BACKGROUND  *********************/
 .bg-oxford {
   background-color: #0C1B33;
+}
+
+/********************** BUTTON **************************/
+.btn-oxford {
+  color: #fff;
+  background-color: #0C1B33;
+  border-color: #0C1B33;
+}
+.btn-oxford:hover {
+  color: #fff;
+  background-color: #12294e;
 }
 
 /**************************************************************************/
@@ -22,9 +40,6 @@
 .bg-dash-left {
   border-radius: 10px 0px 0px 10px;
 }
-.bg-dash-left a {
-  color: #FBFBF2;
-}
 .bg-dash-left a:hover {
   text-decoration: none;
   color: #000;
@@ -37,14 +52,18 @@
   background-color: #FBFBF2;
 }
 
-.logo {
-  width: 300px;
+.active {
+  text-decoration: none;
+  color: #000;
+  background-color: #FBFBF2;
+}
+.active .side-link-bg {
+  background-color: #FBFBF2;
+  color: #000;
 }
 
-.position-bottom {
-  position: relative;
-  bottom: 0;
-  left: 0;
+.logo {
+  width: 300px;
 }
 
 /*RIGHT SIDE DASHBOARD*/

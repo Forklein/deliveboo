@@ -11,24 +11,24 @@
                 </figure>
                 <hr class="bg-white">
                 <!--Home Route-->
-                <a href="{{route('admin.home')}}" class="mt-2 @if (request()->routeIs('amin.home')) active-route @endif">
-                    <div class="d-flex align-items-stretch justify-content-start side-link-bg">
-                        <div class="mr-4"><i class="fas fa-home fa-2x"></i></div>
+                <a href="{{route('admin.home')}}" class="mt-2 @if (request()->routeIs('admin.home')) active @else link-white @endif">
+                    <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
+                        <div class="mr-md-4"><i class="fas fa-home fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Home</h4></div>
                     </div>
                 </a>
                 <!--Plates Route-->
-                <a href="{{route('admin.plates.index')}}" class="mt-2 @if (request()->routeIs('admin.plates.index')) active-route @endif">
-                    <div class="d-flex align-items-stretch justify-content-start side-link-bg">
-                        <div class="mr-4"><i class="fas fa-utensils fa-2x"></i></div>
+                <a href="{{route('admin.plates.index')}}" class="mt-2 @if (request()->routeIs('admin.plates.index')) active @else link-white @endif">
+                    <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
+                        <div class="mr-md-4 text-center"><i class="fas fa-utensils fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Plates</h4></div>
                     </div>
                 </a>
                                 
                 <!--Order Route-->
-                <a href="{{route('admin.orders.index')}}" class="mt-2 @if (request()->routeIs('admin.orders.index')) active-route @endif">
-                    <div class="d-flex align-items-stretch justify-content-start side-link-bg">
-                        <div class="mr-4"><i class="fas fa-receipt fa-2x"></i></div>
+                <a href="{{route('admin.orders.index')}}" class="mt-2 @if (request()->routeIs('admin.orders.index')) active @else link-white @endif">
+                    <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
+                        <div class="mr-md-4"><i class="fas fa-receipt fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Orders</h4></div>
                     </div>
                 </a>

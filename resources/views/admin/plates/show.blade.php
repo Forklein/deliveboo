@@ -9,7 +9,7 @@
         </div>
         <hr>
         <div class="d-flex justify-content-end">
-            <a class="btn btn-primary" href="{{route('admin.plates.index')}}">Back</a>
+            <a class="btn btn-oxford" href="{{route('admin.plates.index')}}">Back</a>
         </div>
     </div>
 @endsection

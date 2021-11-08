@@ -6,6 +6,7 @@
     <div><h1>Your Plates</h1></div>
     <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
   </div>
+  <div class="table-responsive">
     <table class="table table-striped">
         <thead>
           <tr>
@@ -60,6 +61,8 @@
           @endforelse
         </tbody>
       </table>
+  </div>
+    
 </div>
 <div class="d-flex justify-content-end">
     {{$plates->links()}}
