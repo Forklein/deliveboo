@@ -4,7 +4,7 @@
     <div class="container-fluid p-4 rounded">
         <div class="row shadow-lg">
             <!--Left Dashboard Section-->
-            <div class="col-side-left bg-dash-left text-white py-4">
+            <div class="col-side-left bg-oxford bg-dash-left text-white py-4">
                 <!--Logo Restaurant-->
                 <figure class="p-4 d-flex justify-content-center">
                     <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid logo">
@@ -32,17 +32,7 @@
                         <div class="d-none d-md-inline"><h4>Orders</h4></div>
                     </div>
                 </a>
-                
 
-
-                <!--Restaurant Info
-                <div class="d-flex flex-column justify-content-end">
-                    <div class="d-flex align-items-stretch">
-                            <div class="mr-4"><i class="fas fa-user fa-2x"></i></div>
-                            <div><h4>{{Auth::user()->name}}</h4></div>
-                    </div>
-                </div>
-                -->
             </div>
 
             <!--Right Dashboard Section-->

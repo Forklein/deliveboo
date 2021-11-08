@@ -1,17 +1,15 @@
-//Generics Dashboard Style
+/**************************************************************************/
+/*********************** GENERICS DASHBOARD STYLE *************************/
+/**************************************************************************/
+
+/*LEFT SIDE DASHBOARD*/
 .col-side-left{
   width: 20%;
   min-height: 800px;
   flex-grow: 1;
 }
 
-.col-side-right{
-  width: 80%;
-  min-height: 800px
-}
-
 .bg-dash-left{
-    background-color: #0C1B33;
     border-radius: 10px 0px 0px 10px;
     a{
       color: #FBFBF2;
@@ -32,17 +30,24 @@
       width: 300px;
     }
 
+    .position-bottom{
+      position: relative;
+      bottom: 0;
+      left: 0;
+    }
+
+/*RIGHT SIDE DASHBOARD*/
+.col-side-right{
+  width: 80%;
+  min-height: 800px
+}
+
 .bg-dash-right{
     background-color: #fff;
     border-radius: 0px 10px 10px 0px;
 }   
 
-.active-route{
-        text-decoration: none;
-        color: #000;
-        background-color: #FBFBF2;
-}
-
+/********** TOGGLE STYLE  **********/
 
 //Toggle Input for Dashboard Plates
 .switch {
