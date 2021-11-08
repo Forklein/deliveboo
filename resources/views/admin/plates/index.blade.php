@@ -26,13 +26,19 @@
             <td>{{$plate->course}}</td>
             <td>{{$plate->price}}</td>
             <td>
-              <div class="switch">
-                <input type="checkbox" name="toggle">
-                <label for="toggle">
-                  <i><div class="fa fa-hamburger"></div></i>
-                </label>
-                <span></span>
-              </div>
+
+              <form method="POST" action="{{ route('admin.plates.update', $plate->id)}}" class="form-toggle" >
+                @method('PATCH')
+                @csrf
+                <div class="switch">
+                <input type="checkbox" name="visibility" class="customToggle" @if( $plate->visibility == 1) checked @else unchecked @endif value="{{$plate->visibility}}" >
+                <label>
+                    <i><div class="fa fa-hamburger"></div></i>
+                  </label>
+                  <span></span>
+                </div>
+              </form>
+            
             </td>
             <td>
               <div class="btn">
@@ -53,4 +59,27 @@
         {{($plates->total())}}
     </details>
 </div>
+@endsection
+
+
+@section('script')
+
+<!--Submit Toggle-->
+  <script>
+    const check = document.querySelectorAll('.customToggle');
+    check.forEach(function(element){
+      const form = document.querySelectorAll('.form-toggle');
+        check.addEventListener('change', function(){
+          form.forEach(function(element){
+            console.log(element)
+            form.submit();
+
+          }) 
+          
+        } )
+        
+            
+    });
+  
+  </script>
 @endsection

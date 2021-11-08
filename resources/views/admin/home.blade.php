@@ -27,22 +27,10 @@
                     {{Auth::user()->name.', here are your restaurant details'}}
                 </h2>
                 @yield('rightDashboardContent')
-                <!--<div class="container cards">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card w-100" style="width: 18rem;">
-                                <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>-->
+                
     
             </div>
         </div>
     </div>
+    @yield('script');
 @endsection
