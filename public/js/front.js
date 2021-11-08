@@ -1915,6 +1915,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
@@ -1977,24 +1979,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
   data: function data() {
     return {};
   },
-  props: ['user']
-  /* methods: {
-    getFormattedDate(date) {
-      const postDate = new Date(date);
-      const day = postDate.getDate();
-      const month = postDate.getMonth() + 1;
-      const year = postDate.getFullYear();
-        if (day < 10) day = "0" + day;
-      if (month < 10) month = "0" + month;
-        return `${day}/${month}/${year}`;
-    },
-  }, */
-
+  props: ["user"]
 });
 
 /***/ }),
@@ -2008,10 +2000,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Loader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Loader.vue */ "./resources/js/components/Loader.vue");
-/* harmony import */ var _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RestaurantCard.vue */ "./resources/js/components/RestaurantCard.vue");
+/* harmony import */ var _Loader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Loader.vue */ "./resources/js/components/Loader.vue");
+/* harmony import */ var _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RestaurantCard.vue */ "./resources/js/components/RestaurantCard.vue");
 //
 //
 //
@@ -2022,18 +2012,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'RestaurantsList',
+  name: "RestaurantsList",
   components: {
-    RestaurantCard: _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Loader: _Loader_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    RestaurantCard: _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Loader: _Loader_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
-      baseUri: 'http://localhost:8000',
+      baseUri: "http://localhost:8000",
       users: [],
       isLoading: false
     };
@@ -2043,10 +2034,9 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.isLoading = true;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(this.baseUri, "/api/users")).then(function (res) {
-        // Destructuring
-        console.log(res.data);
-        _this.users = res.data.data.users;
+      axios.get("".concat(this.baseUri, "/api/users")).then(function (res) {
+        console.log(res.data.users);
+        _this.users = res.data.users;
       })["catch"](function (err) {
         console.error(err);
       }).then(function () {
@@ -38292,9 +38282,12 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("main", [_c("RestaurantsList")], 1),
-  ])
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [_c("Header"), _vm._v(" "), _c("Main"), _vm._v(" "), _c("Footer")],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38372,13 +38365,13 @@ var render = function () {
       _vm._v(" "),
       _c("address", [
         _vm._v(
-          "Address: " +
+          "\n      Address: " +
             _vm._s(_vm.user.address) +
             " - " +
             _vm._s(_vm.user.city) +
             " - " +
             _vm._s(_vm.user.zip) +
-            " "
+            "\n    "
         ),
       ]),
       _vm._v(" "),
@@ -38410,27 +38403,29 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    { attrs: { id: "restaurants-list" } },
-    [
-      _c("h2", { staticClass: "mt-4 mb-3" }, [_vm._v("Users' Restaurants")]),
-      _vm._v(" "),
-      _vm.isLoading
-        ? _c("Loader")
-        : _c(
-            "div",
-            _vm._l(_vm.users, function (user) {
-              return _c("RestaurantCard", {
-                key: user.id,
-                attrs: { user: user },
-              })
-            }),
-            1
-          ),
-    ],
-    1
-  )
+  return _c("main", [
+    _c(
+      "section",
+      { attrs: { id: "restaurants-list" } },
+      [
+        _c("h2", { staticClass: "mt-4 mb-3" }, [_vm._v("Users' Restaurants")]),
+        _vm._v(" "),
+        _vm.isLoading
+          ? _c("Loader")
+          : _c(
+              "div",
+              _vm._l(_vm.users, function (user) {
+                return _c("RestaurantCard", {
+                  key: user.id,
+                  attrs: { user: user },
+                })
+              }),
+              1
+            ),
+      ],
+      1
+    ),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -51020,7 +51015,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Elena\deliveboo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Laravel\deliveboo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

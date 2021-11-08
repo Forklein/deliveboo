@@ -1,11 +1,13 @@
 <template>
   <div class="container">
-    <main><RestaurantsList/></main>
+    <Header />
+    <Main />
+    <Footer />
   </div>
 </template>
 
 <script>
-import RestaurantsList from './RestaurantsList.vue';
+import RestaurantsList from "./RestaurantsList.vue";
 export default {
   name: "App",
   components: {

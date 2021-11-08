@@ -18,8 +18,8 @@ class UserController extends Controller
     {
         $users = User::with(['types', 'plates'])->get();
         return response()->json([
-            'status' => 'success',
-            'data' => compact('users')
+            "message" => "Success",
+            "users" => $users
         ], 200);
     }
 
@@ -45,7 +45,7 @@ class UserController extends Controller
         $user->plates;
         return response()->json([
             'status' => 'success',
-            'data' => compact('user')
+            'user' => $user
         ], 200);
     }
 
