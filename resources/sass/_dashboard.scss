@@ -1,0 +1,102 @@
+//Toggle Input for Dashboard Plates
+.switch input {
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switch {
+	width: 80px;
+	height: 30px;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.switch label {
+	display: block;
+	width: 80%;
+	height: 95%;
+	position: relative;
+	background: #fff;
+	border-radius: 30px 30px 30px 30px;
+	
+transition: all .5s ease;
+
+}
+
+.switch input ~ label i {
+    display: block;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    z-index: 2;
+    border-radius: inherit;
+    background-color: #a71a07; /* Fallback */
+transition: all .5s ease;
+}
+
+.switch label + span {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 70px;
+	top: 5px;
+	width: 18px;
+	height: 18px;
+	border-radius: 10px;
+	background: #a02101; 
+	transition: all .5s ease;
+	z-index: 2;
+}
+
+ /* Toggle */
+.fa-hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  text-align: center;
+  font-size: 1em;
+  color: #fff;
+}
+
+.switch input:checked ~ label + span { 
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 10px;
+	transition: all .5s ease;
+	z-index: 2;
+	background: #009600; 
+
+ }
+
+.switch input:checked ~ label i {
+    left: auto;
+    left: 63%;
+	  background-color: #216821;
+    transition: all .5s ease;
+}
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

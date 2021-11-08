@@ -12,6 +12,7 @@
             <th scope="col">Plate description</th>
             <th scope="col">Plate course</th>
             <th scope="col">Plate price</th>
+            <th scope="col">Visibility</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -24,6 +25,15 @@
             <td>{{Str::limit($plate->description, 20, '...')}}</td>
             <td>{{$plate->course}}</td>
             <td>{{$plate->price}}</td>
+            <td>
+              <div class="switch">
+                <input type="checkbox" name="visbility">
+                <label for="visibility">
+                  <i><div class="fa fa-hamburger"></div></i>
+                </label>
+                <span></span>
+              </div>
+            </td>
             <td>
               <div class="btn">
                 <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-warning">Details</a>
