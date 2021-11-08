@@ -70,10 +70,8 @@
 
   forms.forEach(function(form){
     form.addEventListener('change', function(event) {
-      event.preventDefault();
       const hiddens = document.querySelectorAll('.customHidden');
       hiddens.forEach(function(hidden){
-        console.log(hidden);
         if(hidden.value == 1){
           hidden.value = 0;
         }else{hidden.value = 1;}
