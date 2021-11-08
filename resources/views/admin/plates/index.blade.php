@@ -27,12 +27,12 @@
             <td>{{$plate->price}}</td>
             <td>
 
-              <form method="POST" action="{{ route('admin.plates.update', $plate->id)}}" class="form-toggle" >
+              <form method="POST" action="{{ route('admin.plates.update', $plate->id)}}" class="formToggle" >
                 @method('PATCH')
                 @csrf
                 <div class="switch">
                   <input type="checkbox" class="customToggle" @if( $plate->visibility == 1) checked @else unchecked @endif>
-                  <input type="hidden" name="visibility" id="customHidden" value="{{$plate->visibility}}">
+                  <input type="hidden" name="visibility" class="customHidden" value="{{$plate->visibility}}">
                   <label>
                     <i><div class="fa fa-hamburger"></div></i>
                   </label>
@@ -65,63 +65,21 @@
 
 @section('script')
 
-<!--Submit Toggle-->
-  <script>
-  const forms = document.querySelectorAll('.form-toggle');
+<script>
+  const forms = document.querySelectorAll('.formToggle');
 
   forms.forEach(function(form){
-    const checks = document.querySelectorAll('.customToggle');
-    checks.forEach(function(check){
-      check.addEventListener('change', function(){
-      if(check.checked){
-        // const hidden = document.getElementById('customHidden');
-        hidden.value = 1;
+    form.addEventListener('change', function(event) {
+      event.preventDefault();
+      const hiddens = document.querySelectorAll('.customHidden');
+      hiddens.forEach(function(hidden){
+        console.log(hidden);
+        if(hidden.value == 1){
+          hidden.value = 0;
+        }else{hidden.value = 1;}
         form.submit();
-      } else{
-        // const hidden = document.getElementById('customHidden');
-        hidden.value = 0;
-        form.submit();
-      }
-    })
-    })
+      })
+    });
   })
-
-  // forms.forEach((form) => {
-  //   checks.forEach((check) => {
-  //     check.addEventListener('change', function(){
-  //       if(check.checked){
-  //       check.value = '1';
-  //       form.submit();
-  //     }else{
-  //       check.value = '0';
-  //       form.submit();
-  //     }
-  //   }
-  // })
-
-
-  // checks.forEach(function(el){
-  //   el.addEventListener('change', function(){
-  //     forms.forEach(function(form){
-  //       if(el.checked){
-  //       el.value = '1';
-  //       form.submit();
-  //     }else{
-  //       el.value = '0';
-  //       form.submit();
-  //     }
-  //     })
-  //   })
-  // })
-    // check.forEach(function(element){
-    //   
-    //     check.addEventListener('change', function(){
-    //       form.forEach(function(element){
-    //         console.log(element)
-    //         ;
-
-    //       }) 
-    //     })   
-    // });
-  </script>
+</script>
 @endsection
