@@ -1,7 +1,7 @@
 @extends('admin.home')
 
 @section('rightDashboardContent')
-    <div class="container">
+    <div class="container"> 
         <div class="card">
             <div class="card-header">{{$plate->name}}</div>
             <div class="card-body">{{$plate->description}}</div>
