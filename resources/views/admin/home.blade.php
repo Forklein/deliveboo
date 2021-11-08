@@ -9,16 +9,16 @@
                 <figure class="p-4 d-flex justify-content-center">
                     <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid logo">
                 </figure>
+                <hr class="bg-white">
                 <!--Home Route-->
-                <a href="{{route('admin.home')}}" class="mt-2">
+                <a href="{{route('admin.home')}}" class="mt-2 @if (request()->routeIs('amin.home')) active-route @endif">
                     <div class="d-flex align-items-stretch justify-content-start side-link-bg">
                         <div class="mr-4"><i class="fas fa-home fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Home</h4></div>
                     </div>
                 </a>
-                
                 <!--Plates Route-->
-                <a href="{{route('admin.plates.index')}}" class="mt-2">
+                <a href="{{route('admin.plates.index')}}" class="mt-2 @if (request()->routeIs('admin.plates.index')) active-route @endif">
                     <div class="d-flex align-items-stretch justify-content-start side-link-bg">
                         <div class="mr-4"><i class="fas fa-utensils fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Plates</h4></div>
@@ -26,7 +26,7 @@
                 </a>
                                 
                 <!--Order Route-->
-                <a href="{{route('admin.orders.index')}}" class="mt-2">
+                <a href="{{route('admin.orders.index')}}" class="mt-2 @if (request()->routeIs('admin.orders.index')) active-route @endif">
                     <div class="d-flex align-items-stretch justify-content-start side-link-bg">
                         <div class="mr-4"><i class="fas fa-receipt fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Orders</h4></div>
@@ -50,6 +50,7 @@
                 <h2 class="pb-4">
                     {{Auth::user()->name.', here are your restaurant details'}}
                 </h2>
+                <hr class="py-4">
                 @yield('rightDashboardContent')
                 
     

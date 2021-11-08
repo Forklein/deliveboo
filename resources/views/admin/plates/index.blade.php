@@ -2,7 +2,10 @@
 
 @section('rightDashboardContent')
 <div>
-    <div class="text-right py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
+  <div class="d-flex justify-content-between">
+    <div><h1>Your Plates</h1></div>
+    <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}">Create Plate</a></div>
+  </div>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -13,7 +16,12 @@
             <th scope="col">Plate course</th>
             <th scope="col">Plate price</th>
             <th scope="col">Visibility</th>
-            <th scope="col"></th>
+            <th scope="col">
+              <details class="text-dark text-center">
+                <summary>Total Plates</summary>
+                <span>{{($plates->total())}}</span>
+              </details>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -53,12 +61,9 @@
         </tbody>
       </table>
 </div>
-<div>
+<div class="d-flex justify-content-end">
     {{$plates->links()}}
-    <details class="text-white">
-        <summary>Total</summary>
-        {{($plates->total())}}
-    </details>
+    
 </div>
 @endsection
 
