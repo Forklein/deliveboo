@@ -77,9 +77,11 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Plate $plate)
     {
-        //
+        $data = $request->all();
+        $plate->update($data);
+        return redirect()->route('admin.plates.index');
     }
 
     /**
