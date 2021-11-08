@@ -2,6 +2,7 @@
 
 @section('rightDashboardContent')
 <div>
+  {{-- @if($order->plates->contains(Auth::id())) --}}
     <div>
         <table class="table table-striped">
             <thead>
