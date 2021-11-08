@@ -31,8 +31,9 @@
                 @method('PATCH')
                 @csrf
                 <div class="switch">
-                <input type="checkbox" name="visibility" class="customToggle" @if( $plate->visibility == 1) checked @else unchecked @endif value="{{$plate->visibility}}" >
-                <label>
+                  <input type="checkbox" class="customToggle" @if( $plate->visibility == 1) checked @else unchecked @endif>
+                  <input type="hidden" name="visibility" id="customHidden" value="{{$plate->visibility}}">
+                  <label>
                     <i><div class="fa fa-hamburger"></div></i>
                   </label>
                   <span></span>
@@ -66,20 +67,61 @@
 
 <!--Submit Toggle-->
   <script>
-    const check = document.querySelectorAll('.customToggle');
-    check.forEach(function(element){
-      const form = document.querySelectorAll('.form-toggle');
-        check.addEventListener('change', function(){
-          form.forEach(function(element){
-            console.log(element)
-            form.submit();
+  const forms = document.querySelectorAll('.form-toggle');
 
-          }) 
-          
-        } )
-        
-            
-    });
-  
+  forms.forEach(function(form){
+    const checks = document.querySelectorAll('.customToggle');
+    checks.forEach(function(check){
+      check.addEventListener('change', function(){
+      if(check.checked){
+        // const hidden = document.getElementById('customHidden');
+        hidden.value = 1;
+        form.submit();
+      } else{
+        // const hidden = document.getElementById('customHidden');
+        hidden.value = 0;
+        form.submit();
+      }
+    })
+    })
+  })
+
+  // forms.forEach((form) => {
+  //   checks.forEach((check) => {
+  //     check.addEventListener('change', function(){
+  //       if(check.checked){
+  //       check.value = '1';
+  //       form.submit();
+  //     }else{
+  //       check.value = '0';
+  //       form.submit();
+  //     }
+  //   }
+  // })
+
+
+  // checks.forEach(function(el){
+  //   el.addEventListener('change', function(){
+  //     forms.forEach(function(form){
+  //       if(el.checked){
+  //       el.value = '1';
+  //       form.submit();
+  //     }else{
+  //       el.value = '0';
+  //       form.submit();
+  //     }
+  //     })
+  //   })
+  // })
+    // check.forEach(function(element){
+    //   
+    //     check.addEventListener('change', function(){
+    //       form.forEach(function(element){
+    //         console.log(element)
+    //         ;
+
+    //       }) 
+    //     })   
+    // });
   </script>
 @endsection
