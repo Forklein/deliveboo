@@ -31,6 +31,7 @@
               <tr>
                 <th scope="col">Items</th>
                 <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
               </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@
                     <tr>
                         <td>{{$plate->name}}</td>
                         <td>{{$plate->pivot->quantity}}</td>
+                        <td>{{$plate->price}}</td>
                     </tr>
                 @endforeach
                 <td class="font-weight-bold">Total: {{ $order->total }} </td>
