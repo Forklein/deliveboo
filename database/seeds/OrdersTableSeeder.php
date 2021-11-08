@@ -33,11 +33,11 @@ class OrdersTableSeeder extends Seeder
 
                 for ($q = 0; $q < 3; $q++) $new_order->plates()->attach(Arr::random($plates), ['quantity' => rand(1, 5)]);
 
-                foreach ($new_order->plates as $plate){
+                foreach ($new_order->plates as $plate) {
                     $new_order->total += $plate->price * $plate->pivot->quantity;
                 }
-                
-                $new_order->update();
+
+                $new_order->save();
             }
         }
     }
