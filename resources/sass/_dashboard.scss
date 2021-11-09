@@ -1,27 +1,68 @@
-//Generics Dashboard Style
+/**************************************************************************/
+/*********************** GENERICS DASHBOARD STYLE *************************/
+/**************************************************************************/
+
+/*LEFT SIDE DASHBOARD*/
+.col-side-left{
+  width: 20%;
+  min-height: 800px;
+}
 
 .bg-dash-left{
-    background-color: #0C1B33;
     border-radius: 10px 0px 0px 10px;
+    a{
+      &:hover{
+        text-decoration: none;
+        color: #000;
+        background-color: #FBFBF2;
+      }
+      .side-link-bg{
+        padding: 10px;
+        &:hover{
+          background-color: #FBFBF2;
+        }
+      }
+    }
 }
+.active{
+        text-decoration: none;
+        color: #000;
+        background-color: #FBFBF2;
+        .side-link-bg{
+          background-color: #FBFBF2;
+        color: #000;
+
+        }
+}
+    
+
+
+/*RIGHT SIDE DASHBOARD*/
+.col-side-right{
+  width: 80%;
+  min-height: 800px;
+}
+
 .bg-dash-right{
-    background-color: #fff;
-    border-radius: 0px 10px 10px 0px;
+  background-color: #fff;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid #dedede;
 }   
 
 
 
+
+
+
+/********** TOGGLE STYLE  **********/
+
 //Toggle Input for Dashboard Plates
-
-
 .switch {
 	width: 80px;
 	height: 30px;
 	position: relative;
 	margin-top: 20px;
-	margin-bottom: 20px;
-    
-    
+	margin-bottom: 20px;  
 }
 
 

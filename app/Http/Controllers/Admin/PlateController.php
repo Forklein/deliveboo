@@ -55,6 +55,7 @@ class PlateController extends Controller
      */
     public function show(Plate $plate)
     {
+
         if ($plate->user_id == Auth::id()) return view('admin.plates.show', compact('plate'));
         else abort(404);
     }
@@ -67,7 +68,7 @@ class PlateController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.plates.edit');
     }
 
     /**

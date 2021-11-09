@@ -1,0 +1,33 @@
+/************************ TEXT ***************************/
+.link-white{
+    color: #fff;
+    &:hover{
+        background-color: #000;
+    }
+}
+
+.txt-oxford{
+    color: $oxfordBlue;
+}
+
+
+
+
+/********************** BACKGROUND  *********************/
+
+.bg-oxford{
+    background-color: $oxfordBlue !important;
+}
+
+
+
+/********************** BUTTON **************************/
+.btn-oxford{
+    color: #fff;
+    background-color: $oxfordBlue;
+    border-color: $oxfordBlue;
+    &:hover{
+        color: #fff;
+        background-color: #12294e;
+    }
+}

@@ -1,113 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
-.bg-dash-left {
-  background-color: #0C1B33;
-  border-radius: 10px 0px 0px 10px;
-}
-
-.bg-dash-right {
-  background-color: #fff;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.switch {
-  width: 80px;
-  height: 30px;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.switch input {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 100;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.switch label {
-  display: block;
-  width: 80%;
-  height: 95%;
-  position: relative;
-  background: #FBFBF2;
-  border-radius: 30px 30px 30px 30px;
-  transition: all 0.5s ease;
-}
-
-.switch input ~ label i {
-  display: block;
-  height: 26px;
-  width: 26px;
-  position: absolute;
-  left: 2px;
-  top: 1px;
-  z-index: 2;
-  border-radius: inherit;
-  background-color: #a71a07;
-  /* Fallback */
-  transition: all 0.5s ease;
-}
-
-.switch label + span {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 70px;
-  top: 5px;
-  width: 18px;
-  height: 18px;
-  border-radius: 10px;
-  background: #a02101;
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-/* Toggle */
-.fa-hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 6;
-  text-align: center;
-  font-size: 1em;
-  color: #fff;
-}
-
-.switch input:checked ~ label + span {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 10px;
-  transition: all 0.5s ease;
-  z-index: 2;
-  background: #009600;
-}
-
-.switch input:checked ~ label i {
-  left: auto;
-  left: 63%;
-  background-color: #216821;
-  transition: all 0.5s ease;
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10127,4 +10018,177 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+/**************************************************************************/
+/*********************** GENERICS DASHBOARD STYLE *************************/
+/**************************************************************************/
+/*LEFT SIDE DASHBOARD*/
+.col-side-left {
+  width: 20%;
+  min-height: 800px;
+}
+
+.bg-dash-left {
+  border-radius: 10px 0px 0px 10px;
+}
+.bg-dash-left a:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: #FBFBF2;
+}
+.bg-dash-left a .side-link-bg {
+  padding: 10px;
+}
+.bg-dash-left a .side-link-bg:hover {
+  background-color: #FBFBF2;
+}
+
+.active {
+  text-decoration: none;
+  color: #000;
+  background-color: #FBFBF2;
+}
+.active .side-link-bg {
+  background-color: #FBFBF2;
+  color: #000;
+}
+
+/*RIGHT SIDE DASHBOARD*/
+.col-side-right {
+  width: 80%;
+  min-height: 800px;
+}
+
+.bg-dash-right {
+  background-color: #fff;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid #dedede;
+}
+
+/********** TOGGLE STYLE  **********/
+.switch {
+  width: 80px;
+  height: 30px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.switch input {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switch label {
+  display: block;
+  width: 80%;
+  height: 95%;
+  position: relative;
+  background: #FBFBF2;
+  border-radius: 30px 30px 30px 30px;
+  transition: all 0.5s ease;
+}
+
+.switch input ~ label i {
+  display: block;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  z-index: 2;
+  border-radius: inherit;
+  background-color: #a71a07;
+  /* Fallback */
+  transition: all 0.5s ease;
+}
+
+.switch label + span {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 70px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background: #a02101;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+/* Toggle */
+.fa-hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  text-align: center;
+  font-size: 1em;
+  color: #fff;
+}
+
+.switch input:checked ~ label + span {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  z-index: 2;
+  background: #009600;
+}
+
+.switch input:checked ~ label i {
+  left: auto;
+  left: 63%;
+  background-color: #216821;
+  transition: all 0.5s ease;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/************************ TEXT ***************************/
+.link-white {
+  color: #fff;
+}
+.link-white:hover {
+  background-color: #000;
+}
+
+.txt-oxford {
+  color: #0C1B33;
+}
+
+/********************** BACKGROUND  *********************/
+.bg-oxford {
+  background-color: #0C1B33 !important;
+}
+
+/********************** BUTTON **************************/
+.btn-oxford {
+  color: #fff;
+  background-color: #0C1B33;
+  border-color: #0C1B33;
+}
+.btn-oxford:hover {
+  color: #fff;
+  background-color: #12294e;
 }
