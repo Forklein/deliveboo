@@ -81,5 +81,12 @@
             @yield('content')
         </main>
     </div>
+
+
+    <div class="d-flex justify-content-center bg-oxford py-2">
+        <span class="text-white">
+            &copy; 2021, Team 7 - Classe 38
+        </span>
+    </div>
 </body>
 </html>

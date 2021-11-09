@@ -3,6 +3,13 @@
 @section('content')
     <div class="container-fluid p-4 rounded">
         <div class="row">
+            <div class="col">
+                <span class="h2">This is the control panel of: <strong><span class="text-capitalize h1 txt-oxford">{{Auth::user()->restaurant_name}}</span></strong></span>
+                <address><em>Restaurant by {{Auth::user()->name}}</em></address>
+                <hr class="py-4">
+            </div>
+        </div>
+        <div class="row">
             <!--Left Dashboard Section-->
             <div class="col-side-left bg-oxford bg-dash-left text-white py-4">
                 <!--Logo Restaurant-->
@@ -36,10 +43,7 @@
 
             <!--Right Dashboard Section-->
             <div class="col-side-right bg-dash-right p-4">
-                <h2 class="pb-4">
-                    {{Auth::user()->name.', here are your restaurant details'}}
-                </h2>
-                <hr class="py-4">
+                
                 @yield('rightDashboardContent')
                 
     
