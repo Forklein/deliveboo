@@ -26,9 +26,10 @@ class PlateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('admin.plates.create');
+    public function create(Plate $plate)
+    {   
+        $plate = new Plate();
+        return view('admin.plates.create', compact('plate'));
     }
 
     /**
@@ -42,7 +43,7 @@ class PlateController extends Controller
 
         $request->validate([
             'name' => 'required|min:3|max:50',
-            'ingredients' => 'required|min:3|max:150',
+            'ingredients' => 'required|min:3|max:255',
             'description' => 'required|min:3|max:255',
             'course' => 'required|min:3|max:20',
             'image' => 'nullable|url',
@@ -54,7 +55,7 @@ class PlateController extends Controller
         $new_plate->fill($data);
         $new_plate->user_id = Auth::id();
         $new_plate->save();
-        return redirect()->route('admin.plates.index');
+        return redirect()->route('admin.plates.index')->with('alert', 'success')->with('alert-message', 'New plate created successfully!');
     }
 
     /**
@@ -92,7 +93,7 @@ class PlateController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|max:50',
-            'ingredients' => 'required|min:3|max:150',
+            'ingredients' => 'required|min:3|max:255',
             'description' => 'required|min:3|max:255',
             'course' => 'required|min:3|max:20',
             'image' => 'nullable|url',
@@ -101,7 +102,7 @@ class PlateController extends Controller
 
         $data = $request->all();
         $plate->update($data);
-        return redirect()->route('admin.plates.index');
+        return redirect()->route('admin.plates.index')->with('alert', 'success')->with('alert-message', 'Plate updated successfully!');
     }
 
     public function toggleUpdate (Plate $plate, Request $request){
