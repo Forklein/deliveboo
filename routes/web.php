@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->group(function () {
     Route::resource('plates', 'PlateController');
+    Route::patch('/plates/{plate}/toggleUpdate', 'PlateController@toggleUpdate')->name('plates.toggleUpdate');
     Route::get('finances', 'FinanceController@index')->name('finances.index');
     Route::get('orders', 'OrderController@index')->name('orders.index');
     Route::get('orders/{order}', 'OrderController@show')->name('orders.show');
