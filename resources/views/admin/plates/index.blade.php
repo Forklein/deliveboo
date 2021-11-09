@@ -31,7 +31,7 @@
                 @method('PATCH')
                 @csrf
                 <div class="switch">
-                  <input type="checkbox" class="customToggle" @if( $plate->visibility == 1) checked @else unchecked @endif>
+                  <input type="checkbox" @if( $plate->visibility == 1) checked @else unchecked @endif>
                   <input type="hidden" name="visibility" class="customHidden" value="{{$plate->visibility}}">
                   <label>
                     <i><div class="fa fa-hamburger"></div></i>

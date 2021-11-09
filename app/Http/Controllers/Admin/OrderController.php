@@ -17,8 +17,8 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
-        $orders = Auth::user()->plates()->with('orders')->get()->pluck('id');
-        if ($orders->contains($order)) return view('admin.orders.show', compact('order'));
+        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->unique('id')->pluck('id')->toArray();
+        if (in_array($order->id, $orders)) return view('admin.orders.show', compact('order'));
         else abort(404);
     }
 }
