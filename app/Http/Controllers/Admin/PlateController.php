@@ -96,7 +96,7 @@ class PlateController extends Controller
             'description' => 'required|min:3|max:255',
             'course' => 'required|min:3|max:20',
             'image' => 'nullable|url',
-            'price' => 'required|numeric|max:999.99'
+            'price' => 'required|numeric|max:999.99',
         ]);
 
         $data = $request->all();

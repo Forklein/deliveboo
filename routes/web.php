@@ -25,5 +25,6 @@ Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->
     Route::get('finances', 'FinanceController@index')->name('finances.index');
     Route::get('orders', 'OrderController@index')->name('orders.index');
     Route::get('orders/{order}', 'OrderController@show')->name('orders.show');
+
     Route::get('/home', 'HomeController@index')->name('home');
 });
