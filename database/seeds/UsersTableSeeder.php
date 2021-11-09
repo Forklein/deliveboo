@@ -44,7 +44,7 @@ class UsersTableSeeder extends Seeder
             $new_user = new User();
             $new_user->fill($restaurant);
             $new_user->save();
-            $new_user->types()->attach(Arr::random($types));
+            $new_user->types()->attach(Arr::random($types, 2));
         }
 
         for ($i = 0; $i < 13; $i++) {
@@ -58,7 +58,7 @@ class UsersTableSeeder extends Seeder
             $new_user->zip = $faker->randomNumber(5, true);
             $new_user->phone = $faker->phoneNumber();
             $new_user->save();
-            $new_user->types()->attach(Arr::random($types));
+            $new_user->types()->attach(Arr::random($types, 2));
         }
     }
 }
