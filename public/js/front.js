@@ -1950,7 +1950,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Loader'
+  name: "Loader"
 });
 
 /***/ }),
@@ -38325,7 +38325,7 @@ var staticRenderFns = [
           staticClass: "spinner-border text-success",
           attrs: { role: "status" },
         },
-        [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+        [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading..")])]
       ),
     ])
   },
