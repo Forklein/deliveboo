@@ -29,7 +29,7 @@
                             <td>{{$order->surname}}</td>
                             <td>{{$order->total}}€</td>
                             <td></td>
-                            <td class="text-right"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-primary">Show Details</a></td>
+                            <td class="text-right"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-oxford">Show Details</a></td>
                         </tr>
                     @empty
                         <tr colspan="4">No Orders</tr>
