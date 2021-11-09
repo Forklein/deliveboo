@@ -15,14 +15,14 @@ class CreatePlatesTable extends Migration
     {
         Schema::create('plates', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable()->ondelete('set null')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->string('name');
             $table->text('ingredients');
             $table->text('description');
             $table->string('course');
             $table->string('image')->nullable();
             $table->double('price', 5, 2);
-            $table->boolean('visibility', 1);
+            $table->boolean('visibility', 1)->default(1);
             $table->timestamps();
         });
     }

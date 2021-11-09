@@ -6,6 +6,9 @@
             <div class="col">
                 <span class="h2">This is the control panel of: <strong><span class="text-capitalize h1 txt-oxford">{{Auth::user()->restaurant_name}}</span></strong></span>
                 <address><em>Restaurant by {{Auth::user()->name}}</em></address>
+                @foreach(Auth::user()->types as $type)
+                    <span class="badge rounded-pill p-3" style="background-color: {{$type->color}}">{{$type->name}}</span>
+                @endforeach
                 <hr class="py-4">
             </div>
         </div>
@@ -22,6 +25,13 @@
                     <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
                         <div class="mr-md-4"><i class="fas fa-home fa-2x"></i></div>
                         <div class="d-none d-md-inline"><h4>Home</h4></div>
+                    </div>
+                </a>
+                <!--Finance Route-->
+                <a href="{{route('admin.finances.index')}}" class="mt-2 @if (request()->routeIs('admin.orders.index')) active @else link-white @endif">
+                    <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
+                        <div class="mr-md-4"><i class="fas fa-2x fa-chart-line"></i></div>
+                        <div class="d-none d-md-inline"><h4>Finances</h4></div>
                     </div>
                 </a>
                 <!--Plates Route-->
@@ -45,7 +55,6 @@
             <div class="col-side-right bg-dash-right p-4">
                 
                 @yield('rightDashboardContent')
-                
     
             </div>
         </div>

@@ -1,6 +1,7 @@
 @extends('admin.home')
 
 @section('rightDashboardContent')
+@include('includes.errors')
 <form method="post" action="{{route('admin.plates.store')}}">
     @csrf
     <div class="form-group">
@@ -13,7 +14,7 @@
     </div>
     <div class="form-group">
         <label for="description">Description</label>
-        <input type="text" class="form-control" name="description" id="description">
+        <textarea class="form-control" name="description" id="description"></textarea>
     </div>
     <div class="form-group">
         <label for="course">Course</label>
@@ -27,10 +28,9 @@
         <label for="price">Price</label>
         <input type="text" class="form-control" name="price" id="price">
     </div>
-    <div class="form-group">
-        <label for="visibility">Visibility</label>
-        <input type="text" class="form-control" name="visibility" id="visibility">
+    <div class="d-flex justify-content-end">
+        <a class="btn btn-oxford mr-2" href="{{route('admin.plates.index')}}">Back</a>
+        <button type="submit" class="btn btn-oxford">Submit</button>
     </div>
-    <button type="submit" class="btn btn-oxford">Submit</button>
 </form>
 @endsection

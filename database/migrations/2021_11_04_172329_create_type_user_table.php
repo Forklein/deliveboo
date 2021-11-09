@@ -15,7 +15,7 @@ class CreateTypeUserTable extends Migration
     {
         Schema::create('type_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('type_id')->ondelete('cascade')->constrained();
+            $table->foreignId('type_id')->constrained();
             $table->foreignId('user_id')->ondelete('cascade')->constrained();
             $table->timestamps();
         });

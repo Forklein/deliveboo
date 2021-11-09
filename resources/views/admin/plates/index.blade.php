@@ -53,8 +53,8 @@
             </td>
             <td></td>
             <td class="d-flex justify-content-end">
-              <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford mr-2">Details</a>
-              <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning"><i class="fas fa-pencil"></i></a>
+              <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford">Details</a>
+              <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2"><i class="fas fa-pencil-alt"></i></a>
             </td>
           </tr>
           @empty
