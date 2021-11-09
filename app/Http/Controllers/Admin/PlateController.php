@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\Type;
 use App\Models\Plate;
 use Illuminate\Support\Facades\Auth;
 
