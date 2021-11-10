@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid p-4 rounded">
+    <div class="container p-4 rounded">
         <div class="row">
             <div class="col">
                 <span class="h2">This is the control panel of: <strong><span class="text-capitalize h1 txt-oxford">{{Auth::user()->restaurant_name}}</span></strong></span>
@@ -12,7 +12,7 @@
                 <hr class="py-4">
             </div>
         </div>
-        <div class="row">
+        <div class="row shadow-lg border-custom">
             <!--Left Dashboard Section-->
             <div class="col-side-left bg-oxford bg-dash-left text-white py-4">
                 <!--Logo Restaurant-->
@@ -28,7 +28,7 @@
                     </div>
                 </a>
                 <!--Finance Route-->
-                <a href="{{route('admin.finances.index')}}" class="mt-2 @if (request()->routeIs('admin.orders.index')) active @else link-white @endif">
+                <a href="{{route('admin.finances.index')}}" class="mt-2 @if (request()->routeIs('admin.finances.index')) active @else link-white @endif">
                     <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
                         <div class="mr-md-4"><i class="fas fa-2x fa-chart-line"></i></div>
                         <div class="d-none d-md-inline"><h4>Finances</h4></div>

@@ -10022,47 +10022,48 @@ h3 {
 /**************************************************************************/
 /*********************** GENERICS DASHBOARD STYLE *************************/
 /**************************************************************************/
+.border-custom {
+  border-radius: 20px;
+}
+
 /*LEFT SIDE DASHBOARD*/
 .col-side-left {
   width: 20%;
-  min-height: 800px;
 }
 
 .bg-dash-left {
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 20px 0px 0px 20px;
 }
 .bg-dash-left a:hover {
   text-decoration: none;
   color: #000;
-  background-color: #FBFBF2;
+  background-color: #fff;
 }
 .bg-dash-left a .side-link-bg {
   padding: 10px;
 }
 .bg-dash-left a .side-link-bg:hover {
-  background-color: #FBFBF2;
+  background-color: #fff;
 }
 
 .active {
   text-decoration: none;
   color: #000;
-  background-color: #FBFBF2;
+  background-color: #fff;
 }
 .active .side-link-bg {
-  background-color: #FBFBF2;
+  background-color: #fff;
   color: #000;
 }
 
 /*RIGHT SIDE DASHBOARD*/
 .col-side-right {
   width: 80%;
-  min-height: 800px;
 }
 
 .bg-dash-right {
   background-color: #fff;
-  border-radius: 0px 10px 10px 0px;
-  border: 1px solid #dedede;
+  border-radius: 0px 20px 20px 0px;
 }
 
 /********** TOGGLE STYLE  **********/
@@ -10092,7 +10093,7 @@ h3 {
   width: 80%;
   height: 95%;
   position: relative;
-  background: #FBFBF2;
+  background: #fff;
   border-radius: 30px 30px 30px 30px;
   transition: all 0.5s ease;
 }
