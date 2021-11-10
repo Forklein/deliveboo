@@ -7,7 +7,7 @@
             <div class="d-flex justify-content-center">
                 <h1>Deliveboo</h1>
             </div>
-            <div class="card">
+            <div class="card shadow-lg  border-custom">
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
