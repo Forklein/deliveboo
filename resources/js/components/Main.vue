@@ -2,9 +2,10 @@
   <main>
     <section id="about-us">
       <div class="container">
+        <RestaurantsList />
         <div class="card">
           <h2>Rider</h2>
-          <img src="img/rider.png" alt="rider-image">
+          <img src="img/rider.png" alt="rider-image" />
           <p id="rider">
             Deliveroo è orgogliosa di offrire un lavoro ben retribuito e
             flessibile ai rider, che sono il cuore del nostro servizio. Il loro
@@ -20,7 +21,7 @@
         </div>
         <div class="card">
           <h2>Our Company</h2>
-          <img src="img/our-company.jpg" alt="our-company-image">
+          <img src="img/our-company.jpg" alt="our-company-image" />
           <p id="our-company">
             When Deliveroo founder and CEO Will Shu moved to London in 2013, he
             found a city full of great restaurants, but few delivered. So, he
@@ -39,37 +40,16 @@
         </div>
         <div class="card" id="work-with-us">
           <h2>Work with us</h2>
-          <img src="img/work-with-us.png" alt="work-with-us-image">
+          <img src="img/work-with-us.png" alt="work-with-us-image" />
           <h4>Perché lavorare con noi?</h4>
           <ul>
-            <li>
-              1.Affronta sfide stimolanti. Non siamo solo un'app: troviamo
-              soluzioni a problematiche complesse per clienti, rider e
-              ristoranti.
-            </li>
-            <li>
-              2.Hai un'idea? Realizzala! L'idea di oggi è il progetto di domani.
-              In Deliveroo, tutti sono imprenditori.
-            </li>
-            <li>
-              3.Diventa un azionista. Vogliamo farti sentire parte del progetto.
-              Per questo in Deliveroo tutti i dipendenti ricevono delle azioni.
-            </li>
-            <li>
-              4.Un'azienda in forte crescita. Siamo fra le prime aziende al
-              mondo per indice di crescita. Nell'ultimo anno siamo più che
-              raddoppiati.
-            </li>
-            <li>
-              5.La diversità ci rende migliori. La diversità è la chiave del
-              successo. Vogliamo che i nostri team abbraccino la diversità dei
-              nostri rider, dei nostri ristoranti e dei nostri clienti.
+            <li v-for="(work, index) in works" :key="index">
+              {{ work.paragraph }}
             </li>
           </ul>
         </div>
       </div>
     </section>
-    <RestaurantsList />
     <section id="our-values">
       <div class="container">
         <h2>Our values</h2>
@@ -86,12 +66,18 @@
 </template>
 
 <script>
-import RestaurantsList from "./RestaurantsList.vue";
+import RestaurantsList from "./restaurants/RestaurantsList.vue";
+import works from "./data/works.js";
 
 export default {
   name: "Main",
   components: {
     RestaurantsList,
+  },
+  data() {
+    return {
+      works,
+    };
   },
 };
 </script>
@@ -113,16 +99,9 @@ export default {
       width: 400px;
     }
   }
-  ul>li{
+  ul > li {
     margin: 0 7.5px;
   }
-}
-
-#our-values,
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #our-values {

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Loader from "./Loader.vue";
+import Loader from "../utilities/Loader.vue";
 import RestaurantCard from "./RestaurantCard.vue";
 
 export default {

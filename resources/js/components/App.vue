@@ -1,5 +1,5 @@
 <template>
-  <div id="root">
+  <div>
     <Header />
     <Main />
     <Footer />
@@ -27,19 +27,6 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#root {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 section {
   min-height: 100vh;
 }

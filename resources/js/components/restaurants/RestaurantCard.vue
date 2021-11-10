@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="custom-card">
     <img
       src="img/restaurant-image.png"
       class="restaurant-image"
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
+.custom-card {
   margin: 35px 10px;
   padding: 30px 20px;
   width: calc(100% / 3.5);
