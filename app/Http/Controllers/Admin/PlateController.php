@@ -90,18 +90,24 @@ class PlateController extends Controller
      */
     public function update(Request $request, Plate $plate)
     {
-        $request->validate([
-            'name' => 'required|min:3|max:50',
-            'ingredients' => 'required|min:3|max:150',
-            'description' => 'required|min:3|max:255',
-            'course' => 'required|min:3|max:20',
-            'image' => 'nullable|url',
-            'price' => 'required|numeric|max:999.99',
-        ]);
+        if ($request['visibility'] == 0 || $request['visibility'] == 1) {
+            $data = $request->all();
+            $plate->update($data);
+            return redirect()->route('admin.plates.index');
+        } else {
+            $request->validate([
+                'name' => 'required|min:3|max:50',
+                'ingredients' => 'required|min:3|max:150',
+                'description' => 'required|min:3|max:255',
+                'course' => 'required|min:3|max:20',
+                'image' => 'nullable|url',
+                'price' => 'required|numeric|max:999.99',
+            ]);
 
-        $data = $request->all();
-        $plate->update($data);
-        return redirect()->route('admin.plates.index');
+            $data = $request->all();
+            $plate->update($data);
+            return redirect()->route('admin.plates.index');
+        }
     }
 
     /**
