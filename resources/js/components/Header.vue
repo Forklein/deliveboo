@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="jumbotron" id="hero">
-      <img src="/img/jumbotron (1).jpg" alt="" class="jumbotron-img" />
+      <img src="/img/jumbotron.jpg" alt="" class="jumbotron-img" />
       <div class="text-container">
         <h2 class="jumbotron-title">The Food you love at Home</h2>
         <p class="jumbotron-text">
@@ -31,10 +31,10 @@ export default {
 
 /***************************/
 .text-container {
-  margin: 45px auto 0 auto;
+  margin: 50px auto 0 auto;
   padding: 0 0 0 10%;
-  width: 55%;
-  max-height: 45%;
+  width: 52.5%;
+  max-height: 48%;
   overflow-y: auto;
   position: absolute;
   top: 0;
@@ -64,6 +64,7 @@ export default {
 
 .jumbotron-title {
   color: #00ccbc;
+  font-weight: bolder;
   font-size: 38px;
   margin-bottom: 14.5px;
 }
@@ -73,8 +74,8 @@ export default {
   padding-right: 30px;
   width: 100%;
   color: #007E8A;
-  font-size: 16px;
-  line-height: 27px;
+  font-size: 17px;
+  line-height: 26px;
 }
 
 button {

@@ -6737,7 +6737,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n\r\n/***************************/\n.text-container[data-v-1f42fb90] {\r\n  margin: 45px auto 0 auto;\r\n  padding: 0 0 0 10%;\r\n  width: 55%;\r\n  max-height: 45%;\r\n  overflow-y: auto;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  z-index: 2;\r\n  display: flex;\r\n  flex-direction: column;\n}\r\n/***************************/\n.jumbotron[data-v-1f42fb90] {\r\n  width: 100%;\r\n  min-height: 640px;\r\n  position: relative;\n}\n.jumbotron-img[data-v-1f42fb90] {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 100%;\r\n  width: 100%;\r\n  -o-object-position: center;\r\n     object-position: center;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  z-index: 1;\n}\n.jumbotron-title[data-v-1f42fb90] {\r\n  color: #00ccbc;\r\n  font-size: 38px;\r\n  margin-bottom: 14.5px;\n}\n.jumbotron-text[data-v-1f42fb90] {\r\n  margin-bottom: 10px;\r\n  padding-right: 30px;\r\n  width: 100%;\r\n  color: #007E8A;\r\n  font-size: 16px;\r\n  line-height: 27px;\n}\nbutton[data-v-1f42fb90] {\r\n  padding: 10px 17.5px;\r\n  max-width: 120px;\r\n  background: #00ccbc;\r\n  color: white;\r\n  font-size: 16px;\r\n  border: none;\r\n  border-radius: 30px;\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n\r\n/***************************/\n.text-container[data-v-1f42fb90] {\r\n  margin: 50px auto 0 auto;\r\n  padding: 0 0 0 10%;\r\n  width: 52.5%;\r\n  max-height: 48%;\r\n  overflow-y: auto;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  z-index: 2;\r\n  display: flex;\r\n  flex-direction: column;\n}\r\n/***************************/\n.jumbotron[data-v-1f42fb90] {\r\n  width: 100%;\r\n  min-height: 640px;\r\n  position: relative;\n}\n.jumbotron-img[data-v-1f42fb90] {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  height: 100%;\r\n  width: 100%;\r\n  -o-object-position: center;\r\n     object-position: center;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  z-index: 1;\n}\n.jumbotron-title[data-v-1f42fb90] {\r\n  color: #00ccbc;\r\n  font-weight: bolder;\r\n  font-size: 38px;\r\n  margin-bottom: 14.5px;\n}\n.jumbotron-text[data-v-1f42fb90] {\r\n  margin-bottom: 10px;\r\n  padding-right: 30px;\r\n  width: 100%;\r\n  color: #007E8A;\r\n  font-size: 17px;\r\n  line-height: 26px;\n}\nbutton[data-v-1f42fb90] {\r\n  padding: 10px 17.5px;\r\n  max-width: 120px;\r\n  background: #00ccbc;\r\n  color: white;\r\n  font-size: 16px;\r\n  border: none;\r\n  border-radius: 30px;\n}\r\n", ""]);
 
 // exports
 
@@ -38911,7 +38911,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "jumbotron", attrs: { id: "hero" } }, [
         _c("img", {
           staticClass: "jumbotron-img",
-          attrs: { src: "/img/jumbotron (1).jpg", alt: "" },
+          attrs: { src: "/img/jumbotron.jpg", alt: "" },
         }),
         _vm._v(" "),
         _c("div", { staticClass: "text-container" }, [
