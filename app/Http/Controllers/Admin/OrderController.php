@@ -11,7 +11,7 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->sort()->unique('id');
+        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->sortDesc()->unique('id');
         return view('admin.orders.index', compact('orders'));
     }
 

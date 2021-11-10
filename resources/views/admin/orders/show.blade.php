@@ -36,19 +36,19 @@
               <thead>
                 <tr>
                   <th scope="col">Items</th>
-                  <th scope="col">Quantity</th>
                   <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
                 </tr>
               </thead>
               <tbody>
                   @foreach($order->plates as $plate)
                       <tr>
                           <td>{{$plate->name}}</td>
+                          <td>{{$plate->price * $plate->pivot->quantity}}€</td>
                           <td>{{$plate->pivot->quantity}}</td>
-                          <td>{{$plate->price}}</td>
                       </tr>
                   @endforeach
-                  <td class="font-weight-bold">Total: {{ $order->total }} </td>
+                  <td class="font-weight-bold">Total: {{ $order->total }}€ </td>
               </tbody>
           </table>
         </div>

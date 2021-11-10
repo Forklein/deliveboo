@@ -11,6 +11,7 @@
                     <th scope="col">Order ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Surname</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Total</th>
                     <th scope="col">
                         <details class="text-dark text-center">
@@ -27,6 +28,7 @@
                             <td>{{$order->id}}</td>
                             <td>{{$order->name}}</td>
                             <td>{{$order->surname}}</td>
+                            <td>{{$order->getFormattedDate('created_at')}}</td>
                             <td>{{$order->total}}€</td>
                             <td></td>
                             <td class="text-right"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-oxford">Show Details</a></td>
