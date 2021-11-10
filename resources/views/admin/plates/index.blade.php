@@ -39,7 +39,7 @@
             <td>{{$plate->price}}</td>
             <td>
 
-              <form method="POST" action="{{ route('admin.plates.toggleUpdate', $plate->id) }}" class="formToggle" >
+              <form method="POST" action="{{ route('admin.plates.update', $plate->id) }}" class="formToggle" >
                 @method('PATCH')
                 @csrf
                 <div class="switch">

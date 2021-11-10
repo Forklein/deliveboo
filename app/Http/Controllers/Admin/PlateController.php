@@ -105,12 +105,6 @@ class PlateController extends Controller
         return redirect()->route('admin.plates.index')->with('alert', 'success')->with('alert-message', 'Plate updated successfully!');
     }
 
-    public function toggleUpdate (Plate $plate, Request $request){
-        $data = $request->all();
-        $plate->update($data);
-        return redirect()->route('admin.plates.index');
-    }
-
     /**
      * Remove the specified resource from storage.
      *
