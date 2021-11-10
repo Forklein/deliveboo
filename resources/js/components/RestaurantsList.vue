@@ -1,13 +1,18 @@
 <template>
-  <main>
-    <section id="restaurants-list">
-      <h2 class="mt-4 mb-3">Users' Restaurants</h2>
+  <section id="restaurants-list">
+    <div class="container">
+      <h2>Users' Restaurants</h2>
+      <p>
+        Here you can find a selection of the best restaurants next to you. Just
+        choose meal and enjoy your favourite food in the comfort of your
+        favourite places.
+      </p>
       <Loader v-if="isLoading" />
-      <div v-else>
-        <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
-      </div>
-    </section>
-  </main>
+      <div v-else class="cards-list">
+          <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
+      </div> 
+    </div>
+  </section>
 </template>
 
 <script>
@@ -33,7 +38,8 @@ export default {
       axios
         .get(`${this.baseUri}/api/users`)
         .then((res) => {
-          console.log(res.data.users);
+          // Destructuring
+          console.log(res.data);
           this.users = res.data.users;
         })
         .catch((err) => {
@@ -49,3 +55,38 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#restaurants-list {
+  padding: 50px 0;
+  height: fit-content;
+  background: #ed9529;
+  display: flex;
+}
+
+.container {
+  flex-direction: column;
+  height: 100%;
+}
+
+.cards-list {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h2 {
+  text-align: center;
+  color: #007E8A;
+  font-size: 38px;
+  margin-bottom: 14.5px;
+}
+
+p {
+  text-align: center;
+  font-size: 17px;
+  line-height: 27px;
+}
+</style>
