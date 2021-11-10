@@ -10,33 +10,20 @@
     <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Plate ID</th>
             <th scope="col">Plate name</th>
-            <th scope="col">Plate ingredients</th>
-            <th scope="col">Plate description</th>
             <th scope="col">Plate course</th>
             <th scope="col">Plate price</th>
             <th scope="col">Visibility</th>
-            <th scope="col">
-              <details class="text-dark text-center">
-                <summary>Total Plates</summary>
-                <span>{{($plates->total())}}</span>
-              </details>
-            </th>
-            <th scope="col"></th>
+            <th scope="col">Utilities</th>
           </tr>
         </thead>
         <tbody>
             @forelse($plates as $plate)
           <tr>
-            <th scope="row">{{$plate->id}}</th>
             <td>{{$plate->name}}</td>
-            <td>{{Str::limit($plate->ingredients, 20, '...')}}</td>
-            <td>{{Str::limit($plate->description, 20, '...')}}</td>
             <td>{{$plate->course}}</td>
             <td>{{$plate->price}}</td>
             <td>
-
               <form method="POST" action="{{ route('admin.plates.update', $plate->id)}}" class="formToggle" >
                 @method('PATCH')
                 @csrf
@@ -49,10 +36,8 @@
                   <span></span>
                 </div>
               </form>
-            
             </td>
-            <td></td>
-            <td class="d-flex justify-content-end">
+            <td class="d-flex">
               <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford">Details</a>
               <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2"><i class="fas fa-pencil-alt"></i></a>
             </td>
@@ -65,9 +50,20 @@
   </div>
     
 </div>
-<div class="d-flex justify-content-end">
-    {{$plates->links()}}
-    
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-md-4">
+      <details class="text-dark">
+        <summary>Total Plates</summary>
+        <span>{{($plates->total())}}</span>
+      </details>
+    </div>
+    <div class="col-md-4">
+      <div class="d-flex justify-content-end">
+        {{$plates->links()}}
+    </div>
+    </div>
+  </div>
 </div>
 @endsection
 
