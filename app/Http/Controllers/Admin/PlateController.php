@@ -45,7 +45,7 @@ class PlateController extends Controller
             'name' => 'required|min:3|max:50',
             'ingredients' => 'required|min:3|max:255',
             'description' => 'required|min:3|max:255',
-            'course' => 'required|min:3|max:20',
+            'course' => 'required|min:1|max:20',
             'image' => 'nullable|url',
             'price' => 'required|numeric|max:999.99'
         ]);
@@ -98,9 +98,9 @@ class PlateController extends Controller
         } else {
             $request->validate([
                 'name' => 'required|min:3|max:50',
-                'ingredients' => 'required|min:3|max:150',
+                'ingredients' => 'required|min:3|max:255',
                 'description' => 'required|min:3|max:255',
-                'course' => 'required|min:3|max:20',
+                'course' => 'required|min:1|max:20',
                 'image' => 'nullable|url',
                 'price' => 'required|numeric|max:999.99',
             ]);

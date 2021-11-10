@@ -61,6 +61,13 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'restaurant_name' => ['required', 'string', 'min:3', 'max:50'],
+            'vat' => ['required', 'unique:users', 'string', 'min:11', 'max:11'],
+            'address' => ['required', 'string', 'unique:users'],
+            'zip' => ['required', 'string', 'min:5', 'max:5'],
+            'phone' => ['required', 'string', 'between:9,20', 'unique:users'],
+            'image' => ['nullable', 'url'],
+            'types' => ['required']
         ]);
     }
 
