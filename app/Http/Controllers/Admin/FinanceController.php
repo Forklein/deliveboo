@@ -10,6 +10,8 @@ class FinanceController extends Controller
 {
     public function index()
     {
-        return view('admin.finances.index');
+        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->unique('id');
+        $total = array_sum($orders->pluck('total')->toArray());
+        return view('admin.finances.index', compact('orders', 'total'));
     }
 }
