@@ -2173,12 +2173,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
   data: function data() {
-    return {};
+    return {
+      baseUri: "http://localhost:8000"
+    };
   },
-  props: ["user"]
+  props: ["user"],
+  methods: {
+    getMenu: function getMenu(id) {
+      axios.get("".concat(this.baseUri, "/api/users/").concat(id)).then(function (res) {
+        console.log(res.data.user.plates);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -2232,8 +2248,6 @@ __webpack_require__.r(__webpack_exports__);
 
       this.isLoading = true;
       axios.get("".concat(this.baseUri, "/api/users")).then(function (res) {
-        // Destructuring
-        console.log(res.data);
         _this.users = res.data.users;
       })["catch"](function (err) {
         console.error(err);
@@ -6666,7 +6680,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-272b0098] {\n  margin: 35px 10px;\n  padding: 30px 20px;\n  width: 28.5714285714%;\n  line-height: 25px;\n  font-size: 15px;\n  background: #fbdb80;\n  word-wrap: break-word;\n  display: flex;\n  flex-direction: column;\n}\n.card h4[data-v-272b0098] {\n  text-align: center !important;\n}\n.card hr[data-v-272b0098] {\n  margin: 15px 0;\n  border-color: #007E8A;\n  background: #007E8A;\n}\n.card-body[data-v-272b0098] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.icon[data-v-272b0098] {\n  margin-right: 5px;\n  width: 20px;\n  height: auto;\n  vertical-align: baseline;\n}\n.avatar-icon[data-v-272b0098] {\n  margin: 0 5px 10px 0;\n  width: 45px;\n  vertical-align: middle;\n}\n.restaurant-image[data-v-272b0098] {\n  margin: 0 auto;\n  padding: 0 0 0 5px;\n  width: 80%;\n}", ""]);
+exports.push([module.i, ".card[data-v-272b0098] {\n  margin: 35px 10px;\n  padding: 30px 20px;\n  width: 28.5714285714%;\n  line-height: 25px;\n  font-size: 15px;\n  background: #fbdb80;\n  word-wrap: break-word;\n  display: flex;\n  flex-direction: column;\n}\n.card h4[data-v-272b0098] {\n  text-align: center !important;\n}\n.card hr[data-v-272b0098] {\n  margin: 15px 0;\n  border-color: #007e8a;\n  background: #007e8a;\n}\n.card-body[data-v-272b0098] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.icon[data-v-272b0098] {\n  margin-right: 5px;\n  width: 20px;\n  height: auto;\n  vertical-align: baseline;\n}\n.avatar-icon[data-v-272b0098] {\n  margin: 0 5px 10px 0;\n  width: 45px;\n  vertical-align: middle;\n}\n.restaurant-image[data-v-272b0098] {\n  margin: 0 auto;\n  padding: 0 0 0 5px;\n  width: 80%;\n}", ""]);
 
 // exports
 
@@ -6742,7 +6756,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#restaurants-list[data-v-46cb88f9] {\r\n  padding: 50px 0;\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n  background: #ed9529;\r\n  display: flex;\n}\n.container[data-v-46cb88f9] {\r\n  flex-direction: column;\r\n  height: 100%;\n}\n.cards-list[data-v-46cb88f9] {\r\n  width: 100%;\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n  display: flex;\r\n  justify-content: center;\r\n  flex-wrap: wrap;\n}\nh2[data-v-46cb88f9] {\r\n  text-align: center;\r\n  color: #007E8A;\r\n  font-size: 38px;\r\n  margin-bottom: 14.5px;\n}\np[data-v-46cb88f9] {\r\n  text-align: center;\r\n  font-size: 17px;\r\n  line-height: 27px;\n}\r\n", ""]);
+exports.push([module.i, "\n#restaurants-list[data-v-46cb88f9] {\r\n  padding: 50px 0;\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n  background: #ed9529;\r\n  display: flex;\n}\n.container[data-v-46cb88f9] {\r\n  flex-direction: column;\r\n  height: 100%;\n}\n.cards-list[data-v-46cb88f9] {\r\n  width: 100%;\r\n  height: -webkit-fit-content;\r\n  height: -moz-fit-content;\r\n  height: fit-content;\r\n  display: flex;\r\n  justify-content: center;\r\n  flex-wrap: wrap;\n}\nh2[data-v-46cb88f9] {\r\n  text-align: center;\r\n  color: #007e8a;\r\n  font-size: 38px;\r\n  margin-bottom: 14.5px;\n}\np[data-v-46cb88f9] {\r\n  text-align: center;\r\n  font-size: 17px;\r\n  line-height: 27px;\n}\r\n", ""]);
 
 // exports
 
@@ -39109,11 +39123,16 @@ var render = function () {
     _c("img", {
       staticClass: "restaurant-image",
       attrs: { src: "img/restaurant-image.png", alt: "restaurant-image" },
+      on: {
+        click: function ($event) {
+          return _vm.getMenu(_vm.user.id)
+        },
+      },
     }),
     _vm._v(" "),
     _c("div", [
       _c("h4", { staticClass: "card-title" }, [
-        _vm._v("\n        " + _vm._s(_vm.user.restaurant_name) + "\n      "),
+        _vm._v("\n      " + _vm._s(_vm.user.restaurant_name) + "\n    "),
       ]),
     ]),
     _vm._v(" "),
@@ -39126,13 +39145,13 @@ var render = function () {
     _vm._v(" "),
     _c("address", { staticStyle: { display: "inline" } }, [
       _vm._v(
-        "\n      " +
+        "\n    " +
           _vm._s(_vm.user.address) +
           " - " +
           _vm._s(_vm.user.city) +
           " - " +
           _vm._s(_vm.user.zip) +
-          "\n    "
+          "\n  "
       ),
     ]),
     _vm._v(" "),
@@ -39141,7 +39160,7 @@ var render = function () {
         staticClass: "icon",
         attrs: { src: "img/phone-icon.png", alt: "phone-image" },
       }),
-      _vm._v(_vm._s(_vm.user.phone)),
+      _vm._v(_vm._s(_vm.user.phone) + "\n  "),
     ]),
     _vm._v(" "),
     _c("p", [_vm._v("Vat: " + _vm._s(_vm.user.vat))]),

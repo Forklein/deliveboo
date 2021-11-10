@@ -9,8 +9,8 @@
       </p>
       <Loader v-if="isLoading" />
       <div v-else class="cards-list">
-          <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
-      </div> 
+        <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
+      </div>
     </div>
   </section>
 </template>
@@ -38,8 +38,6 @@ export default {
       axios
         .get(`${this.baseUri}/api/users`)
         .then((res) => {
-          // Destructuring
-          console.log(res.data);
           this.users = res.data.users;
         })
         .catch((err) => {
@@ -79,7 +77,7 @@ export default {
 
 h2 {
   text-align: center;
-  color: #007E8A;
+  color: #007e8a;
   font-size: 38px;
   margin-bottom: 14.5px;
 }

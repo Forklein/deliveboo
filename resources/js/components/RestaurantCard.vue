@@ -1,22 +1,27 @@
 <template>
   <div class="card">
-      <img
-        src="img/restaurant-image.png"
-        class="restaurant-image"
-        alt="restaurant-image"
-      />
-      <div>
-        <h4 class="card-title">
-          {{ user.restaurant_name }}
-        </h4>
-      </div>
+    <img
+      src="img/restaurant-image.png"
+      class="restaurant-image"
+      alt="restaurant-image"
+      @click="getMenu(user.id)"
+    />
+    <div>
+      <h4 class="card-title">
+        {{ user.restaurant_name }}
+      </h4>
+    </div>
     <hr />
-      <img src="img/address-icon.png" class="icon" alt="address-image">
-      <address style="display: inline">
-        {{ user.address }} - {{ user.city }} - {{ user.zip }}
-      </address>
-      <p><img src="img/phone-icon.png" class="icon" alt="phone-image">{{ user.phone }}</p>
-      <p>Vat: {{ user.vat }}</p>
+    <img src="img/address-icon.png" class="icon" alt="address-image" />
+    <address style="display: inline">
+      {{ user.address }} - {{ user.city }} - {{ user.zip }}
+    </address>
+    <p>
+      <img src="img/phone-icon.png" class="icon" alt="phone-image" />{{
+        user.phone
+      }}
+    </p>
+    <p>Vat: {{ user.vat }}</p>
   </div>
 </template>
 
@@ -24,9 +29,23 @@
 export default {
   name: "RestaurantCard",
   data() {
-    return {};
+    return {
+      baseUri: "http://localhost:8000",
+    };
   },
   props: ["user"],
+  methods: {
+    getMenu(id) {
+      axios
+        .get(`${this.baseUri}/api/users/${id}`)
+        .then((res) => {
+          console.log(res.data.user.plates);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
+  },
 };
 </script>
 
@@ -44,13 +63,12 @@ export default {
   h4 {
     text-align: center !important;
   }
-hr {
-  margin: 15px 0;
-  border-color: #007E8A;
-  background: #007E8A;
+  hr {
+    margin: 15px 0;
+    border-color: #007e8a;
+    background: #007e8a;
+  }
 }
-}
-
 
 .card-body {
   display: flex;
