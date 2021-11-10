@@ -1,6 +1,7 @@
 <template>
   <section id="restaurants-list">
-    <div class="container">
+    <MenusList v-if="isOpen" :users="users" />
+    <div v-else>
       <h2>Users' Restaurants</h2>
       <p>
         Here you can find a selection of the best restaurants next to you. Just
@@ -9,7 +10,12 @@
       </p>
       <Loader v-if="isLoading" />
       <div v-else class="cards-list">
-        <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
+        <RestaurantCard
+          v-for="user in users"
+          :key="user.id"
+          :user="user"
+          @isOpen="getOpen"
+        />
       </div>
     </div>
   </section>
@@ -18,17 +24,21 @@
 <script>
 import Loader from "../utilities/Loader.vue";
 import RestaurantCard from "./RestaurantCard.vue";
+import MenusList from "../menus/MenusList.vue";
 
 export default {
   name: "RestaurantsList",
   components: {
     RestaurantCard,
     Loader,
+    MenusList,
   },
   data() {
     return {
       baseUri: "http://localhost:8000",
       users: [],
+      menus: [],
+      isOpen: false,
       isLoading: false,
     };
   },
@@ -46,6 +56,9 @@ export default {
         .then(() => {
           this.isLoading = false;
         });
+    },
+    getOpen() {
+      this.isOpen = true;
     },
   },
   created() {

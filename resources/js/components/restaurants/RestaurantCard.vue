@@ -1,27 +1,34 @@
 <template>
   <div class="custom-card">
-    <img
-      src="img/restaurant-image.png"
-      class="restaurant-image"
-      alt="restaurant-image"
-      @click="getMenu(user.id)"
-    />
-    <div>
-      <h4 class="card-title">
-        {{ user.restaurant_name }}
-      </h4>
+    <div v-if="isOpen" class="menu">
+      <div v-for="plate in user.plates" :key="plate.id">
+        <p>{{ plate.name }}</p>
+      </div>
     </div>
-    <hr />
-    <img src="img/address-icon.png" class="icon" alt="address-image" />
-    <address style="display: inline">
-      {{ user.address }} - {{ user.city }} - {{ user.zip }}
-    </address>
-    <p>
-      <img src="img/phone-icon.png" class="icon" alt="phone-image" />{{
-        user.phone
-      }}
-    </p>
-    <p>Vat: {{ user.vat }}</p>
+    <div v-else class="resturant">
+      <img
+        src="img/restaurant-image.png"
+        class="restaurant-image"
+        alt="restaurant-image"
+        @click="getMenu"
+      />
+      <div>
+        <h4 class="card-title">
+          {{ user.restaurant_name }}
+        </h4>
+      </div>
+      <hr />
+      <img src="img/address-icon.png" class="icon" alt="address-image" />
+      <address style="display: inline">
+        {{ user.address }} - {{ user.city }} - {{ user.zip }}
+      </address>
+      <p>
+        <img src="img/phone-icon.png" class="icon" alt="phone-image" />{{
+          user.phone
+        }}
+      </p>
+      <p>Vat: {{ user.vat }}</p>
+    </div>
   </div>
 </template>
 
@@ -31,19 +38,14 @@ export default {
   data() {
     return {
       baseUri: "http://localhost:8000",
+      menus: [],
+      isOpen: false,
     };
   },
   props: ["user"],
   methods: {
-    getMenu(id) {
-      axios
-        .get(`${this.baseUri}/api/users/${id}`)
-        .then((res) => {
-          console.log(res.data.user.plates);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    getMenu() {
+      this.isOpen = true;
     },
   },
 };

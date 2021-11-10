@@ -1,8 +1,8 @@
 <template>
   <main>
+    <RestaurantsList />
     <section id="about-us">
-      <div class="container">
-        <RestaurantsList />
+      <div class="container-fluid">
         <div class="card">
           <h2>Rider</h2>
           <img src="img/rider.png" alt="rider-image" />
