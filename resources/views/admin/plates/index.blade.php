@@ -1,6 +1,8 @@
 @extends('admin.home')
 
+
 @section('rightDashboardContent')
+@include('includes.session')
 <div>
   <div class="d-flex justify-content-between">
     <div><h1>Your Plates</h1></div>
