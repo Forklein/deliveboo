@@ -1,22 +1,23 @@
 <template>
   <section id="restaurants-list">
-    <MenusList v-if="isOpen" :users="users" />
-    <div v-else>
-      <h2>Users' Restaurants</h2>
-      <p>
+    <div>
+      <h2 v-if="hideMenuList">Users' Restaurants</h2>
+      <p v-if="hideMenuList">
         Here you can find a selection of the best restaurants next to you. Just
         choose meal and enjoy your favourite food in the comfort of your
         favourite places.
       </p>
       <Loader v-if="isLoading" />
-      <div v-else class="cards-list">
+      <div v-if="hideMenuList" class="cards-list">
         <RestaurantCard
           v-for="user in users"
           :key="user.id"
           :user="user"
-          @isOpen="getOpen"
+          @plates="getPlates"
         />
       </div>
+       <MenusList v-if="!hideMenuList" :plates="plates"/>
+       <button v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
     </div>
   </section>
 </template>
@@ -37,9 +38,9 @@ export default {
     return {
       baseUri: "http://localhost:8000",
       users: [],
-      menus: [],
-      isOpen: false,
+      plates: [],
       isLoading: false,
+      hideMenuList: true
     };
   },
   methods: {
@@ -57,9 +58,13 @@ export default {
           this.isLoading = false;
         });
     },
-    getOpen() {
-      this.isOpen = true;
-    },
+
+    getPlates(plates) {
+      this.plates = plates;
+      this.hideMenuList = false;
+    }, 
+
+    
   },
   created() {
     this.getUsers();

@@ -1,16 +1,10 @@
 <template>
-  <div class="custom-card">
-    <div v-if="isOpen" class="menu">
-      <div v-for="plate in user.plates" :key="plate.id">
-        <p>{{ plate.name }}</p>
-      </div>
-    </div>
-    <div v-else class="resturant">
+  <div class="custom-card" @click="getMenu(user.plates)">
+    <div class="resturant">
       <img
         src="img/restaurant-image.png"
         class="restaurant-image"
         alt="restaurant-image"
-        @click="getMenu"
       />
       <div>
         <h4 class="card-title">
@@ -35,19 +29,12 @@
 <script>
 export default {
   name: "RestaurantCard",
-  data() {
-    return {
-      baseUri: "http://localhost:8000",
-      menus: [],
-      isOpen: false,
-    };
-  },
   props: ["user"],
   methods: {
-    getMenu() {
-      this.isOpen = true;
+     getMenu(plates) {
+      this.$emit("plates", plates);
     },
-  },
+  }
 };
 </script>
 
