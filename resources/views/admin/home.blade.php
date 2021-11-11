@@ -57,11 +57,9 @@
                 <hr class="d-md-none bg-white">
             </div>
             <!--Right Dashboard Section-->
-            <div class="col-side-right bg-dash-right p-4">
-                
-                @yield('rightDashboardContent')
-    
-            </div>
+        </div>
+        <div class="col-side-right bg-dash-right p-4">
+            @yield('rightDashboardContent')
         </div>
     </div>
     @yield('script')
