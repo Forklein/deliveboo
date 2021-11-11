@@ -1,15 +1,19 @@
 <template>
-  <div class="card">
-    <div class="card-header">{{ plate.name }}</div>
-    <div class="card-body">{{ plate.description }}</div>
-    <div class="card-footer">€{{ plate.price }}</div>
+  <div class="card" style="width: 18rem; height: 500px">
+    <img :src="plate.image" class="card-img-top" :alt="plate.name" />
+    <div class="card-body">
+      <h5 class="card-title">{{ plate.name }}</h5>
+      <p class="card-text">{{ plate.description }}</p>
+      <p class="card-text">{{ plate.price }}€</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "MenuCard",
-  props: ["plate"]
+  props: ["plate"],
 };
 </script>
 

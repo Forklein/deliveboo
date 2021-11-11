@@ -42,6 +42,11 @@
             <td class="d-flex">
               <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford">Details</a>
               <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2"><i class="fas fa-pencil-alt"></i></a>
+              <form method="POST" action="{{route('admin.plates.destroy', $plate->id)}}">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+              </form>
             </td>
           </tr>
           @empty

@@ -1,9 +1,9 @@
 <template>
   <section id="menus-list">
     <div class="container">
-      <div class="row justify-content-around">
+      <div class="row">
         <div class="col-3" v-for="(plate, index) in plates" :key="index">
-          <MenuCard :plate="plate"/>
+          <MenuCard :plate="plate" />
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@ export default {
   components: {
     MenuCard,
   },
-  props:["plates"],
+  props: ["plates"],
 };
 </script>
 

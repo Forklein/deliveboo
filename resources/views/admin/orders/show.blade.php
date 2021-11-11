@@ -36,16 +36,23 @@
               <thead>
                 <tr>
                   <th scope="col">Items</th>
-                  <th scope="col">Price</th>
+                  <th scope="col">Single Price</th>
                   <th scope="col">Quantity</th>
+                  <th scope="col">Total Price</th>
                 </tr>
               </thead>
               <tbody>
+                @if($plates)
+                  @foreach($plates as $plate_trashed)
+                  <p>{{$plate_trashed->id}}</p>
+                  @endforeach
+                @endif
                   @foreach($order->plates as $plate)
                       <tr>
                           <td>{{$plate->name}}</td>
-                          <td>{{$plate->price * $plate->pivot->quantity}}€</td>
+                          <td>{{$plate->price}}€</td>
                           <td>{{$plate->pivot->quantity}}</td>
+                          <td>{{$plate->price * $plate->pivot->quantity}}€</td>
                       </tr>
                   @endforeach
                   <td class="font-weight-bold">Total: {{ $order->total }}€ </td>

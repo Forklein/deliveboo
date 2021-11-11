@@ -1,6 +1,6 @@
 <template>
   <section id="restaurants-list">
-    <div>
+    <div class="mx-auto">
       <h2 v-if="hideMenuList">Users' Restaurants</h2>
       <p v-if="hideMenuList">
         Here you can find a selection of the best restaurants next to you. Just
@@ -16,8 +16,8 @@
           @plates="getPlates"
         />
       </div>
-       <MenusList v-if="!hideMenuList" :plates="plates"/>
-       <button v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
+      <MenusList v-if="!hideMenuList" :plates="plates" />
+      <button v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
     </div>
   </section>
 </template>
@@ -40,7 +40,7 @@ export default {
       users: [],
       plates: [],
       isLoading: false,
-      hideMenuList: true
+      hideMenuList: true,
     };
   },
   methods: {
@@ -62,9 +62,7 @@ export default {
     getPlates(plates) {
       this.plates = plates;
       this.hideMenuList = false;
-    }, 
-
-    
+    },
   },
   created() {
     this.getUsers();
