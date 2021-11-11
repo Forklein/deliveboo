@@ -22,7 +22,7 @@ class CreatePlatesTable extends Migration
             $table->string('course');
             $table->string('image')->nullable();
             $table->double('price', 5, 2);
-            $table->boolean('visibility', 1)->default(1);
+            $table->boolean('visibility', 1);
             $table->softDeletes();
             $table->timestamps();
         });

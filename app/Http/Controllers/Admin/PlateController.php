@@ -54,6 +54,7 @@ class PlateController extends Controller
         $new_plate = new Plate();
         $new_plate->fill($data);
         $new_plate->user_id = Auth::id();
+        $new_plate->visibility = 1;
         $new_plate->save();
         return redirect()->route('admin.plates.index')->with('alert', 'success')->with('alert-message', 'New plate created successfully!');
     }
@@ -91,7 +92,8 @@ class PlateController extends Controller
      */
     public function update(Request $request, Plate $plate)
     {
-        if ($request['visibility'] == 0 || $request['visibility'] == 1) {
+        $arr = $request->all();
+        if (array_key_exists('visibility', $arr)) {
             $data = $request->all();
             $plate->update($data);
             return redirect()->route('admin.plates.index');
