@@ -2204,6 +2204,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
   props: ["user"],
@@ -6717,7 +6727,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".custom-card[data-v-5ebd141e] {\n  margin: 35px 10px;\n  padding: 30px 20px;\n  width: 28.5714285714%;\n  line-height: 25px;\n  font-size: 15px;\n  background: #fbdb80;\n  word-wrap: break-word;\n  display: flex;\n  flex-direction: column;\n}\n.custom-card h4[data-v-5ebd141e] {\n  text-align: center !important;\n}\n.custom-card hr[data-v-5ebd141e] {\n  margin: 15px 0;\n  border-color: #007e8a;\n  background: #007e8a;\n}\n.card-body[data-v-5ebd141e] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.icon[data-v-5ebd141e] {\n  margin-right: 5px;\n  width: 20px;\n  height: auto;\n  vertical-align: baseline;\n}\n.avatar-icon[data-v-5ebd141e] {\n  margin: 0 5px 10px 0;\n  width: 45px;\n  vertical-align: middle;\n}\n.restaurant-image[data-v-5ebd141e] {\n  margin: 0 auto;\n  padding: 0 0 0 5px;\n  width: 80%;\n}", ""]);
+exports.push([module.i, ".w-300[data-v-5ebd141e] {\n  height: 300px;\n  width: 300px;\n}\n.custom-card[data-v-5ebd141e] {\n  margin: 35px 10px;\n  padding: 30px 20px;\n  width: 28.5714285714%;\n  line-height: 25px;\n  font-size: 15px;\n  background: #fbdb80;\n  word-wrap: break-word;\n  display: flex;\n  flex-direction: column;\n}\n.custom-card h4[data-v-5ebd141e] {\n  text-align: center !important;\n}\n.custom-card hr[data-v-5ebd141e] {\n  margin: 15px 0;\n  border-color: #007e8a;\n  background: #007e8a;\n}\n.card-body[data-v-5ebd141e] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.icon[data-v-5ebd141e] {\n  margin-right: 5px;\n  width: 20px;\n  height: auto;\n  vertical-align: baseline;\n}\n.avatar-icon[data-v-5ebd141e] {\n  margin: 0 5px 10px 0;\n  width: 45px;\n  vertical-align: middle;\n}\n.restaurant-image[data-v-5ebd141e] {\n  margin: 0 auto;\n  padding: 0 0 0 5px;\n  width: 80%;\n}", ""]);
 
 // exports
 
@@ -39229,15 +39239,26 @@ var render = function () {
     },
     [
       _c("div", { staticClass: "resturant" }, [
-        _c("img", {
-          staticClass: "restaurant-image",
-          attrs: { src: "img/restaurant-image.png", alt: "restaurant-image" },
-        }),
+        _vm.user.image
+          ? _c("img", {
+              staticClass: "w-300",
+              attrs: { src: _vm.user.image, alt: _vm.user.name },
+            })
+          : _c("img", {
+              staticClass: "restaurant-image",
+              attrs: {
+                src: "img/restaurant-image.png",
+                alt: "restaurant-image",
+              },
+              on: { click: _vm.getMenu },
+            }),
         _vm._v(" "),
         _c("div", [
           _c("h4", { staticClass: "card-title" }, [
             _vm._v(
-              "\n        " + _vm._s(_vm.user.restaurant_name) + "\n      "
+              "\n                " +
+                _vm._s(_vm.user.restaurant_name) +
+                "\n            "
             ),
           ]),
         ]),
@@ -39251,13 +39272,13 @@ var render = function () {
         _vm._v(" "),
         _c("address", { staticStyle: { display: "inline" } }, [
           _vm._v(
-            "\n      " +
+            "\n            " +
               _vm._s(_vm.user.address) +
               " - " +
               _vm._s(_vm.user.city) +
               " - " +
               _vm._s(_vm.user.zip) +
-              "\n    "
+              "\n        "
           ),
         ]),
         _vm._v(" "),
@@ -39266,7 +39287,7 @@ var render = function () {
             staticClass: "icon",
             attrs: { src: "img/phone-icon.png", alt: "phone-image" },
           }),
-          _vm._v(_vm._s(_vm.user.phone) + "\n    "),
+          _vm._v(_vm._s(_vm.user.phone) + "\n        "),
         ]),
         _vm._v(" "),
         _c("p", [_vm._v("Vat: " + _vm._s(_vm.user.vat))]),
