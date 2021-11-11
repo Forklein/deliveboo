@@ -2,8 +2,8 @@
   <section id="menus-list">
     <div class="container">
       <div class="row justify-content-around">
-        <div class="col-3" v-for="user in users" :key="user.id">
-          <MenuCard :plate="user.plates" />
+        <div class="col-3" v-for="(plate, index) in plates" :key="index">
+          <MenuCard :plate="plate"/>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@ export default {
   components: {
     MenuCard,
   },
-  props: ["users"],
+  props:["plates"],
 };
 </script>
 
