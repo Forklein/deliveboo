@@ -25,7 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $plates = Auth::user()->plates()->onlyTrashed()->get();
-        return view('admin.summary', compact('plates'));
+        $plates_trashed = Auth::user()->plates()->onlyTrashed()->get();
+        $plates = Auth::user()->plates()->get();
+        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->unique('id')->pluck('id')->toArray();
+        return view('admin.summary', compact('plates', 'orders', 'plates_trashed'));
     }
 }
