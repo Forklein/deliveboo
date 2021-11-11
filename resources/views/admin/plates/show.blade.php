@@ -2,20 +2,31 @@
 
 @section('rightDashboardContent')
     <div class="container"> 
-        <div class="card mb-4">
+        <div class="card my-4">
             <div class="card-header bg-oxford">
-                <h1 class="text-white">{{$plate->name}}</h1>
+                <h1 class="text-white"><strong>{{$plate->name}}</strong></h1>
             </div>
             <div class="card-body">
-                <div>
-                    <h4 class="my-2">Plate Description</h4>
-                    <hr>
-                    <p>{{$plate->description}}</p>
-                    <h4 class="my-2">Plate Ingredients</h4>
-                    <hr>
-                    <ul>
-                        <li>{{$plate->ingredients}}</li>
-                    </ul>
+                <div class="container">
+                    <div class="row flex-wrap-reverse">
+                        <div class="col col-md-6">
+                            <h4 class="my-2"><strong>Plate Description</strong></h4>
+                            <hr>
+                            <p>{{$plate->description}}</p>
+                            <h4 class="my-2"><strong>Plate Ingredients</strong></h4>
+                            <hr>
+                            <ul>
+                                <li>{{$plate->ingredients}}</li>
+                            </ul>
+                        </div>
+                        <div class="col col-md-6">
+                            @if($plate->image)
+                                <img src="{{$plate->image}}" alt="{{$plate->name}}" class="img-fluid shadow">
+                            @else
+                                <img src="{{asset('img/placeholder-photo.jpg')}}" alt="{{$plate->name}}" class="img-fluid shadow">
+                            @endif
+                        </div>
+                    </div>
                 </div>
                 
             </div>

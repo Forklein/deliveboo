@@ -32,9 +32,9 @@
                             <td>{{$order->total}}€</td>
                             <td></td>
                             <td class="text-right"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-oxford">Show Details</a></td>
+                            @empty
+                            <tr><td colspan="6">No Orders</td></tr>
                         </tr>
-                    @empty
-                        <tr colspan="4">No Orders</tr>
                     @endforelse
                 </tbody>
             </table>

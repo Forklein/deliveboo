@@ -4,9 +4,24 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
 @endsection
 @section('rightDashboardContent')
-<div class="chart d-flex">
-    <canvas id="myChart" class="col-md-6"></canvas>
-    <canvas id="myChart2" class="col-md-6"></canvas>
+<div class="chart container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="txt-oxford">Finances</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12"><h4 class="txt-oxford">Total</h4></div>
+        <!--Orders Total Stats-->
+        <div class="col col-md-6">
+            <canvas id="myChart"></canvas>
+        </div>
+        <!--Amount Total Stats-->
+        <div class="col col-md-6">
+            <canvas id="myChart2"></canvas>
+        </div>
+    </div>
 </div>
 @endsection
 @section('script')

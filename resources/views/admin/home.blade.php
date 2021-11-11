@@ -15,10 +15,14 @@
         <div class="row shadow-lg border-custom">
             <!--Left Dashboard Section-->
             <div class="col-side-left bg-oxford bg-dash-left text-white py-4">
-                <!--Logo Restaurant-->
-                <figure class="p-4 d-flex justify-content-center">
-                    <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid">
-                </figure>
+                <!--Logo Restaurant: If there is an image print it, otherwise print the name-->
+                @if(Auth::user()->image)
+                    <figure class="p-4 d-flex justify-content-center">
+                        <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid">
+                    </figure>
+                @else
+                    <h2 class="d-none d-md-block p-4 text-white text-center text-capitalize">{{Auth::user()->restaurant_name}}</h2>
+                @endif
                 <hr class="bg-white">
                 <!--Home Route-->
                 <a href="{{route('admin.home')}}" class="mt-2 @if (request()->routeIs('admin.home')) active @else link-white @endif">
@@ -49,6 +53,7 @@
                         <div class="d-none d-md-inline"><h4>Orders</h4></div>
                     </div>
                 </a>
+                <hr class="d-md-none bg-white">
             </div>
 
             <!--Right Dashboard Section-->
