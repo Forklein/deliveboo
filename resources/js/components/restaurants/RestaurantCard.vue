@@ -1,15 +1,13 @@
 <template>
   <div class="custom-card" @click="getMenu(user.plates)">
-    <div class="resturant">
-      <a v-if="user.image" href="#restaurants-list"
-        ><img :src="user.image" :alt="user.name" class="w-300"
-      /></a>
-      <a v-else href="#restaurants-list"
-        ><img
-          src="img/restaurant-image.png"
-          class="restaurant-image"
-          alt="restaurant-image"
-      /></a>
+    <div class="resturant text-center">
+      <img v-if="user.image" :src="user.image" :alt="user.name" class="w-300" />
+      <img
+        v-else
+        src="img/restaurant-image.png"
+        class="restaurant-image"
+        alt="restaurant-image"
+      />
       <div>
         <h4 class="card-title">
           {{ user.restaurant_name }}
@@ -49,15 +47,9 @@ export default {
 }
 
 .custom-card {
-  margin: 35px 10px;
-  padding: 30px 20px;
-  width: calc(100% / 3.5);
-  line-height: 25px;
+  cursor: pointer;
   font-size: 15px;
   background: #fbdb80;
-  word-wrap: break-word;
-  display: flex;
-  flex-direction: column;
   h4 {
     text-align: center !important;
   }
@@ -66,31 +58,5 @@ export default {
     border-color: #007e8a;
     background: #007e8a;
   }
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon {
-  margin-right: 5px;
-  width: 20px;
-  height: auto;
-  vertical-align: baseline;
-}
-
-.avatar-icon {
-  margin: 0 5px 10px 0;
-  width: 45px;
-  vertical-align: middle;
-}
-
-.restaurant-image {
-  margin: 0 auto;
-  padding: 0 0 0 5px;
-  width: 80%;
 }
 </style>

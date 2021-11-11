@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <Header />
     <Main />
     <Footer />
@@ -18,25 +18,12 @@ export default {
     Main,
     Footer,
   },
-  data() {
-    return {
-      title: "Deliveboo",
-    };
-  },
 };
 </script>
 
 <style>
-section {
-  min-height: 100vh;
-}
-
 a {
   text-decoration: none;
   color: currentColor;
-}
-
-ul {
-  list-style-type: none;
 }
 </style>

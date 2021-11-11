@@ -1,6 +1,6 @@
 <template>
-  <section id="restaurants-list">
-    <div class="mx-auto">
+  <div class="restaurants mx-auto">
+    <div class="container">
       <h2 v-if="!hideMenuList">Menu</h2>
       <h2 v-if="hideMenuList">Users' Restaurants</h2>
       <p v-if="hideMenuList">
@@ -9,18 +9,15 @@
         favourite places.
       </p>
       <Loader v-if="isLoading" />
-      <div v-if="hideMenuList" class="cards-list">
-        <RestaurantCard
-          v-for="user in users"
-          :key="user.id"
-          :user="user"
-          @plates="getPlates"
-        />
+      <div v-if="hideMenuList" class="row">
+        <div v-for="user in users" :key="user.id" class="col-4">
+          <RestaurantCard :user="user" @plates="getPlates" />
+        </div>
       </div>
       <MenusList v-if="!hideMenuList" :plates="plates" />
       <button v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -70,37 +67,8 @@ export default {
 };
 </script>
 
-<style scoped>
-#restaurants-list {
-  padding: 50px 0;
-  height: fit-content;
+<style lang="scss" scoped>
+.restaurants {
   background: #ed9529;
-  display: flex;
-}
-
-.container {
-  flex-direction: column;
-  height: 100%;
-}
-
-.cards-list {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-h2 {
-  text-align: center;
-  color: #007e8a;
-  font-size: 38px;
-  margin-bottom: 14.5px;
-}
-
-p {
-  text-align: center;
-  font-size: 17px;
-  line-height: 27px;
 }
 </style>
