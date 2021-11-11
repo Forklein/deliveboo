@@ -8,7 +8,7 @@
     <div><h1>Your Plates</h1></div>
     <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}"><i class="fas fa-plus"></i></a></div>
   </div>
-  <div class="table-responsive">
+  <div class="table-responsive overflow-auto vh-40">
     <table class="table table-striped">
         <thead>
           <tr>
@@ -22,10 +22,10 @@
         <tbody>
             @forelse($plates as $plate)
           <tr>
-            <td>{{$plate->name}}</td>
-            <td>{{$plate->course}}</td>
-            <td>{{$plate->price}}</td>
-            <td>
+            <td class="align-middle">{{$plate->name}}</td>
+            <td class="align-middle">{{$plate->course}}</td>
+            <td class="align-middle">{{$plate->price}}</td>
+            <td class="align-middle">
               <form method="POST" action="{{ route('admin.plates.update', $plate->id)}}" class="formToggle" >
                 @method('PATCH')
                 @csrf
@@ -39,7 +39,7 @@
                 </div>
               </form>
             </td>
-            <td class="d-flex">
+            <td class="d-flex align-middle">
               <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford">Details</a>
               <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2"><i class="fas fa-pencil-alt"></i></a>
               <form method="POST" action="{{route('admin.plates.destroy', $plate->id)}}">
@@ -50,7 +50,7 @@
             </td>
           </tr>
           @empty
-          <td colspan="6">No plates</td>
+          <td class="align-middle" colspan="6">No plates</td>
           @endforelse
         </tbody>
       </table>
