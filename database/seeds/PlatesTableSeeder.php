@@ -27,7 +27,7 @@ class PlatesTableSeeder extends Seeder
             $new_plate->ingredients = $faker->paragraph();
             $new_plate->description = $faker->paragraph();
             $new_plate->course = $faker->words(1, true);
-            $new_plate->image = $faker->imageUrl();
+            $new_plate->image = $faker->imageUrl(300, 300);
             $new_plate->price = $faker->randomFloat(2, 1, 30);
             $new_plate->visibility = $faker->boolean();
             $new_plate->save();

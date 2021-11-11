@@ -13,9 +13,9 @@
           different tastes and our job is to make sure that have what they want,
           when they want and where they want it.
         </p>
-          <button>
-            <a href="#about-us">Read more</a>
-          </button>
+        <button>
+          <a href="#about-us">Read more</a>
+        </button>
       </div>
     </div>
   </header>
@@ -28,7 +28,6 @@ export default {
 </script>
 
 <style scoped>
-
 /***************************/
 .text-container {
   margin: 50px auto 0 auto;
@@ -73,7 +72,7 @@ export default {
   margin-bottom: 10px;
   padding-right: 30px;
   width: 100%;
-  color: #007E8A;
+  color: #007e8a;
   font-size: 17px;
   line-height: 26px;
 }

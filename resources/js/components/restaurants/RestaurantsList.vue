@@ -1,6 +1,7 @@
 <template>
   <section id="restaurants-list">
     <div class="mx-auto">
+      <h2 v-if="!hideMenuList">Menu</h2>
       <h2 v-if="hideMenuList">Users' Restaurants</h2>
       <p v-if="hideMenuList">
         Here you can find a selection of the best restaurants next to you. Just
