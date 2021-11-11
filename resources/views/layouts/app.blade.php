@@ -21,7 +21,7 @@
 </head>
 <body class="min-vh-100">
     <div id="app" style="height: 100vh">
-        <nav class="navbar navbar-expand-md navbar-dark bg-oxford shadow-sm" style="height: 5%">
+        <nav class="navbar navbar-expand-md navbar-dark bg-oxford shadow-sm p-0">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <strong>{{ config('app.name', 'DeliveBoo') }}</strong>
@@ -81,10 +81,10 @@
             </div>
         </nav>
 
-        <main class="py-5" style="height: 90%">
+        <main class="py-5">
             @yield('content')
         </main>
-        <footer style="height: 5%">
+        <footer style="height: 5%;">
             <div class="d-flex justify-content-center bg-oxford align-items-center" style="height: 100%">
                 <span class="text-white">
                     &copy; 2021, Team 7 - Classe 38
