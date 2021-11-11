@@ -20,7 +20,8 @@
                     <img src="{{Auth::user()->image}}" alt="profile.pic" class="img-fluid">
                 </figure>
                 <hr class="bg-white">
-                <!--Home Route-->
+                <div class="overflow-auto vh-20">
+                    <!--Home Route-->
                 <a href="{{route('admin.home')}}" class="mt-2 @if (request()->routeIs('admin.home')) active @else link-white @endif">
                     <div class="d-flex justify-content-center justify-content-md-start side-link-bg">
                         <div class="mr-md-4"><i class="fas fa-home fa-2x"></i></div>
@@ -49,8 +50,8 @@
                         <div class="d-none d-md-inline"><h4>Orders</h4></div>
                     </div>
                 </a>
+                </div>
             </div>
-
             <!--Right Dashboard Section-->
             <div class="col-side-right bg-dash-right p-4">
                 
