@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
 @endsection
 @section('rightDashboardContent')
-<div class="chart d-flex">
+<div class="chart d-flex overflow-auto vh-40">
     <canvas id="myChart" class="col-md-6"></canvas>
     <canvas id="myChart2" class="col-md-6"></canvas>
 </div>
