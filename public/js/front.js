@@ -2139,7 +2139,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       currentCart: [],
-      quantity: 0
+      quantity: 1
     };
   },
   props: ["plate"],
@@ -2178,6 +2178,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MenuCard_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MenuCard.vue */ "./resources/js/components/menus/MenuCard.vue");
 /* harmony import */ var _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/Cart.vue */ "./resources/js/components/utilities/Cart.vue");
+/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2203,17 +2204,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MenusList",
   components: {
     MenuCard: _MenuCard_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Cart: _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Cart: _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
-      cart: []
+      cart: [],
+      isLoading: false
     };
   },
   props: ["plates"],
@@ -2222,6 +2227,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var newData = Object.assign.apply(Object, [{}].concat(_toConsumableArray(data)));
       this.cart.push(newData);
     }
+  },
+  created: function created() {
+    var _this = this;
+
+    this.isLoading = true;
+    setTimeout(function () {
+      _this.isLoading = false;
+    }, 1000);
   }
 });
 
@@ -39323,35 +39336,42 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { attrs: { id: "menus-list" } }, [
-    _c(
-      "div",
-      { staticClass: "container" },
-      [
-        _c(
-          "div",
-          { staticClass: "row" },
-          _vm._l(_vm.plates, function (plate, index) {
-            return _c(
-              "div",
-              { key: index, staticClass: "col-3" },
-              [
-                _c("MenuCard", {
-                  attrs: { plate: plate },
-                  on: { currentCart: _vm.getCart },
+  return _c(
+    "section",
+    { attrs: { id: "menus-list" } },
+    [
+      _vm.isLoading
+        ? _c("Loader")
+        : _c(
+            "div",
+            { staticClass: "container" },
+            [
+              _c(
+                "div",
+                { staticClass: "row" },
+                _vm._l(_vm.plates, function (plate, index) {
+                  return _c(
+                    "div",
+                    { key: index, staticClass: "col-3" },
+                    [
+                      _c("MenuCard", {
+                        attrs: { plate: plate },
+                        on: { currentCart: _vm.getCart },
+                      }),
+                    ],
+                    1
+                  )
                 }),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c("Cart", { attrs: { cart: _vm.cart } }),
-      ],
-      1
-    ),
-  ])
+                0
+              ),
+              _vm._v(" "),
+              _c("Cart", { attrs: { cart: _vm.cart } }),
+            ],
+            1
+          ),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

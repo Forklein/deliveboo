@@ -59,7 +59,6 @@ export default {
           this.isLoading = false;
         });
     },
-
     getPlates(plates) {
       this.plates = plates;
       this.hideMenuList = false;

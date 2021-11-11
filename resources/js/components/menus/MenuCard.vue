@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       currentCart: [],
-      quantity: 0,
+      quantity: 1,
     };
   },
   props: ["plate"],
