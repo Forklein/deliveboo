@@ -10056,6 +10056,10 @@ h3 {
   color: #000;
 }
 
+.vh-20 {
+  height: 20vh;
+}
+
 /*RIGHT SIDE DASHBOARD*/
 .col-side-right {
   width: 80%;
@@ -10066,13 +10070,15 @@ h3 {
   border-radius: 0px 20px 20px 0px;
 }
 
+.vh-40 {
+  max-height: 40vh;
+}
+
 /********** TOGGLE STYLE  **********/
 .switch {
   width: 80px;
   height: 30px;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .switch input {
