@@ -12,18 +12,15 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->sortDesc()->unique('id');
+        $orders = Auth::user()->plates()->with('orders')->withTrashed()->get()->pluck('orders')->flatten()->sortDesc()->unique('id');
         return view('admin.orders.index', compact('orders'));
     }
 
     public function show(Order $order)
     {
-        $orders = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->unique('id')->pluck('id')->toArray();
-        if (in_array($order->id, $orders)) {
-            $plates = Auth::user()->plates()->onlyTrashed()->with('orders')->get()->pluck('orders')->flatten()->toArray();
-            if (in_array($order->id, $plates)) {
-                return view('admin.orders.show', compact('order', 'plates'));
-            } else return view('admin.orders.show', compact('order'));
-        } else abort(404);
+        $order_ids = Auth::user()->plates()->with('orders')->get()->pluck('orders')->flatten()->unique('id')->pluck('id')->toArray();
+        $plates = $order->plates()->withTrashed()->get();
+        if (in_array($order->id, $order_ids)) return view('admin.orders.show', compact('order', 'plates'));
+        else abort(404);
     }
 }

@@ -42,12 +42,7 @@
                 </tr>
               </thead>
               <tbody>
-                @if($plates)
-                  @foreach($plates as $plate_trashed)
-                  <p>{{$plate_trashed->id}}</p>
-                  @endforeach
-                @endif
-                  @foreach($order->plates as $plate)
+                  @foreach($plates as $plate)
                       <tr>
                           <td>{{$plate->name}}</td>
                           <td>{{$plate->price}}€</td>
