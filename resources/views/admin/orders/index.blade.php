@@ -29,10 +29,6 @@
             @endforelse
         </tbody>
     </table>
-    <details class="text-dark">
-        <summary>Total Orders</summary>
-        <span>{{count($orders)}}</span>
-    </details>
 </div>
 
 

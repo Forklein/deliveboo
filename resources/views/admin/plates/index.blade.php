@@ -57,20 +57,8 @@
   </div>
     
 </div>
-<div class="container">
-  <div class="row justify-content-between">
-    <div class="col-md-4">
-      <details class="text-dark">
-        <summary>Total Plates</summary>
-        <span>{{($plates->total())}}</span>
-      </details>
-    </div>
-    <div class="col-md-4">
-      <div class="d-flex justify-content-end">
-        {{$plates->links()}}
-    </div>
-    </div>
-  </div>
+<div class="mt-4">
+    {{$plates->links()}}
 </div>
 @endsection
 
