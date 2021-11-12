@@ -2415,6 +2415,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
   props: ["carts", "totalCart"],
@@ -2426,7 +2428,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     showOverview: function showOverview() {
       this.isVisibile = !this.isVisibile;
+    },
+    saveStorage: function saveStorage() {
+      localStorage.setItem("storedData", JSON.stringify(this.carts));
     }
+  },
+  created: function created() {
+    this.carts = JSON.parse(localStorage.getItem("storedData"));
   }
 });
 
@@ -39674,7 +39682,16 @@ var render = function () {
                     _vm._v("Total " + _vm._s(_vm.totalCart)),
                   ]),
                   _vm._v(" "),
-                  _vm._m(0),
+                  _c("div", { staticClass: "col" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        on: { click: _vm.saveStorage },
+                      },
+                      [_vm._v("\n              Checkout\n            ")]
+                    ),
+                  ]),
                 ]
               ),
             ],
@@ -39685,16 +39702,7 @@ var render = function () {
     ),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col" }, [
-      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Checkout")]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

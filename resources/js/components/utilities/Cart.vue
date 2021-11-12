@@ -27,7 +27,9 @@
           <div class="col-12 align-items-center justify-content-between d-flex">
             <div class="col">Total {{ totalCart }}</div>
             <div class="col">
-              <button class="btn btn-primary">Checkout</button>
+              <button @click="saveStorage" class="btn btn-primary">
+                Checkout
+              </button>
             </div>
           </div>
         </div>
@@ -49,6 +51,12 @@ export default {
     showOverview() {
       this.isVisibile = !this.isVisibile;
     },
+    saveStorage() {
+      localStorage.setItem("storedData", JSON.stringify(this.carts));
+    },
+  },
+  created() {
+    this.carts = JSON.parse(localStorage.getItem("storedData"));
   },
 };
 </script>
