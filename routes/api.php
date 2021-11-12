@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::namespace('Api')->group(function () {
     //ROTTE
     Route::apiResource('users', 'UserController');
+    Route::apiResource('orders', 'OrderController');
 });
