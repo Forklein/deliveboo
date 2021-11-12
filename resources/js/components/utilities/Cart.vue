@@ -25,9 +25,7 @@
             <div class="col-2">{{ cart.price }}</div>
           </div>
           <div class="col-12 align-items-center justify-content-between d-flex">
-            <div v-if="carts.length > 0" class="col">
-              Total {{ getTotal() }}€
-            </div>
+            <div class="col">Total {{ totalCart }}</div>
             <div class="col">
               <button class="btn btn-primary">Checkout</button>
             </div>
@@ -41,19 +39,11 @@
 <script>
 export default {
   name: "Cart",
-  props: ["carts"],
+  props: ["carts", "totalCart"],
   data() {
     return {
       isVisibile: false,
     };
-  },
-  computed: {
-    getTotal() {
-      let totalCart = 0;
-      this.carts.forEach((cart) => {
-        return (totalCart += cart.price);
-      });
-    },
   },
   methods: {
     showOverview() {

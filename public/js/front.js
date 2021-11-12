@@ -2215,13 +2215,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   data: function data() {
     return {
       cart: [],
-      isLoading: false
+      isLoading: false,
+      totalCart: 0
     };
   },
   props: ["plates"],
   methods: {
     getCart: function getCart(data) {
       var newData = Object.assign.apply(Object, [{}].concat(_toConsumableArray(data)));
+      this.totalCart += newData.price;
       this.cart.push(newData);
     }
   },
@@ -2413,23 +2415,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
-  props: ["carts"],
+  props: ["carts", "totalCart"],
   data: function data() {
     return {
       isVisibile: false
     };
-  },
-  computed: {
-    getTotal: function getTotal() {
-      var totalCart = 0;
-      this.carts.forEach(function (cart) {
-        return totalCart += cart.price;
-      });
-    }
   },
   methods: {
     showOverview: function showOverview() {
@@ -39407,7 +39399,9 @@ var render = function () {
                 0
               ),
               _vm._v(" "),
-              _c("Cart", { attrs: { carts: _vm.cart } }),
+              _c("Cart", {
+                attrs: { carts: _vm.cart, totalCart: _vm.totalCart },
+              }),
             ],
             1
           ),
@@ -39676,15 +39670,9 @@ var render = function () {
                     "col-12 align-items-center justify-content-between d-flex",
                 },
                 [
-                  _vm.carts.length > 0
-                    ? _c("div", { staticClass: "col" }, [
-                        _vm._v(
-                          "\n            Total " +
-                            _vm._s(_vm.getTotal()) +
-                            "€\n          "
-                        ),
-                      ])
-                    : _vm._e(),
+                  _c("div", { staticClass: "col" }, [
+                    _vm._v("Total " + _vm._s(_vm.totalCart)),
+                  ]),
                   _vm._v(" "),
                   _vm._m(0),
                 ]

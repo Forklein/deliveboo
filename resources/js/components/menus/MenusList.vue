@@ -7,7 +7,7 @@
           <MenuCard :plate="plate" @currentCart="getCart" />
         </div>
       </div>
-      <Cart :carts="cart" />
+      <Cart :carts="cart" :totalCart="totalCart" />
     </div>
   </section>
 </template>
@@ -28,12 +28,14 @@ export default {
     return {
       cart: [],
       isLoading: false,
+      totalCart: 0,
     };
   },
   props: ["plates"],
   methods: {
     getCart(data) {
       const newData = Object.assign({}, ...data);
+      this.totalCart += newData.price;
       this.cart.push(newData);
     },
   },
