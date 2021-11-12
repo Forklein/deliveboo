@@ -1,15 +1,19 @@
 <template>
-  <section id="restaurants-list">
-    <div class="container">
-      <h2>Users' Restaurants</h2>
-      <p>
+  <section id="restaurants-list" class="pt-5">
+    <div class="container flex-column">
+      <h2 class="mb-2">Users' Restaurants</h2>
+      <p class="text-center">
         Here you can find a selection of the best restaurants next to you. Just
         choose meal and enjoy your favourite food in the comfort of your
         favourite places.
       </p>
       <Loader v-if="isLoading" />
-      <div v-else class="cards-list">
-        <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
+      <div v-else class="container">
+        <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4">
+          <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -54,37 +58,10 @@ export default {
 };
 </script>
 
-<style scoped>
-#restaurants-list {
-  padding: 50px 0;
-  height: fit-content;
-  background: #ed9529;
-  display: flex;
-}
-
-.container {
-  flex-direction: column;
-  height: 100%;
-}
-
-.cards-list {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+<style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
 
 h2 {
-  text-align: center;
-  color: #007e8a;
-  font-size: 38px;
-  margin-bottom: 14.5px;
-}
-
-p {
-  text-align: center;
-  font-size: 17px;
-  line-height: 27px;
+  color: $oxfordBlue;
 }
 </style>

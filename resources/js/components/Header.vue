@@ -1,10 +1,10 @@
 <template>
   <header>
-    <div class="jumbotron" id="hero">
+    <div class="jumbotron">
       <img src="/img/jumbotron.jpg" alt="" class="jumbotron-img" />
-      <div class="text-container">
-        <h2 class="jumbotron-title">The Food you love at Home</h2>
-        <p class="jumbotron-text">
+      <div class="container my-container flex-column mt-5 overflow-auto">
+        <h2 class="jumbotron-title mb-2">The Food you love at Home</h2>
+        <p class="jumbotron-text pr-3">
           Deliveroo's aim is to transform the way customers eat. By constantly
           innovating and expanding, we offer ours customers the best choice and
           convenience and a large selection of restaurants: whether you want
@@ -13,7 +13,7 @@
           different tastes and our job is to make sure that have what they want,
           when they want and where they want it.
         </p>
-          <button>
+          <button class="py-2 px-3 border-0 rounded-pill text-white">
             <a href="#about-us">Read more</a>
           </button>
       </div>
@@ -27,27 +27,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../sass/_variables.scss";
 
-/***************************/
-.text-container {
-  margin: 50px auto 0 auto;
-  padding: 0 0 0 10%;
-  width: 52.5%;
-  max-height: 48%;
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-}
-/***************************/
-
+/****************************/
 .jumbotron {
-  width: 100%;
-  min-height: 640px;
+  height: 650px;
   position: relative;
 }
 
@@ -62,29 +47,20 @@ export default {
   z-index: 1;
 }
 
-.jumbotron-title {
-  color: #00ccbc;
-  font-weight: bolder;
-  font-size: 38px;
-  margin-bottom: 14.5px;
+.my-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
+  /****************************/
+
 
 .jumbotron-text {
-  margin-bottom: 10px;
-  padding-right: 30px;
-  width: 100%;
-  color: #007E8A;
-  font-size: 17px;
-  line-height: 26px;
+  color: $oxfordBlue;
 }
 
-button {
-  padding: 10px 17.5px;
-  max-width: 120px;
-  background: #00ccbc;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
+.jumbotron-title {
+  color: $mediumTurquoise;
 }
 </style>

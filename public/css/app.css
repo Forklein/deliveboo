@@ -10175,19 +10175,19 @@ h3 {
 }
 
 .txt-oxford {
-  color: #0C1B33;
+  color: #007e8a;
 }
 
 /********************** BACKGROUND  *********************/
 .bg-oxford {
-  background-color: #0C1B33 !important;
+  background-color: #007e8a !important;
 }
 
 /********************** BUTTON **************************/
 .btn-oxford {
   color: #fff;
-  background-color: #0C1B33;
-  border-color: #0C1B33;
+  background-color: #007e8a;
+  border-color: #007e8a;
 }
 .btn-oxford:hover {
   color: #fff;
@@ -10195,46 +10195,20 @@ h3 {
 }
 
 #main-menu {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
   height: 65px;
   background: #FCB750;
-  display: flex;
-  align-items: center;
 }
 
 #logo {
   height: 60px;
-  margin-right: 20px;
-}
-
-.navbar-nav-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-nav {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .navbar-nav:first-of-type {
-  color: #427267;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-  color: currentColor;
+  color: #007e8a;
 }
 
 .nav-link {
-  padding: 27px 5px;
-  vertical-align: middle;
+  line-height: 65px;
 }
 
 .nav-link:hover,
@@ -10244,17 +10218,14 @@ a:hover {
 }
 
 .icon {
-  width: 20px;
-  margin-right: 5px;
+  font-size: 20px;
   vertical-align: middle;
 }
 
-button {
-  margin: 5px;
-  padding: 10px 15px;
-  background: #00CCBC;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
+.navbar-nav:first-of-type .icon {
+  color: #007e8a;
+}
+
+#menu-icon {
+  font-size: 30px;
 }

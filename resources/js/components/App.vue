@@ -26,17 +26,30 @@ export default {
 };
 </script>
 
-<style>
-section {
-  min-height: 100vh;
+<style lang="scss">
+@import "../../sass/_variables.scss";
+* {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
+p {
+  font-size: 17px;
+}
+
+a, a:hover {
   text-decoration: none;
   color: currentColor;
 }
 
-ul {
-  list-style-type: none;
+h2 {
+  color: $ourIndigo;
+  font-size: 38px;
+  font-weight: bolder;
+  text-align: center !important;
+}
+
+button {
+  background: $mediumTurquoise;
+  font-size: 16px;
 }
 </style>
