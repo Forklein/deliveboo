@@ -2413,6 +2413,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
   props: ["carts"],
@@ -2420,6 +2422,14 @@ __webpack_require__.r(__webpack_exports__);
     return {
       isVisibile: false
     };
+  },
+  computed: {
+    getTotal: function getTotal() {
+      var totalCart = 0;
+      this.carts.forEach(function (cart) {
+        return totalCart += cart.price;
+      });
+    }
   },
   methods: {
     showOverview: function showOverview() {
@@ -39659,7 +39669,26 @@ var render = function () {
                 )
               }),
               _vm._v(" "),
-              _vm._m(0),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 align-items-center justify-content-between d-flex",
+                },
+                [
+                  _vm.carts.length > 0
+                    ? _c("div", { staticClass: "col" }, [
+                        _vm._v(
+                          "\n            Total " +
+                            _vm._s(_vm.getTotal()) +
+                            "€\n          "
+                        ),
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm._m(0),
+                ]
+              ),
             ],
             2
           ),
@@ -39673,12 +39702,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 justify-content-between d-flex" }, [
-      _c("div", { staticClass: "col" }, [_vm._v("Total")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col" }, [
-        _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Checkout")]),
-      ]),
+    return _c("div", { staticClass: "col" }, [
+      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Checkout")]),
     ])
   },
 ]

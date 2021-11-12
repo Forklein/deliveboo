@@ -24,8 +24,10 @@
             <div class="col-1">{{ cart.quantity }}</div>
             <div class="col-2">{{ cart.price }}</div>
           </div>
-          <div class="col-12 justify-content-between d-flex">
-            <div class="col">Total</div>
+          <div class="col-12 align-items-center justify-content-between d-flex">
+            <div v-if="carts.length > 0" class="col">
+              Total {{ getTotal() }}€
+            </div>
             <div class="col">
               <button class="btn btn-primary">Checkout</button>
             </div>
@@ -44,6 +46,14 @@ export default {
     return {
       isVisibile: false,
     };
+  },
+  computed: {
+    getTotal() {
+      let totalCart = 0;
+      this.carts.forEach((cart) => {
+        return (totalCart += cart.price);
+      });
+    },
   },
   methods: {
     showOverview() {
