@@ -7,7 +7,7 @@
           <MenuCard :plate="plate" @currentCart="getCart" />
         </div>
       </div>
-      <Cart :cart="cart" />
+      <Cart :carts="cart" />
     </div>
   </section>
 </template>

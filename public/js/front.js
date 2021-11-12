@@ -2381,8 +2381,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Cart"
+  name: "Cart",
+  props: ["carts"],
+  data: function data() {
+    return {
+      isVisibile: false
+    };
+  },
+  methods: {
+    showOverview: function showOverview() {
+      this.isVisibile = !this.isVisibile;
+    }
+  }
 });
 
 /***/ }),
@@ -6846,7 +6889,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n}", ""]);
+exports.push([module.i, "#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 60px;\n  right: 60px;\n  z-index: 10;\n  width: 400px;\n  border-radius: 20px;\n}", ""]);
 
 // exports
 
@@ -39354,7 +39397,7 @@ var render = function () {
                 0
               ),
               _vm._v(" "),
-              _c("Cart", { attrs: { cart: _vm.cart } }),
+              _c("Cart", { attrs: { carts: _vm.cart } }),
             ],
             1
           ),
@@ -39555,18 +39598,88 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container-cart text-center" }, [
+    _c(
+      "div",
+      {
+        staticClass: "rounded-circle bg-light p-3",
+        attrs: { id: "cart" },
+        on: { click: _vm.showOverview },
+      },
+      [
+        _c(
+          "span",
+          {
+            staticClass: "badge badge-pill badge-danger",
+            attrs: { id: "notify" },
+          },
+          [_vm._v(_vm._s(_vm.carts.length))]
+        ),
+        _vm._v(" "),
+        _c("i", { staticClass: "fas fa-shopping-cart fa-2x pr-1" }),
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "overview bg-white overflow-auto shadow-lg",
+        class: _vm.isVisibile ? "d-block" : "d-none",
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "div",
+            { staticClass: "row" },
+            [
+              _vm._l(_vm.carts, function (cart, index) {
+                return _c(
+                  "div",
+                  { key: index, staticClass: "col-12 d-flex my-2" },
+                  [
+                    _c("div", { staticClass: "col-3" }, [
+                      _c("img", {
+                        staticStyle: { width: "50%" },
+                        attrs: { src: cart.image, alt: cart.name },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _vm._v(_vm._s(cart.name)),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-1" }, [
+                      _vm._v(_vm._s(cart.quantity)),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-2" }, [
+                      _vm._v(_vm._s(cart.price)),
+                    ]),
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _vm._m(0),
+            ],
+            2
+          ),
+        ]),
+      ]
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "rounded-circle bg-light p-3", attrs: { id: "cart" } },
-      [_c("i", { staticClass: "fas fa-shopping-cart fa-2x pr-1" })]
-    )
+    return _c("div", { staticClass: "col-12 justify-content-between d-flex" }, [
+      _c("div", { staticClass: "col" }, [_vm._v("Total")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col" }, [
+        _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Checkout")]),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
