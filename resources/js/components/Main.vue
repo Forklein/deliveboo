@@ -17,7 +17,7 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div
               class="
                 card
@@ -26,7 +26,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
             >
               <img
@@ -43,7 +43,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div
               class="
                 card
@@ -52,7 +52,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
             >
               <img
@@ -69,7 +69,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div
               class="
                 card
@@ -78,7 +78,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
             >
               <img
@@ -95,7 +95,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
             <div
               class="
                 card
@@ -104,7 +104,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
             >
               <img
@@ -146,7 +146,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
               id="rider"
             >
@@ -176,7 +176,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
               id="our-company"
             >
@@ -206,7 +206,7 @@
                 d-flex
                 flex-column
                 align-items-center
-                border-none
+                border-0
               "
               id="work-with-us"
             >
@@ -266,7 +266,7 @@ export default {
 @import "../../sass/_variables.scss";
 #our-technology,
 #about-us {
-  background: #dbfbf8;
+  background: $lightTurquoise;
 }
 
 .card {
@@ -285,4 +285,10 @@ export default {
   }
 }
 
+#our-values {
+  background-color: $ourLightIndigo;
+  h2 {
+    color: $oxfordBlue;
+  }
+}
 </style>

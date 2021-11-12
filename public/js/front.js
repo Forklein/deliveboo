@@ -2708,7 +2708,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
   data: function data() {
@@ -7238,7 +7237,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/****************************/\n.jumbotron[data-v-1f42fb90] {\n  height: 650px;\n  position: relative;\n}\n.jumbotron-img[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: 1;\n}\n.my-container[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 2;\n}\n\n/****************************/\n.jumbotron-text[data-v-1f42fb90] {\n  color: #007e8a;\n}\n.jumbotron-title[data-v-1f42fb90] {\n  color: #00CCBC;\n}", ""]);
+exports.push([module.i, "/****************************/\n.jumbotron[data-v-1f42fb90] {\n  height: 650px;\n  position: relative;\n}\n.jumbotron-img[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: 1;\n}\n.my-container[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 2;\n}\n\n/****************************/\n.jumbotron-text[data-v-1f42fb90] {\n  color: #007e8a;\n}\n.jumbotron-title[data-v-1f42fb90] {\n  font-weight: bolder;\n  color: #00CCBC;\n}", ""]);
 
 // exports
 
@@ -7257,7 +7256,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#our-technology[data-v-b9c20fb8],\n#about-us[data-v-b9c20fb8] {\n  background: #dbfbf8;\n}\n.card[data-v-b9c20fb8] {\n  border-radius: 20px;\n}\n.card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}", ""]);
+exports.push([module.i, "#our-technology[data-v-b9c20fb8],\n#about-us[data-v-b9c20fb8] {\n  background: #dbfbf8;\n}\n.card[data-v-b9c20fb8] {\n  border-radius: 20px;\n}\n.card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-values[data-v-b9c20fb8] {\n  background-color: #e9dfee;\n}\n#our-values h2[data-v-b9c20fb8] {\n  color: #007e8a;\n}", ""]);
 
 // exports
 
@@ -7276,7 +7275,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-5ebd141e] {\n  font-size: 15px;\n  border-radius: 20px;\n}\n.card h4[data-v-5ebd141e] {\n  text-align: center !important;\n}\n.card hr[data-v-5ebd141e] {\n  border: 1px solid #007e8a;\n  background: #007e8a;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #007e8a;\n  vertical-align: baseline;\n}", ""]);
+exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #f3d7a2;\n  border-radius: 20px;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e], .card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
 
 // exports
 
@@ -7295,7 +7294,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "h2[data-v-67b88280] {\n  color: #007e8a;\n}", ""]);
+exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #e9dfee;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
 
 // exports
 
@@ -39526,7 +39525,7 @@ var staticRenderFns = [
               "container my-container flex-column mt-5 overflow-auto",
           },
           [
-            _c("h2", { staticClass: "jumbotron-title mb-2" }, [
+            _c("h1", { staticClass: "jumbotron-title mb-2" }, [
               _vm._v("The Food you love at Home"),
             ]),
             _vm._v(" "),
@@ -39595,7 +39594,7 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+                      "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                     attrs: { id: "work-with-us" },
                   },
                   [
@@ -39662,12 +39661,12 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-3" }, [
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
               _c(
                 "div",
                 {
                   staticClass:
-                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                 },
                 [
                   _c("img", {
@@ -39691,12 +39690,12 @@ var staticRenderFns = [
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-3" }, [
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
               _c(
                 "div",
                 {
                   staticClass:
-                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                 },
                 [
                   _c("img", {
@@ -39720,12 +39719,12 @@ var staticRenderFns = [
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-3" }, [
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
               _c(
                 "div",
                 {
                   staticClass:
-                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                 },
                 [
                   _c("img", {
@@ -39749,12 +39748,12 @@ var staticRenderFns = [
               ),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-3" }, [
+            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
               _c(
                 "div",
                 {
                   staticClass:
-                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+                    "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                 },
                 [
                   _c("img", {
@@ -39805,7 +39804,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+            "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
           attrs: { id: "rider" },
         },
         [
@@ -39836,7 +39835,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-none\n            ",
+            "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
           attrs: { id: "our-company" },
         },
         [
@@ -39920,7 +39919,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "card my-5 p-4 border-none d-flex flex-column" },
+    { staticClass: "card my-5 p-4 border-0 d-flex flex-column" },
     [
       _c("img", {
         staticClass: "my-0 mx-auto w-75",
@@ -39932,27 +39931,29 @@ var render = function () {
         },
       }),
       _vm._v(" "),
-      _c("h4", { staticClass: "card-title" }, [
+      _c("h4", { staticClass: "card-title mb-4" }, [
         _vm._v("\n    " + _vm._s(_vm.user.restaurant_name) + "\n  "),
       ]),
       _vm._v(" "),
-      _c("hr", { staticClass: "mb-3" }),
+      _c(
+        "address",
+        { staticClass: "mb-1", staticStyle: { display: "inline" } },
+        [
+          _c("i", { staticClass: "icon mr-2 fas fa-map-marker-alt" }),
+          _vm._v(
+            "\n    " +
+              _vm._s(_vm.user.address) +
+              " - " +
+              _vm._s(_vm.user.city) +
+              " - " +
+              _vm._s(_vm.user.zip) +
+              "\n  "
+          ),
+        ]
+      ),
       _vm._v(" "),
-      _c("address", { staticStyle: { display: "inline" } }, [
-        _c("i", { staticClass: "icon fas fa-map-marker-alt" }),
-        _vm._v(
-          "\n    " +
-            _vm._s(_vm.user.address) +
-            " - " +
-            _vm._s(_vm.user.city) +
-            " - " +
-            _vm._s(_vm.user.zip) +
-            "\n  "
-        ),
-      ]),
-      _vm._v(" "),
-      _c("p", [
-        _c("i", { staticClass: "icon mx-2 fas fa-phone" }),
+      _c("p", { staticClass: "m-0 pt-1" }, [
+        _c("i", { staticClass: "icon mr-2 fas fa-phone" }),
         _vm._v(_vm._s(_vm.user.phone)),
       ]),
       _vm._v(" "),

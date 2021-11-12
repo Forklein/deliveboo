@@ -3,7 +3,7 @@
     <div class="jumbotron">
       <img src="/img/jumbotron.jpg" alt="" class="jumbotron-img" />
       <div class="container my-container flex-column mt-5 overflow-auto">
-        <h2 class="jumbotron-title mb-2">The Food you love at Home</h2>
+        <h1 class="jumbotron-title mb-2">The Food you love at Home</h1>
         <p class="jumbotron-text pr-3">
           Deliveroo's aim is to transform the way customers eat. By constantly
           innovating and expanding, we offer ours customers the best choice and
@@ -53,14 +53,14 @@ export default {
   left: 0;
   z-index: 2;
 }
-  /****************************/
-
+/****************************/
 
 .jumbotron-text {
   color: $oxfordBlue;
 }
 
 .jumbotron-title {
+  font-weight: bolder;
   color: $mediumTurquoise;
 }
 </style>

@@ -61,7 +61,11 @@ export default {
 <style lang="scss" scoped>
 @import "../../../sass/_variables.scss";
 
+#restaurants-list {
+  background: $ourLightIndigo;
+}
+
 h2 {
-  color: $oxfordBlue;
+  color: $ourIndigo;
 }
 </style>

@@ -1,20 +1,19 @@
 <template>
-  <div class="card my-5 p-4 border-none d-flex flex-column">
+  <div class="card my-5 p-4 border-0 d-flex flex-column">
     <img
       src="img/restaurant-image.png"
       class="my-0 mx-auto w-75"
       alt="restaurant-image"
       @click="getMenu(user.id)"
     />
-    <h4 class="card-title">
+    <h4 class="card-title mb-4">
       {{ user.restaurant_name }}
     </h4>
-    <hr class="mb-3" />
-    <address style="display: inline">
-      <i class="icon fas fa-map-marker-alt"></i>
+    <address class="mb-1" style="display: inline">
+      <i class="icon mr-2 fas fa-map-marker-alt"></i>
       {{ user.address }} - {{ user.city }} - {{ user.zip }}
     </address>
-    <p><i class="icon mx-2 fas fa-phone"></i>{{ user.phone }}</p>
+    <p class="m-0 pt-1"><i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}</p>
     <p>Vat: {{ user.vat }}</p>
   </div>
 </template>
@@ -46,19 +45,21 @@ export default {
 <style lang="scss" scoped>
 @import "../../../sass/_variables.scss";
 .card {
-  font-size: 15px;
+  background: $lightYellowJasmine;
   border-radius: 20px;
   h4 {
+    color: $carrotOrange;
+    font-weight: bolder;
     text-align: center !important;
-  }
-  hr {
-    border: 1px solid $oxfordBlue;
-    background: $oxfordBlue;
   }
   .icon {
     font-size: 20px;
-    color: $oxfordBlue;
+    color: $carrotOrange;
     vertical-align: baseline;
+  }
+  p, address {
+    font-size: 14px;
+    color: rgb(59, 59, 59);
   }
 }
 </style>
