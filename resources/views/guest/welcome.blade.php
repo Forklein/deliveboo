@@ -69,8 +69,12 @@
 
         <div id="root"></div>
         
-        <script src="{{ asset('js/front.js') }}"></script>
     </div>
+
+
+
+    
+    <script src="{{ asset('js/front.js') }}"></script>
 </body>
 
 </html>
