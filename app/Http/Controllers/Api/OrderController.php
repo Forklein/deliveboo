@@ -37,9 +37,9 @@ class OrderController extends Controller
         $order->total = $data['total'];
         $order->save();
 
-        foreach ($data['order_details'] as $key => $detail) {
-            $order->plates()->attach($key, ['quantity' => $detail]);
-        }
+        // foreach ($data['order_details'] as $key => $detail) {
+        //     $order->plates()->attach($key, ['quantity' => $detail]);
+        // }
 
         return response()->json([
             'Message' => 'Order was successfully created'

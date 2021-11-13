@@ -33,6 +33,7 @@ export default {
         this.currentCart.push({
           image: plate.image,
           name: plate.name,
+          plate_id: plate.id,
           price: plate.price * this.quantity,
           quantity: this.quantity,
         });

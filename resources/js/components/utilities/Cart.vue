@@ -27,8 +27,8 @@
           <div class="col-12 align-items-center justify-content-between d-flex">
             <div class="col">Total {{ totalCart }}</div>
             <div class="col">
-              <button @click="saveStorage" class="btn btn-primary">
-                Checkout
+              <button @click="saveStorage">
+                <router-link to="/checkout">Checkout</router-link>
               </button>
             </div>
           </div>
