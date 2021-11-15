@@ -2484,7 +2484,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "MenuCard",
   data: function data() {
     return {
-      currentCart: [],
+      currentCart: {},
       quantity: 1
     };
   },
@@ -2492,13 +2492,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     addToCart: function addToCart(plate) {
       if (this.quantity > 0) {
-        this.currentCart.push({
+        this.currentCart = {
           image: plate.image,
           name: plate.name,
           plate_id: plate.id,
           price: plate.price * this.quantity,
           quantity: this.quantity
-        });
+        };
         this.$emit("currentCart", this.currentCart);
         this.quantity = 1;
       }
@@ -2526,18 +2526,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MenuCard_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MenuCard.vue */ "./resources/js/components/menus/MenuCard.vue");
 /* harmony import */ var _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/Cart.vue */ "./resources/js/components/utilities/Cart.vue");
 /* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 //
 //
 //
@@ -2564,25 +2552,41 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   },
   data: function data() {
     return {
-      cart: [],
       isLoading: false,
-      totalCart: 0
+      totalCart: 0,
+      cart: []
     };
   },
   props: ["plates"],
   methods: {
     getCart: function getCart(data) {
-      var newData = Object.assign.apply(Object, [{}].concat(_toConsumableArray(data)));
-      this.totalCart += newData.price;
-      this.cart.push(newData);
+      var _this = this;
+
+      if (this.cart.length > 0) {
+        this.cart.forEach(function (element) {
+          if (element.plate_id == data.plate_id) {
+            _this.cart.map(function (el) {
+              if (el.plate_id == data.plate_id) {
+                el.quantity += data.quantity;
+                el.price += data.price;
+              }
+            });
+
+            return el;
+          }
+        });
+        this.cart.push(data);
+      } else if (this.cart.length == 0) this.cart.push(data);
+
+      this.totalCart += data.price;
     }
   },
   created: function created() {
-    var _this = this;
+    var _this2 = this;
 
     this.isLoading = true;
     setTimeout(function () {
-      _this.isLoading = false;
+      _this2.isLoading = false;
     }, 1000);
   }
 });
@@ -2647,6 +2651,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "checkout",
@@ -2655,13 +2681,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      name: "Prova d'ordine",
-      surname: "Prova d'ordine",
-      address: "Prova d'ordine",
-      phone: "33333333333",
-      mail: "prova@prova.it",
-      plate_id: "5",
-      total: "55.30",
+      name: "",
+      surname: "",
+      address: "",
+      phone: "",
+      mail: "",
+      plate_id: "",
+      total: 0,
       isLoading: false,
       order: {
         name: this.name,
@@ -2704,7 +2730,10 @@ __webpack_require__.r(__webpack_exports__);
     setTimeout(function () {
       _this.isLoading = false;
     }, 1000);
-    console.log(JSON.parse(localStorage.getItem("storedData")));
+    var cart = JSON.parse(localStorage.getItem("storedData"));
+    cart.forEach(function (el) {
+      _this.total += el.price;
+    });
   }
 });
 
@@ -63252,14 +63281,31 @@ var render = function () {
       [
         _vm.isLoading
           ? _c("Loader")
-          : _c("div", { staticClass: "row" }, [
+          : _c("div", { staticClass: "row my-3" }, [
               _c("div", { staticClass: "col-8" }, [
                 _c("div", { staticClass: "form-group" }, [
                   _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.name,
+                        expression: "name",
+                      },
+                    ],
                     staticClass: "form-control",
                     attrs: { type: "text", id: "name" },
+                    domProps: { value: _vm.name },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.name = $event.target.value
+                      },
+                    },
                   }),
                 ]),
                 _vm._v(" "),
@@ -63269,8 +63315,25 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.surname,
+                        expression: "surname",
+                      },
+                    ],
                     staticClass: "form-control",
                     attrs: { type: "text", id: "surname" },
+                    domProps: { value: _vm.surname },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.surname = $event.target.value
+                      },
+                    },
                   }),
                 ]),
                 _vm._v(" "),
@@ -63280,8 +63343,25 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.address,
+                        expression: "address",
+                      },
+                    ],
                     staticClass: "form-control",
                     attrs: { type: "text", id: "address" },
+                    domProps: { value: _vm.address },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.address = $event.target.value
+                      },
+                    },
                   }),
                 ]),
                 _vm._v(" "),
@@ -63289,8 +63369,25 @@ var render = function () {
                   _c("label", { attrs: { for: "phone" } }, [_vm._v("Phone")]),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.phone,
+                        expression: "phone",
+                      },
+                    ],
                     staticClass: "form-control",
                     attrs: { type: "phone", id: "phone" },
+                    domProps: { value: _vm.phone },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.phone = $event.target.value
+                      },
+                    },
                   }),
                 ]),
                 _vm._v(" "),
@@ -63300,8 +63397,25 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.mail,
+                        expression: "mail",
+                      },
+                    ],
                     staticClass: "form-control",
                     attrs: { type: "email", id: "email" },
+                    domProps: { value: _vm.mail },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.mail = $event.target.value
+                      },
+                    },
                   }),
                 ]),
                 _vm._v(" "),
@@ -63319,16 +63433,22 @@ var render = function () {
               _c("div", { staticClass: "col-4" }, [
                 _c("div", { staticClass: "card" }, [
                   _c("div", { staticClass: "card-header" }, [
-                    _vm._v(_vm._s(_vm.name) + _vm._s(_vm.surname)),
+                    _vm._v(_vm._s(_vm.name)),
+                    _c("br"),
+                    _vm._v(_vm._s(_vm.surname)),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "card-body" }, [
-                    _vm._v(
-                      _vm._s(_vm.address) + _vm._s(_vm.phone) + _vm._s(_vm.mail)
-                    ),
+                    _vm._v("\n            " + _vm._s(_vm.address)),
+                    _c("br"),
+                    _vm._v(_vm._s(_vm.phone)),
+                    _c("br"),
+                    _vm._v(_vm._s(_vm.mail) + "\n          "),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "card-footer" }, [_vm._v("150€")]),
+                  _c("div", { staticClass: "card-footer" }, [
+                    _vm._v("Total Order: " + _vm._s(_vm.total) + "€"),
+                  ]),
                 ]),
               ]),
             ]),

@@ -2,27 +2,47 @@
   <div class="checkout">
     <div class="container">
       <Loader v-if="isLoading" />
-      <div v-else class="row">
+      <div v-else class="row my-3">
         <div class="col-8">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" />
+            <input type="text" v-model="name" class="form-control" id="name" />
           </div>
           <div class="form-group">
             <label for="surname">Surname</label>
-            <input type="text" class="form-control" id="surname" />
+            <input
+              type="text"
+              v-model="surname"
+              class="form-control"
+              id="surname"
+            />
           </div>
           <div class="form-group">
             <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" />
+            <input
+              type="text"
+              v-model="address"
+              class="form-control"
+              id="address"
+            />
           </div>
           <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="phone" class="form-control" id="phone" />
+            <input
+              type="phone"
+              v-model="phone"
+              class="form-control"
+              id="phone"
+            />
           </div>
           <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" />
+            <input
+              type="email"
+              v-model="mail"
+              class="form-control"
+              id="email"
+            />
           </div>
           <button type="button" @click="createOrder" class="btn btn-primary">
             Submit
@@ -30,9 +50,11 @@
         </div>
         <div class="col-4">
           <div class="card">
-            <div class="card-header">{{ name }}{{ surname }}</div>
-            <div class="card-body">{{ address }}{{ phone }}{{ mail }}</div>
-            <div class="card-footer">150€</div>
+            <div class="card-header">{{ name }}<br />{{ surname }}</div>
+            <div class="card-body">
+              {{ address }}<br />{{ phone }}<br />{{ mail }}
+            </div>
+            <div class="card-footer">Total Order: {{ total }}€</div>
           </div>
         </div>
       </div>
@@ -56,13 +78,13 @@ export default {
   },
   data() {
     return {
-      name: "Prova d'ordine",
-      surname: "Prova d'ordine",
-      address: "Prova d'ordine",
-      phone: "33333333333",
-      mail: "prova@prova.it",
-      plate_id: "5",
-      total: "55.30",
+      name: "",
+      surname: "",
+      address: "",
+      phone: "",
+      mail: "",
+      plate_id: "",
+      total: 0,
       isLoading: false,
       order: {
         name: this.name,
@@ -105,7 +127,10 @@ export default {
     setTimeout(() => {
       this.isLoading = false;
     }, 1000);
-    console.log(JSON.parse(localStorage.getItem("storedData")));
+    const cart = JSON.parse(localStorage.getItem("storedData"));
+    cart.forEach((el) => {
+      this.total += el.price;
+    });
   },
 };
 </script>

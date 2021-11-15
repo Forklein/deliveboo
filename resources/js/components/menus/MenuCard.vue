@@ -22,7 +22,7 @@ export default {
   name: "MenuCard",
   data() {
     return {
-      currentCart: [],
+      currentCart: {},
       quantity: 1,
     };
   },
@@ -30,13 +30,13 @@ export default {
   methods: {
     addToCart(plate) {
       if (this.quantity > 0) {
-        this.currentCart.push({
+        this.currentCart = {
           image: plate.image,
           name: plate.name,
           plate_id: plate.id,
           price: plate.price * this.quantity,
           quantity: this.quantity,
-        });
+        };
         this.$emit("currentCart", this.currentCart);
         this.quantity = 1;
       }
