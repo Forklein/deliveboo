@@ -2683,18 +2683,10 @@ __webpack_require__.r(__webpack_exports__);
       address: "",
       phone: "",
       mail: "",
-      plate_id: "",
       total: 0,
       cart: [],
-      isLoading: false,
-      order: {
-        name: this.name,
-        surname: this.surname,
-        address: this.address,
-        phone: this.phone,
-        mail: this.mail,
-        total: this.total
-      }
+      order: {},
+      isLoading: false
     };
   },
   methods: {
@@ -2705,19 +2697,29 @@ __webpack_require__.r(__webpack_exports__);
       var message = error.message; // Whoops, an error has occured while trying to get the nonce
     },
     createOrder: function createOrder() {
+      var order = {
+        name: this.name,
+        surname: this.surname,
+        address: this.address,
+        phone: this.phone,
+        mail: this.mail,
+        total: this.total
+      };
+      var obj = {};
+      this.cart.forEach(function (el) {
+        obj[el.plate_id] = el.quantity;
+      });
+      order.order_details = obj;
+      this.order = order;
+      console.log(this.order);
       axios({
         method: "post",
         url: "http://127.0.0.1:8000/api/orders",
-        data: this.order,
-        headers: {
-          "Content-Type": "multipart/form-data"
-        }
-      }).then(function (response) {
-        //handle success
-        console.log(response);
-      })["catch"](function (response) {
-        //handle error
-        console.log(response);
+        data: this.order
+      }).then(function (res) {
+        console.log(res);
+      })["catch"](function (res) {
+        console.log(res);
       });
     }
   },
@@ -2953,6 +2955,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -63445,7 +63449,7 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-4" }, [
+              _c("div", { staticClass: "col-4 my-auto" }, [
                 _c("div", { staticClass: "card" }, [
                   _c("div", { staticClass: "card-header" }, [
                     _vm._v(_vm._s(_vm.name)),
@@ -63843,12 +63847,17 @@ var render = function () {
                   _c("div", { staticClass: "col" }, [
                     _vm.carts.length > 0
                       ? _c(
-                          "button",
+                          "span",
                           { on: { click: _vm.saveStorage } },
                           [
-                            _c("router-link", { attrs: { to: "/checkout" } }, [
-                              _vm._v("Checkout"),
-                            ]),
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "btn btn-primary",
+                                attrs: { to: "/checkout" },
+                              },
+                              [_vm._v("Checkout")]
+                            ),
                           ],
                           1
                         )

@@ -48,7 +48,7 @@
             Submit
           </button>
         </div>
-        <div class="col-4">
+        <div class="col-4 my-auto">
           <div class="card">
             <div class="card-header">{{ name }}<br />{{ surname }}</div>
             <div class="card-body">
@@ -83,18 +83,10 @@ export default {
       address: "",
       phone: "",
       mail: "",
-      plate_id: "",
       total: 0,
       cart: [],
+      order: {},
       isLoading: false,
-      order: {
-        name: this.name,
-        surname: this.surname,
-        address: this.address,
-        phone: this.phone,
-        mail: this.mail,
-        total: this.total,
-      },
     };
   },
   methods: {
@@ -107,19 +99,31 @@ export default {
       // Whoops, an error has occured while trying to get the nonce
     },
     createOrder() {
+      const order = {
+        name: this.name,
+        surname: this.surname,
+        address: this.address,
+        phone: this.phone,
+        mail: this.mail,
+        total: this.total,
+      };
+      let obj = {};
+      this.cart.forEach((el) => {
+        obj[el.plate_id] = el.quantity;
+      });
+      order.order_details = obj;
+      this.order = order;
+      console.log(this.order);
       axios({
         method: "post",
         url: "http://127.0.0.1:8000/api/orders",
         data: this.order,
-        headers: { "Content-Type": "multipart/form-data" },
       })
-        .then(function (response) {
-          //handle success
-          console.log(response);
+        .then((res) => {
+          console.log(res);
         })
-        .catch(function (response) {
-          //handle error
-          console.log(response);
+        .catch((res) => {
+          console.log(res);
         });
     },
   },

@@ -30,9 +30,11 @@
           <div class="col-12 align-items-center justify-content-between d-flex">
             <div class="col">Total {{ getTotal }}€</div>
             <div class="col">
-              <button v-if="carts.length > 0" @click="saveStorage">
-                <router-link to="/checkout">Checkout</router-link>
-              </button>
+              <span v-if="carts.length > 0" @click="saveStorage">
+                <router-link class="btn btn-primary" to="/checkout"
+                  >Checkout</router-link
+                >
+              </span>
             </div>
           </div>
         </div>
