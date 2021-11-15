@@ -28,18 +28,16 @@
                         <ul class="navbar-nav">
                             @auth
                                 <li class="nav-item">
-                                    <button><a href="{{ url('/admin/home') }}">Home</a></button>
+                                    <a class="btn btn-primary" href="{{ url('/admin/home') }}">Dashboard</a>
                                 </li>
                             @else
                                 <li class="nav-item">
-                                    <button><a href="{{ route('login') }}"><img class="icon"
-                                                src="img/login-icon.png" alt="">Login</a></button>
+                                    <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
                                 </li>
 
                                 <li class="nav-item">
                                     @if (Route::has('register'))
-                                        <button><a href="{{ route('register') }}"><img class="icon"
-                                                    src="img/sign-up-icon.png" alt="">Register</a></button>
+                                        <a class="btn btn-primary" href="{{ route('register') }}">Register</a></button>
                                     @endif
                                 </li>
                             @endauth

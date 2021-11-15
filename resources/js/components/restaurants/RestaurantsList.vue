@@ -53,7 +53,9 @@ export default {
           console.error(err);
         })
         .then(() => {
-          this.isLoading = false;
+          setTimeout(() => {
+            this.isLoading = false;
+          }, 1500);
         });
     },
     getPlates(plates) {

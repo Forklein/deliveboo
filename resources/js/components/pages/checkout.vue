@@ -113,18 +113,23 @@ export default {
       });
       order.order_details = obj;
       this.order = order;
-      console.log(this.order);
-      axios({
-        method: "post",
-        url: "http://127.0.0.1:8000/api/orders",
-        data: this.order,
-      })
-        .then((res) => {
-          console.log(res);
+      this.isLoading = true;
+      setTimeout(() => {
+        axios({
+          method: "post",
+          url: "http://127.0.0.1:8000/api/orders",
+          data: this.order,
         })
-        .catch((res) => {
-          console.log(res);
-        });
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((res) => {
+            console.log(res);
+          })
+          .then(() => {
+            this.isLoading = false;
+          });
+      }, 2500);
     },
   },
   created() {
@@ -137,7 +142,7 @@ export default {
       });
       this.total = total;
       this.isLoading = false;
-    }, 1000);
+    }, 2000);
   },
 };
 </script>

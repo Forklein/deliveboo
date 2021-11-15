@@ -2295,25 +2295,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Footer'
+  name: "Footer"
 });
 
 /***/ }),
@@ -2697,6 +2680,8 @@ __webpack_require__.r(__webpack_exports__);
       var message = error.message; // Whoops, an error has occured while trying to get the nonce
     },
     createOrder: function createOrder() {
+      var _this = this;
+
       var order = {
         name: this.name,
         surname: this.surname,
@@ -2711,33 +2696,37 @@ __webpack_require__.r(__webpack_exports__);
       });
       order.order_details = obj;
       this.order = order;
-      console.log(this.order);
-      axios({
-        method: "post",
-        url: "http://127.0.0.1:8000/api/orders",
-        data: this.order
-      }).then(function (res) {
-        console.log(res);
-      })["catch"](function (res) {
-        console.log(res);
-      });
+      this.isLoading = true;
+      setTimeout(function () {
+        axios({
+          method: "post",
+          url: "http://127.0.0.1:8000/api/orders",
+          data: _this.order
+        }).then(function (res) {
+          console.log(res);
+        })["catch"](function (res) {
+          console.log(res);
+        }).then(function () {
+          _this.isLoading = false;
+        });
+      }, 2500);
     }
   },
   created: function created() {
-    var _this = this;
+    var _this2 = this;
 
     this.isLoading = true;
     setTimeout(function () {
-      _this.cart = JSON.parse(localStorage.getItem("storedData"));
+      _this2.cart = JSON.parse(localStorage.getItem("storedData"));
       var total = 0;
 
-      _this.cart.forEach(function (el) {
+      _this2.cart.forEach(function (el) {
         total += el.price;
       });
 
-      _this.total = total;
-      _this.isLoading = false;
-    }, 1000);
+      _this2.total = total;
+      _this2.isLoading = false;
+    }, 2000);
   }
 });
 
@@ -2931,7 +2920,9 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         console.error(err);
       }).then(function () {
-        _this.isLoading = false;
+        setTimeout(function () {
+          _this.isLoading = false;
+        }, 1500);
       });
     },
     getPlates: function getPlates(plates) {
@@ -3044,6 +3035,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -30528,7 +30533,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".loader[data-v-38305923] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 10;\n}\n.spinner-border[data-v-38305923] {\n  width: 200px;\n  height: 200px;\n}", ""]);
+exports.push([module.i, ".loader[data-v-38305923] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  z-index: 10;\n}\n.spinner-border[data-v-38305923] {\n  width: 200px;\n  height: 200px;\n}\nh1[data-v-38305923] {\n  text-align: center;\n  margin-top: 15px;\n  font-family: \"Pacifico\", cursive;\n  color: white;\n  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;\n}\n\n/* Hamburger */\n.hamburger[data-v-38305923] {\n  width: 220px;\n  height: 165px;\n}\n.hamburger div[data-v-38305923]:nth-child(1) {\n  z-index: 9;\n}\n.hamburger div[data-v-38305923]:nth-child(2) {\n  z-index: 8;\n  -webkit-animation: animate-pickle-1-data-v-38305923 3s infinite;\n          animation: animate-pickle-1-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(3) {\n  z-index: 7;\n  -webkit-animation: animate-pickle-2-data-v-38305923 3s infinite;\n          animation: animate-pickle-2-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(4) {\n  z-index: 5;\n  -webkit-animation: animate-tomato-1-data-v-38305923 3s infinite;\n          animation: animate-tomato-1-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(5) {\n  z-index: 6;\n  -webkit-animation: animate-tomato-2-data-v-38305923 3s infinite;\n          animation: animate-tomato-2-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(6) {\n  z-index: 4;\n  -webkit-animation: animate-cheese-1-data-v-38305923 3s infinite;\n          animation: animate-cheese-1-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(7) {\n  z-index: 3;\n  -webkit-animation: animate-cheese-2-data-v-38305923 3s infinite;\n          animation: animate-cheese-2-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(8) {\n  z-index: 2;\n  -webkit-animation: animate-beef-data-v-38305923 3s infinite;\n          animation: animate-beef-data-v-38305923 3s infinite;\n}\n.hamburger div[data-v-38305923]:nth-child(9) {\n  z-index: 1;\n  -webkit-animation: animate-bottom-bun-data-v-38305923 3s infinite;\n          animation: animate-bottom-bun-data-v-38305923 3s infinite;\n}\n\n/* Top Bun*/\n.hamburger .top-bun[data-v-38305923] {\n  position: absolute;\n  width: 200px;\n  height: 90px;\n  border: 5px solid #a6593b;\n  background-color: #e38f49;\n  border-top-left-radius: 70%;\n  border-top-right-radius: 70%;\n  border-bottom-left-radius: 45%;\n  border-bottom-right-radius: 45%;\n  transform: translate(0px, -80px);\n  -webkit-animation: animate-top-bun-data-v-38305923 3s infinite;\n          animation: animate-top-bun-data-v-38305923 3s infinite;\n}\n.hamburger .top-bun[data-v-38305923]:before,\n.hamburger .top-bun[data-v-38305923]:after {\n  position: absolute;\n  content: \"\";\n  height: 10px;\n  width: 5px;\n  background-color: #f9cc92;\n  border-radius: 5px;\n}\n.hamburger .top-bun[data-v-38305923]:before {\n  transform: translate(60px, 10px) rotate(60deg);\n  box-shadow: 15px -35px #f9cc92;\n}\n.hamburger .top-bun[data-v-38305923]:after {\n  transform: translate(85px, 15px) rotate(-30deg);\n  box-shadow: 35px 15px #f9cc92;\n}\n\n/* Pickles */\n.hamburger .pickle[data-v-38305923],\n.hamburger .pickle[data-v-38305923]:before {\n  position: absolute;\n  width: 60px;\n  height: 30px;\n  background-color: #608349;\n  border: 5px solid #3f592a;\n  border-radius: 50%;\n}\n.hamburger .pickle[data-v-38305923] {\n  overflow: hidden;\n}\n.hamburger .pickle[data-v-38305923]:before {\n  content: \"\";\n  transform: translate(-5px, -14px);\n}\n.hamburger .pickle[data-v-38305923]:after {\n  position: absolute;\n  content: \"\";\n  width: 3px;\n  height: 40px;\n  background-color: #3f592a;\n  transform: translate(20px, -18px) rotate(40deg);\n  box-shadow: 15px -5px #3f592a;\n}\n\n/* Tomatoes */\n.hamburger .tomato[data-v-38305923],\n.hamburger .tomato[data-v-38305923]:before {\n  position: absolute;\n  width: 100px;\n  height: 50px;\n  border: 5px solid #9f3928;\n  border-radius: 50%;\n}\n.hamburger .tomato[data-v-38305923] {\n  background-color: #be4335;\n  overflow: hidden;\n}\n.hamburger .tomato[data-v-38305923]:before {\n  content: \"\";\n  background-color: #d75f44;\n  transform: translate(-5px, -15px);\n}\n.hamburger .tomato div[data-v-38305923],\n.hamburger .tomato div[data-v-38305923]:before {\n  position: absolute;\n  width: 0px;\n  height: 0px;\n  border-radius: 40%;\n}\n.hamburger .tomato div[data-v-38305923] {\n  border-left: 41px solid #9f3928;\n  border-right: 41px solid #9f3928;\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  transform: translate(9px, 9px);\n}\n.hamburger .tomato div[data-v-38305923]:before {\n  content: \"\";\n  border-left: 25px solid transparent;\n  border-right: 25px solid transparent;\n  border-top: 13px solid #9f3928;\n  border-bottom: 18px solid #9f3928;\n  transform: translate(-25px, -15px);\n}\n.hamburger .tomato div[data-v-38305923]:after {\n  position: absolute;\n  content: \"\";\n  width: 15px;\n  height: 13px;\n  border-radius: 50%;\n  background-color: #d75f44;\n  transform: translate(-8px, -7px);\n}\n\n/* Cheese */\n.hamburger .cheese[data-v-38305923] {\n  position: absolute;\n  width: 125px;\n  height: 50px;\n  background-color: #eebd42;\n  border: 5px solid #c0733a;\n}\n\n/* Beef */\n.hamburger .beef[data-v-38305923],\n.hamburger .beef[data-v-38305923]:before {\n  position: absolute;\n  width: 210px;\n  background-color: #834b34;\n  border-radius: 50%;\n  border: 5px solid #6d3c27;\n}\n.hamburger .beef[data-v-38305923] {\n  height: 85px;\n  overflow: hidden;\n}\n.hamburger .beef[data-v-38305923]:before {\n  content: \"\";\n  height: 70px;\n  transform: translate(-5px, -10px);\n}\n\n/* Bottom Bun */\n.hamburger .bottom-bun[data-v-38305923],\n.hamburger .bottom-bun[data-v-38305923]:before {\n  position: absolute;\n  width: 200px;\n  height: 70px;\n  border-radius: 50%;\n  border: 5px solid #a6593b;\n}\n.hamburger .bottom-bun[data-v-38305923] {\n  background-color: #e38f49;\n  overflow: hidden;\n}\n.hamburger .bottom-bun[data-v-38305923]:before {\n  content: \"\";\n  background-color: #f3c68b;\n  transform: translate(-5px, -20px);\n}\n\n/* Animations */\n@-webkit-keyframes animate-top-bun-data-v-38305923 {\n0% {\n    transform: scale(0) translate(5px, 0px);\n}\n53% {\n    transform: scale(0) translate(5px, 0px);\n}\n58% {\n    transform: scale(1.05) translate(5px, 0px);\n}\n59% {\n    transform: scale(1) translate(5px, 0px);\n}\n100% {\n    transform: scale(1) translate(5px, 0px);\n}\n}\n@keyframes animate-top-bun-data-v-38305923 {\n0% {\n    transform: scale(0) translate(5px, 0px);\n}\n53% {\n    transform: scale(0) translate(5px, 0px);\n}\n58% {\n    transform: scale(1.05) translate(5px, 0px);\n}\n59% {\n    transform: scale(1) translate(5px, 0px);\n}\n100% {\n    transform: scale(1) translate(5px, 0px);\n}\n}\n@-webkit-keyframes animate-pickle-2-data-v-38305923 {\n0% {\n    transform: scale(0) translate(100px, 50px) rotate(15deg);\n}\n42% {\n    transform: scale(0) translate(100px, 50px) rotate(15deg);\n}\n47% {\n    transform: scale(1.05) translate(100px, 50px) rotate(15deg);\n}\n48% {\n    transform: scale(1) translate(100px, 50px) rotate(15deg);\n}\n100% {\n    transform: scale(1) translate(100px, 50px) rotate(15deg);\n}\n}\n@keyframes animate-pickle-2-data-v-38305923 {\n0% {\n    transform: scale(0) translate(100px, 50px) rotate(15deg);\n}\n42% {\n    transform: scale(0) translate(100px, 50px) rotate(15deg);\n}\n47% {\n    transform: scale(1.05) translate(100px, 50px) rotate(15deg);\n}\n48% {\n    transform: scale(1) translate(100px, 50px) rotate(15deg);\n}\n100% {\n    transform: scale(1) translate(100px, 50px) rotate(15deg);\n}\n}\n@-webkit-keyframes animate-pickle-1-data-v-38305923 {\n0% {\n    transform: scale(0) translate(30px, 50px) rotate(-10deg);\n}\n36% {\n    transform: scale(0) translate(30px, 50px) rotate(-10deg);\n}\n41% {\n    transform: scale(1.05) translate(30px, 50px) rotate(-10deg);\n}\n42% {\n    transform: scale(1) translate(30px, 50px) rotate(-10deg);\n}\n100% {\n    transform: scale(1) translate(30px, 50px) rotate(-10deg);\n}\n}\n@keyframes animate-pickle-1-data-v-38305923 {\n0% {\n    transform: scale(0) translate(30px, 50px) rotate(-10deg);\n}\n36% {\n    transform: scale(0) translate(30px, 50px) rotate(-10deg);\n}\n41% {\n    transform: scale(1.05) translate(30px, 50px) rotate(-10deg);\n}\n42% {\n    transform: scale(1) translate(30px, 50px) rotate(-10deg);\n}\n100% {\n    transform: scale(1) translate(30px, 50px) rotate(-10deg);\n}\n}\n@-webkit-keyframes animate-tomato-2-data-v-38305923 {\n0% {\n    transform: scale(0) translate(20px, 50px) rotate(-10deg);\n}\n30% {\n    transform: scale(0) translate(20px, 50px) rotate(-10deg);\n}\n35% {\n    transform: scale(1.05) translate(20px, 50px) rotate(-10deg);\n}\n36% {\n    transform: scale(1) translate(20px, 50px) rotate(-10deg);\n}\n100% {\n    transform: scale(1) translate(20px, 50px) rotate(-10deg);\n}\n}\n@keyframes animate-tomato-2-data-v-38305923 {\n0% {\n    transform: scale(0) translate(20px, 50px) rotate(-10deg);\n}\n30% {\n    transform: scale(0) translate(20px, 50px) rotate(-10deg);\n}\n35% {\n    transform: scale(1.05) translate(20px, 50px) rotate(-10deg);\n}\n36% {\n    transform: scale(1) translate(20px, 50px) rotate(-10deg);\n}\n100% {\n    transform: scale(1) translate(20px, 50px) rotate(-10deg);\n}\n}\n@-webkit-keyframes animate-tomato-1-data-v-38305923 {\n0% {\n    transform: scale(0) translate(90px, 55px);\n}\n24% {\n    transform: scale(0) translate(90px, 55px);\n}\n29% {\n    transform: scale(1.05) translate(90px, 55px);\n}\n30% {\n    transform: scale(1) translate(90px, 55px);\n}\n100% {\n    transform: scale(1) translate(90px, 55px);\n}\n}\n@keyframes animate-tomato-1-data-v-38305923 {\n0% {\n    transform: scale(0) translate(90px, 55px);\n}\n24% {\n    transform: scale(0) translate(90px, 55px);\n}\n29% {\n    transform: scale(1.05) translate(90px, 55px);\n}\n30% {\n    transform: scale(1) translate(90px, 55px);\n}\n100% {\n    transform: scale(1) translate(90px, 55px);\n}\n}\n@-webkit-keyframes animate-cheese-1-data-v-38305923 {\n0% {\n    transform: scale(0) skewx(-20deg) translate(50px, 55px);\n}\n18% {\n    transform: scale(0) skewx(-20deg) translate(50px, 55px);\n}\n23% {\n    transform: scale(1.05) skewx(-20deg) translate(50px, 55px);\n}\n24% {\n    transform: scale(1) skewx(-20deg) translate(50px, 55px);\n}\n100% {\n    transform: scale(1) skewx(-20deg) translate(50px, 55px);\n}\n}\n@keyframes animate-cheese-1-data-v-38305923 {\n0% {\n    transform: scale(0) skewx(-20deg) translate(50px, 55px);\n}\n18% {\n    transform: scale(0) skewx(-20deg) translate(50px, 55px);\n}\n23% {\n    transform: scale(1.05) skewx(-20deg) translate(50px, 55px);\n}\n24% {\n    transform: scale(1) skewx(-20deg) translate(50px, 55px);\n}\n100% {\n    transform: scale(1) skewx(-20deg) translate(50px, 55px);\n}\n}\n@-webkit-keyframes animate-cheese-2-data-v-38305923 {\n0% {\n    transform: scale(0) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n12% {\n    transform: scale(0) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n17% {\n    transform: scale(1.05) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n18% {\n    transform: scale(1) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n100% {\n    transform: scale(1) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n}\n@keyframes animate-cheese-2-data-v-38305923 {\n0% {\n    transform: scale(0) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n12% {\n    transform: scale(0) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n17% {\n    transform: scale(1.05) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n18% {\n    transform: scale(1) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n100% {\n    transform: scale(1) skewx(20deg) translate(40px, 65px) rotate(-10deg);\n}\n}\n@-webkit-keyframes animate-beef-data-v-38305923 {\n0% {\n    transform: scale(0) translate(0px, 55px);\n}\n6% {\n    transform: scale(0) translate(0px, 55px);\n}\n11% {\n    transform: scale(1.05) translate(0px, 55px);\n}\n12% {\n    transform: scale(1) translate(0px, 55px);\n}\n100% {\n    transform: scale(1) translate(0px, 55px);\n}\n}\n@keyframes animate-beef-data-v-38305923 {\n0% {\n    transform: scale(0) translate(0px, 55px);\n}\n6% {\n    transform: scale(0) translate(0px, 55px);\n}\n11% {\n    transform: scale(1.05) translate(0px, 55px);\n}\n12% {\n    transform: scale(1) translate(0px, 55px);\n}\n100% {\n    transform: scale(1) translate(0px, 55px);\n}\n}\n@-webkit-keyframes animate-bottom-bun-data-v-38305923 {\n0% {\n    transform: scale(0) translate(5px, 85px);\n}\n5% {\n    transform: scale(1.05) translate(5px, 85px);\n}\n6% {\n    transform: scale(1) translate(5px, 85px);\n}\n100% {\n    transform: scale(1) translate(5px, 85px);\n}\n}\n@keyframes animate-bottom-bun-data-v-38305923 {\n0% {\n    transform: scale(0) translate(5px, 85px);\n}\n5% {\n    transform: scale(1.05) translate(5px, 85px);\n}\n6% {\n    transform: scale(1) translate(5px, 85px);\n}\n100% {\n    transform: scale(1) translate(5px, 85px);\n}\n}", ""]);
 
 // exports
 
@@ -30547,7 +30552,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nfooter {\r\n  background: #017D89;\r\n  color: white;\n}\r\n", ""]);
+exports.push([module.i, "\nfooter {\r\n  background: #017d89;\r\n  color: white;\n}\r\n", ""]);
 
 // exports
 
@@ -62922,68 +62927,9 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", { attrs: { id: "contacts" } })
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { attrs: { id: "contacts" } }, [
-      _c("ul", [
-        _c("li", [
-          _c("a", { attrs: { href: "#hero" } }, [_vm._v("Discover Deliveroo")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#about-us" } }, [_vm._v("About us")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#restaurants-list" } }, [
-            _vm._v("Restaurants"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#work-with-us" } }, [
-            _vm._v("Work with us"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#our-company" } }, [_vm._v("Our Company")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#our-values" } }, [_vm._v("Our values")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Contacts")])]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Tipi di cucina")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Termini & Condizioni")]),
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _vm._v("Informativa sulla privacy"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("FAQ")])]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [_vm._v("Scarica l'app")]),
-        ]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -63903,14 +63849,27 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "loader" }, [
-      _c(
-        "div",
-        {
-          staticClass: "spinner-border text-warning",
-          attrs: { role: "status" },
-        },
-        [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
-      ),
+      _c("div", { staticClass: "hamburger" }, [
+        _c("div", { staticClass: "top-bun" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "pickle" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "pickle" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "tomato" }, [_c("div")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tomato" }, [_c("div")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "cheese" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "cheese" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "beef" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "bottom-bun" }),
+      ]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("Loading...")]),
     ])
   },
 ]

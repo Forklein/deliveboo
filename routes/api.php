@@ -22,4 +22,6 @@ Route::namespace('Api')->group(function () {
     //ROTTE
     Route::apiResource('users', 'UserController');
     Route::apiResource('orders', 'OrderController');
+    Route::get('payments', 'PaymentController@generate');
+    Route::post('payments', 'PaymentController@makepayment');
 });
