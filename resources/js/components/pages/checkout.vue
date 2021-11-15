@@ -54,7 +54,7 @@
             <div class="card-body">
               {{ address }}<br />{{ phone }}<br />{{ mail }}
             </div>
-            <div class="card-footer">Total Order: {{ total }}€</div>
+            <div class="card-footer">Total Order: {{ total }} €</div>
           </div>
         </div>
       </div>
@@ -85,6 +85,7 @@ export default {
       mail: "",
       plate_id: "",
       total: 0,
+      cart: [],
       isLoading: false,
       order: {
         name: this.name,
@@ -125,12 +126,14 @@ export default {
   created() {
     this.isLoading = true;
     setTimeout(() => {
+      this.cart = JSON.parse(localStorage.getItem("storedData"));
+      let total = 0;
+      this.cart.forEach((el) => {
+        total += el.price;
+      });
+      this.total = total;
       this.isLoading = false;
     }, 1000);
-    const cart = JSON.parse(localStorage.getItem("storedData"));
-    cart.forEach((el) => {
-      this.total += el.price;
-    });
   },
 };
 </script>

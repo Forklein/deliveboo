@@ -2553,7 +2553,6 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isLoading: false,
-      totalCart: 0,
       cart: []
     };
   },
@@ -2572,14 +2571,11 @@ __webpack_require__.r(__webpack_exports__);
               }
             });
 
-            _this.totalCart += data.price;
             return el;
           }
         });
         this.cart.push(data);
       } else if (this.cart.length == 0) this.cart.push(data);
-
-      this.totalCart += data.price;
     }
   },
   created: function created() {
@@ -2689,6 +2685,7 @@ __webpack_require__.r(__webpack_exports__);
       mail: "",
       plate_id: "",
       total: 0,
+      cart: [],
       isLoading: false,
       order: {
         name: this.name,
@@ -2729,12 +2726,16 @@ __webpack_require__.r(__webpack_exports__);
 
     this.isLoading = true;
     setTimeout(function () {
+      _this.cart = JSON.parse(localStorage.getItem("storedData"));
+      var total = 0;
+
+      _this.cart.forEach(function (el) {
+        total += el.price;
+      });
+
+      _this.total = total;
       _this.isLoading = false;
     }, 1000);
-    var cart = JSON.parse(localStorage.getItem("storedData"));
-    cart.forEach(function (el) {
-      _this.total += el.price;
-    });
   }
 });
 
@@ -2992,13 +2993,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
-  props: ["carts", "totalCart"],
+  props: ["carts"],
   data: function data() {
     return {
       isVisibile: false
     };
+  },
+  computed: {
+    getTotal: function getTotal() {
+      var total = 0;
+      this.carts.forEach(function (el) {
+        total += el.price;
+      });
+      return total;
+    }
   },
   methods: {
     showOverview: function showOverview() {
@@ -3006,6 +3019,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     saveStorage: function saveStorage() {
       localStorage.setItem("storedData", JSON.stringify(this.carts));
+    },
+    removeItem: function removeItem(i) {
+      this.carts.splice(i, 1);
     }
   },
   created: function created() {
@@ -63243,9 +63259,7 @@ var render = function () {
                 0
               ),
               _vm._v(" "),
-              _c("Cart", {
-                attrs: { carts: _vm.cart, totalCart: _vm.totalCart },
-              }),
+              _c("Cart", { attrs: { carts: _vm.cart } }),
             ],
             1
           ),
@@ -63448,7 +63462,7 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "card-footer" }, [
-                    _vm._v("Total Order: " + _vm._s(_vm.total) + "€"),
+                    _vm._v("Total Order: " + _vm._s(_vm.total) + " €"),
                   ]),
                 ]),
               ]),
@@ -63787,6 +63801,19 @@ var render = function () {
                       }),
                     ]),
                     _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "col-1",
+                        on: {
+                          click: function ($event) {
+                            return _vm.removeItem(index)
+                          },
+                        },
+                      },
+                      [_c("i", { staticClass: "fas fa-trash text-danger" })]
+                    ),
+                    _vm._v(" "),
                     _c("div", { staticClass: "col" }, [
                       _vm._v(_vm._s(cart.name)),
                     ]),
@@ -63810,20 +63837,22 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "col" }, [
-                    _vm._v("Total " + _vm._s(_vm.totalCart)),
+                    _vm._v("Total " + _vm._s(_vm.getTotal) + "€"),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col" }, [
-                    _c(
-                      "button",
-                      { on: { click: _vm.saveStorage } },
-                      [
-                        _c("router-link", { attrs: { to: "/checkout" } }, [
-                          _vm._v("Checkout"),
-                        ]),
-                      ],
-                      1
-                    ),
+                    _vm.carts.length > 0
+                      ? _c(
+                          "button",
+                          { on: { click: _vm.saveStorage } },
+                          [
+                            _c("router-link", { attrs: { to: "/checkout" } }, [
+                              _vm._v("Checkout"),
+                            ]),
+                          ],
+                          1
+                        )
+                      : _vm._e(),
                   ]),
                 ]
               ),

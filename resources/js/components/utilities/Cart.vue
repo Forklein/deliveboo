@@ -20,14 +20,17 @@
             <div class="col-3">
               <img style="width: 50%" :src="cart.image" :alt="cart.name" />
             </div>
+            <div @click="removeItem(index)" class="col-1">
+              <i class="fas fa-trash text-danger"></i>
+            </div>
             <div class="col">{{ cart.name }}</div>
             <div class="col-1">{{ cart.quantity }}</div>
             <div class="col-2">{{ cart.price }}</div>
           </div>
           <div class="col-12 align-items-center justify-content-between d-flex">
-            <div class="col">Total {{ totalCart }}</div>
+            <div class="col">Total {{ getTotal }}€</div>
             <div class="col">
-              <button @click="saveStorage">
+              <button v-if="carts.length > 0" @click="saveStorage">
                 <router-link to="/checkout">Checkout</router-link>
               </button>
             </div>
@@ -41,11 +44,20 @@
 <script>
 export default {
   name: "Cart",
-  props: ["carts", "totalCart"],
+  props: ["carts"],
   data() {
     return {
       isVisibile: false,
     };
+  },
+  computed: {
+    getTotal() {
+      let total = 0;
+      this.carts.forEach((el) => {
+        total += el.price;
+      });
+      return total;
+    },
   },
   methods: {
     showOverview() {
@@ -53,6 +65,9 @@ export default {
     },
     saveStorage() {
       localStorage.setItem("storedData", JSON.stringify(this.carts));
+    },
+    removeItem(i) {
+      this.carts.splice(i, 1);
     },
   },
   created() {

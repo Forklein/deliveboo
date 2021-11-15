@@ -7,7 +7,7 @@
           <MenuCard :plate="plate" @currentCart="getCart" />
         </div>
       </div>
-      <Cart :carts="cart" :totalCart="totalCart" />
+      <Cart :carts="cart" />
     </div>
   </section>
 </template>
@@ -27,7 +27,6 @@ export default {
   data() {
     return {
       isLoading: false,
-      totalCart: 0,
       cart: [],
     };
   },
@@ -43,13 +42,11 @@ export default {
                 el.price += data.price;
               }
             });
-            this.totalCart += data.price;
             return el;
           }
         });
         this.cart.push(data);
       } else if (this.cart.length == 0) this.cart.push(data);
-      this.totalCart += data.price;
     },
   },
   created() {
