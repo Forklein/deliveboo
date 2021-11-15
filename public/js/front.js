@@ -2572,6 +2572,7 @@ __webpack_require__.r(__webpack_exports__);
               }
             });
 
+            _this.totalCart += data.price;
             return el;
           }
         });

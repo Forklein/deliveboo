@@ -43,6 +43,7 @@ export default {
                 el.price += data.price;
               }
             });
+            this.totalCart += data.price;
             return el;
           }
         });
