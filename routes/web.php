@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guest.welcome');
-});
 
 Auth::routes();
 
@@ -27,4 +24,12 @@ Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->
     Route::get('orders/{order}', 'OrderController@show')->name('orders.show');
 
     Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('{any}', function () {
+        abort(404);
+    })->where('any', '.*');
 });
+
+Route::get('{any}', function () {
+    return view('guest.welcome');
+})->where('any', '.*');

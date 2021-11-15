@@ -20,25 +20,11 @@
         @if (Route::has('login'))
             <nav class="navbar navbar-expand-lg" id="main-menu">
                 <div class="container">
-                    <img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" />
-                    <div class="navbar-nav-container d-xs-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#restaurants-list"><img class="icon"
-                                        src="img/restaurant-icon.png" alt="restaurant-icon">Restaurants</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about-us"><img class="icon"
-                                        src="img/info-icon.png" alt="info-icon">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#our-values">Our values</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contacts"><img class="icon"
-                                        src="img/contacts-icon.png" alt="">Contacts</a>
-                            </li>
-                        </ul>
+                    <div class="navbar-nav-container d-xs-none d-sm-none d-md-flex d-lg-flex d-xl-flex justify-content-between">
+                        <div class="deliveboo d-flex align-items-center text-white">
+                            <a href="{{url('/')}}"><img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" /></a>
+                            <h1>Deliveboo</h1>
+                        </div>
                         <ul class="navbar-nav">
                             @auth
                                 <li class="nav-item">

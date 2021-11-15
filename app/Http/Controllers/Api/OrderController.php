@@ -28,6 +28,7 @@ class OrderController extends Controller
     {
 
         $data = $request->all();
+
         $order = new Order();
         $order->name = $data['name'];
         $order->surname = $data['surname'];
