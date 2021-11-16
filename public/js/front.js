@@ -2658,6 +2658,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -63503,7 +63508,15 @@ var render = function () {
             { staticClass: "container" },
             [
               _c("v-braintree", {
-                attrs: { authorization: _vm.token, locale: "it_IT" },
+                attrs: {
+                  authorization: _vm.token,
+                  locale: "it_IT",
+                  card: {
+                    cardholderName: {
+                      required: true,
+                    },
+                  },
+                },
                 on: { success: _vm.onSuccess, error: _vm.onError },
               }),
             ],

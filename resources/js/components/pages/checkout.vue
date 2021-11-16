@@ -65,6 +65,11 @@
         @success="onSuccess"
         @error="onError"
         locale="it_IT"
+        :card="{
+          cardholderName: {
+            required: true,
+          },
+        }"
       ></v-braintree>
     </div>
     <Thanks v-if="thanks" :order="order" />
