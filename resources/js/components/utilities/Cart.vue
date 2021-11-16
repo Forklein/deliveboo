@@ -25,10 +25,10 @@
             </div>
             <div class="col">{{ cart.name }}</div>
             <div class="col-1">{{ cart.quantity }}</div>
-            <div class="col-2">{{ cart.price }}</div>
+            <div class="col-2">{{ cart.price.toFixed(2) }}€</div>
           </div>
           <div class="col-12 align-items-center justify-content-between d-flex">
-            <div class="col">Total {{ getTotal }}€</div>
+            <div class="col">Total {{ getTotal.toFixed(2) }}€</div>
             <div class="col">
               <span v-if="carts.length > 0" @click="saveStorage">
                 <router-link class="btn btn-primary" to="/checkout"

@@ -2476,6 +2476,7 @@ __webpack_require__.r(__webpack_exports__);
     addToCart: function addToCart(plate) {
       if (this.quantity > 0) {
         this.currentCart = {
+          restaurant: plate.user_id,
           image: plate.image,
           name: plate.name,
           plate_id: plate.id,
@@ -63866,7 +63867,7 @@ var render = function () {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-2" }, [
-                      _vm._v(_vm._s(cart.price)),
+                      _vm._v(_vm._s(cart.price.toFixed(2)) + "€"),
                     ]),
                   ]
                 )
@@ -63880,7 +63881,7 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "col" }, [
-                    _vm._v("Total " + _vm._s(_vm.getTotal) + "€"),
+                    _vm._v("Total " + _vm._s(_vm.getTotal.toFixed(2)) + "€"),
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col" }, [

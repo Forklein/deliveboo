@@ -31,6 +31,7 @@ export default {
     addToCart(plate) {
       if (this.quantity > 0) {
         this.currentCart = {
+          restaurant: plate.user_id,
           image: plate.image,
           name: plate.name,
           plate_id: plate.id,
