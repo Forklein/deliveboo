@@ -1,68 +1,275 @@
 <template>
   <main>
-    <section id="restaurants">
-      <RestaurantsList />
-    </section>
-    <section id="about-us">
-      <div class="d-flex">
-        <div class="col-4 d-flex flex-column">
-          <h2>Rider</h2>
-          <img src="img/rider.png" alt="rider-image" />
-          <p id="rider">
-            Deliveroo è orgogliosa di offrire un lavoro ben retribuito e
-            flessibile ai rider, che sono il cuore del nostro servizio. Il loro
-            lavoro alimenta la nostra crescita, e senza di loro non potremmo
-            consegnare ai nostri clienti i piatti migliori e aiutare i
-            ristoranti locali a crescere. I rider hanno accesso
-            all’assicurazione, ma vogliamo fare di più. Deliveroo è stata la
-            prima società tech a chiedere la fine del compromesso tra
-            flessibilità e sicurezza che esiste attualmente nel diritto del
-            lavoro. Vogliamo collaborare con i governi in tutti i Paesi per
-            raggiungere questo obiettivo.
+    <section id="our-technology" class="pt-5 d-flex-align-items-center">
+      <div class="container justify-content-center">
+        <div class="mb-5 text-center">
+          <h2 class="mb-2">Technology guides us</h2>
+          <p>
+            We are proud to take our technology around the world. Our algorithm
+            is based on powerful predictive technology that manages the
+            assignment of orders in the most efficient way based on the location
+            of restaurants, riders and customers. Machine learning helps
+            estimate the time needed to prepare an order, optimizing the overall
+            experience. Deliveroo has managed to decrease delivery time by 20%,
+            so riders can complete more deliveries per hour and increase their
+            earnings, restaurants can increase their sales and, of course,
+            customers can get their order in less. weather.
           </p>
         </div>
-        <div class="col-4 d-flex flex-column">
-          <h2>Our Company</h2>
-          <img src="img/our-company.jpg" alt="our-company-image" />
-          <p id="our-company">
-            When Deliveroo founder and CEO Will Shu moved to London in 2013, he
-            found a city full of great restaurants, but few delivered. So, he
-            decided that his personal mission would be to bring the best
-            restaurants in town straight into people's homes. Food is at the
-            heart of every Deliveroo business and his mission is to give
-            customers more choice. There are great restaurants that we believe
-            everyone should be able to order from. But Deliveroo's goal is not
-            just to make sure that restaurants in your area are available when
-            and where you want. We want to go further and bring new restaurants
-            to your area to expand your choice. Deliveroo Editions is a project
-            that was created to bring the dishes of great chefs, created
-            exclusively for Deliveroo, to all homes. Editions allows chefs and
-            restaurants to create new concepts and reach new food enthusiasts.
-          </p>
-        </div>
-        <div class="col-4 d-flex flex-column">
-          <h2>Work with us</h2>
-          <img src="img/work-with-us.png" alt="work-with-us-image" />
-          <h4>Perché lavorare con noi?</h4>
-          <ul>
-            <li v-for="(work, index) in works" :key="index">
-              {{ work.paragraph }}
-            </li>
-          </ul>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+            >
+              <img
+                src="img/select-food.png"
+                alt="select-food-image"
+                class="w-75"
+              />
+              <h4 class="font-weight-bolder mt-3 mb-2">SELECT FOOD</h4>
+              <p>
+                You can make an order anytime, anywhere using your smartphone,
+                tablet or any mobile devices. Also more information about food
+                options are provided and customers are allowed to take their
+                time to browse the menu.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+            >
+              <img
+                src="img/pay-online.png"
+                alt="pay-online-image"
+                class="w-75"
+              />
+              <h4 class="font-weight-bolder mt-3 mb-2">PAY ONLINE</h4>
+              <p>
+                Choosing us you are paying for both food and convenience.
+                Browsing online menus you can compare prices and go for the
+                cheapest offer. Also the payment process is secure and no card
+                details are spread.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+            >
+              <img
+                src="img/enter-address.png"
+                alt="enter-address-image"
+                class="w-75"
+              />
+              <h4 class="font-weight-bolder mt-3 mb-2">GPS SYSTEM</h4>
+              <p>
+                The online ordering system is equipped with GPS systems that
+                help you capture your entire address and enter it. That means
+                you can enjoy your favourite food no matter where you are and it
+                will be delivered next to you.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+            >
+              <img
+                src="img/fast-delivery.png"
+                alt="fast-delivery-image"
+                class="w-75"
+              />
+              <h4 class="font-weight-bolder mt-3 mb-2">FAST DELIVERY</h4>
+              <p>
+                When having your food delivered you are able to track it to your
+                door in real time. This way you can experience a fast, immediate
+                service. You'll never have to sit in your car or the restaurant
+                to wait for your food again.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="our-values">
-      <div class="container">
-        <h2>Our values</h2>
-        <p>
+    <RestaurantsList />
+    <section id="about-us" class="pt-5 d-flex align-items-center">
+      <div class="container justify-content-center">
+        <div class="mb-5 text-center">
+          <h2 class="mb-2">About us</h2>
+          <p>
+            By offering fast and reliable delivery, which the customer can track
+            on their mobile, Deliveroo has seen revenue growth of over 650%. Our
+            partner restaurants manage to increase their revenues by 30%,
+            creating thousands of jobs in the restaurant sector.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+              id="rider"
+            >
+              <img
+                src="img/rider.png"
+                alt="rider-image"
+                class="img-fluid my-2"
+              />
+              <h3 class="font-weight-bolder mt-3 mb-2">Rider</h3>
+              <p>
+                Deliveroo prides itself on offering well-paid work and flexible
+                to the riders, who are the heart of our service. Their work
+                fuels our growth, and without them we'd not be able to deliver
+                the best dishes to our customers and help local restaurants to
+                grow. Riders have access to insurance, but we want to do more.
+                Deliveroo was the first tech company to demand an end to the
+                compromise between flexibility and security in the law of work.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+              id="our-company"
+            >
+              <img
+                src="img/our-company.jpg"
+                alt="our-company-image"
+                class="img-fluid my-2"
+              />
+              <h3 class="font-weight-bolder mt-3 mb-2">Our Company</h3>
+              <p>
+                When Deliveroo founder and CEO Will Shu moved to London in 2013,
+                he found a city full of great restaurants, but few delivered.
+                So, he decided that his personal mission would be to bring the
+                best restaurants in town straight into people's homes. Food is
+                at the heart of every Deliveroo business and his mission is to
+                give customers more choice. There are great restaurants that we
+                believe everyone should be able to order from.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div
+              class="
+                card
+                mb-5
+                p-4
+                d-flex
+                flex-column
+                align-items-center
+                border-0
+              "
+              id="work-with-us"
+            >
+              <img
+                src="img/work-with-us.png"
+                alt="work-with-us-image"
+                class="img-fluid my-2"
+              />
+              <h3 class="font-weight-bolder mt-3 mb-2">Work with us</h3>
+              <ol class="m-0 pl-2">
+                <li class="m-1" v-for="(work, index) in works" :key="index">
+                  {{ work.paragraph }}
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="our-values" class="py-5 d-flex justify-content-center">
+      <div class="container paragraph justify-content-center text-center">
+        <h2 class="mb-2">Our values</h2>
+        <p class="mb-4">
           Everything we do revolves around our values. They guide us every day
           to work as a team and make important decisions, from the choices that
           have an impact on hiring and staff development, to those that write
           the future of Deliveroo products.
         </p>
-        <img src="img/our-values-image.jpg" alt="our-values-image" />
+        <img
+          src="img/our-values-image.jpg"
+          alt="our-values-image"
+          class="img-fluid"
+        />
       </div>
+      <!-- <div class="row">
+          <div class="col-1 d-flex align-items-center justify-content-center">
+            <i class="fas fa-chevron-left fs-1" v-on:click="decreaseIndex"></i>
+          </div>
+          <div class="col-10 d-flex flex-column align-items-center justify-content-center">
+            <carousel class="slider">
+              <img
+                v-for="(image, imageIndex) in images"
+                :key="imageIndex"
+                :src="image"
+                class="img-fluid"
+                :class="isActive(imageIndex)"
+              />
+            </carousel>
+          <div id="slider-dots" class="d-flex px-3 py-3 align-items-center justify-content-center"
+          >
+            <div
+              v-for="(image, imageIndex) in images"
+              :key="imageIndex"
+              class="dot mx-2"
+              :class="isActive(imageIndex)"
+              v-on:click="setCurrentIndex(imageIndex)"
+            ></div>
+          </div>
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center">
+            <i class="fas fa-chevron-right fs-1" v-on:click="increaseIndex"></i>
+          </div>
+        </div> -->
     </section>
   </main>
 </template>
@@ -85,15 +292,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#our-values {
-  h2 {
-    font-size: 38px;
-    margin-bottom: 14.5px;
-    color: #440264;
+@import "../../sass/_variables.scss";
+#our-technology,
+#about-us {
+  background: $lightTurquoise;
+}
+
+.card {
+  border-radius: 20px;
+  h3,
+  h4 {
+    color: $ourIndigo;
   }
-  img {
-    margin: 30px 12.5%;
-    width: 75%;
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  li {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+#our-values {
+  background-color: $ourLightIndigo;
+  h2 {
+    color: $oxfordBlue;
   }
 }
 </style>

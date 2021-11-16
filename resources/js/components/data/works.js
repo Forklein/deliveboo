@@ -1,17 +1,17 @@
 export default [
     {
-        'paragraph': "Affronta sfide stimolanti. Non siamo solo un'app: troviamo soluzioni a problematiche complesse per clienti, rider e ristoranti."
+        'paragraph': "Face stimulating challenges. We are not just an app: we find solutions to complex problems for customers, riders and restaurants."
     },
     {
-        'paragraph': "Hai un'idea? Realizzala! L'idea di oggi è il progetto di domani. In Deliveroo, tutti sono imprenditori."
+        'paragraph': "Do you have an idea? Make it happen! Today's idea is tomorrow's project. At Deliveroo, everyone is an entrepreneur."
     },
     {
-        'paragraph': "Diventa un azionista. Vogliamo farti sentire parte del progetto. Per questo in Deliveroo tutti i dipendenti ricevono delle azioni."
+        'paragraph': "Become a shareholder. We want you to feel part of the project. This is why at Deliveroo all employees receive shares."
     },
     {
-        'paragraph': "Un'azienda in forte crescita. Siamo fra le prime aziende al mondo per indice di crescita. Nell'ultimo anno siamo più che raddoppiati."
+        'paragraph': "A fast growing company. We are among the top companies in the world in terms of growth. We have more than doubled in the last year."
     },
     {
-        'paragraph': "La diversità ci rende migliori. La diversità è la chiave del successo. Vogliamo che i nostri team abbraccino la diversità dei nostri rider, dei nostri ristoranti e dei nostri clienti."
+        'paragraph': "Diversity makes us better and it's the key to success. We want our teams to embrace the diversity of our riders, our restaurants and our customers."
     }
 ]

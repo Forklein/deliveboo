@@ -1,30 +1,25 @@
 <template>
-  <div class="custom-card" @click="getMenu(user.plates)">
-    <div class="resturant text-center">
-      <img v-if="user.image" :src="user.image" :alt="user.name" class="w-300" />
-      <img
-        v-else
-        src="img/restaurant-image.png"
-        class="restaurant-image"
-        alt="restaurant-image"
-      />
-      <div>
-        <h4 class="card-title">
-          {{ user.restaurant_name }}
-        </h4>
-      </div>
-      <hr />
-      <img src="img/address-icon.png" class="icon" alt="address-image" />
-      <address style="display: inline">
-        {{ user.address }} - {{ user.city }} - {{ user.zip }}
-      </address>
-      <p>
-        <img src="img/phone-icon.png" class="icon" alt="phone-image" />{{
-          user.phone
-        }}
-      </p>
-      <p>Vat: {{ user.vat }}</p>
-    </div>
+  <div
+    class="card my-5 p-4 border-0 d-flex flex-column"
+    @click="getMenu(user.plates)"
+  >
+    <img v-if="user.image" :src="user.image" :alt="user.name" class="w-300" />
+    <img
+      v-else
+      src="img/restaurant-image.png"
+      class="restaurant-image"
+      alt="restaurant-image"
+    />
+    <h4 class="card-title mb-4">
+      {{ user.restaurant_name }}
+    </h4>
+    <address class="mb-1 text-break" style="display: inline">
+      <i class="icon mr-2 fas fa-map-marker-alt"></i>
+      {{ user.address }} - {{ user.city }} - {{ user.zip }}
+    </address>
+    <p class="m-0 pt-1 text-break">
+      <i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}
+    </p>
   </div>
 </template>
 
@@ -41,22 +36,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.w-300 {
-  height: 300px;
-  width: 300px;
-}
-
-.custom-card {
-  cursor: pointer;
-  font-size: 15px;
-  background: #fbdb80;
+@import "../../../sass/_variables.scss";
+.card {
+  background: $lightYellowJasmine;
+  border-radius: 20px;
   h4 {
+    color: $carrotOrange;
+    font-weight: bolder;
     text-align: center !important;
   }
-  hr {
-    margin: 15px 0;
-    border-color: #007e8a;
-    background: #007e8a;
+  .icon {
+    font-size: 20px;
+    color: $carrotOrange;
+    vertical-align: baseline;
+  }
+  p,
+  address {
+    font-size: 14px;
+    color: rgb(59, 59, 59);
   }
 }
 </style>

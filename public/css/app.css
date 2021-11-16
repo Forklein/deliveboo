@@ -10019,9 +10019,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
-/**************************************************************************/
-/*********************** GENERICS DASHBOARD STYLE *************************/
-/**************************************************************************/
+/* Generics */
+nav {
+  height: 70px;
+}
+
+/* Utils */
 .border-custom {
   border-radius: 20px;
 }
@@ -10037,27 +10040,25 @@ h3 {
 .bg-dash-left a:hover {
   text-decoration: none;
   color: #000;
-  background-color: #fff;
+  background-color: #FCB750;
 }
 .bg-dash-left a .side-link-bg {
+  font-size: 17px;
   padding: 10px;
 }
 .bg-dash-left a .side-link-bg:hover {
-  background-color: #fff;
+  background-color: #FCB750;
+  color: #007e8a;
 }
 
 .active {
   text-decoration: none;
-  color: #000;
-  background-color: #fff;
+  color: #007e8a;
+  background-color: #FCB750;
 }
 .active .side-link-bg {
-  background-color: #fff;
-  color: #000;
-}
-
-.vh-20 {
-  height: 20vh;
+  color: #007e8a;
+  background-color: #FCB750;
 }
 
 /*RIGHT SIDE DASHBOARD*/
@@ -10070,15 +10071,13 @@ h3 {
   border-radius: 0px 20px 20px 0px;
 }
 
-.vh-40 {
-  max-height: 40vh;
-}
-
 /********** TOGGLE STYLE  **********/
 .switch {
   width: 80px;
   height: 30px;
   position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .switch input {
@@ -10181,19 +10180,19 @@ h3 {
 }
 
 .txt-oxford {
-  color: #0C1B33;
+  color: #007e8a;
 }
 
 /********************** BACKGROUND  *********************/
 .bg-oxford {
-  background-color: #0C1B33 !important;
+  background-color: #007e8a !important;
 }
 
 /********************** BUTTON **************************/
 .btn-oxford {
   color: #fff;
-  background-color: #0C1B33;
-  border-color: #0C1B33;
+  background-color: #007e8a;
+  border-color: #007e8a;
 }
 .btn-oxford:hover {
   color: #fff;
@@ -10201,46 +10200,20 @@ h3 {
 }
 
 #main-menu {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  height: 65px;
+  height: 70px;
   background: #FCB750;
-  display: flex;
-  align-items: center;
 }
 
 #logo {
   height: 60px;
-  margin-right: 20px;
-}
-
-.navbar-nav-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-nav {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .navbar-nav:first-of-type {
-  color: #427267;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-  color: currentColor;
+  color: #007e8a;
 }
 
 .nav-link {
-  padding: 27px 5px;
-  vertical-align: middle;
+  line-height: 65px;
 }
 
 .nav-link:hover,
@@ -10250,17 +10223,14 @@ a:hover {
 }
 
 .icon {
-  width: 20px;
-  margin-right: 5px;
+  font-size: 20px;
   vertical-align: middle;
 }
 
-button {
-  margin: 5px;
-  padding: 10px 15px;
-  background: #00CCBC;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
+.navbar-nav:first-of-type .icon {
+  color: #007e8a;
+}
+
+#menu-icon {
+  font-size: 30px;
 }

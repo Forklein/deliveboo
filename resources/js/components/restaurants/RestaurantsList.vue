@@ -1,6 +1,6 @@
 <template>
-  <div class="restaurants mx-auto">
-    <div class="container">
+  <section id="restaurants-list" class="pt-5 pb-4">
+    <div class="container flex-column">
       <h2 v-if="!hideMenuList">Menu</h2>
       <h2 v-if="hideMenuList">Users' Restaurants</h2>
       <p v-if="hideMenuList">
@@ -19,14 +19,18 @@
             </option>
           </select>
         </div>
-        <div v-for="user in filteredRestaurants" :key="user.id" class="col-4">
+        <div
+          v-for="user in filteredRestaurants"
+          :key="user.id"
+          class="col-12 col-sm-6 col-md-4"
+        >
           <RestaurantCard :user="user" @plates="getPlates" />
         </div>
       </div>
       <MenusList v-if="!hideMenuList" :plates="plates" />
       <button v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -105,7 +109,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.restaurants {
-  background: #ed9529;
+@import "../../../sass/_variables.scss";
+
+#restaurants-list {
+  background: $ourLightIndigo;
+}
+
+h2 {
+  color: $ourIndigo;
 }
 </style>

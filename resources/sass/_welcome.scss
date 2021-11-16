@@ -1,64 +1,39 @@
 #main-menu {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 65px;
-    background: #FCB750;
-    display: flex;
-    align-items: center;
+    height: 70px;
+    background: $yellowJasmine;
 }
 
 #logo {
     height: 60px;
-    margin-right: 20px;
-}
-
-.navbar-nav-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between
-}
-
-.navbar-nav {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center
 }
 
 .navbar-nav:first-of-type {
-    color: rgb(66, 114, 103);
-}
-
-a,
-a:hover {
-    text-decoration: none;
-    color: currentColor;
+    color: $oxfordBlue;
 }
 
 .nav-link {
-    padding: 27px 5px;
-    vertical-align: middle;
+    line-height: 65px
 }
 
 .nav-link:hover,
 .nav-link:active {
-    background: #ED9529;
+    background: $carrotOrange;
     color: currentColor;
 }
 
 .icon {
-    width: 20px;
-    margin-right: 5px;
+    font-size: 20px;
     vertical-align: middle;
 }
 
-button {
-    margin: 5px;
-    padding: 10px 15px;
-    background: #00CCBC;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 30px;
+.navbar-nav:first-of-type .icon {
+    color: $oxfordBlue;
 }
+
+#menu-icon {
+    font-size: 30px;
+}
+
+
+
+
