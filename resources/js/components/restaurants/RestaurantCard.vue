@@ -9,12 +9,11 @@
     <h4 class="card-title mb-4">
       {{ user.restaurant_name }}
     </h4>
-    <address class="mb-1" style="display: inline">
+    <address class="mb-1 text-break" style="display: inline">
       <i class="icon mr-2 fas fa-map-marker-alt"></i>
       {{ user.address }} - {{ user.city }} - {{ user.zip }}
     </address>
-    <p class="m-0 pt-1"><i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}</p>
-    <p>Vat: {{ user.vat }}</p>
+    <p class="m-0 pt-1 text-break"><i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}</p>
   </div>
 </template>
 
@@ -45,6 +44,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../../sass/_variables.scss";
 .card {
+  width: 100%;
   background: $lightYellowJasmine;
   border-radius: 20px;
   h4 {

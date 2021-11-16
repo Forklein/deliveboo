@@ -40,7 +40,7 @@
           <hr class="border-white bg-white" />
 
           <div id="social-networks">
-            <a href="#"><i class="px-3 mx-2 fab fa-facebook"></i></a>
+            <a href="#"><i class="mx-2 fab fa-facebook"></i></a>
             <a href="#"><i class="mx-2 fab fa-twitter"></i></a>
             <a href="#"><i class="mx-2 fab fa-instagram"></i></a>
           </div>

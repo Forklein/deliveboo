@@ -4,7 +4,7 @@
 @section('rightDashboardContent')
 @include('includes.session')
 <div>
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between plates">
     <div><h1>Your Plates</h1></div>
     <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}"><i class="fas fa-plus"></i></a></div>
   </div>

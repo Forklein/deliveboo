@@ -36,7 +36,8 @@ p {
   font-size: 17px;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: currentColor;
 }
@@ -49,7 +50,16 @@ h2 {
 }
 
 button {
+  border: none;
   background: $mediumTurquoise;
-  font-size: 16px;
+}
+
+button:hover {
+  background: $oxfordBlue;
+  transform: scale(1.15);
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 </style>

@@ -1,75 +1,70 @@
-/**************************************************************************/
-/*********************** GENERICS DASHBOARD STYLE *************************/
-/**************************************************************************/
+/* Generics */
+nav {
+  height: 70px;
+}
 
-.border-custom{
-  border-radius: 20px;
+/* Utils */
+.border-custom {
+    border-radius: 20px;
 }
 /*LEFT SIDE DASHBOARD*/
-.col-side-left{
-  width: 20%;
+.col-side-left {
+    width: 20%;
 }
 
-.bg-dash-left{
+.bg-dash-left {
     border-radius: 20px 0px 0px 20px;
-    a{
-      &:hover{
-        text-decoration: none;
-        color: #000;
-        background-color: $white;
-      }
-      .side-link-bg{
-        padding: 10px;
-        &:hover{
-          background-color: $white;
+    a {
+        &:hover {
+            text-decoration: none;
+            color: #000;
+            background-color: $yellowJasmine;
         }
-      }
+        .side-link-bg {
+          font-size: 17px;
+            padding: 10px;
+            &:hover {
+                background-color: $yellowJasmine;
+                color: $oxfordBlue;
+            }
+        }
     }
 }
-.active{
-        text-decoration: none;
-        color: #000;
-        background-color: $white;
-        .side-link-bg{
-          background-color: $white;
-        color: #000;
-
-        }
+.active {
+    text-decoration: none;
+    color: $oxfordBlue;
+    background-color: $yellowJasmine;
+    .side-link-bg {
+      color: $oxfordBlue;
+      background-color: $yellowJasmine;
+    }
 }
-    
-
 
 /*RIGHT SIDE DASHBOARD*/
-.col-side-right{
-  width: 80%;
+.col-side-right {
+    width: 80%;
 }
 
-.bg-dash-right{
-  background-color: $white;
-  border-radius: 0px 20px 20px 0px;
-}   
-
-
-
-
-
+.bg-dash-right {
+    background-color: $white;
+    border-radius: 0px 20px 20px 0px;
+}
 
 /********** TOGGLE STYLE  **********/
 
 //Toggle Input for Dashboard Plates
 .switch {
-	width: 80px;
-	height: 30px;
-	position: relative;
-	margin-top: 20px;
-	margin-bottom: 20px;  
+    width: 80px;
+    height: 30px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-
- .switch input {
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
+.switch input {
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     opacity: 0;
     z-index: 100;
@@ -77,16 +72,15 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
-    }
+}
 .switch label {
-	display: block;
-	width: 80%;
-	height: 95%;
-	position: relative;
-	background: $white;
-	border-radius: 30px 30px 30px 30px;	
-    transition: all .5s ease;
-
+    display: block;
+    width: 80%;
+    height: 95%;
+    position: relative;
+    background: $white;
+    border-radius: 30px 30px 30px 30px;
+    transition: all 0.5s ease;
 }
 .switch input ~ label i {
     display: block;
@@ -98,60 +92,59 @@
     z-index: 2;
     border-radius: inherit;
     background-color: #a71a07; /* Fallback */
-transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
 .switch label + span {
-	content: "";
-	display: inline-block;
-	position: absolute;
-	left: 70px;
-	top: 5px;
-	width: 18px;
-	height: 18px;
-	border-radius: 10px;
-	background: #a02101; 
-	transition: all .5s ease;
-	z-index: 2;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 70px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background: #a02101;
+    transition: all 0.5s ease;
+    z-index: 2;
 }
 
- /* Toggle */
+/* Toggle */
 .fa-hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 6;
-  text-align: center;
-  font-size: 1em;
-  color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    text-align: center;
+    font-size: 1em;
+    color: $white;
 }
 
-.switch input:checked ~ label + span { 
-	content: "";
-	display: inline-block;
-	position: absolute;
-	width: 18px;
-	height: 18px;
-	border-radius: 10px;
-	transition: all .5s ease;
-	z-index: 2;
-	background: #009600; 
-
- }
+.switch input:checked ~ label + span {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    z-index: 2;
+    background: #009600;
+}
 
 .switch input:checked ~ label i {
     left: auto;
     left: 63%;
-	  background-color: #216821;
-    transition: all .5s ease;
+    background-color: #216821;
+    transition: all 0.5s ease;
 }
-  
-  /* Rounded sliders */
-  .slider.round {
+
+/* Rounded sliders */
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}

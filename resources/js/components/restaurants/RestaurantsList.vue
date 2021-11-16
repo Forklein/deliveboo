@@ -1,7 +1,7 @@
 <template>
-  <section id="restaurants-list" class="pt-5">
+  <section id="restaurants-list" class="pt-5 pb-4">
     <div class="container flex-column">
-      <h2 class="mb-2">Users' Restaurants</h2>
+      <h2 class="mb-2">Our Restaurants</h2>
       <p class="text-center">
         Here you can find a selection of the best restaurants next to you. Just
         choose meal and enjoy your favourite food in the comfort of your
@@ -9,10 +9,8 @@
       </p>
       <Loader v-if="isLoading" />
       <div v-else class="container">
-        <div class="row justify-content-center">
-        <div class="col-12 col-sm-6 col-md-4">
-          <RestaurantCard v-for="user in users" :key="user.id" :user="user" />
-        </div>
+        <div class="row justify-content-between">
+          <RestaurantCard class="py-3 px-5 col-12 col-sm-6 col-md-4 d-flex justify-content-center" v-for="user in users" :key="user.id" :user="user" />
       </div>
       </div>
     </div>
@@ -68,4 +66,5 @@ export default {
 h2 {
   color: $ourIndigo;
 }
+
 </style>

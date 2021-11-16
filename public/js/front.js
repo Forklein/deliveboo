@@ -2399,6 +2399,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header"
 });
@@ -2416,6 +2418,35 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurants/RestaurantsList.vue */ "./resources/js/components/restaurants/RestaurantsList.vue");
 /* harmony import */ var _data_works_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/works.js */ "./resources/js/components/data/works.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2707,7 +2738,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
   data: function data() {
@@ -2740,8 +2770,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
 /* harmony import */ var _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RestaurantCard.vue */ "./resources/js/components/restaurants/RestaurantCard.vue");
-//
-//
 //
 //
 //
@@ -7199,7 +7227,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\np {\n  font-size: 17px;\n}\na, a:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\nbutton {\n  background: #00CCBC;\n  font-size: 16px;\n}", ""]);
+exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\nbutton {\n  border: none;\n  background: #00CCBC;\n}\nbutton:hover {\n  background: #007e8a;\n  transform: scale(1.15);\n}\n.card:hover {\n  transform: scale(1.1);\n}", ""]);
 
 // exports
 
@@ -7237,7 +7265,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "/****************************/\n.jumbotron[data-v-1f42fb90] {\n  height: 650px;\n  position: relative;\n}\n.jumbotron-img[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: 1;\n}\n.my-container[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 2;\n}\n\n/****************************/\n.jumbotron-text[data-v-1f42fb90] {\n  color: #007e8a;\n}\n.jumbotron-title[data-v-1f42fb90] {\n  font-weight: bolder;\n  color: #00CCBC;\n}", ""]);
+exports.push([module.i, "header[data-v-1f42fb90] {\n  position: relative;\n  height: 650px;\n}\n.jumbotron[data-v-1f42fb90] {\n  background: transparent;\n}\nimg.bg[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: -1;\n}\n.jumbotron-text[data-v-1f42fb90] {\n  max-width: 600px;\n  font-size: 19px;\n  line-height: 30px;\n  text-align: justify;\n}\n.jumbotron-title[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 40px;\n}\n.jumbotron-text > p[data-v-1f42fb90] {\n  color: #007e8a;\n}", ""]);
 
 // exports
 
@@ -7275,7 +7303,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #f3d7a2;\n  border-radius: 20px;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e], .card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
+exports.push([module.i, ".card[data-v-5ebd141e] {\n  width: 100%;\n  background: #f3d7a2;\n  border-radius: 20px;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e], .card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
 
 // exports
 
@@ -39465,7 +39493,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { attrs: { id: "social-networks" } }, [
                 _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "px-3 mx-2 fab fa-facebook" }),
+                  _c("i", { staticClass: "mx-2 fab fa-facebook" }),
                 ]),
                 _vm._v(" "),
                 _c("a", { attrs: { href: "#" } }, [
@@ -39512,36 +39540,31 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("header", [
+      _c("img", {
+        staticClass: "bg",
+        attrs: { src: "/img/jumbotron.jpg", alt: "" },
+      }),
+      _vm._v(" "),
       _c("div", { staticClass: "jumbotron" }, [
-        _c("img", {
-          staticClass: "jumbotron-img",
-          attrs: { src: "/img/jumbotron.jpg", alt: "" },
-        }),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "container my-container flex-column mt-5 overflow-auto",
-          },
-          [
-            _c("h1", { staticClass: "jumbotron-title mb-2" }, [
-              _vm._v("The Food you love at Home"),
-            ]),
+        _c("div", { staticClass: "container flex-column align-items-start" }, [
+          _c("div", { staticClass: "jumbotron-text mt-3" }, [
+            _c(
+              "h1",
+              { staticClass: "jumbotron-title font-weight-bolder mb-2" },
+              [_vm._v("The Food you love at Home")]
+            ),
             _vm._v(" "),
-            _c("p", { staticClass: "jumbotron-text pr-3" }, [
+            _c("p", { staticClass: "pr-3" }, [
               _vm._v(
-                "\n        Deliveroo's aim is to transform the way customers eat. By constantly\n        innovating and expanding, we offer ours customers the best choice and\n        convenience and a large selection of restaurants: whether you want\n        sushi for dinner, a salad for lunch, or a brioche for breakfast, we'll\n        take care of it! In Deliveroo we know that every customer has\n        different tastes and our job is to make sure that have what they want,\n        when they want and where they want it.\n      "
+                "\n          Deliveroo's aim is to transform the way customers eat. By constantly\n          innovating and expanding, we offer ours customers the best choice\n          and convenience and a large selection of restaurants: whether you\n          want sushi for dinner, a salad for lunch, or a brioche for\n          breakfast, we'll take care of it! In Deliveroo we know that every\n          customer has different tastes and our job is to make sure that have\n          what they want, when they want and where they want it.\n        "
               ),
             ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "py-2 px-3 border-0 rounded-pill text-white" },
-              [_c("a", { attrs: { href: "#about-us" } }, [_vm._v("Read more")])]
-            ),
-          ]
-        ),
+          ]),
+          _vm._v(" "),
+          _c("button", { staticClass: "py-2 px-3 rounded-pill text-white" }, [
+            _c("a", { attrs: { href: "#about-us" } }, [_vm._v("Learn more")]),
+          ]),
+        ]),
       ]),
     ])
   },
@@ -39937,7 +39960,7 @@ var render = function () {
       _vm._v(" "),
       _c(
         "address",
-        { staticClass: "mb-1", staticStyle: { display: "inline" } },
+        { staticClass: "mb-1 text-break", staticStyle: { display: "inline" } },
         [
           _c("i", { staticClass: "icon mr-2 fas fa-map-marker-alt" }),
           _vm._v(
@@ -39952,12 +39975,10 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-      _c("p", { staticClass: "m-0 pt-1" }, [
+      _c("p", { staticClass: "m-0 pt-1 text-break" }, [
         _c("i", { staticClass: "icon mr-2 fas fa-phone" }),
         _vm._v(_vm._s(_vm.user.phone)),
       ]),
-      _vm._v(" "),
-      _c("p", [_vm._v("Vat: " + _vm._s(_vm.user.vat))]),
     ]
   )
 }
@@ -39985,13 +40006,13 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "pt-5", attrs: { id: "restaurants-list" } },
+    { staticClass: "pt-5 pb-4", attrs: { id: "restaurants-list" } },
     [
       _c(
         "div",
         { staticClass: "container flex-column" },
         [
-          _c("h2", { staticClass: "mb-2" }, [_vm._v("Users' Restaurants")]),
+          _c("h2", { staticClass: "mb-2" }, [_vm._v("Our Restaurants")]),
           _vm._v(" "),
           _c("p", { staticClass: "text-center" }, [
             _vm._v(
@@ -40002,19 +40023,19 @@ var render = function () {
           _vm.isLoading
             ? _c("Loader")
             : _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row justify-content-center" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-12 col-sm-6 col-md-4" },
-                    _vm._l(_vm.users, function (user) {
-                      return _c("RestaurantCard", {
-                        key: user.id,
-                        attrs: { user: user },
-                      })
-                    }),
-                    1
-                  ),
-                ]),
+                _c(
+                  "div",
+                  { staticClass: "row justify-content-between" },
+                  _vm._l(_vm.users, function (user) {
+                    return _c("RestaurantCard", {
+                      key: user.id,
+                      staticClass:
+                        "py-3 px-5 col-12 col-sm-6 col-md-4 d-flex justify-content-center",
+                      attrs: { user: user },
+                    })
+                  }),
+                  1
+                ),
               ]),
         ],
         1

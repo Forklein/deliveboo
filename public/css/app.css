@@ -10019,9 +10019,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
-/**************************************************************************/
-/*********************** GENERICS DASHBOARD STYLE *************************/
-/**************************************************************************/
+/* Generics */
+nav {
+  height: 70px;
+}
+
+/* Utils */
 .border-custom {
   border-radius: 20px;
 }
@@ -10037,23 +10040,25 @@ h3 {
 .bg-dash-left a:hover {
   text-decoration: none;
   color: #000;
-  background-color: #fff;
+  background-color: #FCB750;
 }
 .bg-dash-left a .side-link-bg {
+  font-size: 17px;
   padding: 10px;
 }
 .bg-dash-left a .side-link-bg:hover {
-  background-color: #fff;
+  background-color: #FCB750;
+  color: #007e8a;
 }
 
 .active {
   text-decoration: none;
-  color: #000;
-  background-color: #fff;
+  color: #007e8a;
+  background-color: #FCB750;
 }
 .active .side-link-bg {
-  background-color: #fff;
-  color: #000;
+  color: #007e8a;
+  background-color: #FCB750;
 }
 
 /*RIGHT SIDE DASHBOARD*/
@@ -10195,7 +10200,7 @@ h3 {
 }
 
 #main-menu {
-  height: 65px;
+  height: 70px;
   background: #FCB750;
 }
 

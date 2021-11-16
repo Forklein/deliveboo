@@ -241,6 +241,35 @@
           class="img-fluid"
         />
       </div>
+      <!-- <div class="row">
+          <div class="col-1 d-flex align-items-center justify-content-center">
+            <i class="fas fa-chevron-left fs-1" v-on:click="decreaseIndex"></i>
+          </div>
+          <div class="col-10 d-flex flex-column align-items-center justify-content-center">
+            <carousel class="slider">
+              <img
+                v-for="(image, imageIndex) in images"
+                :key="imageIndex"
+                :src="image"
+                class="img-fluid"
+                :class="isActive(imageIndex)"
+              />
+            </carousel>
+          <div id="slider-dots" class="d-flex px-3 py-3 align-items-center justify-content-center"
+          >
+            <div
+              v-for="(image, imageIndex) in images"
+              :key="imageIndex"
+              class="dot mx-2"
+              :class="isActive(imageIndex)"
+              v-on:click="setCurrentIndex(imageIndex)"
+            ></div>
+          </div>
+          </div>
+          <div class="col-1 d-flex align-items-center justify-content-center">
+            <i class="fas fa-chevron-right fs-1" v-on:click="increaseIndex"></i>
+          </div>
+        </div> -->
     </section>
   </main>
 </template>

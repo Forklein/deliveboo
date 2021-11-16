@@ -55,20 +55,20 @@
                         <ul class="navbar-nav">
                             @auth
                                 <li class="nav-item">
-                                    <button class="p-2 border-0 rounded-pill text-white"><a
+                                    <button class="p-2 rounded-pill text-white"><a
                                             href="{{ url('/admin/home') }}" class="p-2"><i
                                                 class="icon mr-1 fas fa-home"></i>Home</a></button>
                                 </li>
                             @else
                                 <li class="nav-item">
-                                    <button class="mr-1 p-2 border-0 rounded-pill text-white"><a href="{{ route('login') }}"
+                                    <button class="mr-1 p-2 rounded-pill text-white"><a href="{{ route('login') }}"
                                             class="p-2"><i
                                                 class="icon mr-1 fas fa-sign-in-alt"></i>Login</a></button>
                                 </li>
     
                                 <li class="nav-item">
                                     @if (Route::has('register'))
-                                        <button class="ml-2 p-2 border-0 rounded-pill text-white"><a
+                                        <button class="ml-2 p-2 rounded-pill text-white"><a
                                                 href="{{ route('register') }}" class="p-2"><i
                                                     class="icon mr-1 fas fa-user-plus"></i>Register</a></button>
                                     @endif
