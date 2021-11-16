@@ -5,7 +5,10 @@
         <h2>Thanks for your order!</h2>
       </div>
       <div class="card-body">
-        <p></p>
+        <p>{{ order.name }}</p>
+        <p>{{ order.surname }}</p>
+        <p>{{ order.mail }}</p>
+        <p>{{ order.total }}</p>
       </div>
     </div>
   </div>
@@ -14,6 +17,7 @@
 <script>
 export default {
   name: "Thanks",
+  props: ["order"],
 };
 </script>
 

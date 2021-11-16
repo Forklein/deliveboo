@@ -1,6 +1,6 @@
 <template>
   <div class="checkout">
-    <div v-if="!isCreated" class="container">
+    <div v-if="form" class="container">
       <Loader v-if="isLoading" />
       <div v-else class="row my-3">
         <div class="col-8">
@@ -59,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div v-else class="container">
+    <div v-if="payment" class="container">
       <v-braintree
         :authorization="token"
         @success="onSuccess"
@@ -67,17 +67,19 @@
         locale="it_IT"
       ></v-braintree>
     </div>
-    <Thanks :order="order" />
+    <Thanks v-if="thanks" :order="order" />
   </div>
 </template>
 
 <script>
 import Loader from "../utilities/Loader.vue";
+import Thanks from "../utilities/Thanks.vue";
 
 export default {
   name: "checkout",
   components: {
     Loader,
+    Thanks,
   },
   data() {
     return {
@@ -92,7 +94,9 @@ export default {
       cart: [],
       order: {},
       isLoading: false,
-      isCreated: false,
+      form: true,
+      payment: false,
+      thanks: false,
     };
   },
   methods: {
@@ -110,6 +114,9 @@ export default {
           "Content-Type": "application/json",
         },
       }).then((res) => {
+        this.payment = false;
+        this.thanks = true;
+        localStorage.clear();
         console.log(res);
       });
     },
@@ -142,7 +149,8 @@ export default {
           .then((res) => {
             console.log(res);
             this.orderId = res.data.Order_number;
-            this.isCreated = true;
+            this.form = false;
+            this.payment = true;
           })
           .catch((res) => {
             console.log(res);
