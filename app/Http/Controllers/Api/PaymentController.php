@@ -25,7 +25,7 @@ class PaymentController extends Controller
         $order = Order::find($request->id);
 
         $result = $gateway->transaction()->sale([
-            'amount' => $order->price,
+            'amount' => $order->total,
             'paymentMethodNonce' => $request->token,
             'options' => [
                 'submitForSettlement' => True
@@ -34,8 +34,8 @@ class PaymentController extends Controller
 
         if ($result->success) {
             $data = [
-                'email' => $request->email,
-                'amount' => $order->price,
+                'email' => $order->mail,
+                'amount' => $order->total,
                 'order_number' => $order->id,
                 'success' => true,
                 'message' => 'Transazione avvenuta con successo'
