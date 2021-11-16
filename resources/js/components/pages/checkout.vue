@@ -1,8 +1,8 @@
 <template>
   <div class="checkout">
+    <Loader v-if="isLoading" />
     <div v-if="form" class="container">
-      <Loader v-if="isLoading" />
-      <div v-else class="row my-3">
+      <div class="row my-3">
         <div class="col-8">
           <div class="form-group">
             <label for="name">Name</label>
@@ -119,10 +119,14 @@ export default {
           "Content-Type": "application/json",
         },
       }).then((res) => {
-        this.payment = false;
-        this.thanks = true;
-        localStorage.clear();
-        console.log(res);
+        this.isLoading = true;
+        setTimeout(() => {
+          this.isLoading = false;
+          this.payment = false;
+          this.thanks = true;
+          localStorage.clear();
+          console.log(res);
+        }, 1500);
       });
     },
     onError(error) {

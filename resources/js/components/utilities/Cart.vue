@@ -1,8 +1,8 @@
 <template>
   <div class="container-cart text-center">
     <div @click="showOverview" class="rounded-circle bg-light p-3" id="cart">
-      <span id="notify" class="badge badge-pill badge-danger">{{
-        carts.length
+      <span v-if="carts" id="notify" class="badge badge-pill badge-danger">{{
+        getQuantity
       }}</span>
       <i class="fas fa-shopping-cart fa-2x pr-1"></i>
     </div>
@@ -25,10 +25,10 @@
             </div>
             <div class="col">{{ cart.name }}</div>
             <div class="col-1">{{ cart.quantity }}</div>
-            <div class="col-2">{{ cart.price.toFixed(2) }}€</div>
+            <div v-if="carts" class="col-2">{{ cart.price.toFixed(2) }}€</div>
           </div>
           <div class="col-12 align-items-center justify-content-between d-flex">
-            <div class="col">Total {{ getTotal.toFixed(2) }}€</div>
+            <div v-if="carts" class="col">Total {{ getTotal.toFixed(2) }}€</div>
             <div class="col">
               <span v-if="carts.length > 0" @click="saveStorage">
                 <router-link class="btn btn-primary" to="/checkout"
@@ -54,11 +54,22 @@ export default {
   },
   computed: {
     getTotal() {
-      let total = 0;
-      this.carts.forEach((el) => {
-        total += el.price;
-      });
-      return total;
+      if (this.carts) {
+        let total = 0;
+        this.carts.forEach((el) => {
+          total += el.price;
+        });
+        return total;
+      }
+    },
+    getQuantity() {
+      if (this.carts) {
+        let totalQuantity = 0;
+        this.carts.forEach((cart) => {
+          totalQuantity += cart.quantity;
+        });
+        return totalQuantity;
+      }
     },
   },
   methods: {

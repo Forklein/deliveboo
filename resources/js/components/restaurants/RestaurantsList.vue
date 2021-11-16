@@ -10,7 +10,16 @@
       </p>
       <Loader v-if="isLoading" />
       <div v-if="hideMenuList" class="row">
-        <div v-for="user in users" :key="user.id" class="col-4">
+        <div class="form-group offset-9 col-3">
+          <label for="categories">Select Category</label>
+          <select class="form-control" id="categories" v-model="category">
+            <option>All</option>
+            <option v-for="(category, index) in getCategories" :key="index">
+              {{ category }}
+            </option>
+          </select>
+        </div>
+        <div v-for="user in filteredRestaurants" :key="user.id" class="col-4">
           <RestaurantCard :user="user" @plates="getPlates" />
         </div>
       </div>
@@ -37,9 +46,35 @@ export default {
       baseUri: "http://localhost:8000",
       users: [],
       plates: [],
+      category: "All",
       isLoading: false,
       hideMenuList: true,
     };
+  },
+  computed: {
+    getCategories() {
+      const categories = [];
+      this.users.forEach((user) => {
+        user.types.forEach((type) => {
+          if (!categories.includes(type.name)) {
+            categories.push(type.name);
+          }
+        });
+      });
+      return categories.sort();
+    },
+    filteredRestaurants() {
+      if (this.category === "All") {
+        return this.users;
+      } else {
+        const filtered = this.users.filter((user) => {
+          return user.types.some((type) => {
+            return type.name === this.category;
+          });
+        });
+        return filtered;
+      }
+    },
   },
   methods: {
     getUsers() {

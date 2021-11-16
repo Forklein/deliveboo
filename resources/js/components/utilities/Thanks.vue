@@ -8,7 +8,7 @@
         <p>{{ order.name }}</p>
         <p>{{ order.surname }}</p>
         <p>{{ order.mail }}</p>
-        <p>{{ order.total }}</p>
+        <p>{{ order.total.toFixed(2) }}</p>
       </div>
     </div>
   </div>
