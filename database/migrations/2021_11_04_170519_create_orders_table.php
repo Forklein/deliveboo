@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string('phone', 20);
             $table->string('mail');
             $table->double('total', 5, 2);
+            $table->boolean('status', 1)->default(0);
             $table->timestamps();
         });
     }

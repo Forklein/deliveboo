@@ -40,6 +40,8 @@ class PaymentController extends Controller
                 'success' => true,
                 'message' => 'Transazione avvenuta con successo'
             ];
+            $order->status = 1;
+            $order->save();
             return response()->json(compact('data'), 200);
         } else {
             $data = [
