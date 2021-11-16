@@ -11,6 +11,7 @@
             <th scope="col">Surname</th>
             <th scope="col">Date</th>
             <th scope="col">Total</th>
+            <th scope="col">Status</th>
             <th>Utilities</th>
           </tr>
         </thead>
@@ -22,6 +23,7 @@
                     <td class="align-middle">{{$order->surname}}</td>
                     <td class="align-middle">{{$order->getFormattedDate('created_at')}}</td>
                     <td class="align-middle">{{$order->total}}€</td>
+                    <td class="align-middle font-weight-bold {{($order->status) ? 'text-success' : 'text-danger'}}">{{($order->status) ? 'Paid' : 'Unpaid'}}</td>
                     <td class="align-middle"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-oxford">Show Details</a></td>
                 </tr>
             @empty
