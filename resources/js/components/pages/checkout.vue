@@ -54,7 +54,7 @@
             <div class="card-body">
               {{ address }}<br />{{ phone }}<br />{{ mail }}
             </div>
-            <div class="card-footer">Total Order: {{ total }} €</div>
+            <div class="card-footer">Total Order: {{ total.toFixed(2) }} €</div>
           </div>
         </div>
       </div>

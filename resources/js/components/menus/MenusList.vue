@@ -28,9 +28,9 @@ export default {
     return {
       isLoading: false,
       cart: [],
+      plates: [],
     };
   },
-  props: ["plates"],
   methods: {
     getCart(data) {
       if (this.cart.length) {
@@ -52,9 +52,17 @@ export default {
   },
   created() {
     this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 1000);
+    axios
+      .get(`http://127.0.0.1:8000/api/users/${this.$route.params.id}`)
+      .then((res) => {
+        this.plates = res.data.user.plates;
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .then(() => {
+        this.isLoading = false;
+      });
   },
 };
 </script>

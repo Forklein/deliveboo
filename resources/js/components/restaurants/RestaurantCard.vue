@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="card my-5 p-4 border-0 d-flex flex-column"
-    @click="getMenu(user.plates)"
-  >
+  <div class="card my-5 p-4 border-0 d-flex flex-column">
     <img v-if="user.image" :src="user.image" :alt="user.name" class="w-300" />
     <img
       v-else
@@ -20,6 +17,11 @@
     <p class="m-0 pt-1 text-break">
       <i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}
     </p>
+    <router-link
+      class="btn btn-primary"
+      :to="{ name: 'MenusList', params: { id: user.id } }"
+      >Show Menu</router-link
+    >
   </div>
 </template>
 
@@ -27,11 +29,6 @@
 export default {
   name: "RestaurantCard",
   props: ["user"],
-  methods: {
-    getMenu(plates) {
-      this.$emit("plates", plates);
-    },
-  },
 };
 </script>
 

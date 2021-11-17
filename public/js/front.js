@@ -2805,10 +2805,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isLoading: false,
-      cart: []
+      cart: [],
+      plates: []
     };
   },
-  props: ["plates"],
   methods: {
     getCart: function getCart(data) {
       var _this = this;
@@ -2835,9 +2835,13 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     this.isLoading = true;
-    setTimeout(function () {
+    axios.get("http://127.0.0.1:8000/api/users/".concat(this.$route.params.id)).then(function (res) {
+      _this2.plates = res.data.user.plates;
+    })["catch"](function (err) {
+      console.log(err);
+    }).then(function () {
       _this2.isLoading = false;
-    }, 1000);
+    });
   }
 });
 
@@ -3158,14 +3162,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
-  props: ["user"],
-  methods: {
-    getMenu: function getMenu(plates) {
-      this.$emit("plates", plates);
-    }
-  }
+  props: ["user"]
 });
 
 /***/ }),
@@ -3214,9 +3215,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -3233,8 +3231,7 @@ __webpack_require__.r(__webpack_exports__);
       users: [],
       plates: [],
       category: "All",
-      isLoading: false,
-      hideMenuList: true
+      isLoading: false
     };
   },
   computed: {
@@ -3264,28 +3261,19 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  methods: {
-    getUsers: function getUsers() {
-      var _this2 = this;
-
-      this.isLoading = true;
-      axios.get("".concat(this.baseUri, "/api/users")).then(function (res) {
-        _this2.users = res.data.users;
-      })["catch"](function (err) {
-        console.error(err);
-      }).then(function () {
-        setTimeout(function () {
-          _this2.isLoading = false;
-        }, 1500);
-      });
-    },
-    getPlates: function getPlates(plates) {
-      this.plates = plates;
-      this.hideMenuList = false;
-    }
-  },
   created: function created() {
-    this.getUsers();
+    var _this2 = this;
+
+    this.isLoading = true;
+    axios.get("".concat(this.baseUri, "/api/users")).then(function (res) {
+      _this2.users = res.data.users;
+    })["catch"](function (err) {
+      console.error(err);
+    }).then(function () {
+      setTimeout(function () {
+        _this2.isLoading = false;
+      }, 1500);
+    });
   }
 });
 
@@ -64202,7 +64190,9 @@ var render = function () {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "card-footer" }, [
-                    _vm._v("Total Order: " + _vm._s(_vm.total) + " €"),
+                    _vm._v(
+                      "Total Order: " + _vm._s(_vm.total.toFixed(2)) + " €"
+                    ),
                   ]),
                 ]),
               ]),
@@ -64351,14 +64341,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "card my-5 p-4 border-0 d-flex flex-column",
-      on: {
-        click: function ($event) {
-          return _vm.getMenu(_vm.user.plates)
-        },
-      },
-    },
+    { staticClass: "card my-5 p-4 border-0 d-flex flex-column" },
     [
       _vm.user.image
         ? _c("img", {
@@ -64395,7 +64378,17 @@ var render = function () {
         _c("i", { staticClass: "icon mr-2 fas fa-phone" }),
         _vm._v(_vm._s(_vm.user.phone) + "\n  "),
       ]),
-    ]
+      _vm._v(" "),
+      _c(
+        "router-link",
+        {
+          staticClass: "btn btn-primary",
+          attrs: { to: { name: "MenusList", params: { id: _vm.user.id } } },
+        },
+        [_vm._v("Show Menu")]
+      ),
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -64428,113 +64421,80 @@ var render = function () {
         "div",
         { staticClass: "container flex-column" },
         [
-          !_vm.hideMenuList ? _c("h2", [_vm._v("Menu")]) : _vm._e(),
+          _c("h2", [_vm._v("Users' Restaurants")]),
           _vm._v(" "),
-          _vm.hideMenuList
-            ? _c("h2", [_vm._v("Users' Restaurants")])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.hideMenuList
-            ? _c("p", [
-                _vm._v(
-                  "\n      Here you can find a selection of the best restaurants next to you. Just\n      choose meal and enjoy your favourite food in the comfort of your\n      favourite places.\n    "
-                ),
-              ])
-            : _vm._e(),
+          _c("p", [
+            _vm._v(
+              "\n      Here you can find a selection of the best restaurants next to you. Just\n      choose meal and enjoy your favourite food in the comfort of your\n      favourite places.\n    "
+            ),
+          ]),
           _vm._v(" "),
           _vm.isLoading ? _c("Loader") : _vm._e(),
           _vm._v(" "),
-          _vm.hideMenuList
-            ? _c(
-                "div",
-                { staticClass: "row" },
-                [
-                  _c("div", { staticClass: "form-group offset-9 col-3" }, [
-                    _c("label", { attrs: { for: "categories" } }, [
-                      _vm._v("Select Category"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
+          _c(
+            "div",
+            { staticClass: "row" },
+            [
+              _c("div", { staticClass: "form-group offset-9 col-3" }, [
+                _c("label", { attrs: { for: "categories" } }, [
+                  _vm._v("Select Category"),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
                       {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.category,
-                            expression: "category",
-                          },
-                        ],
-                        staticClass: "form-control",
-                        attrs: { id: "categories" },
-                        on: {
-                          change: function ($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function (o) {
-                                return o.selected
-                              })
-                              .map(function (o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.category = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          },
-                        },
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.category,
+                        expression: "category",
                       },
-                      [
-                        _c("option", [_vm._v("All")]),
-                        _vm._v(" "),
-                        _vm._l(_vm.getCategories, function (category, index) {
-                          return _c("option", { key: index }, [
-                            _vm._v(
-                              "\n            " +
-                                _vm._s(category) +
-                                "\n          "
-                            ),
-                          ])
-                        }),
-                      ],
-                      2
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _vm._l(_vm.filteredRestaurants, function (user) {
-                    return _c(
-                      "div",
-                      { key: user.id, staticClass: "col-12 col-sm-6 col-md-4" },
-                      [
-                        _c("RestaurantCard", {
-                          attrs: { user: user },
-                          on: { plates: _vm.getPlates },
-                        }),
-                      ],
-                      1
-                    )
-                  }),
-                ],
-                2
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          !_vm.hideMenuList
-            ? _c("MenusList", { attrs: { plates: _vm.plates } })
-            : _vm._e(),
-          _vm._v(" "),
-          !_vm.hideMenuList
-            ? _c(
-                "button",
-                {
-                  on: {
-                    click: function ($event) {
-                      _vm.hideMenuList = true
+                    ],
+                    staticClass: "form-control",
+                    attrs: { id: "categories" },
+                    on: {
+                      change: function ($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function (o) {
+                            return o.selected
+                          })
+                          .map(function (o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.category = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      },
                     },
                   },
-                },
-                [_vm._v("Return")]
-              )
-            : _vm._e(),
+                  [
+                    _c("option", [_vm._v("All")]),
+                    _vm._v(" "),
+                    _vm._l(_vm.getCategories, function (category, index) {
+                      return _c("option", { key: index }, [
+                        _vm._v(
+                          "\n            " + _vm._s(category) + "\n          "
+                        ),
+                      ])
+                    }),
+                  ],
+                  2
+                ),
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.filteredRestaurants, function (user) {
+                return _c(
+                  "div",
+                  { key: user.id, staticClass: "col-12 col-sm-6 col-md-4" },
+                  [_c("RestaurantCard", { attrs: { user: user } })],
+                  1
+                )
+              }),
+            ],
+            2
+          ),
         ],
         1
       ),
@@ -64666,7 +64626,7 @@ var render = function () {
                               "router-link",
                               {
                                 staticClass: "btn btn-primary",
-                                attrs: { to: "/checkout" },
+                                attrs: { to: { name: "Checkout" } },
                               },
                               [_vm._v("Checkout")]
                             ),
@@ -81458,12 +81418,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_pages_home_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/home.vue */ "./resources/js/components/pages/home.vue");
-/* harmony import */ var _components_pages_checkout_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/checkout.vue */ "./resources/js/components/pages/checkout.vue");
-/* harmony import */ var _components_pages_contact_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/contact.vue */ "./resources/js/components/pages/contact.vue");
-/* harmony import */ var _components_pages_notfound_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/pages/notfound.vue */ "./resources/js/components/pages/notfound.vue");
+/* harmony import */ var _components_menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menus/MenusList.vue */ "./resources/js/components/menus/MenusList.vue");
+/* harmony import */ var _components_pages_checkout_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/checkout.vue */ "./resources/js/components/pages/checkout.vue");
+/* harmony import */ var _components_pages_contact_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/pages/contact.vue */ "./resources/js/components/pages/contact.vue");
+/* harmony import */ var _components_pages_notfound_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/pages/notfound.vue */ "./resources/js/components/pages/notfound.vue");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
 
 
 
@@ -81475,17 +81437,21 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'Home',
     component: _components_pages_home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, {
+    path: '/:id',
+    name: 'MenusList',
+    component: _components_menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }, {
     path: '/checkout',
     name: 'Checkout',
-    component: _components_pages_checkout_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _components_pages_checkout_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: '/contact',
     name: 'Contact',
-    component: _components_pages_contact_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_pages_contact_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: '*',
     name: 'NotFound',
-    component: _components_pages_notfound_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _components_pages_notfound_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   }]
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);

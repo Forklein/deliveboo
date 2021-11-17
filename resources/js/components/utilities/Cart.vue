@@ -31,7 +31,7 @@
             <div v-if="carts" class="col">Total {{ getTotal.toFixed(2) }}€</div>
             <div class="col">
               <span v-if="carts.length > 0" @click="saveStorage">
-                <router-link class="btn btn-primary" to="/checkout"
+                <router-link class="btn btn-primary" :to="{ name: 'Checkout' }"
                   >Checkout</router-link
                 >
               </span>
