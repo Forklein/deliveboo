@@ -1,7 +1,7 @@
 <template>
   <section id="menus-list">
     <Loader v-if="isLoading" />
-    <div v-else class="container">
+    <div v-else class="container p-3">
       <div class="row">
         <div class="col-3" v-for="(plate, index) in plates" :key="index">
           <MenuCard :plate="plate" @currentCart="getCart" />
@@ -67,5 +67,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>

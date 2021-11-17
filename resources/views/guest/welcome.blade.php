@@ -32,18 +32,18 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav list-unstyled d-flex align-items-center justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link" href="#restaurants-list"><i
+                            <a class="nav-link" href="/#restaurants-list"><i
                                     class="icon mr-1 fas fa-utensils"></i>Restaurants</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about-us"><i class="icon mr-1 fas fa-info-circle"></i>About
+                            <a class="nav-link" href="/#about-us"><i class="icon mr-1 fas fa-info-circle"></i>About
                                 us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#links"><i class="icon mr-1 fas fa-hashtag"></i>Links</a>
+                            <a class="nav-link" href="/#links"><i class="icon mr-1 fas fa-hashtag"></i>Links</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contacts"><i
+                            <a class="nav-link" href="/#contacts"><i
                                     class="icon mr-1 fas fa-address-book"></i>Contacts</a>
                         </li>
                     </ul>

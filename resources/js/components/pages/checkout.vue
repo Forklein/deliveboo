@@ -1,90 +1,106 @@
 <template>
   <div class="checkout">
-    <Loader v-if="isLoading" />
-    <div v-if="form" class="container">
-      <div class="row my-3">
-        <div class="col-8">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" v-model="name" class="form-control" id="name" />
-          </div>
-          <div class="form-group">
-            <label for="surname">Surname</label>
-            <input
-              type="text"
-              v-model="surname"
-              class="form-control"
-              id="surname"
-            />
-          </div>
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input
-              type="text"
-              v-model="address"
-              class="form-control"
-              id="address"
-            />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input
-              type="phone"
-              v-model="phone"
-              class="form-control"
-              id="phone"
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input
-              type="email"
-              v-model="mail"
-              class="form-control"
-              id="email"
-            />
-          </div>
-          <button type="button" @click="createOrder" class="btn btn-primary">
-            Submit
-          </button>
-        </div>
-        <div class="col-4 my-auto">
-          <div class="card">
-            <div class="card-header">{{ name }}<br />{{ surname }}</div>
-            <div class="card-body">
-              {{ address }}<br />{{ phone }}<br />{{ mail }}
+    <div :class="modal ? 'opacity' : ''">
+      <Loader v-if="isLoading" />
+      <div v-if="form" class="container">
+        <div class="row my-3">
+          <div class="col-8">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                v-model="name"
+                class="form-control"
+                id="name"
+              />
             </div>
-            <div class="card-footer">Total Order: {{ total.toFixed(2) }} €</div>
+            <div class="form-group">
+              <label for="surname">Surname</label>
+              <input
+                type="text"
+                v-model="surname"
+                class="form-control"
+                id="surname"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                v-model="address"
+                class="form-control"
+                id="address"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="phone"
+                v-model="phone"
+                class="form-control"
+                id="phone"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                v-model="mail"
+                class="form-control"
+                id="email"
+              />
+            </div>
+            <button type="button" @click="createOrder" class="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <div class="col-4 my-auto">
+            <div class="card">
+              <div class="card-header">{{ name }}<br />{{ surname }}</div>
+              <div class="card-body">
+                {{ address }}<br />{{ phone }}<br />{{ mail }}
+              </div>
+              <div class="card-footer">
+                Total Order: {{ total.toFixed(2) }} €
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div v-if="payment" class="container">
+        <v-braintree
+          :authorization="token"
+          @success="onSuccess"
+          @error="onError"
+          locale="it_IT"
+          :card="{
+            cardholderName: {
+              required: true,
+            },
+          }"
+        ></v-braintree>
+      </div>
+      <Thanks v-if="thanks" :order="order" />
     </div>
-    <div v-if="payment" class="container">
-      <v-braintree
-        :authorization="token"
-        @success="onSuccess"
-        @error="onError"
-        locale="it_IT"
-        :card="{
-          cardholderName: {
-            required: true,
-          },
-        }"
-      ></v-braintree>
-    </div>
-    <Thanks v-if="thanks" :order="order" />
+    <Modal
+      :class="modal ? 'd-block' : ''"
+      :warning="'There are errors in the input fields'"
+      @close="modal = false"
+    />
   </div>
 </template>
 
 <script>
 import Loader from "../utilities/Loader.vue";
 import Thanks from "../utilities/Thanks.vue";
+import Modal from "../utilities/Modal.vue";
 
 export default {
   name: "checkout",
   components: {
     Loader,
     Thanks,
+    Modal,
   },
   data() {
     return {
@@ -98,6 +114,7 @@ export default {
       orderId: "",
       cart: [],
       order: {},
+      modal: false,
       isLoading: false,
       form: true,
       payment: false,
@@ -142,32 +159,41 @@ export default {
         mail: this.mail,
         total: this.total,
       };
-      let obj = {};
-      this.cart.forEach((el) => {
-        obj[el.plate_id] = el.quantity;
-      });
-      order.order_details = obj;
-      this.order = order;
-      this.isLoading = true;
-      setTimeout(() => {
-        axios({
-          method: "post",
-          url: "http://127.0.0.1:8000/api/orders",
-          data: this.order,
-        })
-          .then((res) => {
-            console.log(res);
-            this.orderId = res.data.Order_number;
-            this.form = false;
-            this.payment = true;
+      if (
+        order.name &&
+        order.surname &&
+        order.address &&
+        !isNaN(order.phone) &&
+        order.phone.length > 8 &&
+        order.mail.includes("@")
+      ) {
+        let obj = {};
+        this.cart.forEach((el) => {
+          obj[el.plate_id] = el.quantity;
+        });
+        order.order_details = obj;
+        this.order = order;
+        this.isLoading = true;
+        setTimeout(() => {
+          axios({
+            method: "post",
+            url: "http://127.0.0.1:8000/api/orders",
+            data: this.order,
           })
-          .catch((res) => {
-            console.log(res);
-          })
-          .then(() => {
-            this.isLoading = false;
-          });
-      }, 2500);
+            .then((res) => {
+              console.log(res);
+              this.orderId = res.data.Order_number;
+              this.form = false;
+              this.payment = true;
+            })
+            .catch((res) => {
+              console.log(res);
+            })
+            .then(() => {
+              this.isLoading = false;
+            });
+        }, 2500);
+      } else this.modal = true;
     },
   },
   created() {
@@ -193,5 +219,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.opacity {
+  opacity: 0.5;
+  height: 100vh;
+}
 </style>
