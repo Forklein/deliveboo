@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Models\Plate;
 
 class UserController extends Controller
 {
@@ -42,10 +43,12 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $user->plates;
+        $plates = Plate::where('user_id', $user->id)->where('visibility', 1)->get();
         return response()->json([
             'status' => 'success',
-            'user' => $user
+            'restaurant_name' => $user->restaurant_name,
+            'total' => count($plates),
+            'user' => compact('plates')
         ], 200);
     }
 

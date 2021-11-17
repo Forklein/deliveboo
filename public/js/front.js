@@ -2789,6 +2789,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -2803,7 +2805,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       isLoading: false,
       cart: [],
-      plates: []
+      plates: [],
+      restaurantName: "",
+      totalPlates: ""
     };
   },
   methods: {
@@ -2834,6 +2838,8 @@ __webpack_require__.r(__webpack_exports__);
     this.isLoading = true;
     axios.get("http://127.0.0.1:8000/api/users/".concat(this.$route.params.id)).then(function (res) {
       _this2.plates = res.data.user.plates;
+      _this2.restaurantName = res.data.restaurant_name;
+      _this2.totalPlates = res.data.total;
     })["catch"](function (err) {
       console.log(err);
     }).then(function () {
@@ -64130,6 +64136,10 @@ var render = function () {
             "div",
             { staticClass: "container p-3" },
             [
+              _c("h1", [_vm._v("Menu " + _vm._s(_vm.restaurantName))]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("Total plate: " + _vm._s(_vm.totalPlates))]),
+              _vm._v(" "),
               _c(
                 "div",
                 { staticClass: "row" },

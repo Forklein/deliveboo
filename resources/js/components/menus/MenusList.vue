@@ -2,6 +2,8 @@
   <section id="menus-list">
     <Loader v-if="isLoading" />
     <div v-else class="container p-3">
+      <h1>Menu {{ restaurantName }}</h1>
+      <h2>Total plate: {{ totalPlates }}</h2>
       <div class="row">
         <div class="col-3" v-for="(plate, index) in plates" :key="index">
           <MenuCard :plate="plate" @currentCart="getCart" />
@@ -29,6 +31,8 @@ export default {
       isLoading: false,
       cart: [],
       plates: [],
+      restaurantName: "",
+      totalPlates: "",
     };
   },
   methods: {
@@ -56,6 +60,8 @@ export default {
       .get(`http://127.0.0.1:8000/api/users/${this.$route.params.id}`)
       .then((res) => {
         this.plates = res.data.user.plates;
+        this.restaurantName = res.data.restaurant_name;
+        this.totalPlates = res.data.total;
       })
       .catch((err) => {
         console.log(err);
