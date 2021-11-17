@@ -8,22 +8,29 @@
         favourite places.
       </p>
       <Loader v-if="isLoading" />
-      <div class="row">
-        <div class="form-group offset-9 col-3">
-          <label for="categories">Select Category</label>
-          <select class="form-control" id="categories" v-model="category">
-            <option>All</option>
-            <option v-for="(category, index) in getCategories" :key="index">
-              {{ category }}
-            </option>
-          </select>
+      <div class="form-group offset-9 col-3">
+        <label for="categories">Select Category</label>
+        <select class="form-control" id="categories" v-model="category">
+          <option>All</option>
+          <option v-for="(category, index) in getCategories" :key="index">
+            {{ category }}
+          </option>
+        </select>
+      </div>
+      <div class="carousel row">
+        <div class="col-3 d-flex justify-content-center align-items-center">
+          <i @click="goBack" class="fas fa-arrow-circle-left fa-3x"></i>
         </div>
         <div
-          v-for="user in filteredRestaurants"
+          class="col-4 mx-auto"
+          v-for="(user, index) in filteredRestaurants"
           :key="user.id"
-          class="col-12 col-sm-6 col-md-4"
+          v-if="index == currentIndex"
         >
           <RestaurantCard :user="user" />
+        </div>
+        <div class="col-3 d-flex justify-content-center align-items-center">
+          <i @click="goNext" class="fas fa-arrow-circle-right fa-3x"></i>
         </div>
       </div>
     </div>
@@ -49,6 +56,7 @@ export default {
       plates: [],
       category: "All",
       isLoading: false,
+      currentIndex: 0,
     };
   },
   computed: {
@@ -76,6 +84,18 @@ export default {
       }
     },
   },
+  methods: {
+    goBack() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      }
+    },
+    goNext() {
+      if (this.currentIndex == this.users.length - 1) {
+        this.currentIndex = 0;
+      } else this.currentIndex++;
+    },
+  },
   created() {
     this.isLoading = true;
     axios
@@ -100,6 +120,12 @@ export default {
 
 #restaurants-list {
   background: $ourLightIndigo;
+  .carousel {
+    i {
+      color: $carrotOrange;
+      cursor: pointer;
+    }
+  }
 }
 
 h2 {

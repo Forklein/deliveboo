@@ -2658,35 +2658,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3236,6 +3207,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3252,7 +3230,8 @@ __webpack_require__.r(__webpack_exports__);
       users: [],
       plates: [],
       category: "All",
-      isLoading: false
+      isLoading: false,
+      currentIndex: 0
     };
   },
   computed: {
@@ -3280,6 +3259,18 @@ __webpack_require__.r(__webpack_exports__);
         });
         return filtered;
       }
+    }
+  },
+  methods: {
+    goBack: function goBack() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      }
+    },
+    goNext: function goNext() {
+      if (this.currentIndex == this.users.length - 1) {
+        this.currentIndex = 0;
+      } else this.currentIndex++;
     }
   },
   created: function created() {
@@ -31013,7 +31004,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #e9dfee;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
+exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #e9dfee;\n}\n#restaurants-list .carousel i[data-v-67b88280] {\n  color: #ED9529;\n  cursor: pointer;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
 
 // exports
 
@@ -64563,67 +64554,95 @@ var render = function () {
           _vm._v(" "),
           _vm.isLoading ? _c("Loader") : _vm._e(),
           _vm._v(" "),
+          _c("div", { staticClass: "form-group offset-9 col-3" }, [
+            _c("label", { attrs: { for: "categories" } }, [
+              _vm._v("Select Category"),
+            ]),
+            _vm._v(" "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.category,
+                    expression: "category",
+                  },
+                ],
+                staticClass: "form-control",
+                attrs: { id: "categories" },
+                on: {
+                  change: function ($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function (o) {
+                        return o.selected
+                      })
+                      .map(function (o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.category = $event.target.multiple
+                      ? $$selectedVal
+                      : $$selectedVal[0]
+                  },
+                },
+              },
+              [
+                _c("option", [_vm._v("All")]),
+                _vm._v(" "),
+                _vm._l(_vm.getCategories, function (category, index) {
+                  return _c("option", { key: index }, [
+                    _vm._v("\n          " + _vm._s(category) + "\n        "),
+                  ])
+                }),
+              ],
+              2
+            ),
+          ]),
+          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "row" },
+            { staticClass: "carousel row" },
             [
-              _c("div", { staticClass: "form-group offset-9 col-3" }, [
-                _c("label", { attrs: { for: "categories" } }, [
-                  _vm._v("Select Category"),
-                ]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.category,
-                        expression: "category",
-                      },
-                    ],
-                    staticClass: "form-control",
-                    attrs: { id: "categories" },
-                    on: {
-                      change: function ($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function (o) {
-                            return o.selected
-                          })
-                          .map(function (o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.category = $event.target.multiple
-                          ? $$selectedVal
-                          : $$selectedVal[0]
-                      },
-                    },
-                  },
-                  [
-                    _c("option", [_vm._v("All")]),
-                    _vm._v(" "),
-                    _vm._l(_vm.getCategories, function (category, index) {
-                      return _c("option", { key: index }, [
-                        _vm._v(
-                          "\n            " + _vm._s(category) + "\n          "
-                        ),
-                      ])
-                    }),
-                  ],
-                  2
-                ),
-              ]),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-3 d-flex justify-content-center align-items-center",
+                },
+                [
+                  _c("i", {
+                    staticClass: "fas fa-arrow-circle-left fa-3x",
+                    on: { click: _vm.goBack },
+                  }),
+                ]
+              ),
               _vm._v(" "),
-              _vm._l(_vm.filteredRestaurants, function (user) {
-                return _c(
-                  "div",
-                  { key: user.id, staticClass: "col-12 col-sm-6 col-md-4" },
-                  [_c("RestaurantCard", { attrs: { user: user } })],
-                  1
-                )
+              _vm._l(_vm.filteredRestaurants, function (user, index) {
+                return index == _vm.currentIndex
+                  ? _c(
+                      "div",
+                      { key: user.id, staticClass: "col-4 mx-auto" },
+                      [_c("RestaurantCard", { attrs: { user: user } })],
+                      1
+                    )
+                  : _vm._e()
               }),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-3 d-flex justify-content-center align-items-center",
+                },
+                [
+                  _c("i", {
+                    staticClass: "fas fa-arrow-circle-right fa-3x",
+                    on: { click: _vm.goNext },
+                  }),
+                ]
+              ),
             ],
             2
           ),
