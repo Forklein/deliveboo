@@ -10083,8 +10083,6 @@ nav {
   width: 80px;
   height: 30px;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .switch input {
@@ -10211,7 +10209,7 @@ nav {
 }
 
 #logo {
-  max-height: 60px;
+  height: 60px;
 }
 
 /*
@@ -10219,6 +10217,10 @@ nav {
     color: $oxfordBlue;
 }
 */
+.nav-link {
+  line-height: 54px;
+}
+
 .nav-link:hover,
 .nav-link:active {
   background: #ED9529;
