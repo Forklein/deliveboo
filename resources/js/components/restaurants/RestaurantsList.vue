@@ -7,7 +7,6 @@
         choose meal and enjoy your favourite food in the comfort of your
         favourite places.
       </p>
-      <Loader v-if="isLoading" />
       <div class="form-group offset-9 col-3">
         <label for="categories">Select Category</label>
         <select class="form-control" id="categories" v-model="category">
@@ -32,7 +31,6 @@
 </template>
 
 <script>
-import Loader from "../utilities/Loader.vue";
 import RestaurantCard from "./RestaurantCard.vue";
 import MenusList from "../menus/MenusList.vue";
 
@@ -42,7 +40,6 @@ export default {
   name: "RestaurantsList",
   components: {
     RestaurantCard,
-    Loader,
     MenusList,
     Carousel,
     Slide,
@@ -53,7 +50,6 @@ export default {
       users: [],
       plates: [],
       category: "All",
-      isLoading: false,
     };
   },
   computed: {
@@ -82,7 +78,6 @@ export default {
     },
   },
   created() {
-    this.isLoading = true;
     axios
       .get(`${this.baseUri}/api/users`)
       .then((res) => {
@@ -90,11 +85,6 @@ export default {
       })
       .catch((err) => {
         console.error(err);
-      })
-      .then(() => {
-        setTimeout(() => {
-          this.isLoading = false;
-        }, 1500);
       });
   },
 };

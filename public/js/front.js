@@ -2422,6 +2422,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurants/RestaurantsList.vue */ "./resources/js/components/restaurants/RestaurantsList.vue");
 /* harmony import */ var _data_works_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/works.js */ "./resources/js/components/data/works.js");
+/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
 //
 //
 //
@@ -2671,17 +2672,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   components: {
-    RestaurantsList: _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    RestaurantsList: _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
-      works: _data_works_js__WEBPACK_IMPORTED_MODULE_1__["default"]
+      works: _data_works_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+      isLoading: false
     };
+  },
+  created: function created() {
+    var _this = this;
+
+    this.isLoading = true;
+    setTimeout(function () {
+      _this.isLoading = false;
+    }, 2000);
   }
 });
 
@@ -3185,11 +3198,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
-/* harmony import */ var _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RestaurantCard.vue */ "./resources/js/components/restaurants/RestaurantCard.vue");
-/* harmony import */ var _menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../menus/MenusList.vue */ "./resources/js/components/menus/MenusList.vue");
-/* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-carousel */ "./node_modules/vue-carousel/dist/vue-carousel.min.js");
-/* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_carousel__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RestaurantCard.vue */ "./resources/js/components/restaurants/RestaurantCard.vue");
+/* harmony import */ var _menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menus/MenusList.vue */ "./resources/js/components/menus/MenusList.vue");
+/* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-carousel */ "./node_modules/vue-carousel/dist/vue-carousel.min.js");
+/* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_carousel__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -3222,27 +3234,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantsList",
   components: {
-    RestaurantCard: _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    MenusList: _menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Carousel: vue_carousel__WEBPACK_IMPORTED_MODULE_3__["Carousel"],
-    Slide: vue_carousel__WEBPACK_IMPORTED_MODULE_3__["Slide"]
+    RestaurantCard: _RestaurantCard_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    MenusList: _menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Carousel: vue_carousel__WEBPACK_IMPORTED_MODULE_2__["Carousel"],
+    Slide: vue_carousel__WEBPACK_IMPORTED_MODULE_2__["Slide"]
   },
   data: function data() {
     return {
       baseUri: "http://localhost:8000",
       users: [],
       plates: [],
-      category: "All",
-      isLoading: false
+      category: "All"
     };
   },
   computed: {
@@ -3275,15 +3283,10 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this2 = this;
 
-    this.isLoading = true;
     axios.get("".concat(this.baseUri, "/api/users")).then(function (res) {
       _this2.users = res.data.users;
     })["catch"](function (err) {
       console.error(err);
-    }).then(function () {
-      setTimeout(function () {
-        _this2.isLoading = false;
-      }, 1500);
     });
   }
 });
@@ -63728,6 +63731,8 @@ var render = function () {
       ),
       _vm._v(" "),
       _vm._m(4),
+      _vm._v(" "),
+      _vm.isLoading ? _c("Loader") : _vm._e(),
     ],
     1
   )
@@ -64607,8 +64612,6 @@ var render = function () {
               "\n      Here you can find a selection of the best restaurants next to you. Just\n      choose meal and enjoy your favourite food in the comfort of your\n      favourite places.\n    "
             ),
           ]),
-          _vm._v(" "),
-          _vm.isLoading ? _c("Loader") : _vm._e(),
           _vm._v(" "),
           _c("div", { staticClass: "form-group offset-9 col-3" }, [
             _c("label", { attrs: { for: "categories" } }, [

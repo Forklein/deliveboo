@@ -245,20 +245,31 @@
         />
       </div>
     </section>
+    <Loader v-if="isLoading" />
   </main>
 </template>
 <script>
 import RestaurantsList from "./restaurants/RestaurantsList.vue";
 import works from "./data/works.js";
+import Loader from "./utilities/Loader.vue";
+
 export default {
   name: "Main",
   components: {
     RestaurantsList,
+    Loader,
   },
   data() {
     return {
       works,
+      isLoading: false,
     };
+  },
+  created() {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
   },
 };
 </script>
