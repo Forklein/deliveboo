@@ -17,7 +17,12 @@
           </option>
         </select>
       </div>
-      <Carousel :autoplayTimeout="3000" :autoplay="true" :per-page="3">
+      <Carousel
+        :loop="true"
+        :autoplayTimeout="3000"
+        :autoplay="true"
+        :per-page="3"
+      >
         <Slide class="col-4" v-for="user in filteredRestaurants" :key="user.id">
           <RestaurantCard :user="user" />
         </Slide>

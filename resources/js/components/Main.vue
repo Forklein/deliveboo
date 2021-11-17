@@ -1,8 +1,9 @@
 <template>
   <main>
+    <RestaurantsList />
     <section id="our-technology" class="pt-5 d-flex-align-items-center">
       <div class="container justify-content-center">
-        <div class="mb-5 text-center">
+        <div class="mb-5 text-center" data-aos="fade-down">
           <h2 class="mb-2">Technology guides us</h2>
           <p>
             We are proud to take our technology around the world. Our algorithm
@@ -17,7 +18,10 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div
+            class="col-12 col-sm-6 col-md-6 col-lg-3"
+            data-aos="fade-up-right"
+          >
             <div
               class="
                 card
@@ -43,7 +47,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up">
             <div
               class="
                 card
@@ -69,7 +73,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up">
             <div
               class="
                 card
@@ -95,7 +99,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-3" data-aos="fade-left">
             <div
               class="
                 card
@@ -124,10 +128,9 @@
         </div>
       </div>
     </section>
-    <RestaurantsList />
     <section id="about-us" class="pt-5 d-flex align-items-center">
       <div class="container justify-content-center">
-        <div class="mb-5 text-center">
+        <div class="mb-5 text-center" data-aos="fade-in">
           <h2 class="mb-2">About us</h2>
           <p>
             By offering fast and reliable delivery, which the customer can track
@@ -244,11 +247,9 @@
     </section>
   </main>
 </template>
-
 <script>
 import RestaurantsList from "./restaurants/RestaurantsList.vue";
 import works from "./data/works.js";
-
 export default {
   name: "Main",
   components: {
@@ -261,14 +262,12 @@ export default {
   },
 };
 </script>
-
 <style lang="scss" scoped>
 @import "../../sass/_variables.scss";
 #our-technology,
 #about-us {
   background: $lightTurquoise;
 }
-
 .card {
   border-radius: 20px;
   h3,
@@ -284,7 +283,6 @@ export default {
     line-height: 18px;
   }
 }
-
 #our-values {
   background-color: $ourLightIndigo;
   h2 {
