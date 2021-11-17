@@ -10204,6 +10204,10 @@ nav {
   background-color: #12294e;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #main-menu {
   background: #FCB750;
 }
