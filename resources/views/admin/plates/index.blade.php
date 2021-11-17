@@ -45,7 +45,8 @@
               <form method="POST" action="{{route('admin.plates.destroy', $plate->id)}}">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-danger button-trigger"><i class="fas fa-trash"></i></button>
+                <button type="submit" class="btn btn-danger button-trigger" onclick="play()"><i class="fas fa-trash"></i></button>
+                <audio id="audio" src="https://freesound.org/data/previews/508/508597_11110115-lq.mp3"></audio>
               </form>
             </td>
           </tr>
@@ -55,7 +56,6 @@
         </tbody>
       </table>
   </div>
-    
 </div>
 <div class="mt-4">
     {{$plates->links()}}
@@ -78,6 +78,10 @@
         form.submit();
       })
     });
-  })
+  });
+  function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
 </script>
 @endsection
