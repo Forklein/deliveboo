@@ -19,9 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="min-vh-100">
+<body>
     <div id="app" style="height: 100vh">
-        <nav class="navbar navbar-expand-md navbar-dark bg-oxford shadow-sm p-0">
+        <nav id="dashboard-navbar" class="navbar navbar-expand-md navbar-dark bg-oxford shadow-sm p-0">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <strong>{{ config('app.name', 'DeliveBoo') }}</strong>
@@ -81,10 +81,10 @@
             </div>
         </nav>
 
-        <main class="py-5">
+        <main id="dashboard-main" class="d-flex align-items-center" >
             @yield('content')
         </main>
-        <footer style="height: 5%;">
+        <footer id="dashboard-footer">
             <div class="d-flex justify-content-center bg-oxford align-items-center" style="height: 100%">
                 <span class="text-white">
                     &copy; 2021, Team 7 - Classe 38

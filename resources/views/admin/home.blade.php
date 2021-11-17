@@ -2,17 +2,7 @@
 
 @section('content')
     <div class="container p-4 rounded">
-        <div class="row">
-            <div class="col">
-                <span class="h2">This is the control panel of: <strong><span class="text-capitalize h1 txt-oxford">{{Auth::user()->restaurant_name}}</span></strong></span>
-                <address><em>Restaurant by {{Auth::user()->name}}</em></address>
-                @foreach(Auth::user()->types as $type)
-                    <span class="badge rounded-pill p-3" style="background-color: {{$type->color}}">{{$type->name}}</span>
-                @endforeach
-                <hr class="py-4">
-            </div>
-        </div>
-        <div class="row shadow-lg border-custom">
+        <div id="dashboard-row" class="row shadow-lg border-custom">
             <!--Left Dashboard Section-->
             <div class="col-side-left bg-oxford bg-dash-left text-white py-4">
                 <!--Logo Restaurant: If there is an image print it, otherwise print the name-->
@@ -64,3 +54,4 @@
     </div>
     @yield('script')
 @endsection
+
