@@ -10024,6 +10024,13 @@ nav {
   height: 70px;
 }
 
+.bg-dash {
+  background-image: url("../img/food-background.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 40%;
+}
+
 /* Utils */
 .border-custom {
   border-radius: 20px;
@@ -10200,37 +10207,35 @@ nav {
 }
 
 #main-menu {
-  height: 70px;
   background: #FCB750;
 }
 
 #logo {
-  height: 60px;
+  max-height: 60px;
 }
 
+/*
 .navbar-nav:first-of-type {
-  color: #007e8a;
+    color: $oxfordBlue;
 }
-
-.nav-link {
-  line-height: 65px;
-}
-
+*/
 .nav-link:hover,
 .nav-link:active {
   background: #ED9529;
   color: currentColor;
 }
 
+/*
 .icon {
-  font-size: 20px;
-  vertical-align: middle;
+    font-size: 20px;
+    vertical-align: middle;
 }
 
 .navbar-nav:first-of-type .icon {
-  color: #007e8a;
+    color: $oxfordBlue;
 }
 
 #menu-icon {
-  font-size: 30px;
+    font-size: 30px;
 }
+*/

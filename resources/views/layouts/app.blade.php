@@ -81,7 +81,7 @@
             </div>
         </nav>
 
-        <main class="py-5">
+        <main class="py-5 bg-dash">
             @yield('content')
         </main>
         <footer style="height: 5%;">
