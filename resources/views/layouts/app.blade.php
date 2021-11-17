@@ -78,7 +78,7 @@
             </div>
         </nav>
 
-        <main class="py-5 bg-dash">
+        <main id="dashboard-main" class="py-5 bg-dash d-flex align-items-center">
             @yield('content')
         </main>
         <footer id="dashboard-footer">
