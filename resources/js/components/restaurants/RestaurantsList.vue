@@ -17,22 +17,11 @@
           </option>
         </select>
       </div>
-      <div class="carousel row">
-        <div class="col-3 d-flex justify-content-center align-items-center">
-          <i @click="goBack" class="fas fa-arrow-circle-left fa-3x"></i>
-        </div>
-        <div
-          class="col-4 mx-auto"
-          v-for="(user, index) in filteredRestaurants"
-          :key="user.id"
-          v-if="index == currentIndex"
-        >
+      <Carousel :autoplayTimeout="3000" :autoplay="true" :per-page="3">
+        <Slide class="col-4" v-for="user in filteredRestaurants" :key="user.id">
           <RestaurantCard :user="user" />
-        </div>
-        <div class="col-3 d-flex justify-content-center align-items-center">
-          <i @click="goNext" class="fas fa-arrow-circle-right fa-3x"></i>
-        </div>
-      </div>
+        </Slide>
+      </Carousel>
     </div>
   </section>
 </template>
@@ -42,12 +31,16 @@ import Loader from "../utilities/Loader.vue";
 import RestaurantCard from "./RestaurantCard.vue";
 import MenusList from "../menus/MenusList.vue";
 
+import { Carousel, Slide } from "vue-carousel";
+
 export default {
   name: "RestaurantsList",
   components: {
     RestaurantCard,
     Loader,
     MenusList,
+    Carousel,
+    Slide,
   },
   data() {
     return {
@@ -56,7 +49,6 @@ export default {
       plates: [],
       category: "All",
       isLoading: false,
-      currentIndex: 0,
     };
   },
   computed: {
@@ -82,18 +74,6 @@ export default {
         });
         return filtered;
       }
-    },
-  },
-  methods: {
-    goBack() {
-      if (this.currentIndex > 0) {
-        this.currentIndex--;
-      }
-    },
-    goNext() {
-      if (this.currentIndex == this.users.length - 1) {
-        this.currentIndex = 0;
-      } else this.currentIndex++;
     },
   },
   created() {
