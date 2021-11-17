@@ -1,18 +1,20 @@
+html{
+    scroll-behavior: smooth;
+}
 #main-menu {
-    height: 70px;
     background: $yellowJasmine;
 }
 
 #logo {
     height: 60px;
 }
-
+/*
 .navbar-nav:first-of-type {
     color: $oxfordBlue;
 }
-
+*/
 .nav-link {
-    line-height: 65px
+    line-height: 54px;
 }
 
 .nav-link:hover,
@@ -20,7 +22,7 @@
     background: $carrotOrange;
     color: currentColor;
 }
-
+/*
 .icon {
     font-size: 20px;
     vertical-align: middle;
@@ -33,7 +35,7 @@
 #menu-icon {
     font-size: 30px;
 }
-
+*/
 
 
 

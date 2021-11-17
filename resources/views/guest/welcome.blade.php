@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-lg d-flex align-items-center" id="main-menu">
             <div class="container">
                 <a href="{{url('/')}}"><img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" /></a>
-                <h1>Deliveboo</h1>
+                <a href="{{url('/')}}"><h1>Deliveboo</h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="icon mr-1 fas fa-bars" id="menu-icon mr-1"></i></span>

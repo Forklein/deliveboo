@@ -39,7 +39,7 @@
                 </div>
               </form>
             </td>
-            <td class="d-flex align-middle">
+            <td class="d-flex justify-content-center align-items-center">
               <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford">Details</a>
               <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2"><i class="fas fa-pencil-alt"></i></a>
               <form method="POST" action="{{route('admin.plates.destroy', $plate->id)}}">

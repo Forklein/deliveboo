@@ -60,10 +60,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <!-- To the Dashboard -->
-                                    <a class="dropdown-item" href="{{ route('admin.home') }}">
-                                        Dashboard
-                                    </a>
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -81,7 +78,7 @@
             </div>
         </nav>
 
-        <main id="dashboard-main" class="d-flex align-items-center" >
+        <main class="py-5 bg-dash">
             @yield('content')
         </main>
         <footer id="dashboard-footer">

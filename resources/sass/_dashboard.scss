@@ -12,6 +12,12 @@ nav {
     height: 5%;
 }
 
+.bg-dash{
+    background-image: url('../img/food-background.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 40%;
+}
 /* Utils */
 .border-custom {
     border-radius: 20px;
@@ -66,8 +72,6 @@ nav {
     width: 80px;
     height: 30px;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .switch input {
