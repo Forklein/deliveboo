@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div data-aos="zoom-in" class="container">
     <div class="row justify-content-center">
         @include('includes.errors')
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border-custom shadow-lg">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">

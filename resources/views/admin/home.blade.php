@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container p-4 rounded">
+    <div data-aos="zoom-in" class="container p-4 rounded">
         <div id="dashboard-row" class="row shadow-lg border-custom">
             <!--Left Dashboard Section-->
             <div class="col-side-left bg-oxford bg-dash-left text-white py-4">

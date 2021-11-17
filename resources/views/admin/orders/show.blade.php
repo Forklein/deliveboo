@@ -54,7 +54,7 @@
         </table>
       </div>
       <div class="d-flex justify-content-end">
-        <a href="{{route('admin.orders.index')}}" class="btn btn-oxford">Back to Orders</a>
+        <a href="{{route('admin.orders.index')}}" class="btn btn-oxford button-trigger">Back to Orders</a>
       </div>
   </div>
 </div>

@@ -6,7 +6,7 @@
 <div>
   <div class="d-flex justify-content-between plates">
     <div><h1>Your Plates</h1></div>
-    <div class="py-2"><a class="btn btn-success" href="{{route('admin.plates.create')}}"><i class="fas fa-plus"></i></a></div>
+    <div class="py-2"><a class="btn btn-success button-trigger" href="{{route('admin.plates.create')}}"><i class="fas fa-plus"></i></a></div>
   </div>
   <div class="table-responsive overflow-auto vh-40">
     <table class="table table-striped">
@@ -40,12 +40,12 @@
               </form>
             </td>
             <td class="d-flex justify-content-center align-items-center">
-              <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford">Details</a>
-              <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2"><i class="fas fa-pencil-alt"></i></a>
+              <a href="{{route('admin.plates.show', $plate->id)}}" class="btn btn-oxford button-trigger">Details</a>
+              <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning mx-2 button-trigger"><i class="fas fa-pencil-alt"></i></a>
               <form method="POST" action="{{route('admin.plates.destroy', $plate->id)}}">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                <button type="submit" class="btn btn-danger button-trigger"><i class="fas fa-trash"></i></button>
               </form>
             </td>
           </tr>

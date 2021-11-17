@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-end">
-        <a class="btn btn-oxford mr-2" href="{{route('admin.plates.index')}}">Back</a>
-        <button type="submit" class="btn btn-oxford">Submit</button>
+        <a class="btn btn-oxford button-trigger mr-2" href="{{route('admin.plates.index')}}">Back</a>
+        <button type="submit" class="btn btn-oxford button-trigger">Submit</button>
     </div>
 </form>

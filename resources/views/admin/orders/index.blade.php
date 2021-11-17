@@ -24,7 +24,7 @@
                     <td class="align-middle">{{$order->getFormattedDate('created_at')}}</td>
                     <td class="align-middle">{{$order->total}}€</td>
                     <td class="align-middle text-center font-weight-bold {{($order->status) ? 'text-success' : 'text-danger'}}">{{($order->status) ? 'Paid' : 'Unpaid'}}</td>
-                    <td class="align-middle"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-oxford">Show Details</a></td>
+                    <td class="align-middle"><a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-oxford button-trigger">Show Details</a></td>
                 </tr>
             @empty
                 <tr colspan="4">No Orders</tr>
