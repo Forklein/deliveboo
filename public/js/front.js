@@ -81745,7 +81745,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
-Vue.use(aos__WEBPACK_IMPORTED_MODULE_4___default.a.init());
+Vue.use(aos__WEBPACK_IMPORTED_MODULE_4___default.a.init({
+  startEvent: 'scroll'
+}));
 Vue.use(vue_braintree__WEBPACK_IMPORTED_MODULE_2__["default"]);
 Vue.use(vue_carousel__WEBPACK_IMPORTED_MODULE_3___default.a);
 var app = new Vue({

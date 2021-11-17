@@ -11,7 +11,9 @@ import VueCarousel from 'vue-carousel';
 import Aos from "aos";
 
 
-Vue.use(Aos.init());
+Vue.use(Aos.init({
+    startEvent: 'scroll',
+}));
 Vue.use(vueBraintree);
 Vue.use(VueCarousel);
 
