@@ -20,7 +20,7 @@ class FinanceController extends Controller
 
         $monthly_orders = [];
         foreach ($months as $key => $value){
-            array_push($monthly_orders, (object) ['x' => $key, 'y' => count($value)]);
+            array_push($monthly_orders, ['x' => $key, 'y' => count($value)]);
         };
 
         $monthly_income = [];
@@ -32,7 +32,7 @@ class FinanceController extends Controller
             array_push($monthly_income, ['x' => $key, 'y' => $tot]);
         };
 
-        return view('admin.finances.index', compact('total', 'orders', 'monthly_orders', 'monthly_income'));
+        return view('admin.finances.index', compact('orders', 'total', 'monthly_orders', 'monthly_income'));
     }
 
 }
