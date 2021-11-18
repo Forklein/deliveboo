@@ -3284,9 +3284,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -3301,36 +3298,28 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       baseUri: "http://localhost:8000",
+      categories: ["American", "Chinese", "Fusion", "Indian", "Italian", "Japanese", "Mexican"],
       users: [],
       plates: [],
-      category: "All"
+      checkbox: []
     };
   },
   computed: {
-    getCategories: function getCategories() {
-      var categories = [];
-      this.users.forEach(function (user) {
-        user.types.forEach(function (type) {
-          if (!categories.includes(type.name)) {
-            categories.push(type.name);
-          }
-        });
-      });
-      return categories.sort();
-    },
-    filteredRestaurants: function filteredRestaurants() {
+    getFilteredUsers: function getFilteredUsers() {
       var _this = this;
 
-      if (this.category === "All") {
-        return this.users;
-      } else {
-        var filtered = this.users.filter(function (user) {
-          return user.types.some(function (type) {
-            return type.name === _this.category;
+      var filter = [];
+
+      if (this.checkbox.length > 0) {
+        this.users.forEach(function (user) {
+          user.types.forEach(function (type) {
+            if (_this.checkbox.includes(type.name) && !filter.includes(user)) {
+              filter.push(user);
+            }
           });
         });
-        return filtered;
-      }
+        return filter;
+      } else return this.users;
     }
   },
   created: function created() {
@@ -64813,12 +64802,46 @@ var render = function () {
           _c(
             "div",
             { staticClass: "form-group col-12 d-flex justify-content-center" },
-            _vm._l(_vm.getCategories, function (category, index) {
+            _vm._l(_vm.categories, function (category, index) {
               return _c("div", { key: index, staticClass: "form-check" }, [
                 _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.checkbox,
+                      expression: "checkbox",
+                    },
+                  ],
                   staticClass: "form-check-input",
-                  attrs: { type: "checkbox", id: category },
-                  domProps: { value: category },
+                  attrs: { type: "checkbox" },
+                  domProps: {
+                    value: category,
+                    checked: Array.isArray(_vm.checkbox)
+                      ? _vm._i(_vm.checkbox, category) > -1
+                      : _vm.checkbox,
+                  },
+                  on: {
+                    change: function ($event) {
+                      var $$a = _vm.checkbox,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = category,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.checkbox = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.checkbox = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.checkbox = $$c
+                      }
+                    },
+                  },
                 }),
                 _vm._v(" "),
                 _c(
@@ -64844,10 +64867,10 @@ var render = function () {
                 "per-page": 3,
               },
             },
-            _vm._l(_vm.filteredRestaurants, function (user) {
+            _vm._l(_vm.getFilteredUsers, function (user, index) {
               return _c(
                 "Slide",
-                { key: user.id, staticClass: "col-4" },
+                { key: index, staticClass: "col-4" },
                 [_c("RestaurantCard", { attrs: { user: user } })],
                 1
               )

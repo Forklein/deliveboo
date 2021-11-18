@@ -8,22 +8,15 @@
         favourite places.
       </p>
       <div class="form-group col-12 d-flex justify-content-center">
-        <!-- <label for="categories">Select Category</label>
-        <select class="form-control" id="categories" v-model="category">
-          <option>All</option>
-          <option v-for="(category, index) in getCategories" :key="index">
-            {{ category }}
-          </option>
-        </select> -->
         <div
-          v-for="(category, index) in getCategories"
+          v-for="(category, index) in categories"
           :key="index"
           class="form-check"
         >
           <input
             class="form-check-input"
             type="checkbox"
-            :id="category"
+            v-model="checkbox"
             :value="category"
           />
           <label class="form-check-label pr-2" for="defaultCheck1">
@@ -37,7 +30,11 @@
         :autoplay="true"
         :per-page="3"
       >
-        <Slide class="col-4" v-for="user in filteredRestaurants" :key="user.id">
+        <Slide
+          class="col-4"
+          v-for="(user, index) in getFilteredUsers"
+          :key="index"
+        >
           <RestaurantCard :user="user" />
         </Slide>
       </Carousel>
@@ -62,34 +59,33 @@ export default {
   data() {
     return {
       baseUri: "http://localhost:8000",
+      categories: [
+        "American",
+        "Chinese",
+        "Fusion",
+        "Indian",
+        "Italian",
+        "Japanese",
+        "Mexican",
+      ],
       users: [],
       plates: [],
-      category: "All",
+      checkbox: [],
     };
   },
   computed: {
-    getCategories() {
-      const categories = [];
-      this.users.forEach((user) => {
-        user.types.forEach((type) => {
-          if (!categories.includes(type.name)) {
-            categories.push(type.name);
-          }
-        });
-      });
-      return categories.sort();
-    },
-    filteredRestaurants() {
-      if (this.category === "All") {
-        return this.users;
-      } else {
-        const filtered = this.users.filter((user) => {
-          return user.types.some((type) => {
-            return type.name === this.category;
+    getFilteredUsers() {
+      const filter = [];
+      if (this.checkbox.length > 0) {
+        this.users.forEach((user) => {
+          user.types.forEach((type) => {
+            if (this.checkbox.includes(type.name) && !filter.includes(user)) {
+              filter.push(user);
+            }
           });
         });
-        return filtered;
-      }
+        return filter;
+      } else return this.users;
     },
   },
   created() {

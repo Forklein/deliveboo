@@ -24,7 +24,7 @@ class UserController extends Controller
             $users = Type::with('users')->whereIn('name', $types_filtered)->get();
             return response()->json([
                 "message" => "Success",
-                "users" => $users
+                "types" => $users
             ], 200);
         }
 
