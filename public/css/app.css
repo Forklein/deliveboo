@@ -10019,13 +10019,20 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/*Navbar Front*/
+.navbar-position {
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+}
+
 /* Generics */
 nav {
   height: 70px;
 }
 
 #dashboard-navbar {
-  height: 5%;
+  height: 75px;
 }
 
 #dashboard-main {
@@ -10263,7 +10270,7 @@ html {
 }
 
 .nav-link {
-  line-height: 65px;
+  line-height: 59px;
 }
 
 .nav-link:hover,
@@ -10276,15 +10283,6 @@ nav i:not(#menu-icon, .btn-icon) {
   font-size: 20px;
   vertical-align: middle;
   color: #007e8a;
-}
-
-.btn-icon {
-  color: white;
-}
-
-#menu-icon {
-  color: #00CCBC;
-  font-size: 40px;
 }
 
 button:not(.navbar-toggler) {
@@ -10300,7 +10298,6 @@ button:not(.navbar-toggler):hover {
   z-index: 1;
 }
 .navbar-collapse .navbar-nav {
-  background: #FCB750;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

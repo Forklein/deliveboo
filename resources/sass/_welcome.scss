@@ -17,7 +17,7 @@ html{
     }
 }
 .nav-link {
-    line-height: 65px;
+    line-height: 59px;
 }
 
 .nav-link:hover,
@@ -32,14 +32,6 @@ nav i:not(#menu-icon, .btn-icon) {
     color: $oxfordBlue;
 }
 
-.btn-icon {
-    color: white;
-}
-
-#menu-icon {
-    color: $mediumTurquoise;
-    font-size: 40px;
-}
 
 button:not(.navbar-toggler) {
     border: none;
@@ -53,11 +45,11 @@ button:not(.navbar-toggler) {
 .navbar-collapse {
     z-index: 1;
     .navbar-nav {
-        background: $yellowJasmine;
         width: fit-content;
         height: fit-content;
         vertical-align: middle;
         z-index: 2;
         border-radius: 20px;
     }
+   
 }

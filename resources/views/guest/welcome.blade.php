@@ -21,7 +21,7 @@
 
 <body>
     @if (Route::has('login'))
-        <nav class="navbar navbar-expand-lg d-flex align-items-center p-0" id="main-menu">
+        <nav class="navbar navbar-expand-lg d-flex align-items-center p-0 navbar-position" id="main-menu">
             <div class="container">
                 <a href="{{url('/')}}"><img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" /></a>
                 <a href="{{url('/')}}"><h1>Deliveboo</h1></a>
