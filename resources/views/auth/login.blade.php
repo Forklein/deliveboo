@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="height: 100%">
+<div data-aos="zoom-in" class="container" style="height: 100%">
     <div class="row justify-content-center align-content-center" style="height: 100%">
         <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
             <div class="d-flex justify-content-center">

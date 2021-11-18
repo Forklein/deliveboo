@@ -10048,6 +10048,19 @@ nav {
   border-radius: 20px;
 }
 
+.zoom-in {
+  transition: transform 0.5s ease;
+}
+
+.zoom-in:hover {
+  transform: scale(1.5);
+}
+
+.button-trigger:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
 /*LEFT SIDE DASHBOARD*/
 .col-side-left {
   width: 20%;

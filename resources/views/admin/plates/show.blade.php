@@ -37,8 +37,8 @@
         </div>
         <hr>
         <div class="d-flex justify-content-end">
-            <a class="btn btn-oxford mr-2" href="{{route('admin.plates.index')}}">Back</a>
-            <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-oxford button-trigger mr-2" href="{{route('admin.plates.index')}}">Back</a>
+            <a href="{{route('admin.plates.edit', $plate->id)}}" class="btn btn-warning button-trigger"><i class="fas fa-pencil-alt"></i></a>
         </div>
     </div>
 @endsection
