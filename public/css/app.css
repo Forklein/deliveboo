@@ -10203,12 +10203,16 @@ nav {
   height: 70px;
   background: #FCB750;
 }
-
-#logo {
+#main-menu #logo {
   height: 60px;
 }
-
-.navbar-nav:first-of-type {
+#main-menu h1 {
+  color: #00CCBC;
+  line-height: 70px;
+  vertical-align: middle;
+  font-size: 30px;
+}
+#main-menu .navbar-nav:first-of-type {
   color: #007e8a;
 }
 
@@ -10222,15 +10226,42 @@ nav {
   color: currentColor;
 }
 
-.icon {
+nav i:not(#menu-icon, .btn-icon) {
   font-size: 20px;
   vertical-align: middle;
-}
-
-.navbar-nav:first-of-type .icon {
   color: #007e8a;
 }
 
+.btn-icon {
+  color: white;
+}
+
 #menu-icon {
-  font-size: 30px;
+  color: #00CCBC;
+  font-size: 40px;
+}
+
+button:not(.navbar-toggler) {
+  border: none;
+  background: #00CCBC;
+}
+button:not(.navbar-toggler):hover {
+  background: #007e8a;
+  transform: scale(1.15);
+}
+
+.navbar-collapse {
+  z-index: 1;
+}
+.navbar-collapse .navbar-nav {
+  background: #FCB750;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  vertical-align: middle;
+  z-index: 2;
+  border-radius: 20px;
 }

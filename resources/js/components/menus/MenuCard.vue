@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
-    <img :src="plate.image" class="card-img-top" :alt="plate.name" />
-    <div class="card-body">
+  <div class="card shadow border-0 m-0 p-4">
+    <img :src="plate.image" class="img-fluid my-2" :alt="plate.name" />
+    <div class="card-body mx-0 px-0">
       <h5 class="card-title">{{ plate.name }}</h5>
       <p class="card-text">{{ plate.description }}</p>
       <p class="card-text">{{ plate.price }}€</p>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "MenuCard",
+  name: "Menucard",
   data() {
     return {
       currentCart: {},
@@ -52,5 +52,29 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
+/* **************************** */
+.card {
+  background: $lightYellowJasmine;
+  border-radius: 20px;
+  height: 650px;
+  h4 {
+    color: $carrotOrange;
+    font-weight: bolder;
+    text-align: center !important;
+  }
+  .icon {
+    font-size: 20px;
+    color: $carrotOrange;
+    vertical-align: baseline;
+  }
+  p,
+  address {
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+  }
+}
+/* **************************** */
+
 </style>

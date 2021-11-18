@@ -1,11 +1,10 @@
 <template>
   <section id="restaurants-list" class="pt-5 pb-4">
     <div class="container flex-column">
-      <h2 v-if="!hideMenuList">Menu</h2>
-      <h2 v-if="hideMenuList">Users' Restaurants</h2>
-      <p v-if="hideMenuList">
-        Here you can find a selection of the best restaurants next to you. Just
-        choose meal and enjoy your favourite food in the comfort of your
+      <h2 class="mb-2" v-if="!hideMenuList">Menu</h2>
+      <h2 v-if="hideMenuList">Restaurants</h2>
+      <p v-if="hideMenuList" class="text-center">
+        Here you can find a selection of the best restaurants next to you. All you have to do is choose meal and enjoy your favourite food in the comfort of your
         favourite places.
       </p>
       <Loader v-if="isLoading" />
@@ -28,7 +27,7 @@
         </div>
       </div>
       <MenusList v-if="!hideMenuList" :plates="plates" />
-      <button v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
+      <button class="py-2 px-4 rounded-pill text-white" v-if="!hideMenuList" @click="hideMenuList = true">Return</button>
     </div>
   </section>
 </template>

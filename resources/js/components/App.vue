@@ -33,17 +33,10 @@ h2 {
   text-align: center !important;
 }
 
-button {
-  border: none;
-  background: $mediumTurquoise;
-}
-
-button:hover {
-  background: $oxfordBlue;
-  transform: scale(1.15);
-}
-
-.card:hover {
+.card {
+  border-radius: 20px;
+&:hover {
   transform: scale(1.1);
+}
 }
 </style>

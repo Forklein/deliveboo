@@ -1,18 +1,22 @@
 #main-menu {
     height: 70px;
     background: $yellowJasmine;
-}
-
-#logo {
-    height: 60px;
-}
-
-.navbar-nav:first-of-type {
-    color: $oxfordBlue;
+    #logo {
+        height: 60px;
+    }
+    h1 {
+        color: $mediumTurquoise;
+        line-height: 70px;
+        vertical-align: middle;
+        font-size: 30px;
+    }
+    .navbar-nav:first-of-type {
+        color: $oxfordBlue;
+    }
 }
 
 .nav-link {
-    line-height: 65px
+    line-height: 65px;
 }
 
 .nav-link:hover,
@@ -21,19 +25,38 @@
     color: currentColor;
 }
 
-.icon {
+nav i:not(#menu-icon, .btn-icon) {
     font-size: 20px;
     vertical-align: middle;
-}
-
-.navbar-nav:first-of-type .icon {
     color: $oxfordBlue;
 }
 
-#menu-icon {
-    font-size: 30px;
+.btn-icon {
+    color: white;
 }
 
+#menu-icon {
+    color: $mediumTurquoise;
+    font-size: 40px;
+}
 
+button:not(.navbar-toggler) {
+    border: none;
+    background: $mediumTurquoise;
+    &:hover {
+        background: $oxfordBlue;
+        transform: scale(1.15);
+    }
+}
 
-
+.navbar-collapse {
+    z-index: 1;
+    .navbar-nav {
+        background: $yellowJasmine;
+        width: fit-content;
+        height: fit-content;
+        vertical-align: middle;
+        z-index: 2;
+        border-radius: 20px;
+    }
+}

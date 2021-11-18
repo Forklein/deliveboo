@@ -1,16 +1,16 @@
 <template>
   <div
-    class="card my-5 p-4 border-0 d-flex flex-column"
+    class="card shadow my-5 p-4 border-0 d-flex flex-column"
     @click="getMenu(user.plates)"
   >
     <img v-if="user.image" :src="user.image" :alt="user.name" class="w-300" />
     <img
       v-else
-      src="img/restaurant-image.png"
-      class="restaurant-image"
+      src="img/restaurant-placeholder.png"
+      class="restaurant-image mb-4"
       alt="restaurant-image"
     />
-    <h4 class="card-title mb-4">
+    <h4 class="card-title mb-3">
       {{ user.restaurant_name }}
     </h4>
     <address class="mb-1 text-break" style="display: inline">
@@ -39,7 +39,7 @@ export default {
 @import "../../../sass/_variables.scss";
 .card {
   background: $lightYellowJasmine;
-  border-radius: 20px;
+  height: 450px;
   h4 {
     color: $carrotOrange;
     font-weight: bolder;
