@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use App\Models\Plate;
+use App\Models\Type;
 
 class UserController extends Controller
 {
@@ -15,9 +16,19 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::with(['types', 'plates'])->get();
+
+        if ($request->query('types')) {
+            $types_filtered = explode(" ", $request->query('types'));
+            $users = Type::with('users')->whereIn('name', $types_filtered)->get();
+            return response()->json([
+                "message" => "Success",
+                "users" => $users
+            ], 200);
+        }
+
+        $users = User::with('types')->get();
         return response()->json([
             "message" => "Success",
             "users" => $users

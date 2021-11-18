@@ -7,14 +7,29 @@
         choose meal and enjoy your favourite food in the comfort of your
         favourite places.
       </p>
-      <div class="form-group offset-9 col-3">
-        <label for="categories">Select Category</label>
+      <div class="form-group col-12 d-flex justify-content-center">
+        <!-- <label for="categories">Select Category</label>
         <select class="form-control" id="categories" v-model="category">
           <option>All</option>
           <option v-for="(category, index) in getCategories" :key="index">
             {{ category }}
           </option>
-        </select>
+        </select> -->
+        <div
+          v-for="(category, index) in getCategories"
+          :key="index"
+          class="form-check"
+        >
+          <input
+            class="form-check-input"
+            type="checkbox"
+            :id="category"
+            :value="category"
+          />
+          <label class="form-check-label pr-2" for="defaultCheck1">
+            {{ category }}
+          </label>
+        </div>
       </div>
       <Carousel
         :loop="true"

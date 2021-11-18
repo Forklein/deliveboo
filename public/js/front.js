@@ -3272,6 +3272,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -64795,52 +64810,29 @@ var render = function () {
             ),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-group offset-9 col-3" }, [
-            _c("label", { attrs: { for: "categories" } }, [
-              _vm._v("Select Category"),
-            ]),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.category,
-                    expression: "category",
-                  },
-                ],
-                staticClass: "form-control",
-                attrs: { id: "categories" },
-                on: {
-                  change: function ($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function (o) {
-                        return o.selected
-                      })
-                      .map(function (o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.category = $event.target.multiple
-                      ? $$selectedVal
-                      : $$selectedVal[0]
-                  },
-                },
-              },
-              [
-                _c("option", [_vm._v("All")]),
-                _vm._v(" "),
-                _vm._l(_vm.getCategories, function (category, index) {
-                  return _c("option", { key: index }, [
-                    _vm._v("\n          " + _vm._s(category) + "\n        "),
-                  ])
+          _c(
+            "div",
+            { staticClass: "form-group col-12 d-flex justify-content-center" },
+            _vm._l(_vm.getCategories, function (category, index) {
+              return _c("div", { key: index, staticClass: "form-check" }, [
+                _c("input", {
+                  staticClass: "form-check-input",
+                  attrs: { type: "checkbox", id: category },
+                  domProps: { value: category },
                 }),
-              ],
-              2
-            ),
-          ]),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  {
+                    staticClass: "form-check-label pr-2",
+                    attrs: { for: "defaultCheck1" },
+                  },
+                  [_vm._v("\n          " + _vm._s(category) + "\n        ")]
+                ),
+              ])
+            }),
+            0
+          ),
           _vm._v(" "),
           _c(
             "Carousel",
