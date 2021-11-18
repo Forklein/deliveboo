@@ -71,6 +71,9 @@ footer {
   background: $ourIndigo;
   font-size: 14px;
   line-height: 27px;
+  #logo {
+    height: 80px;
+  }
   #social-networks i {
     font-size: 25px;
   }

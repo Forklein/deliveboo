@@ -1,20 +1,16 @@
 <template>
   <main>
     <RestaurantsList />
+    <Loader v-if="isLoading" />
     <section id="our-technology" class="pt-5 d-flex-align-items-center">
       <div class="container justify-content-center">
         <div class="mb-5 text-center" data-aos="fade-down">
           <h2 class="mb-2">Technology guides us</h2>
           <p>
             We are proud to take our technology around the world. Our algorithm
-            is based on powerful predictive technology that manages the
-            assignment of orders in the most efficient way based on the location
-            of restaurants, riders and customers. Machine learning helps
-            estimate the time needed to prepare an order, optimizing the overall
-            experience. Deliveroo has managed to decrease delivery time by 20%,
-            so riders can complete more deliveries per hour and increase their
-            earnings, restaurants can increase their sales and, of course,
-            customers can get their order in less. weather.
+            is based on powerful predictive technology and machine learning,
+            that help optimizing the overall experience. In the last years
+            Deliveroo has managed to decrease delivery time by 20%.
           </p>
         </div>
         <div class="row">
@@ -25,8 +21,12 @@
             <div
               class="
                 card
+                shadow
                 mb-5
-                p-4
+                px-4
+                pt-4
+                pb-2
+                text-justify
                 d-flex
                 flex-column
                 align-items-center
@@ -40,10 +40,8 @@
               />
               <h4 class="font-weight-bolder mt-3 mb-2">SELECT FOOD</h4>
               <p>
-                You can make an order anytime, anywhere using your smartphone,
-                tablet or any mobile devices. Also more information about food
-                options are provided and customers are allowed to take their
-                time to browse the menu.
+                You can make an order anytime, anywhere using a mobile device,
+                taking your time to browse the menu and the food information.
               </p>
             </div>
           </div>
@@ -51,8 +49,12 @@
             <div
               class="
                 card
+                shadow
                 mb-5
-                p-4
+                px-4
+                pt-4
+                pb-2
+                text-justify
                 d-flex
                 flex-column
                 align-items-center
@@ -66,10 +68,8 @@
               />
               <h4 class="font-weight-bolder mt-3 mb-2">PAY ONLINE</h4>
               <p>
-                Choosing us you are paying for both food and convenience.
-                Browsing online menus you can compare prices and go for the
-                cheapest offer. Also the payment process is secure and no card
-                details are spread.
+                You are paying for both food and convenience. Compare online
+                prices, make your choice and trust our payment process.
               </p>
             </div>
           </div>
@@ -77,8 +77,12 @@
             <div
               class="
                 card
+                shadow
                 mb-5
-                p-4
+                px-4
+                pt-4
+                pb-2
+                text-justify
                 d-flex
                 flex-column
                 align-items-center
@@ -92,10 +96,8 @@
               />
               <h4 class="font-weight-bolder mt-3 mb-2">GPS SYSTEM</h4>
               <p>
-                The online ordering system is equipped with GPS systems that
-                help you capture your entire address and enter it. That means
-                you can enjoy your favourite food no matter where you are and it
-                will be delivered next to you.
+                Our GPS systems help you capture your entire address and enter
+                it. Enjoy your favourite food no matter where you are.
               </p>
             </div>
           </div>
@@ -103,8 +105,12 @@
             <div
               class="
                 card
+                shadow
                 mb-5
-                p-4
+                px-4
+                pt-4
+                pb-2
+                text-justify
                 d-flex
                 flex-column
                 align-items-center
@@ -118,10 +124,9 @@
               />
               <h4 class="font-weight-bolder mt-3 mb-2">FAST DELIVERY</h4>
               <p>
-                When having your food delivered you are able to track it to your
-                door in real time. This way you can experience a fast, immediate
-                service. You'll never have to sit in your car or the restaurant
-                to wait for your food again.
+                Our costumers are able to track the delivery to their door in
+                real time. This way they can experience a fast, immediate
+                service.
               </p>
             </div>
           </div>
@@ -144,6 +149,7 @@
             <div
               class="
                 card
+                shadow
                 mb-5
                 p-4
                 d-flex
@@ -174,6 +180,7 @@
             <div
               class="
                 card
+                shadow
                 mb-5
                 p-4
                 d-flex
@@ -204,6 +211,7 @@
             <div
               class="
                 card
+                shadow
                 mb-5
                 p-4
                 d-flex
@@ -239,13 +247,33 @@
           the future of Deliveroo products.
         </p>
         <img
-          src="img/our-values-image.jpg"
+          src="img/our-values.jpg"
           alt="our-values-image"
           class="img-fluid"
         />
       </div>
     </section>
-    <Loader v-if="isLoading" />
+    <section id="overview">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="card shadow">
+              <img src="img/restaurant-icon.png" alt="restaurant-icon" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card shadow">
+              <img src="img/rider-icon.png" alt="rider-icon" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card shadow">
+              <img src="img/thunder-icon.png" alt="thunder-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 <script>
@@ -280,7 +308,6 @@ export default {
   background: $lightTurquoise;
 }
 .card {
-  border-radius: 20px;
   h3,
   h4 {
     color: $ourIndigo;

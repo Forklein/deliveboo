@@ -1,11 +1,15 @@
 <template>
-  <section id="menus-list">
+  <section id="menus-list" class="pt-5 pb-4">
     <Loader v-if="isLoading" />
     <div v-else class="container p-3">
       <h1>Menu {{ restaurantName }}</h1>
       <h2>Total plate: {{ totalPlates }}</h2>
       <div class="row">
-        <div class="col-3" v-for="(plate, index) in plates" :key="index">
+        <div
+          class="col-12 col-sm-6 col-md-4 mb-5"
+          v-for="(plate, index) in plates"
+          :key="index"
+        >
           <MenuCard :plate="plate" @currentCart="getCart" />
         </div>
       </div>
@@ -74,4 +78,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
+/* **************************** */
+#menus-list {
+  background: $ourLightIndigo;
+}
+
+h2 {
+  color: $ourIndigo;
+}
+/* **************************** */
 </style>
