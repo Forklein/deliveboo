@@ -10231,6 +10231,10 @@ nav {
   background-color: #007e8a !important;
 }
 
+.bg-mediumTurquoise {
+  background-color: #00CCBC;
+}
+
 /********************** BUTTON **************************/
 .btn-oxford {
   color: #fff;

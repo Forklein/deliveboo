@@ -5,13 +5,12 @@
       <h5 class="card-title">{{ plate.name }}</h5>
       <p class="card-text">{{ plate.description }}</p>
       <p class="card-text">{{ plate.price }}€</p>
-      <div class="cart-footer">
+      <div class="cart-footer d-flex justify-content-around">
         <button @click="removeQuantity">-</button>
-        <span>{{ quantity }}</span>
-        <button @click="addQuantity">+</button>
-        <button @click="addToCart(plate)" class="btn btn-primary">
-          Add to cart
+        <button @click="addToCart(plate)" class="btn btn-primary position-relative">
+          Add to cart <span class="position-absolute cart-item pt-2 badge badge-pill bg-mediumTurquoise">{{ quantity }}</span>
         </button>
+        <button @click="addQuantity">+</button>
       </div>
     </div>
   </div>
@@ -74,6 +73,13 @@ export default {
     font-size: 14px;
     color: rgb(59, 59, 59);
   }
+}
+.cart-item {
+      position:absolute;
+      height:24px;
+      width:24px;
+      top:-10px;
+      right:-10px;
 }
 /* **************************** */
 

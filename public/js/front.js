@@ -2755,7 +2755,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Menucard",
   data: function data() {
@@ -3390,7 +3389,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ["carts"],
   data: function data() {
     return {
-      isVisibile: false
+      isVisibile: true
     };
   },
   computed: {
@@ -31006,7 +31005,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  background: #f3d7a2;\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  background: #f3d7a2;\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -31101,7 +31100,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 60px;\n  right: 60px;\n  z-index: 10;\n  width: 400px;\n  border-radius: 20px;\n}", ""]);
+exports.push([module.i, "#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 100px;\n  right: 20px;\n  z-index: 10;\n  width: 400px;\n  border-radius: 20px;\n}\n.fade-in[data-v-2120f3b0] {\n  opacity: 1;\n  -webkit-animation-name: fadeInOpacity-data-v-2120f3b0;\n          animation-name: fadeInOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-in;\n          animation-timing-function: ease-in;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n.fade-out[data-v-2120f3b0] {\n  opacity: 0;\n  -webkit-animation-name: fadeOutOpacity-data-v-2120f3b0;\n          animation-name: fadeOutOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-out;\n          animation-timing-function: ease-out;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
 
 // exports
 
@@ -64247,25 +64246,33 @@ var render = function () {
         _vm._v(_vm._s(_vm.plate.price) + "€"),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "cart-footer" }, [
+      _c("div", { staticClass: "cart-footer d-flex justify-content-around" }, [
         _c("button", { on: { click: _vm.removeQuantity } }, [_vm._v("-")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(_vm._s(_vm.quantity))]),
-        _vm._v(" "),
-        _c("button", { on: { click: _vm.addQuantity } }, [_vm._v("+")]),
         _vm._v(" "),
         _c(
           "button",
           {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btn-primary position-relative",
             on: {
               click: function ($event) {
                 return _vm.addToCart(_vm.plate)
               },
             },
           },
-          [_vm._v("\n        Add to cart\n      ")]
+          [
+            _vm._v("\n        Add to cart "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "position-absolute cart-item pt-2 badge badge-pill bg-mediumTurquoise",
+              },
+              [_vm._v(_vm._s(_vm.quantity))]
+            ),
+          ]
         ),
+        _vm._v(" "),
+        _c("button", { on: { click: _vm.addQuantity } }, [_vm._v("+")]),
       ]),
     ]),
   ])
@@ -64894,7 +64901,7 @@ var render = function () {
     _c(
       "div",
       {
-        staticClass: "rounded-circle bg-light p-3",
+        staticClass: "rounded-circle bg-light p-3 fade-in shodow-lg",
         attrs: { id: "cart" },
         on: { click: _vm.showOverview },
       },
@@ -64918,7 +64925,7 @@ var render = function () {
       "div",
       {
         staticClass: "overview bg-white overflow-auto shadow-lg",
-        class: _vm.isVisibile ? "d-block" : "d-none",
+        class: _vm.isVisibile ? "fade-in" : "fade-out",
       },
       [
         _c("div", { staticClass: "container" }, [
@@ -64929,7 +64936,7 @@ var render = function () {
               _vm._l(_vm.carts, function (cart, index) {
                 return _c(
                   "div",
-                  { key: index, staticClass: "col-12 d-flex my-2" },
+                  { key: index, staticClass: "col-12 d-flex py-2 mt-4" },
                   [
                     _c("div", { staticClass: "col-3" }, [
                       _c("img", {
@@ -64972,13 +64979,22 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "col-12 align-items-center justify-content-between d-flex",
+                    "col-12 align-items-center justify-content-between d-flex py-4",
                 },
                 [
                   _vm.carts
                     ? _c("div", { staticClass: "col" }, [
-                        _vm._v(
-                          "Total " + _vm._s(_vm.getTotal.toFixed(2)) + "€"
+                        _c(
+                          "span",
+                          {
+                            staticClass:
+                              "rounded-pill p-2 text-white bg-mediumTurquoise",
+                          },
+                          [
+                            _vm._v(
+                              "Total " + _vm._s(_vm.getTotal.toFixed(2)) + "€"
+                            ),
+                          ]
                         ),
                       ])
                     : _vm._e(),
@@ -64992,7 +65008,8 @@ var render = function () {
                             _c(
                               "router-link",
                               {
-                                staticClass: "btn btn-primary",
+                                staticClass:
+                                  "btn bg-mediumTurquoise text-white rounded-pill",
                                 attrs: { to: { name: "Checkout" } },
                               },
                               [_vm._v("Checkout")]

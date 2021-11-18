@@ -1,21 +1,21 @@
 <template>
   <div class="container-cart text-center">
-    <div @click="showOverview" class="rounded-circle bg-light p-3" id="cart">
+    <div @click="showOverview" class="rounded-circle bg-light p-3 fade-in shodow-lg" id="cart">
       <span v-if="carts" id="notify" class="badge badge-pill badge-danger">{{
         getQuantity
       }}</span>
       <i class="fas fa-shopping-cart fa-2x pr-1"></i>
     </div>
     <div
-      :class="isVisibile ? 'd-block' : 'd-none'"
+      :class="isVisibile ? 'fade-in' : 'fade-out'"
       class="overview bg-white overflow-auto shadow-lg"
     >
       <div class="container">
-        <div class="row">
+        <div  class="row">
           <div
             v-for="(cart, index) in carts"
             :key="index"
-            class="col-12 d-flex my-2"
+            class="col-12 d-flex py-2 mt-4"
           >
             <div class="col-3">
               <img style="width: 50%" :src="cart.image" :alt="cart.name" />
@@ -27,11 +27,11 @@
             <div class="col-1">{{ cart.quantity }}</div>
             <div v-if="carts" class="col-2">{{ cart.price.toFixed(2) }}€</div>
           </div>
-          <div class="col-12 align-items-center justify-content-between d-flex">
-            <div v-if="carts" class="col">Total {{ getTotal.toFixed(2) }}€</div>
+          <div class="col-12 align-items-center justify-content-between d-flex py-4">
+            <div v-if="carts" class="col"><span class="rounded-pill p-2 text-white bg-mediumTurquoise">Total {{ getTotal.toFixed(2) }}€</span></div>
             <div class="col">
               <span v-if="carts.length > 0" @click="saveStorage">
-                <router-link class="btn btn-primary" :to="{ name: 'Checkout' }"
+                <router-link class="btn bg-mediumTurquoise text-white rounded-pill" :to="{ name: 'Checkout' }"
                   >Checkout</router-link
                 >
               </span>
@@ -49,7 +49,7 @@ export default {
   props: ["carts"],
   data() {
     return {
-      isVisibile: false,
+      isVisibile: true,
     };
   },
   computed: {
@@ -106,10 +106,42 @@ export default {
 }
 .overview {
   position: fixed;
-  bottom: 60px;
-  right: 60px;
+  bottom: 100px;
+  right: 20px;
   z-index: 10;
   width: 400px;
   border-radius: 20px;
+}
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.fade-out {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 0.5s;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 </style>
