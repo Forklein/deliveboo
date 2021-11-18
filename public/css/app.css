@@ -10019,11 +10019,48 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/************************ TEXT ***************************/
+.link-white {
+  color: #fff;
+}
+.link-white:hover {
+  background-color: #000;
+}
+
+.txt-oxford {
+  color: #007e8a;
+}
+
+/********************** BACKGROUND  *********************/
+.bg-oxford {
+  background-color: #007e8a !important;
+}
+
+/********************** BUTTON **************************/
+.btn-oxford {
+  color: #fff;
+  background-color: #007e8a;
+  border-color: #007e8a;
+}
+.btn-oxford:hover {
+  color: #fff;
+  background-color: #12294e;
+}
+
+/*Our Border*/
+.border-right {
+  border-right: 1px solid #000;
+}
+
 /*Navbar Front*/
 .navbar-position {
   position: fixed;
-  z-index: 15;
-  width: 100%;
+  z-index: 18;
+  width: 100vw;
+}
+
+.bg-jasmine {
+  background-color: #FCB750;
 }
 
 /* Generics */
@@ -10221,34 +10258,6 @@ nav {
   border-radius: 50%;
 }
 
-/************************ TEXT ***************************/
-.link-white {
-  color: #fff;
-}
-.link-white:hover {
-  background-color: #000;
-}
-
-.txt-oxford {
-  color: #007e8a;
-}
-
-/********************** BACKGROUND  *********************/
-.bg-oxford {
-  background-color: #007e8a !important;
-}
-
-/********************** BUTTON **************************/
-.btn-oxford {
-  color: #fff;
-  background-color: #007e8a;
-  border-color: #007e8a;
-}
-.btn-oxford:hover {
-  color: #fff;
-  background-color: #12294e;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -10279,12 +10288,6 @@ html {
   color: currentColor;
 }
 
-nav i:not(#menu-icon, .btn-icon) {
-  font-size: 20px;
-  vertical-align: middle;
-  color: #007e8a;
-}
-
 button:not(.navbar-toggler) {
   border: none;
   background: #00CCBC;
@@ -10294,17 +10297,58 @@ button:not(.navbar-toggler):hover {
   transform: scale(1.15);
 }
 
-.navbar-collapse {
-  z-index: 1;
+/*STYLE CONTACT SECTION*/
+#contacts {
+  padding-top: 100px;
 }
-.navbar-collapse .navbar-nav {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  vertical-align: middle;
-  z-index: 2;
+#contacts .row .my-margin-y {
+  margin-top: 120px;
+}
+
+/*CONTACT CARD*/
+.contact-card {
   border-radius: 20px;
+  height: 350px;
+  background-color: #fff;
+  position: relative;
+}
+.contact-card .card-head .contact-card-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+}
+.contact-card .card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+.contact-card .card-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.contact-card .card-foot .card-icon {
+  width: 50%;
+  font-size: 2.6em;
+}
+.contact-card .card-foot .card-icon .fa-github {
+  transition: 0.3s;
+}
+.contact-card .card-foot .card-icon .fa-github:hover {
+  color: #5f08bb;
+}
+.contact-card .card-foot .card-icon .fa-linkedin {
+  transition: 0.3s;
+}
+.contact-card .card-foot .card-icon .fa-linkedin:hover {
+  color: #305bb1;
 }

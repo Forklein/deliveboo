@@ -26,11 +26,7 @@ html{
     color: currentColor;
 }
 
-nav i:not(#menu-icon, .btn-icon) {
-    font-size: 20px;
-    vertical-align: middle;
-    color: $oxfordBlue;
-}
+
 
 
 button:not(.navbar-toggler) {
@@ -40,16 +36,4 @@ button:not(.navbar-toggler) {
         background: $oxfordBlue;
         transform: scale(1.15);
     }
-}
-
-.navbar-collapse {
-    z-index: 1;
-    .navbar-nav {
-        width: fit-content;
-        height: fit-content;
-        vertical-align: middle;
-        z-index: 2;
-        border-radius: 20px;
-    }
-   
 }
