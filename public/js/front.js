@@ -2673,12 +2673,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-=======
-//
-//
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2780,6 +2803,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MenuCard_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MenuCard.vue */ "./resources/js/components/menus/MenuCard.vue");
 /* harmony import */ var _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/Cart.vue */ "./resources/js/components/utilities/Cart.vue");
 /* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -3213,6 +3240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _menus_MenusList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menus/MenusList.vue */ "./resources/js/components/menus/MenusList.vue");
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-carousel */ "./node_modules/vue-carousel/dist/vue-carousel.min.js");
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_carousel__WEBPACK_IMPORTED_MODULE_2__);
+//
 //
 //
 //
@@ -62435,23 +62463,14 @@ if(false) {}
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true& ***!
-=======
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/menus/MenuCard.vue?vue&type=style&index=0&id=497ea7f5&lang=scss&scoped=true&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/menus/MenuCard.vue?vue&type=style&index=0&id=497ea7f5&lang=scss&scoped=true& ***!
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-<<<<<<< HEAD
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true&");
-=======
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./MenuCard.vue?vue&type=style&index=0&id=497ea7f5&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/menus/MenuCard.vue?vue&type=style&index=0&id=497ea7f5&lang=scss&scoped=true&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
@@ -62483,7 +62502,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./MenusList.vue?vue&type=style&index=0&id=6eeccd3c&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/menus/MenusList.vue?vue&type=style&index=0&id=6eeccd3c&lang=scss&scoped=true&");
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/checkout.vue?vue&type=style&index=0&id=162ce9bc&lang=scss&scoped=true&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -63758,6 +63806,8 @@ var render = function () {
     [
       _c("RestaurantsList"),
       _vm._v(" "),
+      _vm.isLoading ? _c("Loader") : _vm._e(),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -63780,7 +63830,7 @@ var render = function () {
                   "div",
                   {
                     staticClass:
-                      "\n              card shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                      "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                     attrs: { id: "work-with-us" },
                   },
                   [
@@ -63820,11 +63870,7 @@ var render = function () {
       _vm._v(" "),
       _vm._m(4),
       _vm._v(" "),
-<<<<<<< HEAD
-      _vm.isLoading ? _c("Loader") : _vm._e(),
-=======
       _vm._m(5),
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
     ],
     1
   )
@@ -63842,7 +63888,6 @@ var staticRenderFns = [
       },
       [
         _c("div", { staticClass: "container justify-content-center" }, [
-<<<<<<< HEAD
           _c(
             "div",
             {
@@ -63856,7 +63901,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "\n          We are proud to take our technology around the world. Our algorithm\n          is based on powerful predictive technology that manages the\n          assignment of orders in the most efficient way based on the location\n          of restaurants, riders and customers. Machine learning helps\n          estimate the time needed to prepare an order, optimizing the overall\n          experience. Deliveroo has managed to decrease delivery time by 20%,\n          so riders can complete more deliveries per hour and increase their\n          earnings, restaurants can increase their sales and, of course,\n          customers can get their order in less. weather.\n        "
+                  "\n          We are proud to take our technology around the world. Our algorithm\n          is based on powerful predictive technology and machine learning,\n          that help optimizing the overall experience. In the last years\n          Deliveroo has managed to decrease delivery time by 20%.\n        "
                 ),
               ]),
             ]
@@ -63874,7 +63919,7 @@ var staticRenderFns = [
                   "div",
                   {
                     staticClass:
-                      "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                      "\n              card\n              shadow\n              mb-5\n              px-4\n              pt-4\n              pb-2\n              text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                   },
                   [
                     _c("img", {
@@ -63891,7 +63936,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n              You can make an order anytime, anywhere using your smartphone,\n              tablet or any mobile devices. Also more information about food\n              options are provided and customers are allowed to take their\n              time to browse the menu.\n            "
+                        "\n              You can make an order anytime, anywhere using a mobile device,\n              taking your time to browse the menu and the food information.\n            "
                       ),
                     ]),
                   ]
@@ -63910,7 +63955,7 @@ var staticRenderFns = [
                   "div",
                   {
                     staticClass:
-                      "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                      "\n              card\n              shadow\n              mb-5\n              px-4\n              pt-4\n              pb-2\n              text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                   },
                   [
                     _c("img", {
@@ -63927,7 +63972,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n              Choosing us you are paying for both food and convenience.\n              Browsing online menus you can compare prices and go for the\n              cheapest offer. Also the payment process is secure and no card\n              details are spread.\n            "
+                        "\n              You are paying for both food and convenience. Compare online\n              prices, make your choice and trust our payment process.\n            "
                       ),
                     ]),
                   ]
@@ -63946,7 +63991,7 @@ var staticRenderFns = [
                   "div",
                   {
                     staticClass:
-                      "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                      "\n              card\n              shadow\n              mb-5\n              px-4\n              pt-4\n              pb-2\n              text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                   },
                   [
                     _c("img", {
@@ -63963,7 +64008,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n              The online ordering system is equipped with GPS systems that\n              help you capture your entire address and enter it. That means\n              you can enjoy your favourite food no matter where you are and it\n              will be delivered next to you.\n            "
+                        "\n              Our GPS systems help you capture your entire address and enter\n              it. Enjoy your favourite food no matter where you are.\n            "
                       ),
                     ]),
                   ]
@@ -63982,7 +64027,7 @@ var staticRenderFns = [
                   "div",
                   {
                     staticClass:
-                      "\n              card\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                      "\n              card\n              shadow\n              mb-5\n              px-4\n              pt-4\n              pb-2\n              text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
                   },
                   [
                     _c("img", {
@@ -63999,141 +64044,13 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n              When having your food delivered you are able to track it to your\n              door in real time. This way you can experience a fast, immediate\n              service. You'll never have to sit in your car or the restaurant\n              to wait for your food again.\n            "
+                        "\n              Our costumers are able to track the delivery to their door in\n              real time. This way they can experience a fast, immediate\n              service.\n            "
                       ),
                     ]),
                   ]
                 ),
               ]
             ),
-=======
-          _c("div", { staticClass: "mb-4 text-center" }, [
-            _c("h2", { staticClass: "mb-2" }, [_vm._v("Technology guides us")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n          We are proud to take our technology around the world. Our algorithm\n          is based on powerful predictive technology and machine learning, that help optimizing the overall experience. In the last years Deliveroo has managed to decrease delivery time by 20%.\n        "
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n              card shadow\n              mb-5 px-4\n              pt-4 pb-2 text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-                },
-                [
-                  _c("img", {
-                    staticClass: "w-75",
-                    attrs: {
-                      src: "img/select-food.png",
-                      alt: "select-food-image",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-                    _vm._v("SELECT FOOD"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n              You can make an order anytime, anywhere using a mobile device, taking your time to browse the menu and the food information.\n            "
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n              card shadow\n              mb-5\n              px-4\n              pt-4 pb-2 text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-                },
-                [
-                  _c("img", {
-                    staticClass: "w-75",
-                    attrs: {
-                      src: "img/pay-online.png",
-                      alt: "pay-online-image",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-                    _vm._v("PAY ONLINE"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n              You are paying for both food and convenience. Compare online prices, make your choice and trust our payment process.\n            "
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n              card shadow\n              mb-5\n              px-4\n              pt-4 pb-2 text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-                },
-                [
-                  _c("img", {
-                    staticClass: "w-75",
-                    attrs: {
-                      src: "img/enter-address.png",
-                      alt: "enter-address-image",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-                    _vm._v("GPS SYSTEM"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n              Our GPS systems help you capture your entire address and enter it. Enjoy your favourite food no matter where you are.\n            "
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-12 col-sm-6 col-md-6 col-lg-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n              card shadow\n              mb-5\n              px-4\n              pt-4 pb-2 text-justify\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-                },
-                [
-                  _c("img", {
-                    staticClass: "w-75",
-                    attrs: {
-                      src: "img/fast-delivery.png",
-                      alt: "fast-delivery-image",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-                    _vm._v("FAST DELIVERY"),
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n              Our costumers are able to track the delivery to their door in real time. This way they can experience a fast, immediate service.\n            "
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
           ]),
         ]),
       ]
@@ -64166,7 +64083,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "\n              card shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
           attrs: { id: "rider" },
         },
         [
@@ -64197,7 +64114,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "\n              card shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
           attrs: { id: "our-company" },
         },
         [
@@ -64787,18 +64704,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-<<<<<<< HEAD
-    { staticClass: "card my-5 p-4 border-0 d-flex flex-column" },
-=======
-    {
-      staticClass: "card shadow my-5 p-4 border-0 d-flex flex-column",
-      on: {
-        click: function ($event) {
-          return _vm.getMenu(_vm.user.plates)
-        },
-      },
-    },
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
+    { staticClass: "card shadow my-5 p-4 border-0 d-flex flex-column" },
     [
       _vm.user.image
         ? _c("img", {
@@ -64881,7 +64787,6 @@ var render = function () {
         "div",
         { staticClass: "container flex-column" },
         [
-<<<<<<< HEAD
           _c("h2", [_vm._v("Users' Restaurants")]),
           _vm._v(" "),
           _c("p", [
@@ -64889,23 +64794,6 @@ var render = function () {
               "\n      Here you can find a selection of the best restaurants next to you. Just\n      choose meal and enjoy your favourite food in the comfort of your\n      favourite places.\n    "
             ),
           ]),
-=======
-          !_vm.hideMenuList
-            ? _c("h2", { staticClass: "mb-2" }, [_vm._v("Menu")])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.hideMenuList ? _c("h2", [_vm._v("Restaurants")]) : _vm._e(),
-          _vm._v(" "),
-          _vm.hideMenuList
-            ? _c("p", { staticClass: "text-center" }, [
-                _vm._v(
-                  "\n      Here you can find a selection of the best restaurants next to you. All you have to do is choose meal and enjoy your favourite food in the comfort of your\n      favourite places.\n    "
-                ),
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.isLoading ? _c("Loader") : _vm._e(),
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
           _vm._v(" "),
           _c("div", { staticClass: "form-group offset-9 col-3" }, [
             _c("label", { attrs: { for: "categories" } }, [
@@ -64923,7 +64811,6 @@ var render = function () {
                     expression: "category",
                   },
                 ],
-<<<<<<< HEAD
                 staticClass: "form-control",
                 attrs: { id: "categories" },
                 on: {
@@ -64939,25 +64826,6 @@ var render = function () {
                     _vm.category = $event.target.multiple
                       ? $$selectedVal
                       : $$selectedVal[0]
-=======
-                2
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          !_vm.hideMenuList
-            ? _c("MenusList", { attrs: { plates: _vm.plates } })
-            : _vm._e(),
-          _vm._v(" "),
-          !_vm.hideMenuList
-            ? _c(
-                "button",
-                {
-                  staticClass: "py-2 px-4 rounded-pill text-white",
-                  on: {
-                    click: function ($event) {
-                      _vm.hideMenuList = true
-                    },
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
                   },
                 },
               },
@@ -81246,8 +81114,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./resources/js/components/menus/MenusList.vue?vue&type=style&index=0&id=6eeccd3c&lang=scss&scoped=true&":
 /*!***************************************************************************************************************!*\
   !*** ./resources/js/components/menus/MenusList.vue?vue&type=style&index=0&id=6eeccd3c&lang=scss&scoped=true& ***!
@@ -81264,7 +81130,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
 /***/ "./resources/js/components/menus/MenusList.vue?vue&type=template&id=6eeccd3c&scoped=true&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/menus/MenusList.vue?vue&type=template&id=6eeccd3c&scoped=true& ***!
@@ -82163,7 +82028,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Elena\deliveboo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Laravel\deliveboo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

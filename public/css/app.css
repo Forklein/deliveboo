@@ -10252,12 +10252,6 @@ html {
 #main-menu #logo {
   height: 60px;
 }
-<<<<<<< HEAD
-
-/*
-.navbar-nav:first-of-type {
-    color: $oxfordBlue;
-=======
 #main-menu h1 {
   color: #00CCBC;
   line-height: 70px;
@@ -10266,11 +10260,10 @@ html {
 }
 #main-menu .navbar-nav:first-of-type {
   color: #007e8a;
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
 }
-*/
+
 .nav-link {
-  line-height: 54px;
+  line-height: 65px;
 }
 
 .nav-link:hover,
@@ -10279,22 +10272,6 @@ html {
   color: currentColor;
 }
 
-<<<<<<< HEAD
-/*
-.icon {
-    font-size: 20px;
-    vertical-align: middle;
-}
-
-.navbar-nav:first-of-type .icon {
-    color: $oxfordBlue;
-}
-
-#menu-icon {
-    font-size: 30px;
-}
-*/
-=======
 nav i:not(#menu-icon, .btn-icon) {
   font-size: 20px;
   vertical-align: middle;
@@ -10334,4 +10311,3 @@ button:not(.navbar-toggler):hover {
   z-index: 2;
   border-radius: 20px;
 }
->>>>>>> 500b1ae37db4f4adf1f1f8bcb44e98dddc10f403
