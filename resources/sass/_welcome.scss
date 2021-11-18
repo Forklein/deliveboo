@@ -41,7 +41,7 @@ nav i:not(#menu-icon, .btn-icon) {
     font-size: 40px;
 }
 
-button:not(.navbar-toggler) {
+button:not(.navbar-toggler, .btn-danger) {
     border: none;
     background: $mediumTurquoise;
     &:hover {

@@ -10287,11 +10287,11 @@ nav i:not(#menu-icon, .btn-icon) {
   font-size: 40px;
 }
 
-button:not(.navbar-toggler) {
+button:not(.navbar-toggler, .btn-danger) {
   border: none;
   background: #00CCBC;
 }
-button:not(.navbar-toggler):hover {
+button:not(.navbar-toggler, .btn-danger):hover {
   background: #007e8a;
   transform: scale(1.15);
 }
