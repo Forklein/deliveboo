@@ -2405,6 +2405,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header"
 });
@@ -3119,12 +3121,56 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _data_contacts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/contacts */ "./resources/js/components/data/contacts.js");
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "contact"
+  name: "contact",
+  data: function data() {
+    return {
+      contacts: _data_contacts__WEBPACK_IMPORTED_MODULE_0__["default"]
+    };
+  }
 });
 
 /***/ }),
@@ -30981,7 +31027,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "header[data-v-1f42fb90] {\n  position: relative;\n  height: 650px;\n}\nheader img.bg[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: -1;\n}\nheader .jumbotron[data-v-1f42fb90] {\n  background: transparent;\n  height: 100%;\n}\nheader .jumbotron-text[data-v-1f42fb90] {\n  max-width: 55%;\n  max-height: 285px;\n  overflow-y: auto;\n  font-size: 19px;\n  line-height: 30px;\n  text-align: justify;\n}\nheader .jumbotron-text .jumbotron-title[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 40px;\n}\nheader .jumbotron-text p[data-v-1f42fb90] {\n  color: #007e8a;\n}\nheader button[data-v-1f42fb90] {\n  border: none;\n  background: #00CCBC;\n}\nheader button[data-v-1f42fb90]:hover {\n  background: #007e8a;\n  transform: scale(1.15);\n}", ""]);
+exports.push([module.i, "header[data-v-1f42fb90] {\n  position: relative;\n  height: 650px;\n  padding-top: 40px;\n}\nheader img.bg[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: -1;\n}\nheader .jumbotron[data-v-1f42fb90] {\n  background: transparent;\n  height: 100%;\n}\nheader .jumbotron-text[data-v-1f42fb90] {\n  max-width: 55%;\n  max-height: 285px;\n  overflow-y: auto;\n  font-size: 19px;\n  line-height: 30px;\n  text-align: justify;\n}\nheader .jumbotron-text .jumbotron-title[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 40px;\n}\nheader .jumbotron-text p[data-v-1f42fb90] {\n  color: #007e8a;\n}\nheader button[data-v-1f42fb90] {\n  border: none;\n  background: #00CCBC;\n}\nheader button[data-v-1f42fb90]:hover {\n  background: #007e8a;\n  transform: scale(1.15);\n}", ""]);
 
 // exports
 
@@ -63775,12 +63821,16 @@ var staticRenderFns = [
             _c(
               "h1",
               { staticClass: "jumbotron-title font-weight-bolder mb-2" },
-              [_vm._v("\n          The Food you love at Home\n        ")]
+              [
+                _vm._v(
+                  "\n                    The Food you love at Home\n                "
+                ),
+              ]
             ),
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n          Deliveroo's aim is to transform the way customers eat. By constantly\n          innovating and expanding, we offer ours customers the best choice\n          and convenience and a large selection of restaurants: whether you\n          want sushi for dinner, a salad for lunch, or a brioche for\n          breakfast, we'll take care of it! In Deliveroo we know that every\n          customer has different tastes and our job is to make sure that have\n          what they want, when they want and where they want it.\n        "
+                "\n                    Deliveroo's aim is to transform the way customers eat.\n                    By constantly innovating and expanding, we offer ours\n                    customers the best choice and convenience and a large\n                    selection of restaurants: whether you want sushi for\n                    dinner, a salad for lunch, or a brioche for breakfast,\n                    we'll take care of it! In Deliveroo we know that every\n                    customer has different tastes and our job is to make\n                    sure that have what they want, when they want and where\n                    they want it.\n                "
               ),
             ]),
           ]),
@@ -64610,10 +64660,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -64625,7 +64675,53 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("TEST CONTATTI")])
+  return _c("section", { attrs: { id: "contacts" } }, [
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "row justify-content-center" },
+        _vm._l(_vm.contacts, function (contact) {
+          return _c(
+            "div",
+            { key: contact.id, staticClass: "col-md-6 my-margin-y" },
+            [
+              _c("div", { staticClass: "contact-card shadow-lg" }, [
+                _c("div", { staticClass: "card-head" }, [
+                  _c("img", {
+                    staticClass: "contact-card-img shadow-lg",
+                    attrs: { src: contact.img, alt: contact.name },
+                  }),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-content" }, [
+                  _c("h1", { staticClass: "text-center" }, [
+                    _vm._v(_vm._s(contact.name)),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-foot" }, [
+                  _c("div", { staticClass: "d-flex justify-content-between" }, [
+                    _c("div", { staticClass: "card-icon border-right" }, [
+                      _c("a", { attrs: { href: contact.github } }, [
+                        _c("i", { staticClass: "fab fa-github" }),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-icon" }, [
+                      _c("a", { attrs: { href: contact.linkedin } }, [
+                        _c("i", { staticClass: "fab fa-linkedin" }),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]
+          )
+        }),
+        0
+      ),
+    ]),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -80978,6 +81074,49 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/data/contacts.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/data/contacts.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ([{
+  id: 1,
+  name: "Giuseppe Pisani",
+  github: "https://github.com/Forklein",
+  linkedin: "https://www.linkedin.com/in/giuseppe-pisani93/",
+  img: "https://media-exp1.licdn.com/dms/image/C4D03AQFXK1-j6lVeMg/profile-displayphoto-shrink_400_400/0/1636014090842?e=1642636800&v=beta&t=pfTXtL5njAr85Ax9YKxc_EWTJtvACq6Sx5Fkn80rpoE"
+}, {
+  id: 2,
+  name: "Valentina Frasca",
+  github: "https://github.com/Valentina-Fr",
+  linkedin: "https://www.linkedin.com/in/valentina-frasca-995b02224/",
+  img: "https://media-exp1.licdn.com/dms/image/C4E03AQHqwj1-Ro-xHQ/profile-displayphoto-shrink_400_400/0/1637011380831?e=1642636800&v=beta&t=ARcHUKHpe0d2euzn-TgSjmqasbUzeVaI5bKev-R_iVs"
+}, {
+  id: 3,
+  name: "Mirko Chiappori",
+  github: "https://github.com/mirkone1994",
+  linkedin: "https://www.linkedin.com/in/mirko-chiappori/",
+  img: "https://media-exp1.licdn.com/dms/image/C4D03AQGPpasrv2mQJg/profile-displayphoto-shrink_400_400/0/1636226768623?e=1642636800&v=beta&t=T46H8eW2w6HPOvCO-Vf6W9pq47DykYKqR2xF2BcVPZE"
+}, {
+  id: 4,
+  name: "Elena Durante",
+  github: "https://github.com/duranteelena00",
+  linkedin: "https://www.linkedin.com/in/elena-durante-a27454226/",
+  img: "https://media-exp1.licdn.com/dms/image/C5603AQH7ERFGo78k0Q/profile-displayphoto-shrink_400_400/0/1637000462253?e=1642636800&v=beta&t=oEpqsseGOUxacuGBaxcvxcSkeu1lGpl6J9EfHx-OwnA"
+}, {
+  id: 5,
+  name: "Riccardo Girotti",
+  github: "https://github.com/Riki420",
+  linkedin: "https://www.linkedin.com/in/riccardo-girotti-621700224/",
+  img: "https://media-exp1.licdn.com/dms/image/C4E03AQEfUXpbiXyc3Q/profile-displayphoto-shrink_400_400/0/1636745152234?e=1642636800&v=beta&t=n38mVoh-1_Ou084t7eTiaBAtOvsQyhQ9sRfHoUXZLso"
+}]);
+
+/***/ }),
+
 /***/ "./resources/js/components/data/works.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/data/works.js ***!
@@ -81271,7 +81410,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _contact_vue_vue_type_template_id_c5a493cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact.vue?vue&type=template&id=c5a493cc& */ "./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&");
+/* harmony import */ var _contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact.vue?vue&type=template&id=c5a493cc&scoped=true& */ "./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true&");
 /* harmony import */ var _contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/contact.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -81283,11 +81422,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _contact_vue_vue_type_template_id_c5a493cc___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _contact_vue_vue_type_template_id_c5a493cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  null,
+  "c5a493cc",
   null
   
 )
@@ -81313,19 +81452,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true& ***!
+  \**********************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_c5a493cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./contact.vue?vue&type=template&id=c5a493cc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_c5a493cc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./contact.vue?vue&type=template&id=c5a493cc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_c5a493cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

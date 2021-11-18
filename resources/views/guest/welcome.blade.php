@@ -21,7 +21,7 @@
 
 <body>
     @if (Route::has('login'))
-        <nav class="navbar navbar-expand-lg d-flex align-items-center p-0" id="main-menu">
+        <nav class="navbar navbar-expand-lg d-flex align-items-center p-0 navbar-position" id="main-menu">
             <div class="container">
                 <a href="{{url('/')}}"><img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" /></a>
                 <a href="{{url('/')}}"><h1>Deliveboo</h1></a>
@@ -29,7 +29,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="mr-1 fas fa-bars p-0" id="menu-icon"></i></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse bg-jasmine" id="navbarNav">
                     <ul class="navbar-nav pb-1 px-3 d-flex align-items-lg-center">
                         <li class="nav-item">
                             <a class="nav-link py-0" href="/#restaurants-list"><i
@@ -43,10 +43,10 @@
                             <a class="nav-link py-0" href="/#links"><i class="mr-1 fas fa-hashtag"></i>Links</a>
                         </li>
                         <li class="nav-item p-0 mr-5">
-                            <a class="nav-link py-0" href="/#contacts"><i
+                            <a class="nav-link py-0" href="{{url('/contact')}}"><i
                                     class="mr-1 fas fa-address-book"></i>Contacts</a>
                         </li>
-                    
+                        <hr class="d-md-none bg-white">
                         @auth
                             <li class="nav-item">
                                 <button class="p-2 my-2 rounded-pill text-white"><a
@@ -54,7 +54,8 @@
                                             class="btn-icon mr-1 fas fa-home"></i>Dashboard</a></button>
                             </li>
                         @else
-                            <li class="nav-item mr-3">
+                        <div class="d-flex align-items-center justify-content-around">
+                            <li class="nav-item mr-md-2">
                                 <button class="p-2 rounded-pill text-white"><a href="{{ route('login') }}"
                                         class="p-2"><i
                                             class="btn-icon mr-1 fas fa-sign-in-alt"></i>Login</a></button>
@@ -67,6 +68,7 @@
                                                 class="btn-icon mr-1 fas fa-user-plus"></i>Register</a></button>
                                 @endif
                             </li>
+                        </div>
                         @endauth
                     </ul>
                 </div>

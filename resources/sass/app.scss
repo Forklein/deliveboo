@@ -5,9 +5,13 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
+// Import Style
 @import '~aos/dist/aos.css';
 @import '~bootstrap/scss/bootstrap';
-@import 'dashboard';
+
+//Our Style
 @import 'colors';
+@import 'generics';
+@import 'dashboard';
 @import 'welcome';
+@import 'contact';

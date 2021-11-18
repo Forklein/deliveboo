@@ -17,7 +17,7 @@ html{
     }
 }
 .nav-link {
-    line-height: 65px;
+    line-height: 59px;
 }
 
 .nav-link:hover,
@@ -26,20 +26,8 @@ html{
     color: currentColor;
 }
 
-nav i:not(#menu-icon, .btn-icon) {
-    font-size: 20px;
-    vertical-align: middle;
-    color: $oxfordBlue;
-}
 
-.btn-icon {
-    color: white;
-}
 
-#menu-icon {
-    color: $mediumTurquoise;
-    font-size: 40px;
-}
 
 button:not(.navbar-toggler, .btn-danger) {
     border: none;
@@ -47,17 +35,5 @@ button:not(.navbar-toggler, .btn-danger) {
     &:hover {
         background: $oxfordBlue;
         transform: scale(1.15);
-    }
-}
-
-.navbar-collapse {
-    z-index: 1;
-    .navbar-nav {
-        background: $yellowJasmine;
-        width: fit-content;
-        height: fit-content;
-        vertical-align: middle;
-        z-index: 2;
-        border-radius: 20px;
     }
 }
