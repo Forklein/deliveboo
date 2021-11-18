@@ -7,7 +7,16 @@
         choose meal and enjoy your favourite food in the comfort of your
         favourite places.
       </p>
-      <div class="form-group col-12 d-flex justify-content-center">
+      <div
+        class="
+          form-group
+          col-12
+          d-flex
+          flex-column flex-md-row
+          justify-content-md-center
+          align-items-center
+        "
+      >
         <div
           v-for="(category, index) in categories"
           :key="index"

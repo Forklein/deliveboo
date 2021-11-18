@@ -3284,6 +3284,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -64801,7 +64810,10 @@ var render = function () {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "form-group col-12 d-flex justify-content-center" },
+            {
+              staticClass:
+                "\n        form-group\n        col-12\n        d-flex\n        flex-column flex-md-row\n        justify-content-md-center\n        align-items-center\n      ",
+            },
             _vm._l(_vm.categories, function (category, index) {
               return _c("div", { key: index, staticClass: "form-check" }, [
                 _c("input", {
