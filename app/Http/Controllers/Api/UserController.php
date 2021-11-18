@@ -19,6 +19,16 @@ class UserController extends Controller
     public function index(Request $request)
     {
 
+
+        if ($request->query('search')) {
+            $search = $request->query('search');
+            $users = User::where('restaurant_name', 'LIKE', "%$search%")->get();
+            return response()->json([
+                "message" => "Success",
+                "restaurants" => $users
+            ], 200);
+        }
+
         if ($request->query('types')) {
             $types_filtered = explode(" ", $request->query('types'));
             $users = Type::with('users')->whereIn('name', $types_filtered)->get();
