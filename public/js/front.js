@@ -2759,43 +2759,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -65322,10 +65285,6 @@ var render = function () {
           ]),
         ]
       ),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
     ],
     1
   )
@@ -65589,78 +65548,6 @@ var staticRenderFns = [
           ]),
         ]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      {
-        staticClass: "py-5 d-flex justify-content-center",
-        attrs: { id: "our-values" },
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "container paragraph justify-content-center text-center",
-          },
-          [
-            _c("h2", { staticClass: "mb-2" }, [_vm._v("Our values")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "mb-4" }, [
-              _vm._v(
-                "\n        Everything we do revolves around our values. They guide us every day\n        to work as a team and make important decisions, from the choices that\n        have an impact on hiring and staff development, to those that write\n        the future of Deliveroo products.\n      "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("img", {
-              staticClass: "img-fluid",
-              attrs: { src: "img/our-values.jpg", alt: "our-values-image" },
-            }),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "overview" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
-              _c("img", {
-                attrs: {
-                  src: "img/restaurant-icon.png",
-                  alt: "restaurant-icon",
-                },
-              }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
-              _c("img", {
-                attrs: { src: "img/rider-icon.png", alt: "rider-icon" },
-              }),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
-              _c("img", {
-                attrs: { src: "img/thunder-icon.png", alt: "thunder-icon" },
-              }),
-            ]),
-          ]),
-        ]),
-      ]),
     ])
   },
 ]

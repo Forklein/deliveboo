@@ -237,43 +237,6 @@
         </div>
       </div>
     </section>
-    <section id="our-values" class="py-5 d-flex justify-content-center">
-      <div class="container paragraph justify-content-center text-center">
-        <h2 class="mb-2">Our values</h2>
-        <p class="mb-4">
-          Everything we do revolves around our values. They guide us every day
-          to work as a team and make important decisions, from the choices that
-          have an impact on hiring and staff development, to those that write
-          the future of Deliveroo products.
-        </p>
-        <img
-          src="img/our-values.jpg"
-          alt="our-values-image"
-          class="img-fluid"
-        />
-      </div>
-    </section>
-    <section id="overview">
-      <div class="container">
-        <div class="row">
-          <div class="col-4">
-            <div class="card shadow">
-              <img src="img/restaurant-icon.png" alt="restaurant-icon" />
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card shadow">
-              <img src="img/rider-icon.png" alt="rider-icon" />
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card shadow">
-              <img src="img/thunder-icon.png" alt="thunder-icon" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 <script>
