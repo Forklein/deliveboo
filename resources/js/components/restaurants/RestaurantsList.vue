@@ -1,7 +1,7 @@
 <template>
   <section id="restaurants-list" class="pt-5 pb-4">
     <div class="container flex-column">
-      <h2>Users' Restaurants</h2>
+      <h2>Restaurants</h2>
       <p>
         Here you can find a selection of the best restaurants next to you. Just
         choose meal and enjoy your favourite food in the comfort of your

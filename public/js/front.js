@@ -65833,7 +65833,7 @@ var render = function () {
         "div",
         { staticClass: "container flex-column" },
         [
-          _c("h2", [_vm._v("Users' Restaurants")]),
+          _c("h2", [_vm._v("Restaurants")]),
           _vm._v(" "),
           _c("p", [
             _vm._v(
