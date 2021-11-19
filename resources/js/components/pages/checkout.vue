@@ -58,7 +58,7 @@
               @click="createOrder"
               class="btn rounded-pill text-white"
             >
-              Submit
+              Complete Order
             </button>
           </div>
           <div class="col-4 my-auto">
@@ -175,8 +175,6 @@ export default {
         setTimeout(() => {
           this.isLoading = false;
           this.thanks = true;
-          localStorage.clear();
-          console.log(res);
         }, 1500);
       });
     },

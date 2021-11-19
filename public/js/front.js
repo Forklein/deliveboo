@@ -3187,8 +3187,6 @@ __webpack_require__.r(__webpack_exports__);
         setTimeout(function () {
           _this.isLoading = false;
           _this.thanks = true;
-          localStorage.clear();
-          console.log(res);
         }, 1500);
       });
     },
@@ -3769,7 +3767,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Thanks",
-  props: ["order", "orderId"]
+  props: ["order", "orderId"],
+  created: function created() {
+    localStorage.clear();
+  }
 });
 
 /***/ }),
@@ -66027,7 +66028,7 @@ var render = function () {
                           attrs: { type: "button" },
                           on: { click: _vm.createOrder },
                         },
-                        [_vm._v("\n            Submit\n          ")]
+                        [_vm._v("\n            Complete Order\n          ")]
                       ),
                     ]),
                     _vm._v(" "),

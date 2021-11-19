@@ -27,6 +27,9 @@
 export default {
   name: "Thanks",
   props: ["order", "orderId"],
+  created() {
+    localStorage.clear();
+  },
 };
 </script>
 
