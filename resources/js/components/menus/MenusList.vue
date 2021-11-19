@@ -1,7 +1,7 @@
 <template>
   <section id="menus-list" class="pt-5 pb-4">
     <div class="d-flex justify-content-center">
-      <span class="rounded-pill p-2 text-white bg-mediumTurquoise h1 text-center">Menu "{{ restaurantName }}" - Total plate: {{ totalPlates }}</span>
+      <span class="rounded-pill p-2 bg-lightjasmine h1 text-center shadow-lg">Menu "{{ restaurantName }}" - Plates: {{ totalPlates }}</span>
     </div>
     <Loader v-if="isLoading" />
     <div v-else class="container p-3">
