@@ -1,16 +1,16 @@
 <template>
-  <div class="card shadow border-0 m-0 p-4">
+  <div class="card shadow border-0 m-0 p-4 bg-lightjasmine">
     <img :src="plate.image" class="img-fluid my-2 border-custom" :alt="plate.name" />
     <div class="card-body mx-0 px-0">
       <h5 class="card-title">{{ plate.name }}</h5>
       <p class="card-text">{{ plate.description }}</p>
       <p class="card-text text-center my-4">{{ plate.price }} €</p>
       <div class="cart-footer d-flex justify-content-around">
-        <button class="rounded-pill text-white" @click="removeQuantity">-</button>
+        <button class="rounded-pill text-white h1" @click="removeQuantity"><i class="fas fa-minus"></i></button>
         <button @click="addToCart(plate)" class="btn text-white rounded-pill position-relative">
-          Add to cart <span class="position-absolute cart-item pt-2 badge badge-pill bg-mediumTurquoise border border-white">{{ quantity }}</span>
+          Add to cart <span class="position-absolute cart-item pt-2 badge badge-pill bg-danger border border-white">{{ quantity }}</span>
         </button>
-        <button class="rounded-pill text-white" @click="addQuantity">+</button>
+        <button class="rounded-pill text-white h1" @click="addQuantity"><i class="fas fa-plus"></i></button>
       </div>
     </div>
   </div>
@@ -55,7 +55,6 @@ export default {
 @import "../../../sass/_variables.scss";
 /* **************************** */
 .card {
-  background: $lightYellowJasmine;
   border-radius: 20px;
   height: 650px;
   h4 {

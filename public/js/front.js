@@ -2920,7 +2920,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -3541,11 +3540,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
 //
 //
 //
@@ -31238,7 +31232,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  background: #f3d7a2;\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -65309,67 +65303,77 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card shadow border-0 m-0 p-4" }, [
-    _c("img", {
-      staticClass: "img-fluid my-2 border-custom",
-      attrs: { src: _vm.plate.image, alt: _vm.plate.name },
-    }),
-    _vm._v(" "),
-    _c("div", { staticClass: "card-body mx-0 px-0" }, [
-      _c("h5", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.plate.name))]),
+  return _c(
+    "div",
+    { staticClass: "card shadow border-0 m-0 p-4 bg-lightjasmine" },
+    [
+      _c("img", {
+        staticClass: "img-fluid my-2 border-custom",
+        attrs: { src: _vm.plate.image, alt: _vm.plate.name },
+      }),
       _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
-        _vm._v(_vm._s(_vm.plate.description)),
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "card-text text-center my-4" }, [
-        _vm._v(_vm._s(_vm.plate.price) + " €"),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "cart-footer d-flex justify-content-around" }, [
-        _c(
-          "button",
-          {
-            staticClass: "rounded-pill text-white",
-            on: { click: _vm.removeQuantity },
-          },
-          [_vm._v("-")]
-        ),
+      _c("div", { staticClass: "card-body mx-0 px-0" }, [
+        _c("h5", { staticClass: "card-title" }, [
+          _vm._v(_vm._s(_vm.plate.name)),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "card-text" }, [
+          _vm._v(_vm._s(_vm.plate.description)),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "card-text text-center my-4" }, [
+          _vm._v(_vm._s(_vm.plate.price) + " €"),
+        ]),
         _vm._v(" "),
         _c(
-          "button",
-          {
-            staticClass: "btn text-white rounded-pill position-relative",
-            on: {
-              click: function ($event) {
-                return _vm.addToCart(_vm.plate)
-              },
-            },
-          },
+          "div",
+          { staticClass: "cart-footer d-flex justify-content-around" },
           [
-            _vm._v("\n        Add to cart "),
             _c(
-              "span",
+              "button",
               {
-                staticClass:
-                  "position-absolute cart-item pt-2 badge badge-pill bg-mediumTurquoise border border-white",
+                staticClass: "rounded-pill text-white h1",
+                on: { click: _vm.removeQuantity },
               },
-              [_vm._v(_vm._s(_vm.quantity))]
+              [_c("i", { staticClass: "fas fa-minus" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn text-white rounded-pill position-relative",
+                on: {
+                  click: function ($event) {
+                    return _vm.addToCart(_vm.plate)
+                  },
+                },
+              },
+              [
+                _vm._v("\n        Add to cart "),
+                _c(
+                  "span",
+                  {
+                    staticClass:
+                      "position-absolute cart-item pt-2 badge badge-pill bg-danger border border-white",
+                  },
+                  [_vm._v(_vm._s(_vm.quantity))]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "rounded-pill text-white h1",
+                on: { click: _vm.addQuantity },
+              },
+              [_c("i", { staticClass: "fas fa-plus" })]
             ),
           ]
         ),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "rounded-pill text-white",
-            on: { click: _vm.addQuantity },
-          },
-          [_vm._v("+")]
-        ),
       ]),
-    ]),
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -65402,13 +65406,13 @@ var render = function () {
           "span",
           {
             staticClass:
-              "rounded-pill p-2 text-white bg-mediumTurquoise h1 text-center",
+              "rounded-pill p-2 bg-lightjasmine h1 text-center shadow-lg",
           },
           [
             _vm._v(
               'Menu "' +
                 _vm._s(_vm.restaurantName) +
-                '" - Total plate: ' +
+                '" - Plates: ' +
                 _vm._s(_vm.totalPlates)
             ),
           ]
@@ -66148,7 +66152,7 @@ var render = function () {
               "span",
               {
                 staticClass:
-                  "\n        badge badge-pill\n        bg-mediumTurquoise\n        text-white\n        border border-white\n      ",
+                  "badge badge-pill bg-danger text-white border border-white",
                 attrs: { id: "notify" },
               },
               [_vm._v(_vm._s(_vm.getQuantity))]
@@ -66166,7 +66170,7 @@ var render = function () {
         class: _vm.isVisibile ? "fade-in" : "fade-out",
       },
       [
-        _c("div", { staticClass: "container bg-mediumTurquoise text-white" }, [
+        _c("div", { staticClass: "container bg-lightjasmine" }, [
           _c(
             "div",
             { staticClass: "row pt-5" },
@@ -66174,10 +66178,7 @@ var render = function () {
               _vm._l(_vm.carts, function (cart, index) {
                 return _c(
                   "div",
-                  {
-                    key: index,
-                    staticClass: "col-12 d-flex border border-white bg-primary",
-                  },
+                  { key: index, staticClass: "col-12 d-flex my-1" },
                   [
                     _c("div", { staticClass: "col-3" }, [
                       _c("img", {
@@ -66196,7 +66197,7 @@ var render = function () {
                           },
                         },
                       },
-                      [_c("i", { staticClass: "fas fa-trash text-white" })]
+                      [_c("i", { staticClass: "fas fa-trash text-danger" })]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col" }, [
@@ -66233,7 +66234,7 @@ var render = function () {
                               "router-link",
                               {
                                 staticClass:
-                                  "btn bg-primary text-white rounded-pill",
+                                  "btn bg-mediumTurquoise text-white rounded-pill",
                                 attrs: { to: { name: "Checkout" } },
                               },
                               [_vm._v("Checkout")]
@@ -66253,7 +66254,7 @@ var render = function () {
                             "span",
                             {
                               staticClass:
-                                "rounded-pill p-2 text-white bg-primary",
+                                "rounded-pill p-2 text-white bg-mediumTurquoise",
                             },
                             [
                               _vm._v(
