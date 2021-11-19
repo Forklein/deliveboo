@@ -3,7 +3,6 @@
 @section('content')
 <div data-aos="zoom-in" class="container">
     <div class="row justify-content-center">
-        @include('includes.errors')
         <div class="col-md-8">
             <div class="card border-custom shadow-lg">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -36,44 +35,75 @@
                         <div class="form-group row">
                             <label for="restaurant_name" class="col-md-4 col-form-label text-md-right">Restaurant Name</label>
                             <div class="col-md-6">
-                                <input id="restaurant_name" type="text" class="form-control" name="restaurant_name">
+                                <input id="restaurant_name" type="text" class="form-control @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}">
+                                @error('restaurant_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="vat" class="col-md-4 col-form-label text-md-right">VAT</label>
                             <div class="col-md-6">
-                                <input id="vat" type="text" class="form-control" name="vat">
+                                <input id="vat" type="text" class="form-control @error('vat') is-invalid @enderror" name="vat" value="{{ old('vat') }}">
+                                @error('vat')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="address" class="col-md-4 col-form-label text-md-right">Address</label>
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control" name="address">
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}">
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="zip" class="col-md-4 col-form-label text-md-right">Zip</label>
                             <div class="col-md-6">
-                                <input id="zip" type="number" class="form-control" name="zip">
+                                <input id="zip" type="number" class="form-control @error('zip') is-invalid @enderror" name="zip" value="{{ old('zip') }}">
+                                @error('zip')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="phone" class="col-md-4 col-form-label text-md-right">Phone</label>
                             <div class="col-md-6">
-                                <input id="phone" type="phone" class="form-control" name="phone">
+                                <input id="phone" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}">
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="image" class="col-md-4 col-form-label text-md-right">Image</label>
                             <div class="col-md-6">
-                                <input id="image" type="text" class="form-control" name="image">
+                                <input id="image" type="text" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}">
+                                @error('image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col">
                                 @foreach($types as $type)
                                 <label for="type-{{$type->id}}" class="col-md-4 col-form-label text-md-right">{{$type->name}}</label>
-                                <input type="checkbox" name="types[]" id="type-{{$type->id}}" value="{{$type->id}}">
+                                <input type="checkbox" name="types[]" id="type-{{$type->id}}" value="{{$type->id}}"
+                                @if (in_array($type->id, old('types', []))) checked @endif>
                                 @endforeach
                             </div>
                         </div>
