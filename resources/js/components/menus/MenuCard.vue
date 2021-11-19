@@ -1,16 +1,36 @@
 <template>
-  <div class="card shadow border-0 m-0 p-4 bg-lightjasmine">
-    <img :src="plate.image" class="img-fluid my-2 border-custom" :alt="plate.name" />
+  <div class="card shadow border-0 p-4 bg-lightjasmine">
+    <div class="card-image" :style="getBackground(plate.image)"></div>
     <div class="card-body mx-0 px-0">
       <h5 class="card-title">{{ plate.name }}</h5>
       <p class="card-text">{{ plate.description }}</p>
-      <p class="card-text text-center my-4">{{ plate.price }} €</p>
+      <p class="card-text text-center my-4">
+        <b>{{ plate.price }} €</b>
+      </p>
       <div class="cart-footer d-flex justify-content-around">
-        <button class="rounded-pill text-white h1" @click="removeQuantity"><i class="fas fa-minus"></i></button>
-        <button @click="addToCart(plate)" class="btn text-white rounded-pill position-relative">
-          Add to cart <span class="position-absolute cart-item pt-2 badge badge-pill bg-danger border border-white">{{ quantity }}</span>
+        <button class="rounded-pill text-white h1" @click="removeQuantity">
+          <i class="fas fa-minus"></i>
         </button>
-        <button class="rounded-pill text-white h1" @click="addQuantity"><i class="fas fa-plus"></i></button>
+        <button
+          @click="addToCart(plate)"
+          class="btn text-white rounded-pill position-relative"
+        >
+          Add to cart
+          <span
+            class="
+              position-absolute
+              cart-item
+              pt-2
+              badge badge-pill
+              bg-danger
+              border border-white
+            "
+            >{{ quantity }}</span
+          >
+        </button>
+        <button class="rounded-pill text-white h1" @click="addQuantity">
+          <i class="fas fa-plus"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -47,6 +67,9 @@ export default {
     addQuantity() {
       if (this.quantity < 10) this.quantity++;
     },
+    getBackground(image) {
+      return `background-image: url('${image}');`;
+    },
   },
 };
 </script>
@@ -74,12 +97,17 @@ export default {
   }
 }
 .cart-item {
-      position:absolute;
-      height:24px;
-      width:24px;
-      top:-10px;
-      right:-10px;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: -10px;
+  right: -10px;
+}
+
+.card-image {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* **************************** */
-
 </style>

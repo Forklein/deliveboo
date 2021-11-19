@@ -39,8 +39,11 @@
             <div class="col-3">
               <img style="width: 50%" :src="cart.image" :alt="cart.name" />
             </div>
-            <div @click="removeItem(index)" class="col-1 pointer">
-              <i class="fas fa-trash text-danger fa-2x"></i>
+            <div
+              @click="removeItem(index)"
+              class="col-1 d-flex justify-content-center"
+            >
+              <i class="fas fa-trash fa-2x pointer"></i>
             </div>
             <div class="col">
               <p class="m-0">{{ cart.name }}</p>
@@ -57,7 +60,7 @@
               py-4
             "
           >
-            <div class="col-5">
+            <div class="col-4">
               <span v-if="carts.length > 0" @click="saveStorage">
                 <router-link
                   class="btn bg-mediumTurquoise text-white rounded-pill"
@@ -66,7 +69,12 @@
                 >
               </span>
             </div>
-            <div v-if="carts" class="col-5 d-flex justify-content-end">
+            <div v-if="carts.length > 0" class="col pointer" @click="removeAll">
+              <span class="rounded-pill p-2 text-white bg-mediumTurquoise"
+                >Empty it</span
+              >
+            </div>
+            <div v-if="carts" class="col-4 d-flex justify-content-end">
               <span class="rounded-pill p-2 text-white bg-mediumTurquoise"
                 >Total {{ getTotal.toFixed(2) }}€</span
               >
@@ -117,6 +125,10 @@ export default {
     removeItem(i) {
       this.carts.splice(i, 1);
     },
+    removeAll() {
+      this.carts.splice(0, this.carts.length);
+      localStorage.clear();
+    },
   },
 };
 </script>
@@ -145,7 +157,7 @@ export default {
   bottom: 100px;
   right: 20px;
   z-index: 10;
-  width: 400px;
+  width: 350px;
   border-radius: 20px;
 }
 .fade-in {

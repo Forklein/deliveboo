@@ -1,6 +1,10 @@
 <template>
   <div class="card shadow my-5 p-4 border-0 d-flex flex-column">
-    <img v-if="user.image" :src="user.image" :alt="user.name" class="w-300" />
+    <div
+      v-if="user.image"
+      class="menu-image"
+      :style="getBackground(user.image)"
+    ></div>
     <img
       v-else
       src="img/restaurant-placeholder.png"
@@ -29,6 +33,11 @@
 export default {
   name: "RestaurantCard",
   props: ["user"],
+  methods: {
+    getBackground(image) {
+      return `background-image: url('${image}');`;
+    },
+  },
 };
 </script>
 
@@ -37,6 +46,11 @@ export default {
 .card {
   background: $lightYellowJasmine;
   height: 450px;
+  .menu-image {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
   h4 {
     color: $carrotOrange;
     font-weight: bolder;

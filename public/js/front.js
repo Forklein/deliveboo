@@ -2813,6 +2813,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Menucard",
   data: function data() {
@@ -2842,6 +2862,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     addQuantity: function addQuantity() {
       if (this.quantity < 10) this.quantity++;
+    },
+    getBackground: function getBackground(image) {
+      return "background-image: url('".concat(image, "');");
     }
   }
 });
@@ -3379,9 +3402,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RestaurantCard",
-  props: ["user"]
+  props: ["user"],
+  methods: {
+    getBackground: function getBackground(image) {
+      return "background-image: url('".concat(image, "');");
+    }
+  }
 });
 
 /***/ }),
@@ -3592,6 +3624,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
   props: ["carts"],
@@ -3629,6 +3669,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     removeItem: function removeItem(i) {
       this.carts.splice(i, 1);
+    },
+    removeAll: function removeAll() {
+      this.carts.splice(0, this.carts.length);
+      localStorage.clear();
     }
   }
 });
@@ -31222,7 +31266,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n.card-image[data-v-497ea7f5] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -31298,7 +31342,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #f3d7a2;\n  height: 450px;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e],\n.card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
+exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #f3d7a2;\n  height: 450px;\n}\n.card .menu-image[data-v-5ebd141e] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e],\n.card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
 
 // exports
 
@@ -31336,7 +31380,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".pointer[data-v-2120f3b0] {\n  cursor: pointer;\n}\n#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 100px;\n  right: 20px;\n  z-index: 10;\n  width: 400px;\n  border-radius: 20px;\n}\n.fade-in[data-v-2120f3b0] {\n  opacity: 1;\n  -webkit-animation-name: fadeInOpacity-data-v-2120f3b0;\n          animation-name: fadeInOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-in;\n          animation-timing-function: ease-in;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n.fade-out[data-v-2120f3b0] {\n  opacity: 0;\n  -webkit-animation-name: fadeOutOpacity-data-v-2120f3b0;\n          animation-name: fadeOutOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-out;\n          animation-timing-function: ease-out;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
+exports.push([module.i, ".pointer[data-v-2120f3b0] {\n  cursor: pointer;\n}\n#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 100px;\n  right: 20px;\n  z-index: 10;\n  width: 350px;\n  border-radius: 20px;\n}\n.fade-in[data-v-2120f3b0] {\n  opacity: 1;\n  -webkit-animation-name: fadeInOpacity-data-v-2120f3b0;\n          animation-name: fadeInOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-in;\n          animation-timing-function: ease-in;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n.fade-out[data-v-2120f3b0] {\n  opacity: 0;\n  -webkit-animation-name: fadeOutOpacity-data-v-2120f3b0;\n          animation-name: fadeOutOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-out;\n          animation-timing-function: ease-out;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
 
 // exports
 
@@ -65574,11 +65618,11 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "card shadow border-0 m-0 p-4 bg-lightjasmine" },
+    { staticClass: "card shadow border-0 p-4 bg-lightjasmine" },
     [
-      _c("img", {
-        staticClass: "img-fluid my-2 border-custom",
-        attrs: { src: _vm.plate.image, alt: _vm.plate.name },
+      _c("div", {
+        staticClass: "card-image",
+        style: _vm.getBackground(_vm.plate.image),
       }),
       _vm._v(" "),
       _c("div", { staticClass: "card-body mx-0 px-0" }, [
@@ -65591,7 +65635,7 @@ var render = function () {
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "card-text text-center my-4" }, [
-          _vm._v(_vm._s(_vm.plate.price) + " €"),
+          _c("b", [_vm._v(_vm._s(_vm.plate.price) + " €")]),
         ]),
         _vm._v(" "),
         _c(
@@ -65618,12 +65662,12 @@ var render = function () {
                 },
               },
               [
-                _vm._v("\n        Add to cart "),
+                _vm._v("\n        Add to cart\n        "),
                 _c(
                   "span",
                   {
                     staticClass:
-                      "position-absolute cart-item pt-2 badge badge-pill bg-danger border border-white",
+                      "\n            position-absolute\n            cart-item\n            pt-2\n            badge badge-pill\n            bg-danger\n            border border-white\n          ",
                   },
                   [_vm._v(_vm._s(_vm.quantity))]
                 ),
@@ -66233,9 +66277,9 @@ var render = function () {
     { staticClass: "card shadow my-5 p-4 border-0 d-flex flex-column" },
     [
       _vm.user.image
-        ? _c("img", {
-            staticClass: "w-300",
-            attrs: { src: _vm.user.image, alt: _vm.user.name },
+        ? _c("div", {
+            staticClass: "menu-image",
+            style: _vm.getBackground(_vm.user.image),
           })
         : _c("img", {
             staticClass: "restaurant-image mb-4",
@@ -66499,18 +66543,14 @@ var render = function () {
                     _c(
                       "div",
                       {
-                        staticClass: "col-1 pointer",
+                        staticClass: "col-1 d-flex justify-content-center",
                         on: {
                           click: function ($event) {
                             return _vm.removeItem(index)
                           },
                         },
                       },
-                      [
-                        _c("i", {
-                          staticClass: "fas fa-trash text-danger fa-2x",
-                        }),
-                      ]
+                      [_c("i", { staticClass: "fas fa-trash fa-2x pointer" })]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col" }, [
@@ -66539,7 +66579,7 @@ var render = function () {
                     "\n            col-12\n            align-items-center\n            justify-content-between\n            d-flex\n            py-4\n          ",
                 },
                 [
-                  _c("div", { staticClass: "col-5" }, [
+                  _c("div", { staticClass: "col-4" }, [
                     _vm.carts.length > 0
                       ? _c(
                           "span",
@@ -66560,10 +66600,30 @@ var render = function () {
                       : _vm._e(),
                   ]),
                   _vm._v(" "),
+                  _vm.carts.length > 0
+                    ? _c(
+                        "div",
+                        {
+                          staticClass: "col pointer",
+                          on: { click: _vm.removeAll },
+                        },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "rounded-pill p-2 text-white bg-mediumTurquoise",
+                            },
+                            [_vm._v("Empty it")]
+                          ),
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
                   _vm.carts
                     ? _c(
                         "div",
-                        { staticClass: "col-5 d-flex justify-content-end" },
+                        { staticClass: "col-4 d-flex justify-content-end" },
                         [
                           _c(
                             "span",
