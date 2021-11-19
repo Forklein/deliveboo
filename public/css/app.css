@@ -10270,6 +10270,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.darkmode--activated .form-check-label {
+  color: white;
+}
+
+.darkmode--activated #our-technology p {
+  color: white;
+}
+
+.darkmode--activated #about-us p {
+  color: white;
+}
+
+.darkmode--activated footer .row {
+  color: black;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -10310,11 +10326,11 @@ html {
   color: currentColor;
 }
 
-button:not(.navbar-toggler, .btn-danger) {
+button:not(.navbar-toggler, .btn-danger, .darkmode-toggle) {
   border: none;
   background: #00CCBC;
 }
-button:not(.navbar-toggler, .btn-danger):hover {
+button:not(.navbar-toggler, .btn-danger, .darkmode-toggle):hover {
   background: #007e8a;
   transform: scale(1.15);
 }
