@@ -8,16 +8,14 @@
       >
         <div class="row my-3">
           <div class="col-8 container-fluid">
-            <div class="row">
-              <div class="form-group col-6">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  v-model="name"
-                  class="form-control border-custom"
-                  id="name"
-                />
-              </div>
+            <div class="form-group col-6">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                v-model="name"
+                class="form-control border-custom"
+                id="name"
+              />
             </div>
             <div class="form-group col-6">
               <label for="surname">Surname</label>
@@ -116,7 +114,7 @@
           }"
         ></v-braintree>
       </div>
-      <Thanks v-if="thanks" :order="order" />
+      <Thanks v-if="thanks" :order="order" :order-id="orderId" />
     </div>
     <Modal
       :class="modal ? 'd-block' : ''"

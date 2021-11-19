@@ -9,14 +9,15 @@
     "
   >
     <div class="card mx-auto">
-      <div class="card-header">
+      <div class="card-header text-center">
         <h2>Thanks for your order!</h2>
+        <h5>Order number #{{ orderId }}</h5>
       </div>
       <div class="card-body">
         <p>{{ order.name }}</p>
         <p>{{ order.surname }}</p>
         <p>{{ order.mail }}</p>
-        <p>{{ order.total.toFixed(2) }}</p>
+        <p><b>Total</b>{{ order.total.toFixed(2) }}€</p>
       </div>
     </div>
   </div>
@@ -25,7 +26,7 @@
 <script>
 export default {
   name: "Thanks",
-  props: ["order"],
+  props: ["order", "orderId"],
 };
 </script>
 
