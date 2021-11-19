@@ -1,11 +1,12 @@
 <template>
-  <div class="checkout">
-    <div :class="modal ? 'opacity' : ''">
+  <div class="checkout d-flex align-items-center justify-content-center">
+    <div class="w-75" :class="modal ? 'opacity' : ''">
       <Loader v-if="isLoading" />
       <div v-if="form" class="container">
         <div class="row my-3">
-          <div class="col-8">
-            <div class="form-group">
+          <div class="col-8 container-fluid">
+            <div class="row">
+              <div class="form-group col-6">
               <label for="name">Name</label>
               <input
                 type="text"
@@ -14,7 +15,7 @@
                 id="name"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
               <label for="surname">Surname</label>
               <input
                 type="text"
@@ -23,7 +24,7 @@
                 id="surname"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
               <label for="address">Address</label>
               <input
                 type="text"
@@ -32,7 +33,7 @@
                 id="address"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
               <label for="phone">Phone</label>
               <input
                 type="phone"
@@ -41,7 +42,7 @@
                 id="phone"
               />
             </div>
-            <div class="form-group">
+            <div class="form-group col-6">
               <label for="email">Email address</label>
               <input
                 type="email"
@@ -50,19 +51,34 @@
                 id="email"
               />
             </div>
-            <button type="button" @click="createOrder" class="btn btn-primary">
-              Submit
-            </button>
           </div>
+          <button type="button" @click="createOrder" class="btn rounded-pill text-white">
+              Submit
+          </button>
+        </div>
           <div class="col-4 my-auto">
-            <div class="card">
-              <div class="card-header">{{ name }}<br />{{ surname }}</div>
+            <div class="card p-4">
+              <div>
+                <p> Hi, {{ name }} {{ surname }}</p>
+              </div>
               <div class="card-body">
-                {{ address }}<br />{{ phone }}<br />{{ mail }}
+                <p>{{ address }}</p>
+                <p>{{ phone }}</p>
+                <p>{{ mail }}</p>
+                <span>You have purchashed these plates:</span>
+                <div class="container-fluid" v-for="(plate, index) in cart" :key="index">
+                  <div class="row">
+                    <div class="col-10">{{plate.name}}</div>
+                    <div class="col-2">{{plate.quantity}}</div>
+                    <div class="col-12"><hr></div>
+                  </div>
+                </div>
               </div>
-              <div class="card-footer">
-                Total Order: {{ total.toFixed(2) }} €
+              <div class="my-3 d-flex">
+                <div class="col-6">Total Order:</div>
+                <div class="col-6 d-flex justify-content-end">{{ total.toFixed(2) }} €</div>
               </div>
+              <img class="img-fluid" src="https://i.ibb.co/c8CQvBq/barcode.png" alt="">
             </div>
           </div>
         </div>
@@ -220,6 +236,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../../sass/_variables.scss";
 .opacity {
   opacity: 0.5;
   height: 100vh;

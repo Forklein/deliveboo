@@ -15,6 +15,9 @@ export default {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+.app{
+  background-color: $ourLightIndigo;
+}
 
 p {
   font-size: 17px;
@@ -35,8 +38,5 @@ h2 {
 
 .card {
   border-radius: 20px;
-&:hover {
-  transform: scale(1.1);
-}
 }
 </style>

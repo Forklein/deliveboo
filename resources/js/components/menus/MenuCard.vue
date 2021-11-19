@@ -1,17 +1,16 @@
 <template>
   <div class="card shadow border-0 m-0 p-4">
-    <img :src="plate.image" class="img-fluid my-2" :alt="plate.name" />
+    <img :src="plate.image" class="img-fluid my-2 border-custom" :alt="plate.name" />
     <div class="card-body mx-0 px-0">
       <h5 class="card-title">{{ plate.name }}</h5>
       <p class="card-text">{{ plate.description }}</p>
-      <p class="card-text">{{ plate.price }}€</p>
-      <div class="cart-footer">
-        <button @click="removeQuantity">-</button>
-        <span>{{ quantity }}</span>
-        <button @click="addQuantity">+</button>
-        <button @click="addToCart(plate)" class="btn btn-primary">
-          Add to cart
+      <p class="card-text text-center my-4">{{ plate.price }} €</p>
+      <div class="cart-footer d-flex justify-content-around">
+        <button class="rounded-pill text-white" @click="removeQuantity">-</button>
+        <button @click="addToCart(plate)" class="btn text-white rounded-pill position-relative">
+          Add to cart <span class="position-absolute cart-item pt-2 badge badge-pill bg-mediumTurquoise border border-white">{{ quantity }}</span>
         </button>
+        <button class="rounded-pill text-white" @click="addQuantity">+</button>
       </div>
     </div>
   </div>
@@ -74,6 +73,13 @@ export default {
     font-size: 14px;
     color: rgb(59, 59, 59);
   }
+}
+.cart-item {
+      position:absolute;
+      height:24px;
+      width:24px;
+      top:-10px;
+      right:-10px;
 }
 /* **************************** */
 

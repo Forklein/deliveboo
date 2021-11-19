@@ -1,9 +1,10 @@
 <template>
   <section id="menus-list" class="pt-5 pb-4">
+    <div class="d-flex justify-content-center">
+      <span class="rounded-pill p-2 text-white bg-mediumTurquoise h1 text-center">Menu "{{ restaurantName }}" - Total plate: {{ totalPlates }}</span>
+    </div>
     <Loader v-if="isLoading" />
     <div v-else class="container p-3">
-      <h1>Menu {{ restaurantName }}</h1>
-      <h2>Total plate: {{ totalPlates }}</h2>
       <div class="row">
         <div
           class="col-12 col-sm-6 col-md-4 mb-5"
