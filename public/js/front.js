@@ -2990,7 +2990,7 @@ __webpack_require__.r(__webpack_exports__);
       _this2.isLoading = false;
     });
 
-    if (localStorage.key("storedData")) {
+    if (localStorage.getItem("storedData")) {
       this.cart = JSON.parse(localStorage.getItem("storedData"));
     } else this.cart = [];
   }

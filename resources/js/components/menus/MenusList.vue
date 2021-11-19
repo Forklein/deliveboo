@@ -88,7 +88,7 @@ export default {
       .then(() => {
         this.isLoading = false;
       });
-    if (localStorage.key("storedData")) {
+    if (localStorage.getItem("storedData")) {
       this.cart = JSON.parse(localStorage.getItem("storedData"));
     } else this.cart = [];
   },
