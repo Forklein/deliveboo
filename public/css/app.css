@@ -10274,11 +10274,7 @@ html {
   color: white;
 }
 
-.darkmode--activated #our-technology p {
-  color: white;
-}
-
-.darkmode--activated #about-us p {
+.darkmode--activated .subtitle {
   color: white;
 }
 

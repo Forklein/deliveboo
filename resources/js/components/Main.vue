@@ -6,7 +6,7 @@
       <div class="container justify-content-center">
         <div class="mb-5 text-center" data-aos="fade-down">
           <h2 class="mb-2">Technology guides us</h2>
-          <p>
+          <p class="subtitle">
             We are proud to take our technology around the world. Our algorithm
             is based on powerful predictive technology and machine learning,
             that help optimizing the overall experience. In the last years
@@ -137,7 +137,7 @@
       <div class="container justify-content-center">
         <div class="mb-5 text-center" data-aos="fade-in">
           <h2 class="mb-2">About us</h2>
-          <p>
+          <p class="subtitle">
             By offering fast and reliable delivery, which the customer can track
             on their mobile, Deliveroo has seen revenue growth of over 650%. Our
             partner restaurants manage to increase their revenues by 30%,

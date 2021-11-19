@@ -65224,7 +65224,7 @@ var staticRenderFns = [
                 _vm._v("Technology guides us"),
               ]),
               _vm._v(" "),
-              _c("p", [
+              _c("p", { staticClass: "subtitle" }, [
                 _vm._v(
                   "\n          We are proud to take our technology around the world. Our algorithm\n          is based on powerful predictive technology and machine learning,\n          that help optimizing the overall experience. In the last years\n          Deliveroo has managed to decrease delivery time by 20%.\n        "
                 ),
@@ -65391,7 +65391,7 @@ var staticRenderFns = [
       [
         _c("h2", { staticClass: "mb-2" }, [_vm._v("About us")]),
         _vm._v(" "),
-        _c("p", [
+        _c("p", { staticClass: "subtitle" }, [
           _vm._v(
             "\n          By offering fast and reliable delivery, which the customer can track\n          on their mobile, Deliveroo has seen revenue growth of over 650%. Our\n          partner restaurants manage to increase their revenues by 30%,\n          creating thousands of jobs in the restaurant sector.\n        "
           ),
@@ -83527,11 +83527,11 @@ var options = {
   // default: '#fff'
   backgroundColor: '#fff',
   // default: '#fff'
-  buttonColorDark: 'rgb(255, 217, 0)',
+  buttonColorDark: '#000',
   // default: '#100f2c'
-  buttonColorLight: '#000',
+  buttonColorLight: 'rgb(255, 217, 0)',
   // default: '#fff'
-  saveInCookies: true,
+  saveInCookies: false,
   // default: true,
   label: '🌓',
   // default: ''
