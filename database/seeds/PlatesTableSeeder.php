@@ -20,7 +20,8 @@ class PlatesTableSeeder extends Seeder
 
         $users = User::pluck('id')->toArray();
 
-        for ($i = 0; $i < 250; $i++) {
+
+        for ($i = 0; $i < 100; $i++) {
             $new_plate = new Plate();
             $new_plate->user_id = Arr::random($users);
             $new_plate->name = $faker_restaurant->foodName();
