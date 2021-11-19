@@ -31102,7 +31102,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\n.app {\n  background-color: #e9dfee;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card {\n  border-radius: 20px;\n}", ""]);
+exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\n.app {\n  background-color: #e9dfee;\n  padding-top: 70px;\n  min-height: 100vh;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card {\n  border-radius: 20px;\n}", ""]);
 
 // exports
 
