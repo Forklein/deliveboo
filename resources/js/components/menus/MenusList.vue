@@ -1,7 +1,10 @@
 <template>
   <section id="menus-list" class="pt-5 pb-4">
     <div class="d-flex justify-content-center">
-      <span class="rounded-pill p-2 text-white bg-mediumTurquoise h1 text-center">Menu "{{ restaurantName }}" - Total plate: {{ totalPlates }}</span>
+      <span
+        class="rounded-pill p-2 text-white bg-mediumTurquoise h1 text-center"
+        >Menu "{{ restaurantName }}" - Total plate: {{ totalPlates }}</span
+      >
     </div>
     <Loader v-if="isLoading" />
     <div v-else class="container p-3">
@@ -44,6 +47,11 @@ export default {
     getCart(data) {
       if (this.cart.length) {
         let notFound = true;
+        if (this.cart[0].restaurant !== data.restaurant) {
+          alert("Il tuo carrello sarà svuotato");
+          this.cart = [];
+          notFound = false;
+        }
         this.cart.forEach((i, index) => {
           if (i.plate_id === data.plate_id) {
             this.cart[index].quantity += data.quantity;
@@ -74,6 +82,9 @@ export default {
       .then(() => {
         this.isLoading = false;
       });
+    if (localStorage.key("storedData")) {
+      this.cart = JSON.parse(localStorage.getItem("storedData"));
+    } else this.cart = [];
   },
 };
 </script>

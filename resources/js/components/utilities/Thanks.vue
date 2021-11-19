@@ -1,5 +1,13 @@
 <template>
-  <div class="container">
+  <div
+    class="
+      container
+      d-flex
+      flex-column
+      justify-content-center
+      align-items-center
+    "
+  >
     <div class="card mx-auto">
       <div class="card-header">
         <h2>Thanks for your order!</h2>

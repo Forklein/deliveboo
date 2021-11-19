@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderRequest;
+use App\Mail\SendNewMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Braintree\Gateway;
 use App\Models\Order;
@@ -42,6 +44,8 @@ class PaymentController extends Controller
             ];
             $order->status = 1;
             $order->save();
+            Mail::to($order->mail)->send(new SendNewMail($order));
+
             return response()->json(compact('data'), 200);
         } else {
             $data = [

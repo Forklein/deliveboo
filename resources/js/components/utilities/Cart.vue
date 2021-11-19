@@ -1,9 +1,21 @@
 <template>
   <div class="container-cart text-center">
-    <div @click="showOverview" class="rounded-circle p-3 fade-in shodow-lg bg-mediumTurquoise text-white" id="cart">
-      <span v-if="carts" id="notify" class="badge badge-pill bg-mediumTurquoise text-white border border-white">{{
-        getQuantity
-      }}</span>
+    <div
+      @click="showOverview"
+      class="rounded-circle p-3 fade-in shodow-lg bg-mediumTurquoise text-white"
+      id="cart"
+    >
+      <span
+        v-if="carts"
+        id="notify"
+        class="
+          badge badge-pill
+          bg-mediumTurquoise
+          text-white
+          border border-white
+        "
+        >{{ getQuantity }}</span
+      >
       <i class="fas fa-shopping-cart fa-2x pr-1"></i>
     </div>
     <div
@@ -11,7 +23,7 @@
       class="overview bg-white overflow-auto shadow-lg"
     >
       <div class="container bg-mediumTurquoise text-white">
-        <div  class="row pt-5">
+        <div class="row pt-5">
           <div
             v-for="(cart, index) in carts"
             :key="index"
@@ -27,16 +39,28 @@
             <div class="col-1">{{ cart.quantity }}</div>
             <div v-if="carts" class="col-2">{{ cart.price.toFixed(2) }}€</div>
           </div>
-          <div class="col-12 align-items-center justify-content-between d-flex py-4">
+          <div
+            class="
+              col-12
+              align-items-center
+              justify-content-between
+              d-flex
+              py-4
+            "
+          >
             <div class="col-5">
               <span v-if="carts.length > 0" @click="saveStorage">
-                <router-link class="btn bg-primary text-white rounded-pill" :to="{ name: 'Checkout' }"
+                <router-link
+                  class="btn bg-primary text-white rounded-pill"
+                  :to="{ name: 'Checkout' }"
                   >Checkout</router-link
                 >
               </span>
             </div>
             <div v-if="carts" class="col-5 d-flex justify-content-end">
-              <span class="rounded-pill p-2 text-white bg-primary">Total {{ getTotal.toFixed(2) }}€</span>
+              <span class="rounded-pill p-2 text-white bg-primary"
+                >Total {{ getTotal.toFixed(2) }}€</span
+              >
             </div>
           </div>
         </div>
@@ -85,9 +109,6 @@ export default {
       this.carts.splice(i, 1);
     },
   },
-  created() {
-    this.carts = JSON.parse(localStorage.getItem("storedData"));
-  },
 };
 </script>
 
@@ -115,35 +136,35 @@ export default {
   border-radius: 20px;
 }
 .fade-in {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 0.5s;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .fade-out {
-	opacity: 0;
-	animation-name: fadeOutOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-out;
-	animation-duration: 0.5s;
+  opacity: 0;
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
 }
 
 @keyframes fadeOutOpacity {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 </style>

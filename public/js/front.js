@@ -2918,6 +2918,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -2943,6 +2946,13 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.cart.length) {
         var notFound = true;
+
+        if (this.cart[0].restaurant !== data.restaurant) {
+          alert("Il tuo carrello sarà svuotato");
+          this.cart = [];
+          notFound = false;
+        }
+
         this.cart.forEach(function (i, index) {
           if (i.plate_id === data.plate_id) {
             _this.cart[index].quantity += data.quantity;
@@ -2972,6 +2982,10 @@ __webpack_require__.r(__webpack_exports__);
     }).then(function () {
       _this2.isLoading = false;
     });
+
+    if (localStorage.key("storedData")) {
+      this.cart = JSON.parse(localStorage.getItem("storedData"));
+    } else this.cart = [];
   }
 });
 
@@ -2989,6 +3003,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
 /* harmony import */ var _utilities_Thanks_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/Thanks.vue */ "./resources/js/components/utilities/Thanks.vue");
 /* harmony import */ var _utilities_Modal_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/Modal.vue */ "./resources/js/components/utilities/Modal.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3130,6 +3161,8 @@ __webpack_require__.r(__webpack_exports__);
     onSuccess: function onSuccess(payload) {
       var _this = this;
 
+      this.payment = false;
+      this.isLoading = true;
       var nonce = payload.nonce;
       axios({
         method: "post",
@@ -3143,10 +3176,8 @@ __webpack_require__.r(__webpack_exports__);
           "Content-Type": "application/json"
         }
       }).then(function (res) {
-        _this.isLoading = true;
         setTimeout(function () {
           _this.isLoading = false;
-          _this.payment = false;
           _this.thanks = true;
           localStorage.clear();
           console.log(res);
@@ -3557,6 +3588,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
   props: ["carts"],
@@ -3595,9 +3650,6 @@ __webpack_require__.r(__webpack_exports__);
     removeItem: function removeItem(i) {
       this.carts.splice(i, 1);
     }
-  },
-  created: function created() {
-    this.carts = JSON.parse(localStorage.getItem("storedData"));
   }
 });
 
@@ -3685,6 +3737,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -65578,7 +65638,7 @@ var render = function () {
                         attrs: { type: "button" },
                         on: { click: _vm.createOrder },
                       },
-                      [_vm._v("\n            Submit\n        ")]
+                      [_vm._v("\n            Submit\n          ")]
                     ),
                   ]),
                   _vm._v(" "),
@@ -65587,7 +65647,7 @@ var render = function () {
                       _c("div", [
                         _c("p", [
                           _vm._v(
-                            " Hi, " +
+                            "Hi, " +
                               _vm._s(_vm.name) +
                               " " +
                               _vm._s(_vm.surname)
@@ -65640,7 +65700,13 @@ var render = function () {
                         _c(
                           "div",
                           { staticClass: "col-6 d-flex justify-content-end" },
-                          [_vm._v(_vm._s(_vm.total.toFixed(2)) + " €")]
+                          [
+                            _vm._v(
+                              "\n                " +
+                                _vm._s(_vm.total.toFixed(2)) +
+                                " €\n              "
+                            ),
+                          ]
                         ),
                       ]),
                       _vm._v(" "),
@@ -65660,7 +65726,10 @@ var render = function () {
           _vm.payment
             ? _c(
                 "div",
-                { staticClass: "container" },
+                {
+                  staticClass:
+                    "container d-flex justify-content-center align-items-center",
+                },
                 [
                   _c("v-braintree", {
                     attrs: {
@@ -66079,7 +66148,7 @@ var render = function () {
               "span",
               {
                 staticClass:
-                  "badge badge-pill bg-mediumTurquoise text-white border border-white",
+                  "\n        badge badge-pill\n        bg-mediumTurquoise\n        text-white\n        border border-white\n      ",
                 attrs: { id: "notify" },
               },
               [_vm._v(_vm._s(_vm.getQuantity))]
@@ -66151,7 +66220,7 @@ var render = function () {
                 "div",
                 {
                   staticClass:
-                    "col-12 align-items-center justify-content-between d-flex py-4",
+                    "\n            col-12\n            align-items-center\n            justify-content-between\n            d-flex\n            py-4\n          ",
                 },
                 [
                   _c("div", { staticClass: "col-5" }, [
@@ -66343,21 +66412,28 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "card mx-auto" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "card-body" }, [
-        _c("p", [_vm._v(_vm._s(_vm.order.name))]),
+  return _c(
+    "div",
+    {
+      staticClass:
+        "\n    container\n    d-flex\n    flex-column\n    justify-content-center\n    align-items-center\n  ",
+    },
+    [
+      _c("div", { staticClass: "card mx-auto" }, [
+        _vm._m(0),
         _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.order.surname))]),
-        _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.order.mail))]),
-        _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.order.total.toFixed(2)))]),
+        _c("div", { staticClass: "card-body" }, [
+          _c("p", [_vm._v(_vm._s(_vm.order.name))]),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.order.surname))]),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.order.mail))]),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.order.total.toFixed(2)))]),
+        ]),
       ]),
-    ]),
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
