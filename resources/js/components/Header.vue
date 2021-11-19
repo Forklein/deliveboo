@@ -24,7 +24,7 @@
             <div class="input-group">
               <input
                 type="search"
-                class="form-control rounded"
+                class="form-control border-custom"
                 placeholder="Search"
                 data-toggle="dropdown"
                 v-model="search"
@@ -32,7 +32,7 @@
               />
               <button
                 type="button"
-                class="btn btn-outline-primary text-white"
+                class="btn rounded-pill btn-outline-primary text-white"
                 @click="searchRestaurant"
                 id="dropdownMenuButton"
               >

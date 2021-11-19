@@ -1,56 +1,55 @@
 <template>
-  <div class="checkout d-flex align-items-center justify-content-center">
+  <div class="checkout d-flex align-items-center justify-content-center mt-5">
     <div class="w-75" :class="modal ? 'opacity' : ''">
       <Loader v-if="isLoading" />
-      <div v-if="form" class="container">
+      <div v-if="form" class="container bg-lightjasmine border-custom shadow-lg p-5">
         <div class="row my-3">
           <div class="col-8 container-fluid">
             <div class="row">
               <div class="form-group col-6">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  v-model="name"
-                  class="form-control"
-                  id="name"
-                />
-              </div>
-              <div class="form-group col-6">
-                <label for="surname">Surname</label>
-                <input
-                  type="text"
-                  v-model="surname"
-                  class="form-control"
-                  id="surname"
-                />
-              </div>
-              <div class="form-group col-6">
-                <label for="address">Address</label>
-                <input
-                  type="text"
-                  v-model="address"
-                  class="form-control"
-                  id="address"
-                />
-              </div>
-              <div class="form-group col-6">
-                <label for="phone">Phone</label>
-                <input
-                  type="phone"
-                  v-model="phone"
-                  class="form-control"
-                  id="phone"
-                />
-              </div>
-              <div class="form-group col-6">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  v-model="mail"
-                  class="form-control"
-                  id="email"
-                />
-              </div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                v-model="name"
+                class="form-control border-custom"
+                id="name"
+              />
+            </div>
+            <div class="form-group col-6">
+              <label for="surname">Surname</label>
+              <input
+                type="text"
+                v-model="surname"
+                class="form-control border-custom"
+                id="surname"
+              />
+            </div>
+            <div class="form-group col-6">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                v-model="address"
+                class="form-control  border-custom"
+                id="address"
+              />
+            </div>
+            <div class="form-group col-6">
+              <label for="phone">Phone</label>
+              <input
+                type="phone"
+                v-model="phone"
+                class="form-control  border-custom"
+                id="phone"
+              />
+            </div>
+            <div class="form-group col-6">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                v-model="mail"
+                class="form-control  border-custom"
+                id="email"
+              />
             </div>
             <button
               type="button"

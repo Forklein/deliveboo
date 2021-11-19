@@ -1,6 +1,16 @@
 html{
     scroll-behavior: smooth;
 }
+.darkmode--activated .form-check-label{
+    color: white;
+}
+.darkmode--activated .subtitle{
+    color: white;
+}
+
+.darkmode--activated footer .row{
+    color: black;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -42,7 +52,7 @@ html{
 
 
 
-button:not(.navbar-toggler, .btn-danger) {
+button:not(.navbar-toggler, .btn-danger, .darkmode-toggle) {
     border: none;
     background: $mediumTurquoise;
     &:hover {
