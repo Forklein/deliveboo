@@ -3615,6 +3615,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
   props: ["carts"],
@@ -31359,7 +31373,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 100px;\n  right: 20px;\n  z-index: 10;\n  width: 400px;\n  border-radius: 20px;\n}\n.fade-in[data-v-2120f3b0] {\n  opacity: 1;\n  -webkit-animation-name: fadeInOpacity-data-v-2120f3b0;\n          animation-name: fadeInOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-in;\n          animation-timing-function: ease-in;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n.fade-out[data-v-2120f3b0] {\n  opacity: 0;\n  -webkit-animation-name: fadeOutOpacity-data-v-2120f3b0;\n          animation-name: fadeOutOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-out;\n          animation-timing-function: ease-out;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
+exports.push([module.i, ".pointer[data-v-2120f3b0] {\n  cursor: pointer;\n}\n#notify[data-v-2120f3b0] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  z-index: 10;\n}\n#cart[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 10;\n  cursor: pointer;\n}\n.overview[data-v-2120f3b0] {\n  position: fixed;\n  bottom: 100px;\n  right: 20px;\n  z-index: 10;\n  width: 400px;\n  border-radius: 20px;\n}\n.fade-in[data-v-2120f3b0] {\n  opacity: 1;\n  -webkit-animation-name: fadeInOpacity-data-v-2120f3b0;\n          animation-name: fadeInOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-in;\n          animation-timing-function: ease-in;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n@keyframes fadeInOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 0;\n}\n100% {\n    opacity: 1;\n}\n}\n.fade-out[data-v-2120f3b0] {\n  opacity: 0;\n  -webkit-animation-name: fadeOutOpacity-data-v-2120f3b0;\n          animation-name: fadeOutOpacity-data-v-2120f3b0;\n  -webkit-animation-iteration-count: 1;\n          animation-iteration-count: 1;\n  -webkit-animation-timing-function: ease-out;\n          animation-timing-function: ease-out;\n  -webkit-animation-duration: 0.5s;\n          animation-duration: 0.5s;\n}\n@-webkit-keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes fadeOutOpacity-data-v-2120f3b0 {\n0% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
 
 // exports
 
@@ -66563,6 +66577,18 @@ var render = function () {
       },
       [
         _c("div", { staticClass: "container bg-lightjasmine" }, [
+          _c("p", { staticClass: "text-left p-2 font-weight-bold" }, [
+            _vm._v(
+              "\n        Your Cart" +
+                _vm._s(
+                  _vm.carts.length
+                    ? " Quantity (" + _vm.getQuantity + ")"
+                    : " is empty"
+                ) +
+                "\n      "
+            ),
+          ]),
+          _vm._v(" "),
           _c(
             "div",
             { staticClass: "row pt-5" },
@@ -66570,7 +66596,11 @@ var render = function () {
               _vm._l(_vm.carts, function (cart, index) {
                 return _c(
                   "div",
-                  { key: index, staticClass: "col-12 d-flex my-1" },
+                  {
+                    key: index,
+                    staticClass:
+                      "\n            col-12\n            d-flex\n            my-1\n            justify-content-center\n            align-items-center\n            shadow\n          ",
+                  },
                   [
                     _c("div", { staticClass: "col-3" }, [
                       _c("img", {
@@ -66582,18 +66612,24 @@ var render = function () {
                     _c(
                       "div",
                       {
-                        staticClass: "col-1",
+                        staticClass: "col-1 pointer",
                         on: {
                           click: function ($event) {
                             return _vm.removeItem(index)
                           },
                         },
                       },
-                      [_c("i", { staticClass: "fas fa-trash text-danger" })]
+                      [
+                        _c("i", {
+                          staticClass: "fas fa-trash text-danger fa-2x",
+                        }),
+                      ]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col" }, [
-                      _vm._v(_vm._s(cart.name)),
+                      _c("p", { staticClass: "m-0" }, [
+                        _vm._v(_vm._s(cart.name)),
+                      ]),
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-1" }, [

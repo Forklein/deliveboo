@@ -18,19 +18,33 @@
       class="overview bg-white overflow-auto shadow-lg"
     >
       <div class="container bg-lightjasmine">
+        <p class="text-left p-2 font-weight-bold">
+          Your Cart{{
+            carts.length ? ` Quantity (${getQuantity})` : " is empty"
+          }}
+        </p>
         <div class="row pt-5">
           <div
             v-for="(cart, index) in carts"
             :key="index"
-            class="col-12 d-flex my-1"
+            class="
+              col-12
+              d-flex
+              my-1
+              justify-content-center
+              align-items-center
+              shadow
+            "
           >
             <div class="col-3">
               <img style="width: 50%" :src="cart.image" :alt="cart.name" />
             </div>
-            <div @click="removeItem(index)" class="col-1">
-              <i class="fas fa-trash text-danger"></i>
+            <div @click="removeItem(index)" class="col-1 pointer">
+              <i class="fas fa-trash text-danger fa-2x"></i>
             </div>
-            <div class="col">{{ cart.name }}</div>
+            <div class="col">
+              <p class="m-0">{{ cart.name }}</p>
+            </div>
             <div class="col-1">{{ cart.quantity }}</div>
             <div v-if="carts" class="col-2">{{ cart.price.toFixed(2) }}€</div>
           </div>
@@ -108,6 +122,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.pointer {
+  cursor: pointer;
+}
+
 #notify {
   position: absolute;
   top: 0;
