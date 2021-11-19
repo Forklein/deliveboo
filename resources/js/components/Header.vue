@@ -44,6 +44,7 @@
                   :key="restaurant.id"
                   class="
                     container
+                    search-bar
                     d-flex
                     align-items-center
                     justify-content-between
@@ -96,6 +97,10 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-size: 100% 100%;
+  .search-bar:hover {
+    background-color: $mediumTurquoise;
+    color: white;
+  }
   .col-8 {
     a {
       background-color: $mediumTurquoise;

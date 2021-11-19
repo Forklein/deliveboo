@@ -2467,6 +2467,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   data: function data() {
@@ -31139,7 +31140,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "header[data-v-1f42fb90] {\n  height: 900px;\n  padding-top: 175px;\n  background-image: url(\"/img/jumbotron.jpg\");\n  background-position: center;\n  background-attachment: fixed;\n  background-size: 100% 100%;\n}\nheader .col-8 a[data-v-1f42fb90] {\n  background-color: #00CCBC;\n}\nheader h1[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 44px;\n}\nheader p[data-v-1f42fb90] {\n  color: #007e8a;\n  font-size: 20px;\n  cursor: pointer;\n}\nheader .search[data-v-1f42fb90] {\n  margin-top: 100px;\n}", ""]);
+exports.push([module.i, "header[data-v-1f42fb90] {\n  height: 900px;\n  padding-top: 175px;\n  background-image: url(\"/img/jumbotron.jpg\");\n  background-position: center;\n  background-attachment: fixed;\n  background-size: 100% 100%;\n}\nheader .search-bar[data-v-1f42fb90]:hover {\n  background-color: #00CCBC;\n  color: white;\n}\nheader .col-8 a[data-v-1f42fb90] {\n  background-color: #00CCBC;\n}\nheader h1[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 44px;\n}\nheader p[data-v-1f42fb90] {\n  color: #007e8a;\n  font-size: 20px;\n  cursor: pointer;\n}\nheader .search[data-v-1f42fb90] {\n  margin-top: 100px;\n}", ""]);
 
 // exports
 
@@ -64733,7 +64734,7 @@ var render = function () {
                     {
                       key: restaurant.id,
                       staticClass:
-                        "\n                  container\n                  d-flex\n                  align-items-center\n                  justify-content-between\n                ",
+                        "\n                  container\n                  search-bar\n                  d-flex\n                  align-items-center\n                  justify-content-between\n                ",
                     },
                     [
                       _c(

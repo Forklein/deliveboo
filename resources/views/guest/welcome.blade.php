@@ -21,10 +21,9 @@
 
 <body>
     @if (Route::has('login'))
-        <nav class="navbar navbar-expand-lg d-flex align-items-center p-0 navbar-position" id="main-menu">
-            <div class="container">
+            <nav class="navbar d-flex align-items-center p-0 navbar-position" id="main-menu">
                 <a href="{{url('/')}}"><img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" /></a>
-                <a href="{{url('/')}}"><h1>Deliveboo</h1></a>
+                <a href="{{url('/')}}"><h1 class="m-0">Deliveboo</h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="mr-1 fas fa-bars p-0" id="menu-icon"></i></span>
@@ -72,8 +71,7 @@
                         @endauth
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
     @endif
 
     <div id="root"></div>
