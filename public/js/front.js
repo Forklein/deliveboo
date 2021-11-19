@@ -2897,6 +2897,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MenuCard_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MenuCard.vue */ "./resources/js/components/menus/MenuCard.vue");
 /* harmony import */ var _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utilities/Cart.vue */ "./resources/js/components/utilities/Cart.vue");
 /* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
+/* harmony import */ var _utilities_Modal_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/Modal.vue */ "./resources/js/components/utilities/Modal.vue");
 //
 //
 //
@@ -2920,6 +2921,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+
 
 
 
@@ -2928,11 +2935,13 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     MenuCard: _MenuCard_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Cart: _utilities_Cart_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Modal: _utilities_Modal_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   data: function data() {
     return {
       isLoading: false,
+      modal: false,
       cart: [],
       plates: [],
       restaurantName: "",
@@ -2947,8 +2956,7 @@ __webpack_require__.r(__webpack_exports__);
         var notFound = true;
 
         if (this.cart[0].restaurant !== data.restaurant) {
-          alert("Il tuo carrello sarà svuotato");
-          this.cart = [];
+          this.modal = true;
           notFound = false;
         }
 
@@ -65451,6 +65459,19 @@ var render = function () {
             ],
             1
           ),
+      _vm._v(" "),
+      _c("Modal", {
+        class: _vm.modal ? "d-block" : "",
+        attrs: {
+          warning:
+            "It is not possible to add products from other restaurants, Please empty your cart first",
+        },
+        on: {
+          close: function ($event) {
+            _vm.modal = false
+          },
+        },
+      }),
     ],
     1
   )

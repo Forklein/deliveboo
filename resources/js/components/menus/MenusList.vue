@@ -18,6 +18,11 @@
       </div>
       <Cart v-if="cart" :carts="cart" />
     </div>
+    <Modal
+      :class="modal ? 'd-block' : ''"
+      :warning="'It is not possible to add products from other restaurants, Please empty your cart first'"
+      @close="modal = false"
+    />
   </section>
 </template>
 
@@ -25,6 +30,7 @@
 import MenuCard from "./MenuCard.vue";
 import Cart from "../utilities/Cart.vue";
 import Loader from "../utilities/Loader.vue";
+import Modal from "../utilities/Modal.vue";
 
 export default {
   name: "MenusList",
@@ -32,10 +38,12 @@ export default {
     MenuCard,
     Cart,
     Loader,
+    Modal,
   },
   data() {
     return {
       isLoading: false,
+      modal: false,
       cart: [],
       plates: [],
       restaurantName: "",
@@ -47,8 +55,7 @@ export default {
       if (this.cart.length) {
         let notFound = true;
         if (this.cart[0].restaurant !== data.restaurant) {
-          alert("Il tuo carrello sarà svuotato");
-          this.cart = [];
+          this.modal = true;
           notFound = false;
         }
         this.cart.forEach((i, index) => {
