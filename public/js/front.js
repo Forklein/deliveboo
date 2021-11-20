@@ -31298,7 +31298,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n#menus-list[data-v-6eeccd3c] {\n  background: #e9dfee;\n}\nh2[data-v-6eeccd3c] {\n  color: #440264;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n#menus-list[data-v-6eeccd3c] {\n  background: #e9dfee;\n}\n#menus-list .my-text-shadow[data-v-6eeccd3c] {\n  text-shadow: 3px 3px 5px #969696;\n  color: #007e8a;\n}\nh2[data-v-6eeccd3c] {\n  color: #440264;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -65739,21 +65739,14 @@ var render = function () {
     { staticClass: "pt-5 pb-4", attrs: { id: "menus-list" } },
     [
       _c("div", { staticClass: "d-flex justify-content-center" }, [
-        _c(
-          "span",
-          {
-            staticClass:
-              "rounded-pill p-2 bg-lightjasmine h1 text-center shadow-lg",
-          },
-          [
-            _vm._v(
-              'Menu "' +
-                _vm._s(_vm.restaurantName) +
-                '" - Plates: ' +
-                _vm._s(_vm.totalPlates)
-            ),
-          ]
-        ),
+        _c("span", { staticClass: "p-3 h1 my-text-shadow text-center" }, [
+          _vm._v(
+            'Menu "' +
+              _vm._s(_vm.restaurantName) +
+              '" - Plates: ' +
+              _vm._s(_vm.totalPlates)
+          ),
+        ]),
       ]),
       _vm._v(" "),
       _vm.isLoading

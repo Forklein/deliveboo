@@ -1,7 +1,7 @@
 <template>
   <section id="menus-list" class="pt-5 pb-4">
     <div class="d-flex justify-content-center">
-      <span class="rounded-pill p-2 bg-lightjasmine h1 text-center shadow-lg"
+      <span class="p-3 h1 my-text-shadow text-center"
         >Menu "{{ restaurantName }}" - Plates: {{ totalPlates }}</span
       >
     </div>
@@ -97,9 +97,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../../sass/_variables.scss";
+
 /* **************************** */
 #menus-list {
   background: $ourLightIndigo;
+  .my-text-shadow {
+    text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
+    color: $oxfordBlue;
+  }
 }
 
 h2 {
