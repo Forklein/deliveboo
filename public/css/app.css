@@ -10068,11 +10068,11 @@ body {
 }
 
 .bg-jasmine {
-  background-color: #FCB750;
+  background-color: #e9dfee;
 }
 
 .bg-lightjasmine {
-  background-color: #f3d7a2;
+  background-color: #e9dfee;
 }
 
 /* Generics */
@@ -10128,25 +10128,25 @@ nav {
 .bg-dash-left a:hover {
   text-decoration: none;
   color: #000;
-  background-color: #FCB750;
+  background-color: #e9dfee;
 }
 .bg-dash-left a .side-link-bg {
   font-size: 17px;
   padding: 10px;
 }
 .bg-dash-left a .side-link-bg:hover {
-  background-color: #FCB750;
+  background-color: #e9dfee;
   color: #007e8a;
 }
 
 .active {
   text-decoration: none;
   color: #007e8a;
-  background-color: #FCB750;
+  background-color: #e9dfee;
 }
 .active .side-link-bg {
   color: #007e8a;
-  background-color: #FCB750;
+  background-color: #e9dfee;
 }
 
 /* CLASSI CAROSELLO FINANCE */
@@ -10305,7 +10305,7 @@ html {
 }
 
 #main-menu {
-  background: #FCB750;
+  background: #e9dfee;
 }
 #main-menu #logo {
   height: 60px;

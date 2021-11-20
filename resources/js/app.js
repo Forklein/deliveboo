@@ -7,7 +7,5 @@
 require('./bootstrap');
 window.Vue = require('vue');
 import Aos from "aos";
-
-
 Vue.use(Aos.init());
 

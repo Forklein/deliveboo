@@ -31203,7 +31203,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\n.app {\n  background-color: #e9dfee;\n  padding-top: 70px;\n  min-height: 100vh;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card {\n  border-radius: 20px;\n}", ""]);
+exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\n.app {\n  background-color: #dbfbf8;\n  padding-top: 70px;\n  min-height: 100vh;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card {\n  border-radius: 20px;\n}", ""]);
 
 // exports
 
@@ -31260,7 +31260,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#our-technology[data-v-b9c20fb8],\n#about-us[data-v-b9c20fb8] {\n  background: #dbfbf8;\n}\n.card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-values[data-v-b9c20fb8] {\n  background-color: #e9dfee;\n}\n#our-values h2[data-v-b9c20fb8] {\n  color: #007e8a;\n}", ""]);
+exports.push([module.i, "#our-technology[data-v-b9c20fb8],\n#about-us[data-v-b9c20fb8] {\n  background: #e9dfee;\n}\n.card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-values[data-v-b9c20fb8] {\n  background-color: #dbfbf8;\n}\n#our-values h2[data-v-b9c20fb8] {\n  color: #007e8a;\n}", ""]);
 
 // exports
 
@@ -31298,7 +31298,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n#menus-list[data-v-6eeccd3c] {\n  background: #e9dfee;\n}\n#menus-list .my-text-shadow[data-v-6eeccd3c] {\n  text-shadow: 3px 3px 5px #969696;\n  color: #007e8a;\n}\nh2[data-v-6eeccd3c] {\n  color: #440264;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n#menus-list[data-v-6eeccd3c] {\n  background: #dbfbf8;\n}\n#menus-list .my-text-shadow[data-v-6eeccd3c] {\n  text-shadow: 3px 3px 5px #969696;\n  color: #007e8a;\n}\nh2[data-v-6eeccd3c] {\n  color: #440264;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -31355,7 +31355,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #f3d7a2;\n  height: 450px;\n}\n.card .menu-image[data-v-5ebd141e] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e],\n.card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
+exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #e9dfee;\n  height: 450px;\n}\n.card .menu-image[data-v-5ebd141e] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e],\n.card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
 
 // exports
 
@@ -31374,7 +31374,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #e9dfee;\n}\n#restaurants-list .carousel i[data-v-67b88280] {\n  color: #ED9529;\n  cursor: pointer;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
+exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #dbfbf8;\n}\n#restaurants-list .carousel i[data-v-67b88280] {\n  color: #ED9529;\n  cursor: pointer;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
 
 // exports
 
