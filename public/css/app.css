@@ -10282,6 +10282,10 @@ html {
   color: black;
 }
 
+.darkmode-toggle {
+  z-index: 10;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

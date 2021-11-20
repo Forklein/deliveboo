@@ -7,8 +7,8 @@
         class="container bg-lightjasmine border-custom shadow-lg p-5"
       >
         <div class="row my-3">
-          <div class="col-8 container-fluid">
-            <div class="form-group col-6">
+          <div class="col-12 col-md-6 container-fluid row">
+            <div class="form-group col-12">
               <label for="name">Name</label>
               <input
                 type="text"
@@ -17,7 +17,7 @@
                 id="name"
               />
             </div>
-            <div class="form-group col-6">
+            <div class="form-group col-12">
               <label for="surname">Surname</label>
               <input
                 type="text"
@@ -26,7 +26,7 @@
                 id="surname"
               />
             </div>
-            <div class="form-group col-6">
+            <div class="form-group col-12">
               <label for="address">Address</label>
               <input
                 type="text"
@@ -35,7 +35,7 @@
                 id="address"
               />
             </div>
-            <div class="form-group col-6">
+            <div class="form-group col-12">
               <label for="phone">Phone</label>
               <input
                 type="phone"
@@ -44,7 +44,7 @@
                 id="phone"
               />
             </div>
-            <div class="form-group col-6">
+            <div class="form-group col-12">
               <label for="email">Email address</label>
               <input
                 type="email"
@@ -53,15 +53,8 @@
                 id="email"
               />
             </div>
-            <button
-              type="button"
-              @click="createOrder"
-              class="btn rounded-pill text-white"
-            >
-              Complete Order
-            </button>
           </div>
-          <div class="col-4 my-auto">
+          <div class="col-12 col-md-6 my-auto">
             <div class="card p-4">
               <div>
                 <p>Hi, {{ name }} {{ surname }}</p>
@@ -96,6 +89,13 @@
               />
             </div>
           </div>
+          <button
+              type="button"
+              @click="createOrder"
+              class="btn rounded-pill text-white my-4"
+            >
+              Complete Order
+            </button>
         </div>
       </div>
       <div

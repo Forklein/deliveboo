@@ -65746,7 +65746,7 @@ var render = function () {
                     "div",
                     {
                       key: index,
-                      staticClass: "col-12 col-sm-6 col-md-4 mb-5",
+                      staticClass: "col-12 col-md-6 col-lg-4 mb-5",
                     },
                     [
                       _c("MenuCard", {
@@ -65825,159 +65825,153 @@ var render = function () {
                 },
                 [
                   _c("div", { staticClass: "row my-3" }, [
-                    _c("div", { staticClass: "col-8 container-fluid" }, [
-                      _c("div", { staticClass: "form-group col-6" }, [
-                        _c("label", { attrs: { for: "name" } }, [
-                          _vm._v("Name"),
+                    _c(
+                      "div",
+                      { staticClass: "col-12 col-md-6 container-fluid row" },
+                      [
+                        _c("div", { staticClass: "form-group col-12" }, [
+                          _c("label", { attrs: { for: "name" } }, [
+                            _vm._v("Name"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.name,
+                                expression: "name",
+                              },
+                            ],
+                            staticClass: "form-control border-custom",
+                            attrs: { type: "text", id: "name" },
+                            domProps: { value: _vm.name },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.name = $event.target.value
+                              },
+                            },
+                          }),
                         ]),
                         _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.name,
-                              expression: "name",
+                        _c("div", { staticClass: "form-group col-12" }, [
+                          _c("label", { attrs: { for: "surname" } }, [
+                            _vm._v("Surname"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.surname,
+                                expression: "surname",
+                              },
+                            ],
+                            staticClass: "form-control border-custom",
+                            attrs: { type: "text", id: "surname" },
+                            domProps: { value: _vm.surname },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.surname = $event.target.value
+                              },
                             },
-                          ],
-                          staticClass: "form-control border-custom",
-                          attrs: { type: "text", id: "name" },
-                          domProps: { value: _vm.name },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.name = $event.target.value
-                            },
-                          },
-                        }),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group col-6" }, [
-                        _c("label", { attrs: { for: "surname" } }, [
-                          _vm._v("Surname"),
+                          }),
                         ]),
                         _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.surname,
-                              expression: "surname",
+                        _c("div", { staticClass: "form-group col-12" }, [
+                          _c("label", { attrs: { for: "address" } }, [
+                            _vm._v("Address"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.address,
+                                expression: "address",
+                              },
+                            ],
+                            staticClass: "form-control border-custom",
+                            attrs: { type: "text", id: "address" },
+                            domProps: { value: _vm.address },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.address = $event.target.value
+                              },
                             },
-                          ],
-                          staticClass: "form-control border-custom",
-                          attrs: { type: "text", id: "surname" },
-                          domProps: { value: _vm.surname },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.surname = $event.target.value
-                            },
-                          },
-                        }),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group col-6" }, [
-                        _c("label", { attrs: { for: "address" } }, [
-                          _vm._v("Address"),
+                          }),
                         ]),
                         _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.address,
-                              expression: "address",
+                        _c("div", { staticClass: "form-group col-12" }, [
+                          _c("label", { attrs: { for: "phone" } }, [
+                            _vm._v("Phone"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.phone,
+                                expression: "phone",
+                              },
+                            ],
+                            staticClass: "form-control border-custom",
+                            attrs: { type: "phone", id: "phone" },
+                            domProps: { value: _vm.phone },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.phone = $event.target.value
+                              },
                             },
-                          ],
-                          staticClass: "form-control border-custom",
-                          attrs: { type: "text", id: "address" },
-                          domProps: { value: _vm.address },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.address = $event.target.value
-                            },
-                          },
-                        }),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group col-6" }, [
-                        _c("label", { attrs: { for: "phone" } }, [
-                          _vm._v("Phone"),
+                          }),
                         ]),
                         _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.phone,
-                              expression: "phone",
+                        _c("div", { staticClass: "form-group col-12" }, [
+                          _c("label", { attrs: { for: "email" } }, [
+                            _vm._v("Email address"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.mail,
+                                expression: "mail",
+                              },
+                            ],
+                            staticClass: "form-control border-custom",
+                            attrs: { type: "email", id: "email" },
+                            domProps: { value: _vm.mail },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.mail = $event.target.value
+                              },
                             },
-                          ],
-                          staticClass: "form-control border-custom",
-                          attrs: { type: "phone", id: "phone" },
-                          domProps: { value: _vm.phone },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.phone = $event.target.value
-                            },
-                          },
-                        }),
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "form-group col-6" }, [
-                        _c("label", { attrs: { for: "email" } }, [
-                          _vm._v("Email address"),
+                          }),
                         ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.mail,
-                              expression: "mail",
-                            },
-                          ],
-                          staticClass: "form-control border-custom",
-                          attrs: { type: "email", id: "email" },
-                          domProps: { value: _vm.mail },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.mail = $event.target.value
-                            },
-                          },
-                        }),
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn rounded-pill text-white",
-                          attrs: { type: "button" },
-                          on: { click: _vm.createOrder },
-                        },
-                        [_vm._v("\n            Complete Order\n          ")]
-                      ),
-                    ]),
+                      ]
+                    ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-4 my-auto" }, [
+                    _c("div", { staticClass: "col-12 col-md-6 my-auto" }, [
                       _c("div", { staticClass: "card p-4" }, [
                         _c("div", [
                           _c("p", [
@@ -66054,6 +66048,16 @@ var render = function () {
                         }),
                       ]),
                     ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn rounded-pill text-white my-4",
+                        attrs: { type: "button" },
+                        on: { click: _vm.createOrder },
+                      },
+                      [_vm._v("\n            Complete Order\n          ")]
+                    ),
                   ]),
                 ]
               )
@@ -83662,11 +83666,11 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 new darkmode_js__WEBPACK_IMPORTED_MODULE_5___default.a().showWidget();
 var options = {
-  bottom: '64px',
+  bottom: '20px',
   // default: '32px'
   right: 'unset',
   // default: '32px'
-  left: '32px',
+  left: '20px',
   // default: 'unset'
   time: '0.5s',
   // default: '0.3s'
