@@ -32,6 +32,6 @@ class SendNewMail extends Mailable
     public function build()
     {
         $order = $this->order;
-        return $this->view('mail.body', compact('order'));
+        return $this->markdown('mail.body', compact('order'));
     }
 }
