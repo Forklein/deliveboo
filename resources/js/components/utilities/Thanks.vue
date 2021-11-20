@@ -14,10 +14,10 @@
         <h5>Order number #{{ orderId }}</h5>
       </div>
       <div class="card-body">
-        <p>{{ order.name }}</p>
-        <p>{{ order.surname }}</p>
-        <p>{{ order.mail }}</p>
-        <p><b>Total</b>{{ order.total.toFixed(2) }}€</p>
+        <p>Name: {{ order.name }}</p>
+        <p>Surname: {{ order.surname }}</p>
+        <p>Email: {{ order.mail }}</p>
+        <p><b>Total: </b>{{ order.total.toFixed(2) }}€</p>
       </div>
     </div>
   </div>
@@ -29,6 +29,20 @@ export default {
   props: ["order", "orderId"],
   created() {
     localStorage.clear();
+    this.$confetti.start({
+      particles: [
+        {
+          type: "heart",
+        },
+        {
+          size: 15,
+        },
+      ],
+      defaultColors: ["DodgerBlue", "Violet"],
+    });
+    setTimeout(() => {
+      this.$confetti.stop();
+    }, 2500);
   },
 };
 </script>

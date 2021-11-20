@@ -10,6 +10,7 @@ import vueBraintree from 'vue-braintree';
 import VueCarousel from 'vue-carousel';
 import Aos from "aos";
 import Darkmode from 'darkmode-js';
+import VueConfetti from 'vue-confetti';
 
 new Darkmode().showWidget();
 
@@ -25,10 +26,10 @@ const options = {
     saveInCookies: false, // default: true,
     label: '🌓', // default: ''
     autoMatchOsTheme: true // default: true
-  }
-  
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
 
 
 Vue.use(Aos.init({
@@ -36,6 +37,7 @@ Vue.use(Aos.init({
 }));
 Vue.use(vueBraintree);
 Vue.use(VueCarousel);
+Vue.use(VueConfetti);
 
 const app = new Vue({
     el: '#root',
