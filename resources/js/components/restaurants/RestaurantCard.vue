@@ -2,7 +2,7 @@
   <div class="card shadow my-5 p-4 border-0 d-flex flex-column">
     <div
       v-if="user.image"
-      class="menu-image"
+      class="menu-image border-custom"
       :style="getBackground(user.image)"
     ></div>
     <img

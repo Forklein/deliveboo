@@ -66278,7 +66278,7 @@ var render = function () {
     [
       _vm.user.image
         ? _c("div", {
-            staticClass: "menu-image",
+            staticClass: "menu-image border-custom",
             style: _vm.getBackground(_vm.user.image),
           })
         : _c("img", {
