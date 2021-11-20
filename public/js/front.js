@@ -66447,7 +66447,7 @@ var render = function () {
                     staticClass: "form-check-label pr-2",
                     attrs: { for: "defaultCheck1" },
                   },
-                  [_vm._v("\n          " + _vm._s(category) + "\n        ")]
+                  [_c("b", [_vm._v(_vm._s(category))])]
                 ),
               ])
             }),

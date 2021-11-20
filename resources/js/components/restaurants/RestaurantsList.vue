@@ -29,7 +29,7 @@
             :value="category"
           />
           <label class="form-check-label pr-2" for="defaultCheck1">
-            {{ category }}
+            <b>{{ category }}</b>
           </label>
         </div>
       </div>
