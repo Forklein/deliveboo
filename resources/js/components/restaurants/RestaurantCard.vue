@@ -2,27 +2,29 @@
   <div class="card shadow my-5 p-4 border-0 d-flex flex-column">
     <div
       v-if="user.image"
-      class="menu-image border-custom"
+      class="menu-image border-custom mb-4"
       :style="getBackground(user.image)"
     ></div>
     <img
       v-else
       src="img/restaurant-placeholder.png"
-      class="restaurant-image mb-4"
+      class="restaurant-image"
       alt="restaurant-image"
     />
     <h4 class="card-title mb-3">
       {{ user.restaurant_name }}
     </h4>
-    <address class="mb-1 text-break" style="display: inline">
-      <i class="icon mr-2 fas fa-map-marker-alt"></i>
-      {{ user.address }} - {{ user.city }} - {{ user.zip }}
+    <address class="mb-4 text-break" style="display: inline">
+      <p>
+        <i class="icon mr-2 fas fa-map-marker-alt"></i> {{ user.address }} -
+        {{ user.city }} - {{ user.zip }}
+      </p>
+      <p class="m-0 pt-1 text-break">
+        <i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}
+      </p>
     </address>
-    <p class="m-0 pt-1 text-break">
-      <i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}
-    </p>
     <router-link
-      class="btn btn-primary"
+      class="btn btn-primary rounded-pill"
       :to="{ name: 'MenusList', params: { id: user.id } }"
       >Show Menu</router-link
     >

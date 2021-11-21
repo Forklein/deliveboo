@@ -2375,8 +2375,151 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Footer"
+  name: "Footer",
+  data: function data() {
+    return {
+      isHidden: true
+    };
+  },
+  methods: {
+    showFaq: function showFaq() {
+      this.isHidden = !this.isHidden;
+    },
+    closeFaq: function closeFaq() {
+      this.isHidden = true;
+    }
+  }
 });
 
 /***/ }),
@@ -2392,6 +2535,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_works_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/works.js */ "./resources/js/components/data/works.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2468,12 +2612,135 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Header",
   data: function data() {
     return {
       search: "",
-      restaurants: []
+      restaurants: [],
+      works: _data_works_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+      isHidden: true
     };
   },
   methods: {
@@ -2500,6 +2767,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    learnMore: function learnMore() {
+      this.isHidden = false;
+    },
+    readLess: function readLess() {
+      this.isHidden = true;
     }
   }
 });
@@ -2516,8 +2789,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurants/RestaurantsList.vue */ "./resources/js/components/restaurants/RestaurantsList.vue");
-/* harmony import */ var _data_works_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/works.js */ "./resources/js/components/data/works.js");
-/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
+/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
 //
 //
 //
@@ -2742,35 +3014,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   components: {
     RestaurantsList: _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      works: _data_works_js__WEBPACK_IMPORTED_MODULE_1__["default"],
       isLoading: false
     };
   },
@@ -3375,6 +3628,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -31203,7 +31458,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\n.app {\n  background-color: #dbfbf8;\n  padding-top: 70px;\n  min-height: 100vh;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card {\n  border-radius: 20px;\n}", ""]);
+exports.push([module.i, "* {\n  font-family: Arial, Helvetica, sans-serif;\n}\n.app {\n  background-color: #e9dfee;\n  min-height: 100vh;\n}\np {\n  font-size: 17px;\n}\na,\na:hover {\n  text-decoration: none;\n  color: currentColor;\n}\nh2 {\n  color: #440264;\n  font-size: 38px;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card {\n  border-radius: 20px;\n}", ""]);
 
 // exports
 
@@ -31222,7 +31477,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "footer[data-v-61a7c374] {\n  background: #440264;\n  font-size: 14px;\n  line-height: 27px;\n}\nfooter #logo[data-v-61a7c374] {\n  height: 80px;\n}\nfooter #social-networks i[data-v-61a7c374] {\n  font-size: 25px;\n}", ""]);
+exports.push([module.i, "footer #links[data-v-61a7c374] {\n  background: #440264;\n  font-size: 14px;\n  line-height: 27px;\n}\nfooter #links a[data-v-61a7c374], footer #links h6[data-v-61a7c374], footer #links small[data-v-61a7c374] {\n  color: white;\n}\nfooter #links #logo[data-v-61a7c374] {\n  height: 80px;\n}\nfooter #links #social-networks i[data-v-61a7c374] {\n  font-size: 25px;\n}\n#faq i[data-v-61a7c374] {\n  font-size: 17px;\n}\n#faq a.question[data-v-61a7c374] {\n  font-size: 17px;\n  color: #007e8a;\n}\n#faq .collapse[data-v-61a7c374] {\n  font-size: 15px;\n}\n.hidden[data-v-61a7c374] {\n  display: none;\n}", ""]);
 
 // exports
 
@@ -31241,7 +31496,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "header[data-v-1f42fb90] {\n  height: 900px;\n  padding-top: 175px;\n  background-image: url(\"/img/jumbotron.jpg\");\n  background-position: center;\n  background-attachment: fixed;\n  background-size: 100% 100%;\n}\nheader .search-bar[data-v-1f42fb90]:hover {\n  background-color: #00CCBC;\n  color: white;\n}\nheader .col-8 a[data-v-1f42fb90] {\n  background-color: #00CCBC;\n}\nheader h1[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 44px;\n}\nheader p[data-v-1f42fb90] {\n  color: #007e8a;\n  font-size: 20px;\n  cursor: pointer;\n}\nheader .search[data-v-1f42fb90] {\n  margin-top: 100px;\n}", ""]);
+exports.push([module.i, "header[data-v-1f42fb90] {\n  background-image: url(\"/img/jumbotron.jpg\");\n  background-position: center;\n  background-size: cover;\n}\nheader .jumbotron[data-v-1f42fb90] {\n  height: 640px;\n  background: transparent;\n}\nh1[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 40px;\n}\n.jumbotron-text[data-v-1f42fb90] {\n  max-width: 48%;\n  font-size: 17px;\n  line-height: 27px;\n  color: #007e8a;\n  cursor: pointer;\n}\n.search[data-v-1f42fb90] {\n  margin-top: 100px;\n}\n.search input[data-v-1f42fb90] {\n  border-radius: 20px 0 0 20px;\n}\n.search .search-bar[data-v-1f42fb90]:hover {\n  background-color: #00CCBC;\n  color: white;\n}\n.search .search-btn[data-v-1f42fb90] {\n  background: #00CCBC;\n  border-radius: 0 20px 20px 0;\n  border: 1px solid #007e8a;\n}\n#about-us[data-v-1f42fb90] {\n  background: #e9dfee;\n}\n.card h3[data-v-1f42fb90],\n.card h4[data-v-1f42fb90] {\n  color: #440264;\n}\n.card p[data-v-1f42fb90] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-1f42fb90] {\n  font-size: 16px;\n  line-height: 18px;\n}\n.hidden[data-v-1f42fb90] {\n  display: none;\n}", ""]);
 
 // exports
 
@@ -31260,7 +31515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#our-technology[data-v-b9c20fb8],\n#about-us[data-v-b9c20fb8] {\n  background: #e9dfee;\n}\n.card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-values[data-v-b9c20fb8] {\n  background-color: #dbfbf8;\n}\n#our-values h2[data-v-b9c20fb8] {\n  color: #007e8a;\n}", ""]);
+exports.push([module.i, ".card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-technology[data-v-b9c20fb8] {\n  background: #dbfbf8;\n}\n#overview img.icon[data-v-b9c20fb8] {\n  width: 120px;\n}\n#overview h3[data-v-b9c20fb8] {\n  font-size: 40px;\n}\n#overview .logo[data-v-b9c20fb8] {\n  height: 80px;\n}\n#overview p[data-v-b9c20fb8] {\n  font-size: 20px;\n}\n#newsletter[data-v-b9c20fb8] {\n  background: #007e8a;\n}\n#newsletter h3[data-v-b9c20fb8] {\n  font-size: 32px;\n}\n#newsletter input[data-v-b9c20fb8] {\n  border-radius: 20px 0 0 20px;\n}\n#newsletter button[data-v-b9c20fb8] {\n  border-radius: 0 20px 20px 0;\n  background: #00CCBC;\n}\n#newsletter img[data-v-b9c20fb8] {\n  max-height: 160px;\n}", ""]);
 
 // exports
 
@@ -31279,7 +31534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n.card-image[data-v-497ea7f5] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n.card[data-v-497ea7f5] {\n  background: #f6dbb2;\n  border-radius: 20px;\n  height: 650px;\n}\n.card h4[data-v-497ea7f5] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-497ea7f5] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-497ea7f5],\n.card address[data-v-497ea7f5] {\n  font-size: 14px;\n  color: #3b3b3b;\n}\n.cart-item[data-v-497ea7f5] {\n  position: absolute;\n  height: 24px;\n  width: 24px;\n  top: -10px;\n  right: -10px;\n}\n.card-image[data-v-497ea7f5] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -31298,7 +31553,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "/* **************************** */\n#menus-list[data-v-6eeccd3c] {\n  background: #dbfbf8;\n}\n#menus-list .my-text-shadow[data-v-6eeccd3c] {\n  text-shadow: 3px 3px 5px #969696;\n  color: #007e8a;\n}\nh2[data-v-6eeccd3c] {\n  color: #440264;\n}\n\n/* **************************** */", ""]);
+exports.push([module.i, "/* **************************** */\n#menus-list[data-v-6eeccd3c] {\n  background: #e9dfee;\n}\n#menus-list .my-text-shadow[data-v-6eeccd3c] {\n  text-shadow: 3px 3px 5px #969696;\n  color: #007e8a;\n}\nh2[data-v-6eeccd3c] {\n  color: #440264;\n}\n\n/* **************************** */", ""]);
 
 // exports
 
@@ -31318,6 +31573,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".opacity[data-v-162ce9bc] {\n  opacity: 0.5;\n  height: 100vh;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "nav[data-v-c5a493cc] {\n  z-index: 2;\n}", ""]);
 
 // exports
 
@@ -31355,7 +31629,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #e9dfee;\n  height: 450px;\n}\n.card .menu-image[data-v-5ebd141e] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e],\n.card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
+exports.push([module.i, ".card[data-v-5ebd141e] {\n  background: #f6dbb2;\n  height: 450px;\n}\n.card .menu-image[data-v-5ebd141e] {\n  height: 300px;\n  background-repeat: no-repeat;\n  background-size: 100% 100%;\n}\n.card h4[data-v-5ebd141e] {\n  color: #ED9529;\n  font-weight: bolder;\n  text-align: center !important;\n}\n.card .icon[data-v-5ebd141e] {\n  font-size: 20px;\n  color: #ED9529;\n  vertical-align: baseline;\n}\n.card p[data-v-5ebd141e],\n.card address[data-v-5ebd141e] {\n  font-size: 14px;\n  color: #3b3b3b;\n}", ""]);
 
 // exports
 
@@ -31374,7 +31648,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #dbfbf8;\n}\n#restaurants-list .carousel i[data-v-67b88280] {\n  color: #ED9529;\n  cursor: pointer;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
+exports.push([module.i, "#restaurants-list[data-v-67b88280] {\n  background: #e9dfee;\n}\n#restaurants-list .carousel i[data-v-67b88280] {\n  color: #ED9529;\n  cursor: pointer;\n}\nh2[data-v-67b88280] {\n  color: #440264;\n}", ""]);
 
 // exports
 
@@ -63915,6 +64189,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/notfound.vue?vue&type=style&index=0&lang=scss&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/pages/notfound.vue?vue&type=style&index=0&lang=scss& ***!
@@ -65015,113 +65319,359 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", [
+    _c(
+      "section",
+      {
+        staticClass: "pt-5 pb-4",
+        class: { hidden: _vm.isHidden },
+        attrs: { id: "faq" },
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("a", { attrs: { href: "#links" }, on: { click: _vm.closeFaq } }, [
+            _c("i", { staticClass: "fas fa-times text-secondary" }),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+        ]),
+      ]
+    ),
+    _vm._v(" "),
+    _c("section", { staticClass: "pt-4 pb-2", attrs: { id: "links" } }, [
+      _c("div", { staticClass: "container text-white" }, [
+        _c("img", {
+          staticClass: "mb-3",
+          attrs: {
+            src: "img/complete-logo.png",
+            alt: "logo-image",
+            id: "logo",
+          },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col", attrs: { id: "about" } }, [
+            _c("ul", { staticClass: "list-unstyled" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { attrs: { href: "#faq" }, on: { click: _vm.showFaq } },
+                  [_vm._v("FAQ")]
+                ),
+              ]),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("ul"),
+          _vm._v(" "),
+          _vm._m(7),
+        ]),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "pt-4 pb-2" }, [
-      _c(
-        "div",
-        { staticClass: "container text-white", attrs: { id: "links" } },
-        [
-          _c("img", {
-            staticClass: "mb-3",
+    return _c("div", { staticClass: "table shadow-lg" }, [
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
             attrs: {
-              src: "img/complete-logo.png",
-              alt: "logo-image",
-              id: "logo",
+              "data-toggle": "collapse",
+              href: "#q1",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q1",
             },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col", attrs: { id: "about" } }, [
-              _c("ul", { staticClass: "list-unstyled" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#about-us" } }, [
-                    _vm._v("About us"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#our-technology" } }, [
-                    _vm._v("Our Technology"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#our-values" } }, [
-                    _vm._v("Our values"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#work-with-us" } }, [
-                    _vm._v("Work with us"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#our-company" } }, [
-                    _vm._v("Our Company"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Download the app"),
-                    _c("i", { staticClass: "mx-2 fas fa-download" }),
-                  ]),
-                ]),
-              ]),
+          },
+          [
+            _vm._v(
+              "\n            Do I need an FSA rating to join Deliveroo?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q1" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              Yes, we need you to provide proof that your restaurant has a\n              minimum standard of food hygiene."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              We reserve the right to put your application on hold until you\n              can obtain proof of your food hygiene standards.\n            "
+              ),
             ]),
-            _vm._v(" "),
-            _c("ul"),
-            _vm._v(" "),
-            _c("div", { staticClass: "col", attrs: { id: "contacts" } }, [
-              _c("h6", { staticClass: "mb-1 font-weight-bold" }, [
-                _vm._v("Contacts"),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "mx-2 fas fa-envelope" }),
-                    _vm._v("support@deliveroo.it"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "mx-2 fas fa-map-marker-alt" }),
-                    _vm._v(
-                      "Deliveroo Italy\n              S.R.L.Via Carlo Bo 11 Milano 20143\n            "
-                    ),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("hr", { staticClass: "border-white bg-white" }),
-              _vm._v(" "),
-              _c("div", { attrs: { id: "social-networks" } }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "mx-2 fab fa-facebook" }),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "mx-2 fab fa-twitter" }),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "mx-2 fab fa-instagram" }),
-                ]),
-              ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q2",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q2",
+            },
+          },
+          [
+            _vm._v(
+              "\n            New to running a delivery-only restaurant?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q2" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              Government-imposed limitations due to COVID-19 mean restaurants\n              are likely to require more deliveries to maintain similar\n              profits."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              Read our guidance for restaurants adapting to a smaller dine-in\n              capacity and greater demand for takeaway deliveries following\n              COVID-19.\n            "
+              ),
             ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q3",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q3",
+            },
+          },
+          [
+            _vm._v(
+              "\n            Our riders or your own deliveries?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q3" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              You can choose to use Deliveroo's world-class logistics network\n              or your own delivery drivers."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              We extensively train our riders, who can be tracked in real time\n              when they're carrying your orders. Your customers can also see\n              and interact with our riders, meaning fewer undelivered orders\n              and more happy customers.\n            "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q4",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q4",
+            },
+          },
+          [_vm._v("\n            Can I send my own menu images?\n          ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q4" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              We recommend using as many high quality images as possible on\n              your Deliveroo menu. That's why we offer a professional\n              photography service as part of some of our packages."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              You can also upload your own imagery for your menu and\n              restaurant 'shopfront' on Deliveroo. All images are reviewed\n              against our photography guidelines."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              Find out more about uploading your imagery.\n            "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q5",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q5",
+            },
+          },
+          [
+            _vm._v(
+              "\n            What’s the difference between Table Service, Pickup and Delivery?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q5" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              It’s up to you which you choose, but we know that your customers\n              will love having the option to get Delivery at home, or use\n              Pickup to collect orders direct from you when they’re out."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              Our newest product, Table Service allows customers to use the\n              Deliveroo app to dine-in at your restaurant, contact-free.\n            "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#hero" } }, [_vm._v("About us")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#our-technology" } }, [
+        _vm._v("Our Technology"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [_vm._v(" Terms & Conditions ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [_vm._v(" Privacy policy ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [_vm._v(" Cookies ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [
+        _vm._v("Download the app"),
+        _c("i", { staticClass: "mx-2 fas fa-download" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col" }, [
+      _c("h6", { staticClass: "mb-1 font-weight-bold" }, [_vm._v("Contacts")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-unstyled" }, [
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "mx-2 fas fa-envelope" }),
+            _vm._v("support@deliveboo.it"),
           ]),
-        ]
-      ),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "mx-2 fas fa-map-marker-alt" }),
+            _vm._v(
+              "Deliveboo Italy\n                S.R.L.Via Carlo Bo 11 Milano 20143\n              "
+            ),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("hr", { staticClass: "border-white bg-white" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "mb-4", attrs: { id: "social-networks" } }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "mx-2 fab fa-facebook" }),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "mx-2 fab fa-twitter" }),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "mx-2 fab fa-instagram" }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("small", [
+        _c("i", { staticClass: "mr-2 far fa-copyright" }),
+        _vm._v("2021 Deliveboo"),
+      ]),
     ])
   },
 ]
@@ -65147,94 +65697,183 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("header", [
-    _c("div", { staticClass: "opacity" }, [
-      _c("div", { staticClass: "container" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "search col-6 mx-auto" }, [
-            _c("div", { staticClass: "input-group" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.search,
-                    expression: "search",
-                  },
-                ],
-                staticClass: "form-control border-custom",
-                attrs: {
-                  type: "search",
-                  placeholder: "Search",
-                  "data-toggle": "dropdown",
-                },
-                domProps: { value: _vm.search },
-                on: {
-                  keyup: _vm.searchRestaurant,
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.search = $event.target.value
-                  },
-                },
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "btn rounded-pill btn-outline-primary text-white",
-                  attrs: { type: "button", id: "dropdownMenuButton" },
-                  on: { click: _vm.searchRestaurant },
-                },
-                [_vm._v("\n              Search\n            ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "dropdown-menu w-100 shadow" },
-                _vm._l(_vm.restaurants, function (restaurant) {
-                  return _c(
-                    "div",
+    _c(
+      "div",
+      { staticClass: "jumbotron my-0 opacity", attrs: { id: "hero" } },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("h1", { staticClass: "font-weight-bold" }, [
+            _vm._v("The Food you love at Home"),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass:
+                "mt-3 py-2 px-3 border-0 rounded-pill text-white d-block",
+              on: { click: _vm.learnMore },
+            },
+            [_c("a", { attrs: { href: "#about-us" } }, [_vm._v("Learn more")])]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "search col-6 mx-auto" }, [
+              _c("div", { staticClass: "input-group" }, [
+                _c("input", {
+                  directives: [
                     {
-                      key: restaurant.id,
-                      staticClass:
-                        "\n                  container\n                  search-bar\n                  d-flex\n                  align-items-center\n                  justify-content-between\n                ",
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.search,
+                      expression: "search",
                     },
-                    [
-                      _c(
-                        "a",
-                        {
-                          attrs: {
-                            href: "http://127.0.0.1:8000/user/" + restaurant.id,
-                          },
-                        },
-                        [
-                          _c("strong", [
-                            _vm._v(_vm._s(restaurant.restaurant_name)),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("img", {
-                        staticStyle: { width: "15%" },
-                        attrs: {
-                          src: "img/restaurant-placeholder.png",
-                          alt: "bg",
-                        },
-                      }),
-                    ]
-                  )
+                  ],
+                  staticClass: "form-control border-dark pt-1 pb-2",
+                  attrs: {
+                    type: "search",
+                    placeholder: "Search",
+                    "data-toggle": "dropdown",
+                    autocomplete: "off",
+                  },
+                  domProps: { value: _vm.search },
+                  on: {
+                    keyup: _vm.searchRestaurant,
+                    input: function ($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.search = $event.target.value
+                    },
+                  },
                 }),
-                0
-              ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "\n                btn\n                search-btn\n                btn-outline-primary\n                text-white\n              ",
+                    attrs: { type: "button", id: "dropdownMenuButton" },
+                    on: { click: _vm.searchRestaurant },
+                  },
+                  [_vm._v("\n              Search\n            ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "dropdown-menu w-100 shadow" },
+                  _vm._l(_vm.restaurants, function (restaurant) {
+                    return _c(
+                      "div",
+                      {
+                        key: restaurant.id,
+                        staticClass:
+                          "\n                  container\n                  search-bar\n                  d-flex\n                  align-items-center\n                  justify-content-between\n                ",
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href:
+                                "http://127.0.0.1:8000/user/" + restaurant.id,
+                            },
+                          },
+                          [
+                            _c("strong", [
+                              _vm._v(_vm._s(restaurant.restaurant_name)),
+                            ]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("img", {
+                          staticStyle: { width: "15%" },
+                          attrs: {
+                            src: "img/restaurant-placeholder.png",
+                            alt: "bg",
+                          },
+                        }),
+                      ]
+                    )
+                  }),
+                  0
+                ),
+              ]),
             ]),
           ]),
         ]),
-      ]),
-    ]),
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "section",
+      {
+        staticClass: "py-5",
+        class: { hidden: _vm.isHidden },
+        attrs: { id: "about-us" },
+      },
+      [
+        _c("div", { staticClass: "container justify-content-center" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                  attrs: { id: "work-with-us" },
+                },
+                [
+                  _c("img", {
+                    staticClass: "img-fluid my-2",
+                    staticStyle: { height: "130px" },
+                    attrs: {
+                      src: "img/work-with-us.png",
+                      alt: "work-with-us-image",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
+                    _vm._v("Work with us"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "ol",
+                    { staticClass: "m-0 pl-2" },
+                    _vm._l(_vm.works, function (work, index) {
+                      return _c("li", { key: index, staticClass: "m-1" }, [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(work.paragraph) +
+                            "\n              "
+                        ),
+                      ])
+                    }),
+                    0
+                  ),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "mt-3 py-2 px-3 rounded-pill text-white",
+              on: { click: _vm.readLess },
+            },
+            [_c("a", { attrs: { href: "#hero" } }, [_vm._v("Read less")])]
+          ),
+        ]),
+      ]
+    ),
   ])
 }
 var staticRenderFns = [
@@ -65242,27 +65881,105 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-8" }, [
-        _c("h1", { staticClass: "font-weight-bold" }, [
-          _vm._v("The Food you love at Home"),
-        ]),
+    return _c(
+      "p",
+      { staticClass: "jumbotron-text text-justify d-none d-md-inline-block" },
+      [
+        _vm._v(
+          "\n        Deliveroo's aim is to transform the way customers eat.\n        "
+        ),
+        _c(
+          "span",
+          { staticClass: "d-none d-lg-inline-block d-xl-inline-block" },
+          [
+            _vm._v(
+              "By constantly innovating and expanding, we offer our customers the\n          best choice and convenience and a large selection of restaurants:\n          whether you want sushi for dinner, a salad for lunch, or a brioche\n          for breakfast, we'll take care of it! In Deliveroo we know that\n          every customer has different tastes and our job is to make sure that\n          have what they want, when they want and where they want it."
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mb-5 text-center", attrs: { "data-aos": "fade-in" } },
+      [
+        _c("h2", { staticClass: "mb-2" }, [_vm._v("About us")]),
         _vm._v(" "),
-        _c("p", { staticClass: "p-2 my-3" }, [
+        _c("p", [
           _vm._v(
-            "\n            Deliveroo's aim is to transform the way customers eat. By\n            constantly innovating and expanding, we offer ours customers the\n            best choice and convenience and a large selection of restaurants:\n            whether you want sushi for dinner, a salad for lunch, or a brioche\n            for breakfast, we'll take care of it! In Deliveroo we know that\n            every customer has different tastes and our job is to make sure\n            that have what they want, when they want and where they want it.\n          "
+            "\n          By offering fast and reliable delivery, which the customer can track\n          on their mobile, Deliveroo has seen revenue growth of over 650%. Our\n          partner restaurants manage to increase their revenues by 30%,\n          creating thousands of jobs in the restaurant sector.\n        "
           ),
         ]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "p-3 rounded-pill text-white",
-            attrs: { href: "/#about-us" },
-          },
-          [_vm._v("Learn More")]
-        ),
-      ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-lg-4" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+          attrs: { id: "rider" },
+        },
+        [
+          _c("img", {
+            staticClass: "img-fluid my-2",
+            staticStyle: { height: "130px" },
+            attrs: { src: "img/rider.png", alt: "rider-image" },
+          }),
+          _vm._v(" "),
+          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
+            _vm._v("Rider"),
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n              Deliveroo prides itself on offering well-paid work and flexible\n              to the riders, who are the heart of our service. Their work\n              fuels our growth, and without them we'd not be able to deliver\n              the best dishes to our customers and help local restaurants to\n              grow. Riders have access to insurance, but we want to do more.\n              Deliveroo was the first tech company to demand an end to the\n              compromise between flexibility and security in the law of work.\n            "
+            ),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-lg-4" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+          attrs: { id: "our-company" },
+        },
+        [
+          _c("img", {
+            staticClass: "img-fluid my-2",
+            staticStyle: { height: "130px" },
+            attrs: { src: "img/our-company.png", alt: "our-company-image" },
+          }),
+          _vm._v(" "),
+          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
+            _vm._v("Our Company"),
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n              When Deliveroo founder and CEO Will Shu moved to London in 2013,\n              he found a city full of great restaurants, but few delivered.\n              So, he decided that his personal mission would be to bring the\n              best restaurants in town straight into people's homes. Food is\n              at the heart of every Deliveroo business and his mission is to\n              give customers more choice. There are great restaurants that we\n              believe everyone should be able to order from.\n            "
+            ),
+          ]),
+        ]
+      ),
     ])
   },
 ]
@@ -65296,63 +66013,9 @@ var render = function () {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _c(
-        "section",
-        {
-          staticClass: "pt-5 d-flex align-items-center",
-          attrs: { id: "about-us" },
-        },
-        [
-          _c("div", { staticClass: "container justify-content-center" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _vm._m(2),
-              _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-                    attrs: { id: "work-with-us" },
-                  },
-                  [
-                    _c("img", {
-                      staticClass: "img-fluid my-2",
-                      attrs: {
-                        src: "img/work-with-us.png",
-                        alt: "work-with-us-image",
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-                      _vm._v("Work with us"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ol",
-                      { staticClass: "m-0 pl-2" },
-                      _vm._l(_vm.works, function (work, index) {
-                        return _c("li", { key: index, staticClass: "m-1" }, [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(work.paragraph) +
-                              "\n              "
-                          ),
-                        ])
-                      }),
-                      0
-                    ),
-                  ]
-                ),
-              ]),
-            ]),
-          ]),
-        ]
-      ),
+      _vm._m(1),
+      _vm._v(" "),
+      _vm._m(2),
     ],
     1
   )
@@ -65381,7 +66044,7 @@ var staticRenderFns = [
                 _vm._v("Technology guides us"),
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "subtitle" }, [
+              _c("p", { staticClass: "text-dark" }, [
                 _vm._v(
                   "\n          We are proud to take our technology around the world. Our algorithm\n          is based on powerful predictive technology and machine learning,\n          that help optimizing the overall experience. In the last years\n          Deliveroo has managed to decrease delivery time by 20%.\n        "
                 ),
@@ -65542,80 +66205,175 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "mb-5 text-center", attrs: { "data-aos": "fade-in" } },
-      [
-        _c("h2", { staticClass: "mb-2" }, [_vm._v("About us")]),
-        _vm._v(" "),
-        _c("p", { staticClass: "subtitle" }, [
-          _vm._v(
-            "\n          By offering fast and reliable delivery, which the customer can track\n          on their mobile, Deliveroo has seen revenue growth of over 650%. Our\n          partner restaurants manage to increase their revenues by 30%,\n          creating thousands of jobs in the restaurant sector.\n        "
-          ),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-4" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-          attrs: { id: "rider" },
-        },
-        [
-          _c("img", {
-            staticClass: "img-fluid my-2",
-            attrs: { src: "img/rider.png", alt: "rider-image" },
-          }),
-          _vm._v(" "),
-          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-            _vm._v("Rider"),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n              Deliveroo prides itself on offering well-paid work and flexible\n              to the riders, who are the heart of our service. Their work\n              fuels our growth, and without them we'd not be able to deliver\n              the best dishes to our customers and help local restaurants to\n              grow. Riders have access to insurance, but we want to do more.\n              Deliveroo was the first tech company to demand an end to the\n              compromise between flexibility and security in the law of work.\n            "
+    return _c("section", { staticClass: "py-5", attrs: { id: "overview" } }, [
+      _c("div", { staticClass: "container justify-content-center" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "row pb-5 d-flex justify-content-center align-items-center",
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n            col-6 col-md-4\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
+              },
+              [
+                _c("img", {
+                  staticClass: "icon",
+                  attrs: {
+                    src: "img/restaurant-icon.png",
+                    alt: "restaurant-icon",
+                  },
+                }),
+                _vm._v(" "),
+                _c("h3", { staticClass: "font-weight-bolder" }, [
+                  _vm._v("140.000"),
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Partner restaurants")]),
+              ]
             ),
-          ]),
-        ]
-      ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n            col-6 col-md-4\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
+              },
+              [
+                _c("img", {
+                  staticClass: "icon",
+                  attrs: { src: "img/rider-icon.png", alt: "rider-icon" },
+                }),
+                _vm._v(" "),
+                _c("h3", { staticClass: "font-weight-bolder" }, [
+                  _vm._v("100.000 +"),
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Riders in Italy and all around the world")]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n            col-6 col-md-4\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
+              },
+              [
+                _c("img", {
+                  staticClass: "icon",
+                  attrs: { src: "img/thunder-icon.png", alt: "thunder-icon" },
+                }),
+                _vm._v(" "),
+                _c("h3", { staticClass: "font-weight-bolder" }, [
+                  _vm._v("20 min"),
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Average delivery time")]),
+              ]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mt-3 d-flex justify-content-center flex-wrap" },
+          [
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo1.png", alt: "logo-RossoPomodoro" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo2.png", alt: "logo-McDonald" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo3.png", alt: "logo-LaPiadineria" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo4.png", alt: "logo-Lievità" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo5.png", alt: "logo-Temakinho" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo6.png", alt: "logo-Machai" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo7.png", alt: "logo-Daruma" },
+            }),
+          ]
+        ),
+      ]),
     ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-4" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-          attrs: { id: "our-company" },
-        },
-        [
-          _c("img", {
-            staticClass: "img-fluid my-2",
-            attrs: { src: "img/our-company.jpg", alt: "our-company-image" },
-          }),
-          _vm._v(" "),
-          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-            _vm._v("Our Company"),
+    return _c("section", { staticClass: "py-3", attrs: { id: "newsletter" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row mt-2" }, [
+          _c("div", { staticClass: "col-12 col-md-8" }, [
+            _c("h3", { staticClass: "mt-2 text-white font-weight-bolder" }, [
+              _vm._v(
+                "\n            Stay up to date on everything that happens.\n          "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-group w-75 mt-5" }, [
+              _c("input", {
+                staticClass: "form-control pl-4",
+                attrs: {
+                  type: "text",
+                  placeholder: "Enter your email address...",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group-append" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "px-3 border-0 text-white font-weight-bolder",
+                    attrs: { type: "submit" },
+                  },
+                  [_vm._v("\n                Subscribe\n              ")]
+                ),
+              ]),
+            ]),
           ]),
           _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n              When Deliveroo founder and CEO Will Shu moved to London in 2013,\n              he found a city full of great restaurants, but few delivered.\n              So, he decided that his personal mission would be to bring the\n              best restaurants in town straight into people's homes. Food is\n              at the heart of every Deliveroo business and his mission is to\n              give customers more choice. There are great restaurants that we\n              believe everyone should be able to order from.\n            "
-            ),
-          ]),
-        ]
-      ),
+          _c(
+            "div",
+            {
+              staticClass: "col-12 col-md-4 mt-4 d-flex justify-content-center",
+            },
+            [
+              _c("img", {
+                attrs: {
+                  src: "img/newsletter-image.png",
+                  alt: "newsletter-image",
+                },
+              }),
+            ]
+          ),
+        ]),
+      ]),
     ])
   },
 ]
@@ -66156,20 +66914,20 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { attrs: { id: "contacts" } }, [
-    _c("div", { staticClass: "container" }, [
+  return _c("section", { staticClass: "py-5", attrs: { id: "contacts" } }, [
+    _c("div", { staticClass: "container pt-5" }, [
       _c(
         "div",
         { staticClass: "row justify-content-center" },
         _vm._l(_vm.contacts, function (contact) {
           return _c(
             "div",
-            { key: contact.id, staticClass: "col-md-6 my-margin-y" },
+            { key: contact.id, staticClass: "col-md-6 my-5 pb-5" },
             [
-              _c("div", { staticClass: "contact-card shadow-lg" }, [
+              _c("div", { staticClass: "contact-card shadow" }, [
                 _c("div", { staticClass: "card-head" }, [
                   _c("img", {
-                    staticClass: "contact-card-img shadow-lg",
+                    staticClass: "contact-card-img shadow",
                     attrs: { src: contact.img, alt: contact.name },
                   }),
                 ]),
@@ -66299,11 +67057,11 @@ var render = function () {
     [
       _vm.user.image
         ? _c("div", {
-            staticClass: "menu-image border-custom",
+            staticClass: "menu-image border-custom mb-4",
             style: _vm.getBackground(_vm.user.image),
           })
         : _c("img", {
-            staticClass: "restaurant-image mb-4",
+            staticClass: "restaurant-image",
             attrs: {
               src: "img/restaurant-placeholder.png",
               alt: "restaurant-image",
@@ -66316,30 +67074,32 @@ var render = function () {
       _vm._v(" "),
       _c(
         "address",
-        { staticClass: "mb-1 text-break", staticStyle: { display: "inline" } },
+        { staticClass: "mb-4 text-break", staticStyle: { display: "inline" } },
         [
-          _c("i", { staticClass: "icon mr-2 fas fa-map-marker-alt" }),
-          _vm._v(
-            "\n    " +
-              _vm._s(_vm.user.address) +
-              " - " +
-              _vm._s(_vm.user.city) +
-              " - " +
-              _vm._s(_vm.user.zip) +
-              "\n  "
-          ),
+          _c("p", [
+            _c("i", { staticClass: "icon mr-2 fas fa-map-marker-alt" }),
+            _vm._v(
+              " " +
+                _vm._s(_vm.user.address) +
+                " -\n      " +
+                _vm._s(_vm.user.city) +
+                " - " +
+                _vm._s(_vm.user.zip) +
+                "\n    "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "m-0 pt-1 text-break" }, [
+            _c("i", { staticClass: "icon mr-2 fas fa-phone" }),
+            _vm._v(_vm._s(_vm.user.phone) + "\n    "),
+          ]),
         ]
       ),
-      _vm._v(" "),
-      _c("p", { staticClass: "m-0 pt-1 text-break" }, [
-        _c("i", { staticClass: "icon mr-2 fas fa-phone" }),
-        _vm._v(_vm._s(_vm.user.phone) + "\n  "),
-      ]),
       _vm._v(" "),
       _c(
         "router-link",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "btn btn-primary rounded-pill",
           attrs: { to: { name: "MenusList", params: { id: _vm.user.id } } },
         },
         [_vm._v("Show Menu")]
@@ -66372,7 +67132,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "pt-5 pb-4", attrs: { id: "restaurants-list" } },
+    { staticClass: "text-center pt-5 pb-4", attrs: { id: "restaurants-list" } },
     [
       _c(
         "div",
@@ -66437,7 +67197,7 @@ var render = function () {
                 _c(
                   "label",
                   {
-                    staticClass: "form-check-label pr-2",
+                    staticClass: "form-check-label text-dark pr-2",
                     attrs: { for: "defaultCheck1" },
                   },
                   [_c("b", [_vm._v(_vm._s(category))])]
@@ -82953,7 +83713,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contact.vue?vue&type=template&id=c5a493cc&scoped=true& */ "./resources/js/components/pages/contact.vue?vue&type=template&id=c5a493cc&scoped=true&");
 /* harmony import */ var _contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact.vue?vue&type=script&lang=js& */ "./resources/js/components/pages/contact.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _contact_vue_vue_type_style_index_0_id_c5a493cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true& */ "./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -82961,7 +83723,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _contact_vue_vue_type_template_id_c5a493cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -82990,6 +83752,22 @@ component.options.__file = "resources/js/components/pages/contact.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./contact.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_style_index_0_id_c5a493cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/contact.vue?vue&type=style&index=0&id=c5a493cc&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_style_index_0_id_c5a493cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_style_index_0_id_c5a493cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_style_index_0_id_c5a493cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_contact_vue_vue_type_style_index_0_id_c5a493cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
 
 /***/ }),
 
@@ -83787,7 +84565,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Laravel\deliveboo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Elena\deliveboo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

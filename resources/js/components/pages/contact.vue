@@ -1,18 +1,18 @@
 <template>
-    <section id="contacts">
-        <div class="container">
+    <section id="contacts" class="py-5">
+        <div class="container pt-5">
             <div class="row justify-content-center">
                 <div
-                    class="col-md-6 my-margin-y"
+                    class="col-md-6 my-5 pb-5"
                     v-for="contact in contacts"
                     :key="contact.id"
                 >
-                    <div class="contact-card shadow-lg">
+                    <div class="contact-card shadow">
                         <div class="card-head">
                             <img
                                 :src="contact.img"
                                 :alt="contact.name"
-                                class="contact-card-img shadow-lg"
+                                class="contact-card-img shadow"
                             />
                         </div>
                         <div class="card-content">
@@ -51,4 +51,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+nav {
+    z-index: 2;
+}
+</style>

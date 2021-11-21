@@ -1,5 +1,5 @@
 <template>
-  <section id="restaurants-list" class="pt-5 pb-4">
+  <section id="restaurants-list" class="text-center pt-5 pb-4">
     <div class="container flex-column">
       <h2>Restaurants</h2>
       <p>
@@ -28,7 +28,7 @@
             v-model="checkbox"
             :value="category"
           />
-          <label class="form-check-label pr-2" for="defaultCheck1">
+          <label class="form-check-label text-dark pr-2" for="defaultCheck1">
             <b>{{ category }}</b>
           </label>
         </div>

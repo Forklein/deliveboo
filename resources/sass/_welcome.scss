@@ -28,7 +28,8 @@ html{
 }
 
 #main-menu {
-    background: $yellowJasmine;
+    background: $lightYellowJasmine;
+    z-index: 2;
     #logo {
         height: 60px;
     }
@@ -41,6 +42,10 @@ html{
     .navbar-nav:first-of-type {
         color: $oxfordBlue;
     }
+    #menu-icon {
+        font-size: 40px;
+        color: $mediumTurquoise;
+    }
 }
 .nav-link {
     line-height: 59px;
@@ -48,14 +53,12 @@ html{
 
 .nav-link:hover,
 .nav-link:active {
-    background: $carrotOrange;
+    background: $yellowJasmine;
     color: currentColor;
 }
 
 
-
-
-button:not(.navbar-toggler, .btn-danger, .darkmode-toggle) {
+button:not(.navbar-toggler, .search-btn, .btn-danger, .darkmode-toggle) {
     border: none;
     background: $mediumTurquoise;
     &:hover {

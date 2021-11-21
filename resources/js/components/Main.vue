@@ -6,7 +6,7 @@
       <div class="container justify-content-center">
         <div class="mb-5 text-center" data-aos="fade-down">
           <h2 class="mb-2">Technology guides us</h2>
-          <p class="subtitle">
+          <p class="text-dark">
             We are proud to take our technology around the world. Our algorithm
             is based on powerful predictive technology and machine learning,
             that help optimizing the overall experience. In the last years
@@ -133,106 +133,89 @@
         </div>
       </div>
     </section>
-    <section id="about-us" class="pt-5 d-flex align-items-center">
+    <section id="overview" class="py-5">
       <div class="container justify-content-center">
-        <div class="mb-5 text-center" data-aos="fade-in">
-          <h2 class="mb-2">About us</h2>
-          <p class="subtitle">
-            By offering fast and reliable delivery, which the customer can track
-            on their mobile, Deliveroo has seen revenue growth of over 650%. Our
-            partner restaurants manage to increase their revenues by 30%,
-            creating thousands of jobs in the restaurant sector.
-          </p>
+        <div class="row pb-5 d-flex justify-content-center align-items-center">
+          <div
+            class="
+              col-6 col-md-4
+              d-flex
+              flex-column
+              align-items-center
+              justify-content-center
+            "
+          >
+            <img
+              class="icon"
+              src="img/restaurant-icon.png"
+              alt="restaurant-icon"
+            />
+            <h3 class="font-weight-bolder">140.000</h3>
+            <p>Partner restaurants</p>
+          </div>
+          <div
+            class="
+              col-6 col-md-4
+              d-flex
+              flex-column
+              align-items-center
+              justify-content-center
+            "
+          >
+            <img class="icon" src="img/rider-icon.png" alt="rider-icon" />
+            <h3 class="font-weight-bolder">100.000 +</h3>
+            <p>Riders in Italy and all around the world</p>
+          </div>
+          <div
+            class="
+              col-6 col-md-4
+              d-flex
+              flex-column
+              align-items-center
+              justify-content-center
+            "
+          >
+            <img class="icon" src="img/thunder-icon.png" alt="thunder-icon" />
+            <h3 class="font-weight-bolder">20 min</h3>
+            <p>Average delivery time</p>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div
-              class="
-                card
-                shadow
-                mb-5
-                p-4
-                d-flex
-                flex-column
-                align-items-center
-                border-0
-              "
-              id="rider"
-            >
-              <img
-                src="img/rider.png"
-                alt="rider-image"
-                class="img-fluid my-2"
+        <div class="mt-3 d-flex justify-content-center flex-wrap">
+          <img class="logo m-3" src="img/logo1.png" alt="logo-RossoPomodoro" />
+          <img class="logo m-3" src="img/logo2.png" alt="logo-McDonald" />
+          <img class="logo m-3" src="img/logo3.png" alt="logo-LaPiadineria" />
+          <img class="logo m-3" src="img/logo4.png" alt="logo-Lievità" />
+          <img class="logo m-3" src="img/logo5.png" alt="logo-Temakinho" />
+          <img class="logo m-3" src="img/logo6.png" alt="logo-Machai" />
+          <img class="logo m-3" src="img/logo7.png" alt="logo-Daruma" />
+        </div>
+      </div>
+    </section>
+    <section id="newsletter" class="py-3">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col-12 col-md-8">
+            <h3 class="mt-2 text-white font-weight-bolder">
+              Stay up to date on everything that happens.
+            </h3>
+            <div class="input-group w-75 mt-5">
+              <input
+                type="text"
+                class="form-control pl-4"
+                placeholder="Enter your email address..."
               />
-              <h3 class="font-weight-bolder mt-3 mb-2">Rider</h3>
-              <p>
-                Deliveroo prides itself on offering well-paid work and flexible
-                to the riders, who are the heart of our service. Their work
-                fuels our growth, and without them we'd not be able to deliver
-                the best dishes to our customers and help local restaurants to
-                grow. Riders have access to insurance, but we want to do more.
-                Deliveroo was the first tech company to demand an end to the
-                compromise between flexibility and security in the law of work.
-              </p>
+              <div class="input-group-append">
+                <button
+                  class="px-3 border-0 text-white font-weight-bolder"
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div
-              class="
-                card
-                shadow
-                mb-5
-                p-4
-                d-flex
-                flex-column
-                align-items-center
-                border-0
-              "
-              id="our-company"
-            >
-              <img
-                src="img/our-company.jpg"
-                alt="our-company-image"
-                class="img-fluid my-2"
-              />
-              <h3 class="font-weight-bolder mt-3 mb-2">Our Company</h3>
-              <p>
-                When Deliveroo founder and CEO Will Shu moved to London in 2013,
-                he found a city full of great restaurants, but few delivered.
-                So, he decided that his personal mission would be to bring the
-                best restaurants in town straight into people's homes. Food is
-                at the heart of every Deliveroo business and his mission is to
-                give customers more choice. There are great restaurants that we
-                believe everyone should be able to order from.
-              </p>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div
-              class="
-                card
-                shadow
-                mb-5
-                p-4
-                d-flex
-                flex-column
-                align-items-center
-                border-0
-              "
-              id="work-with-us"
-            >
-              <img
-                src="img/work-with-us.png"
-                alt="work-with-us-image"
-                class="img-fluid my-2"
-              />
-              <h3 class="font-weight-bolder mt-3 mb-2">Work with us</h3>
-              <ol class="m-0 pl-2">
-                <li class="m-1" v-for="(work, index) in works" :key="index">
-                  {{ work.paragraph }}
-                </li>
-              </ol>
-            </div>
+          <div class="col-12 col-md-4 mt-4 d-flex justify-content-center">
+            <img src="img/newsletter-image.png" alt="newsletter-image" />
           </div>
         </div>
       </div>
@@ -241,7 +224,6 @@
 </template>
 <script>
 import RestaurantsList from "./restaurants/RestaurantsList.vue";
-import works from "./data/works.js";
 import Loader from "./utilities/Loader.vue";
 
 export default {
@@ -252,7 +234,6 @@ export default {
   },
   data() {
     return {
-      works,
       isLoading: false,
     };
   },
@@ -266,10 +247,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "../../sass/_variables.scss";
-#our-technology,
-#about-us {
-  background: $lightTurquoise;
-}
+
 .card {
   h3,
   h4 {
@@ -284,10 +262,40 @@ export default {
     line-height: 18px;
   }
 }
-#our-values {
-  background-color: $ourLightIndigo;
-  h2 {
-    color: $oxfordBlue;
+
+#our-technology {
+  background: $lightTurquoise;
+}
+
+#overview {
+  img.icon {
+    width: 120px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  .logo {
+    height: 80px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+#newsletter {
+  background: $oxfordBlue;
+  h3 {
+    font-size: 32px;
+  }
+  input {
+    border-radius: 20px 0 0 20px;
+  }
+  button {
+    border-radius: 0 20px 20px 0;
+    background: $mediumTurquoise;
+  }
+  img {
+    max-height: 160px;
   }
 }
 </style>

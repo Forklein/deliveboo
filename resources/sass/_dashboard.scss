@@ -43,13 +43,13 @@ nav {
         &:hover {
             text-decoration: none;
             color: #000;
-            background-color: $yellowJasmine;
+            background-color: $lightTurquoise;
         }
         .side-link-bg {
           font-size: 17px;
             padding: 10px;
             &:hover {
-                background-color: $yellowJasmine;
+                background-color: $lightTurquoise;
                 color: $oxfordBlue;
             }
         }
@@ -58,10 +58,10 @@ nav {
 .active {
     text-decoration: none;
     color: $oxfordBlue;
-    background-color: $yellowJasmine;
+    background-color: $lightTurquoise;
     .side-link-bg {
       color: $oxfordBlue;
-      background-color: $yellowJasmine;
+      background-color: $lightTurquoise;
     }
 }
 

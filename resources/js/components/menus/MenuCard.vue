@@ -78,6 +78,7 @@ export default {
 @import "../../../sass/_variables.scss";
 /* **************************** */
 .card {
+  background: $lightYellowJasmine;
   border-radius: 20px;
   height: 650px;
   h4 {

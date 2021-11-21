@@ -10061,18 +10061,12 @@ body {
 }
 
 /*Navbar Front*/
-.navbar-position {
-  position: fixed;
-  z-index: 18;
-  width: 100vw;
-}
-
 .bg-jasmine {
-  background-color: #e9dfee;
+  background-color: #f6dbb2;
 }
 
 .bg-lightjasmine {
-  background-color: #e9dfee;
+  background-color: #f6dbb2;
 }
 
 /* Generics */
@@ -10128,25 +10122,25 @@ nav {
 .bg-dash-left a:hover {
   text-decoration: none;
   color: #000;
-  background-color: #e9dfee;
+  background-color: #dbfbf8;
 }
 .bg-dash-left a .side-link-bg {
   font-size: 17px;
   padding: 10px;
 }
 .bg-dash-left a .side-link-bg:hover {
-  background-color: #e9dfee;
+  background-color: #dbfbf8;
   color: #007e8a;
 }
 
 .active {
   text-decoration: none;
   color: #007e8a;
-  background-color: #e9dfee;
+  background-color: #dbfbf8;
 }
 .active .side-link-bg {
   color: #007e8a;
-  background-color: #e9dfee;
+  background-color: #dbfbf8;
 }
 
 /* CLASSI CAROSELLO FINANCE */
@@ -10305,7 +10299,8 @@ html {
 }
 
 #main-menu {
-  background: #e9dfee;
+  background: #f6dbb2;
+  z-index: 2;
 }
 #main-menu #logo {
   height: 60px;
@@ -10319,6 +10314,10 @@ html {
 #main-menu .navbar-nav:first-of-type {
   color: #007e8a;
 }
+#main-menu #menu-icon {
+  font-size: 40px;
+  color: #00CCBC;
+}
 
 .nav-link {
   line-height: 59px;
@@ -10326,25 +10325,17 @@ html {
 
 .nav-link:hover,
 .nav-link:active {
-  background: #ED9529;
+  background: #FBB64E;
   color: currentColor;
 }
 
-button:not(.navbar-toggler, .btn-danger, .darkmode-toggle) {
+button:not(.navbar-toggler, .search-btn, .btn-danger, .darkmode-toggle) {
   border: none;
   background: #00CCBC;
 }
-button:not(.navbar-toggler, .btn-danger, .darkmode-toggle):hover {
+button:not(.navbar-toggler, .search-btn, .btn-danger, .darkmode-toggle):hover {
   background: #007e8a;
   transform: scale(1.15);
-}
-
-/*STYLE CONTACT SECTION*/
-#contacts {
-  padding-top: 100px;
-}
-#contacts .row .my-margin-y {
-  margin-top: 120px;
 }
 
 /*CONTACT CARD*/
