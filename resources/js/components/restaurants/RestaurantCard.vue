@@ -18,7 +18,7 @@
       <i class="icon mr-2 fas fa-phone"></i>{{ user.phone }}
     </p>
     <router-link
-      class="btn btn-primary"
+      class="py-2 px-3 rounded-pill"
       :to="{ name: 'MenusList', params: { id: user.id } }"
       >Show Menu</router-link
     >

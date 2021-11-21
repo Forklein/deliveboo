@@ -2363,8 +2363,151 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Footer"
+  name: "Footer",
+  data: function data() {
+    return {
+      isHidden: true
+    };
+  },
+  methods: {
+    showFaq: function showFaq() {
+      this.isHidden = !this.isHidden;
+    },
+    closeFaq: function closeFaq() {
+      this.isHidden = true;
+    }
+  }
 });
 
 /***/ }),
@@ -2378,6 +2521,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _data_works_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/works.js */ "./resources/js/components/data/works.js");
 //
 //
 //
@@ -2405,8 +2549,145 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Header"
+  name: "Header",
+  data: function data() {
+    return {
+      works: _data_works_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+      isHidden: true
+    };
+  },
+  methods: {
+    learnMore: function learnMore() {
+      this.isHidden = false;
+    },
+    readLess: function readLess() {
+      this.isHidden = true;
+    }
+  }
 });
 
 /***/ }),
@@ -2421,8 +2702,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurants/RestaurantsList.vue */ "./resources/js/components/restaurants/RestaurantsList.vue");
-/* harmony import */ var _data_works_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/works.js */ "./resources/js/components/data/works.js");
-/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
+/* harmony import */ var _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utilities/Loader.vue */ "./resources/js/components/utilities/Loader.vue");
 //
 //
 //
@@ -2648,71 +2928,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Main",
   components: {
     RestaurantsList: _restaurants_RestaurantsList_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+    Loader: _utilities_Loader_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      works: _data_works_js__WEBPACK_IMPORTED_MODULE_1__["default"],
       isLoading: false
     };
   },
@@ -30949,7 +31174,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "footer[data-v-61a7c374] {\n  background: #440264;\n  font-size: 14px;\n  line-height: 27px;\n}\nfooter #logo[data-v-61a7c374] {\n  height: 80px;\n}\nfooter #social-networks i[data-v-61a7c374] {\n  font-size: 25px;\n}", ""]);
+exports.push([module.i, "footer #links[data-v-61a7c374] {\n  background: #440264;\n  font-size: 14px;\n  line-height: 27px;\n}\nfooter #links #logo[data-v-61a7c374] {\n  height: 80px;\n}\nfooter #links #social-networks i[data-v-61a7c374] {\n  font-size: 25px;\n}\n#faq i[data-v-61a7c374] {\n  font-size: 17px;\n}\n#faq a.question[data-v-61a7c374] {\n  font-size: 17px;\n  color: #007e8a;\n}\n#faq .collapse[data-v-61a7c374] {\n  font-size: 15px;\n}\n.hidden[data-v-61a7c374] {\n  display: none;\n}", ""]);
 
 // exports
 
@@ -30968,7 +31193,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "header[data-v-1f42fb90] {\n  position: relative;\n  height: 650px;\n}\nheader img.bg[data-v-1f42fb90] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-position: center;\n     object-position: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  z-index: -1;\n}\nheader .jumbotron[data-v-1f42fb90] {\n  background: transparent;\n  height: 100%;\n}\nheader .jumbotron-text[data-v-1f42fb90] {\n  max-width: 55%;\n  max-height: 285px;\n  overflow-y: auto;\n  font-size: 19px;\n  line-height: 30px;\n  text-align: justify;\n}\nheader .jumbotron-text .jumbotron-title[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 40px;\n}\nheader .jumbotron-text p[data-v-1f42fb90] {\n  color: #007e8a;\n}\nheader button[data-v-1f42fb90] {\n  border: none;\n  background: #00CCBC;\n}\nheader button[data-v-1f42fb90]:hover {\n  background: #007e8a;\n  transform: scale(1.15);\n}", ""]);
+exports.push([module.i, "header .jumbotron[data-v-1f42fb90] {\n  min-height: 800px;\n  background-image: url(\"/img/jumbotron.jpg\");\n  background-position: center;\n}\nheader .jumbotron-text[data-v-1f42fb90] {\n  max-width: 60%;\n  font-size: 19px;\n  line-height: 30px;\n}\nheader .jumbotron-text .jumbotron-title[data-v-1f42fb90] {\n  color: #00CCBC;\n  font-size: 40px;\n}\nheader .jumbotron-text p[data-v-1f42fb90] {\n  color: #007e8a;\n}\nheader button[data-v-1f42fb90] {\n  background: #00CCBC;\n}\nheader button[data-v-1f42fb90]:hover {\n  background: #007e8a;\n  transform: scale(1.15);\n}\n#about-us[data-v-1f42fb90] {\n  background: #dbfbf8;\n}\n.card h3[data-v-1f42fb90],\n.card h4[data-v-1f42fb90] {\n  color: #440264;\n}\n.card p[data-v-1f42fb90] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-1f42fb90] {\n  font-size: 16px;\n  line-height: 18px;\n}\n.hidden[data-v-1f42fb90] {\n  display: none;\n}", ""]);
 
 // exports
 
@@ -30987,7 +31212,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#our-technology[data-v-b9c20fb8],\n#about-us[data-v-b9c20fb8] {\n  background: #dbfbf8;\n}\n.card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-values[data-v-b9c20fb8] {\n  background-color: #e9dfee;\n}\n#our-values h2[data-v-b9c20fb8] {\n  color: #007e8a;\n}", ""]);
+exports.push([module.i, ".card h3[data-v-b9c20fb8],\n.card h4[data-v-b9c20fb8] {\n  color: #440264;\n}\n.card p[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 30px;\n}\n.card li[data-v-b9c20fb8] {\n  font-size: 16px;\n  line-height: 18px;\n}\n#our-technology[data-v-b9c20fb8] {\n  background: #dbfbf8;\n}\n#overview img.icon[data-v-b9c20fb8] {\n  width: 120px;\n}\n#overview h3[data-v-b9c20fb8] {\n  font-size: 40px;\n}\n#overview .logo[data-v-b9c20fb8] {\n  height: 80px;\n}\n#overview p[data-v-b9c20fb8] {\n  font-size: 20px;\n}\n#newsletter[data-v-b9c20fb8] {\n  background: #007e8a;\n}\n#newsletter h3[data-v-b9c20fb8] {\n  font-size: 32px;\n}\n#newsletter input[data-v-b9c20fb8] {\n  border-radius: 20px 0 0 20px;\n}\n#newsletter button[data-v-b9c20fb8] {\n  border-radius: 0 20px 20px 0;\n  background: #00CCBC;\n}\n#newsletter img[data-v-b9c20fb8] {\n  max-height: 160px;\n}", ""]);
 
 // exports
 
@@ -63612,113 +63837,359 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", [
+    _c(
+      "section",
+      {
+        staticClass: "pt-5 pb-4",
+        class: { hidden: _vm.isHidden },
+        attrs: { id: "faq" },
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("a", { attrs: { href: "#links" }, on: { click: _vm.closeFaq } }, [
+            _c("i", { staticClass: "fas fa-times text-secondary" }),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+        ]),
+      ]
+    ),
+    _vm._v(" "),
+    _c("section", { staticClass: "pt-4 pb-2", attrs: { id: "links" } }, [
+      _c("div", { staticClass: "container text-white" }, [
+        _c("img", {
+          staticClass: "mb-3",
+          attrs: {
+            src: "img/complete-logo.png",
+            alt: "logo-image",
+            id: "logo",
+          },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col", attrs: { id: "about" } }, [
+            _c("ul", { staticClass: "list-unstyled" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { attrs: { href: "#faq" }, on: { click: _vm.showFaq } },
+                  [_vm._v("FAQ")]
+                ),
+              ]),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("ul"),
+          _vm._v(" "),
+          _vm._m(7),
+        ]),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "pt-4 pb-2" }, [
-      _c(
-        "div",
-        { staticClass: "container text-white", attrs: { id: "links" } },
-        [
-          _c("img", {
-            staticClass: "mb-3",
+    return _c("div", { staticClass: "table shadow-lg" }, [
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
             attrs: {
-              src: "img/complete-logo.png",
-              alt: "logo-image",
-              id: "logo",
+              "data-toggle": "collapse",
+              href: "#q1",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q1",
             },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col", attrs: { id: "about" } }, [
-              _c("ul", { staticClass: "list-unstyled" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#about-us" } }, [
-                    _vm._v("About us"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#our-technology" } }, [
-                    _vm._v("Our Technology"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#our-values" } }, [
-                    _vm._v("Our values"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#work-with-us" } }, [
-                    _vm._v("Work with us"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#our-company" } }, [
-                    _vm._v("Our Company"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Download the app"),
-                    _c("i", { staticClass: "mx-2 fas fa-download" }),
-                  ]),
-                ]),
-              ]),
+          },
+          [
+            _vm._v(
+              "\n            Do I need an FSA rating to join Deliveroo?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q1" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              Yes, we need you to provide proof that your restaurant has a\n              minimum standard of food hygiene."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              We reserve the right to put your application on hold until you\n              can obtain proof of your food hygiene standards.\n            "
+              ),
             ]),
-            _vm._v(" "),
-            _c("ul"),
-            _vm._v(" "),
-            _c("div", { staticClass: "col", attrs: { id: "contacts" } }, [
-              _c("h6", { staticClass: "mb-1 font-weight-bold" }, [
-                _vm._v("Contacts"),
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "list-unstyled" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "mx-2 fas fa-envelope" }),
-                    _vm._v("support@deliveroo.it"),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "mx-2 fas fa-map-marker-alt" }),
-                    _vm._v(
-                      "Deliveroo Italy\n              S.R.L.Via Carlo Bo 11 Milano 20143\n            "
-                    ),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("hr", { staticClass: "border-white bg-white" }),
-              _vm._v(" "),
-              _c("div", { attrs: { id: "social-networks" } }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "mx-2 fab fa-facebook" }),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "mx-2 fab fa-twitter" }),
-                ]),
-                _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "mx-2 fab fa-instagram" }),
-                ]),
-              ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q2",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q2",
+            },
+          },
+          [
+            _vm._v(
+              "\n            New to running a delivery-only restaurant?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q2" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              Government-imposed limitations due to COVID-19 mean restaurants\n              are likely to require more deliveries to maintain similar\n              profits."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              Read our guidance for restaurants adapting to a smaller dine-in\n              capacity and greater demand for takeaway deliveries following\n              COVID-19.\n            "
+              ),
             ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q3",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q3",
+            },
+          },
+          [
+            _vm._v(
+              "\n            Our riders or your own deliveries?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q3" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              You can choose to use Deliveroo's world-class logistics network\n              or your own delivery drivers."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              We extensively train our riders, who can be tracked in real time\n              when they're carrying your orders. Your customers can also see\n              and interact with our riders, meaning fewer undelivered orders\n              and more happy customers.\n            "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q4",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q4",
+            },
+          },
+          [_vm._v("\n            Can I send my own menu images?\n          ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q4" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              We recommend using as many high quality images as possible on\n              your Deliveroo menu. That's why we offer a professional\n              photography service as part of some of our packages."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              You can also upload your own imagery for your menu and\n              restaurant 'shopfront' on Deliveroo. All images are reviewed\n              against our photography guidelines."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              Find out more about uploading your imagery.\n            "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "a",
+          {
+            staticClass: "question btn btn-light w-100 py-3 px-4 text-left",
+            attrs: {
+              "data-toggle": "collapse",
+              href: "#q5",
+              role: "button",
+              "aria-expanded": "false",
+              "aria-controls": "q5",
+            },
+          },
+          [
+            _vm._v(
+              "\n            What’s the difference between Table Service, Pickup and Delivery?\n          "
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "collapse text-secondary", attrs: { id: "q5" } },
+          [
+            _c("div", { staticClass: "p-3" }, [
+              _vm._v(
+                "\n              It’s up to you which you choose, but we know that your customers\n              will love having the option to get Delivery at home, or use\n              Pickup to collect orders direct from you when they’re out."
+              ),
+              _c("br"),
+              _vm._v(
+                "\n\n              Our newest product, Table Service allows customers to use the\n              Deliveroo app to dine-in at your restaurant, contact-free.\n            "
+              ),
+            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#hero" } }, [_vm._v("About us")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#our-technology" } }, [
+        _vm._v("Our Technology"),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [_vm._v(" Terms & Conditions ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [_vm._v(" Privacy policy ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [_vm._v(" Cookies ")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "#links" } }, [
+        _vm._v("Download the app"),
+        _c("i", { staticClass: "mx-2 fas fa-download" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col", attrs: { id: "contacts" } }, [
+      _c("h6", { staticClass: "mb-1" }, [_vm._v("Contacts")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-unstyled" }, [
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "mx-2 fas fa-envelope" }),
+            _vm._v("support@deliveboo.it"),
           ]),
-        ]
-      ),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("i", { staticClass: "mx-2 fas fa-map-marker-alt" }),
+            _vm._v(
+              "Deliveboo Italy\n                S.R.L.Via Carlo Bo 11 Milano 20143\n              "
+            ),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("hr", { staticClass: "border-white bg-white" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "mb-4", attrs: { id: "social-networks" } }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "mx-2 fab fa-facebook" }),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "mx-2 fab fa-twitter" }),
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "mx-2 fab fa-instagram" }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("small", [
+        _c("i", { staticClass: "mr-2 far fa-copyright" }),
+        _vm._v("2021 Deliveboo"),
+      ]),
     ])
   },
 ]
@@ -63743,40 +64214,198 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("header", [
+    _c("div", { staticClass: "jumbotron pb-0", attrs: { id: "hero" } }, [
+      _c("div", { staticClass: "container flex-column align-items-start" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "mt-3 py-2 px-3 border-0 rounded-pill text-white",
+            on: { click: _vm.learnMore },
+          },
+          [_c("a", { attrs: { href: "#about-us" } }, [_vm._v("Learn more")])]
+        ),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c(
+      "section",
+      {
+        staticClass: "py-5",
+        class: { hidden: _vm.isHidden },
+        attrs: { id: "about-us" },
+      },
+      [
+        _c("div", { staticClass: "container justify-content-center" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-lg-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+                  attrs: { id: "work-with-us" },
+                },
+                [
+                  _c("img", {
+                    staticClass: "img-fluid my-2",
+                    staticStyle: { height: "130px" },
+                    attrs: {
+                      src: "img/work-with-us.png",
+                      alt: "work-with-us-image",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
+                    _vm._v("Work with us"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "ol",
+                    { staticClass: "m-0 pl-2" },
+                    _vm._l(_vm.works, function (work, index) {
+                      return _c("li", { key: index, staticClass: "m-1" }, [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(work.paragraph) +
+                            "\n              "
+                        ),
+                      ])
+                    }),
+                    0
+                  ),
+                ]
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "mt-3 py-2 px-3 rounded-pill text-white",
+              on: { click: _vm.readLess },
+            },
+            [_c("a", { attrs: { href: "#hero" } }, [_vm._v("Read less")])]
+          ),
+        ]),
+      ]
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", [
-      _c("img", {
-        staticClass: "bg",
-        attrs: { src: "/img/jumbotron.jpg", alt: "" },
-      }),
+    return _c("div", { staticClass: "jumbotron-text text-justify mt-1 pr-4" }, [
+      _c("h1", { staticClass: "jumbotron-title pb-2 font-weight-bolder" }, [
+        _vm._v("\n          The Food you love at Home\n        "),
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "jumbotron" }, [
-        _c("div", { staticClass: "container flex-column align-items-start" }, [
-          _c("div", { staticClass: "jumbotron-text mt-1 mb-3 pr-4" }, [
-            _c(
-              "h1",
-              { staticClass: "jumbotron-title font-weight-bolder mb-2" },
-              [_vm._v("\n          The Food you love at Home\n        ")]
+      _c("p", { staticClass: "d-none d-md-block" }, [
+        _vm._v(
+          "\n          Deliveroo's aim is to transform the way customers eat.\n          "
+        ),
+        _c(
+          "span",
+          { staticClass: "d-none d-lg-inline-block d-xl-inline-block" },
+          [
+            _vm._v(
+              "By constantly innovating and expanding, we offer our customers\n            the best choice and convenience and a large selection of\n            restaurants: whether you want sushi for dinner, a salad for lunch,\n            or a brioche for breakfast, we'll take care of it! In Deliveroo we\n            know that every customer has different tastes and our job is to\n            make sure that have what they want, when they want and where they\n            want it."
             ),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n          Deliveroo's aim is to transform the way customers eat. By constantly\n          innovating and expanding, we offer ours customers the best choice\n          and convenience and a large selection of restaurants: whether you\n          want sushi for dinner, a salad for lunch, or a brioche for\n          breakfast, we'll take care of it! In Deliveroo we know that every\n          customer has different tastes and our job is to make sure that have\n          what they want, when they want and where they want it.\n        "
-              ),
-            ]),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mb-5 text-center", attrs: { "data-aos": "fade-in" } },
+      [
+        _c("h2", { staticClass: "mb-2" }, [_vm._v("About us")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n          By offering fast and reliable delivery, which the customer can track\n          on their mobile, Deliveroo has seen revenue growth of over 650%. Our\n          partner restaurants manage to increase their revenues by 30%,\n          creating thousands of jobs in the restaurant sector.\n        "
+          ),
+        ]),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-lg-4" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+          attrs: { id: "rider" },
+        },
+        [
+          _c("img", {
+            staticClass: "img-fluid my-2",
+            staticStyle: { height: "130px" },
+            attrs: { src: "img/rider.png", alt: "rider-image" },
+          }),
+          _vm._v(" "),
+          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
+            _vm._v("Rider"),
           ]),
           _vm._v(" "),
-          _c("button", { staticClass: "py-2 px-3 rounded-pill text-white" }, [
-            _c("a", { attrs: { href: "#about-us" } }, [_vm._v("Learn more")]),
+          _c("p", [
+            _vm._v(
+              "\n              Deliveroo prides itself on offering well-paid work and flexible\n              to the riders, who are the heart of our service. Their work\n              fuels our growth, and without them we'd not be able to deliver\n              the best dishes to our customers and help local restaurants to\n              grow. Riders have access to insurance, but we want to do more.\n              Deliveroo was the first tech company to demand an end to the\n              compromise between flexibility and security in the law of work.\n            "
+            ),
           ]),
-        ]),
-      ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-12 col-lg-4" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
+          attrs: { id: "our-company" },
+        },
+        [
+          _c("img", {
+            staticClass: "img-fluid my-2",
+            staticStyle: { height: "130px" },
+            attrs: { src: "img/our-company.png", alt: "our-company-image" },
+          }),
+          _vm._v(" "),
+          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
+            _vm._v("Our Company"),
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "\n              When Deliveroo founder and CEO Will Shu moved to London in 2013,\n              he found a city full of great restaurants, but few delivered.\n              So, he decided that his personal mission would be to bring the\n              best restaurants in town straight into people's homes. Food is\n              at the heart of every Deliveroo business and his mission is to\n              give customers more choice. There are great restaurants that we\n              believe everyone should be able to order from.\n            "
+            ),
+          ]),
+        ]
+      ),
     ])
   },
 ]
@@ -63810,67 +64439,9 @@ var render = function () {
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
-      _c(
-        "section",
-        {
-          staticClass: "pt-5 d-flex align-items-center",
-          attrs: { id: "about-us" },
-        },
-        [
-          _c("div", { staticClass: "container justify-content-center" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _vm._m(2),
-              _vm._v(" "),
-              _vm._m(3),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-12 col-md-4" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-                    attrs: { id: "work-with-us" },
-                  },
-                  [
-                    _c("img", {
-                      staticClass: "img-fluid my-2",
-                      attrs: {
-                        src: "img/work-with-us.png",
-                        alt: "work-with-us-image",
-                      },
-                    }),
-                    _vm._v(" "),
-                    _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-                      _vm._v("Work with us"),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "ol",
-                      { staticClass: "m-0 pl-2" },
-                      _vm._l(_vm.works, function (work, index) {
-                        return _c("li", { key: index, staticClass: "m-1" }, [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(work.paragraph) +
-                              "\n              "
-                          ),
-                        ])
-                      }),
-                      0
-                    ),
-                  ]
-                ),
-              ]),
-            ]),
-          ]),
-        ]
-      ),
+      _vm._m(1),
       _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
+      _vm._m(2),
     ],
     1
   )
@@ -64060,150 +64631,168 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "mb-5 text-center", attrs: { "data-aos": "fade-in" } },
-      [
-        _c("h2", { staticClass: "mb-2" }, [_vm._v("About us")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n          By offering fast and reliable delivery, which the customer can track\n          on their mobile, Deliveroo has seen revenue growth of over 650%. Our\n          partner restaurants manage to increase their revenues by 30%,\n          creating thousands of jobs in the restaurant sector.\n        "
-          ),
-        ]),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-4" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-          attrs: { id: "rider" },
-        },
-        [
-          _c("img", {
-            staticClass: "img-fluid my-2",
-            attrs: { src: "img/rider.png", alt: "rider-image" },
-          }),
-          _vm._v(" "),
-          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-            _vm._v("Rider"),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n              Deliveroo prides itself on offering well-paid work and flexible\n              to the riders, who are the heart of our service. Their work\n              fuels our growth, and without them we'd not be able to deliver\n              the best dishes to our customers and help local restaurants to\n              grow. Riders have access to insurance, but we want to do more.\n              Deliveroo was the first tech company to demand an end to the\n              compromise between flexibility and security in the law of work.\n            "
-            ),
-          ]),
-        ]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12 col-md-4" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "\n              card\n              shadow\n              mb-5\n              p-4\n              d-flex\n              flex-column\n              align-items-center\n              border-0\n            ",
-          attrs: { id: "our-company" },
-        },
-        [
-          _c("img", {
-            staticClass: "img-fluid my-2",
-            attrs: { src: "img/our-company.jpg", alt: "our-company-image" },
-          }),
-          _vm._v(" "),
-          _c("h3", { staticClass: "font-weight-bolder mt-3 mb-2" }, [
-            _vm._v("Our Company"),
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n              When Deliveroo founder and CEO Will Shu moved to London in 2013,\n              he found a city full of great restaurants, but few delivered.\n              So, he decided that his personal mission would be to bring the\n              best restaurants in town straight into people's homes. Food is\n              at the heart of every Deliveroo business and his mission is to\n              give customers more choice. There are great restaurants that we\n              believe everyone should be able to order from.\n            "
-            ),
-          ]),
-        ]
-      ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "section",
-      {
-        staticClass: "py-5 d-flex justify-content-center",
-        attrs: { id: "our-values" },
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "container paragraph justify-content-center text-center",
-          },
-          [
-            _c("h2", { staticClass: "mb-2" }, [_vm._v("Our values")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "mb-4" }, [
-              _vm._v(
-                "\n        Everything we do revolves around our values. They guide us every day\n        to work as a team and make important decisions, from the choices that\n        have an impact on hiring and staff development, to those that write\n        the future of Deliveroo products.\n      "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("img", {
-              staticClass: "img-fluid",
-              attrs: { src: "img/our-values.jpg", alt: "our-values-image" },
-            }),
-          ]
-        ),
-      ]
-    )
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { attrs: { id: "overview" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
+    return _c("section", { staticClass: "py-5", attrs: { id: "overview" } }, [
+      _c("div", { staticClass: "container justify-content-center" }, [
+        _c("div", { staticClass: "row pb-5 d-flex align-items-center" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n            col-6 col-md-4\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
+            },
+            [
               _c("img", {
+                staticClass: "icon",
                 attrs: {
                   src: "img/restaurant-icon.png",
                   alt: "restaurant-icon",
                 },
               }),
-            ]),
-          ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "font-weight-bolder" }, [
+                _vm._v("140.000"),
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Partner restaurants")]),
+            ]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "col-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n            col-6 col-md-4\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
+            },
+            [
               _c("img", {
+                staticClass: "icon",
                 attrs: { src: "img/rider-icon.png", alt: "rider-icon" },
               }),
+              _vm._v(" "),
+              _c("h3", { staticClass: "font-weight-bolder" }, [
+                _vm._v("100.000 +"),
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Riders in Italy and all around the world")]),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n            col-6 col-md-4\n            d-flex\n            flex-column\n            align-items-center\n            justify-content-center\n          ",
+            },
+            [
+              _c("img", {
+                staticClass: "icon",
+                attrs: { src: "img/thunder-icon.png", alt: "thunder-icon" },
+              }),
+              _vm._v(" "),
+              _c("h3", { staticClass: "font-weight-bolder" }, [
+                _vm._v("20 min"),
+              ]),
+              _vm._v(" "),
+              _c("p", [_vm._v("Average delivery time")]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("small", [_vm._v("Global figures as of August 2021")]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mt-3 d-flex justify-content-center flex-wrap" },
+          [
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo1.png", alt: "logo-RossoPomodoro" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo2.png", alt: "logo-McDonald" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo3.png", alt: "logo-LaPiadineria" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo4.png", alt: "logo-Lievità" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo5.png", alt: "logo-Temakinho" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo6.png", alt: "logo-Machai" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "logo m-3",
+              attrs: { src: "img/logo7.png", alt: "logo-Daruma" },
+            }),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "py-3", attrs: { id: "newsletter" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row mt-2" }, [
+          _c("div", { staticClass: "col-12 col-md-8" }, [
+            _c("h3", { staticClass: "mt-2 text-white font-weight-bolder" }, [
+              _vm._v(
+                "\n            Stay up to date on everything that happens.\n          "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-group w-75 mt-5" }, [
+              _c("input", {
+                staticClass: "form-control pl-4",
+                attrs: {
+                  type: "text",
+                  placeholder: "Enter your email address...",
+                },
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group-append" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "px-3 border-0 text-white font-weight-bolder",
+                    attrs: { type: "submit" },
+                  },
+                  [_vm._v("\n                Subscribe\n              ")]
+                ),
+              ]),
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-4" }, [
-            _c("div", { staticClass: "card shadow" }, [
+          _c(
+            "div",
+            {
+              staticClass: "col-12 col-md-4 mt-4 d-flex justify-content-center",
+            },
+            [
               _c("img", {
-                attrs: { src: "img/thunder-icon.png", alt: "thunder-icon" },
+                attrs: {
+                  src: "img/newsletter-image.png",
+                  alt: "newsletter-image",
+                },
               }),
-            ]),
-          ]),
+            ]
+          ),
         ]),
       ]),
     ])
@@ -64748,7 +65337,7 @@ var render = function () {
       _c(
         "router-link",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "py-2 px-3 rounded-pill",
           attrs: { to: { name: "MenusList", params: { id: _vm.user.id } } },
         },
         [_vm._v("Show Menu")]
@@ -82028,7 +82617,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Laravel\deliveboo\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Elena\deliveboo\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
