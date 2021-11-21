@@ -256,7 +256,7 @@ h1 {
 }
 
 #about-us {
-  background: $ourLightIndigo;
+  background: $lightTurquoise;
 }
 .card {
   h3,
