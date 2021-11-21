@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="jumbotron pb-0" id="hero">
+    <div class="jumbotron m-0" id="hero">
       <div class="container flex-column align-items-start">
         <div class="jumbotron-text text-justify mt-1 pr-4">
           <h1 class="jumbotron-title pb-2 font-weight-bolder">
