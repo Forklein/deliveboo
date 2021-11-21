@@ -108,6 +108,14 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <div class="col-md-4 @error('types') is-invalid @enderror"></div>
+                            @error('types')
+                                <span class="col-md-6 invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
