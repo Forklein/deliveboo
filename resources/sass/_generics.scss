@@ -6,6 +6,11 @@
 body{
     font-family: "Roboto", sans-serif;
 }
+.navbar-position {
+    position: fixed;
+    z-index: 20;
+    width: 100vw;
+}
 
 
 /*Navbar Front*/

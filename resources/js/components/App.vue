@@ -18,6 +18,7 @@ export default {
 .app{
   background-color: $ourLightIndigo;
   min-height: 100vh;
+  padding-top: 70px;
 }
 
 p {

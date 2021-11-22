@@ -221,8 +221,8 @@ export default {
 @import "../../sass/_variables.scss";
 header {
   background-image: url("~/img/jumbotron.jpg");
-  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   .jumbotron {
     height: 640px;
     background: transparent;

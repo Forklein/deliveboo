@@ -10,7 +10,7 @@
 
 <body>
     @if (Route::has('login'))
-            <nav class="navbar d-flex justify-content-around align-items-center p-0" id="main-menu">
+            <nav class="navbar navbar-position d-flex justify-content-around align-items-center p-0" id="main-menu">
                 <a href="{{url('/')}}"><img id="logo" src="{{ asset('img/logo.png') }}" alt="logo" /></a>
                 <a href="{{url('/')}}"><h1 class="m-0">Deliveboo</h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -28,8 +28,7 @@
                             </div>
                             <div class="nav-block">
                                 <li class="nav-item">
-                                    <a class="nav-link py-0" href="/#about-us"><i class="mr-1 fas fa-info-circle"></i><b>About
-                                        us</b></a>
+                                    <a class="nav-link py-0" href="/#our-technology"><i class="mr-1 fas fa-info-circle"></i><b>Our Techs</b></a>
                                 </li>
                             </div>
                             <div class="nav-block">
